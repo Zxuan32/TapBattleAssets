@@ -1,0 +1,172 @@
+sprites {
+    // Recortes del atlas. 'sheet' es el numero de 'image' de
+    // pack.tbs, o sea que hoja .png se recorta.
+    // Las coordenadas van a MEDIA resolucion: el motor las multiplica
+    // por 2 al dibujar personajes (DrawImage, acttype 3 o 4), asi que
+    // un recorte de 70x64 se ve a 140x128.
+    // El numero de cada sprite es su POSICION: son un array, no se
+    // pueden saltar ni reordenar. Para quitar uno de en medio hay que
+    // reapuntar los frames que lo usan.
+    // El comentario de la derecha dice que anos lo usan; 'sin usar'
+    // es un recorte que no dibuja nadie (suele sobrar de un
+    // trasplante y se puede reaprovechar).
+
+    sprite_0   { sheet = 1;  x =   0;  y = 472;  w = 472;  h =  34; }   // ano_0, ano_5, ano_220, ano_221, ano_222, ano_224...
+    sprite_1   { sheet = 1;  x =   0;  y = 396;  w = 472;  h =  38; }   // ano_1, ano_2, ano_146, ano_147, ano_148, ano_149...
+    sprite_2   { sheet = 1;  x = 444;  y = 268;  w =  48;  h =  32; }   // ano_3
+    sprite_3   { sheet = 1;  x = 432;  y = 316;  w =  48;  h =  32; }   // ano_4
+    sprite_4   { sheet = 1;  x = 476;  y =   0;  w =  32;  h =  32; }   // ano_6
+    sprite_5   { sheet = 1;  x = 480;  y = 316;  w =  32;  h =  32; }   // ano_7
+    sprite_6   { sheet = 1;  x = 340;  y = 356;  w =  32;  h =  32; }   // ano_8
+    sprite_7   { sheet = 1;  x = 372;  y = 356;  w =  32;  h =  32; }   // ano_9
+    sprite_8   { sheet = 1;  x = 280;  y = 268;  w =  91;  h =  40; }   // ano_10
+    sprite_9   { sheet = 1;  x = 128;  y =  96;  w =  97;  h =  48; }   // ano_12
+    sprite_10  { sheet = 0;  x =   0;  y =   0;  w = 480;  h = 324; }   // ano_13
+    sprite_11  { sheet = 1;  x = 428;  y =   0;  w =  48;  h =  48; }   // ano_27, ano_29, ano_270, ano_271
+    sprite_12  { sheet = 2;  x = 464;  y = 256;  w =  39;  h =  18; }   // ano_30
+    sprite_13  { sheet = 3;  x =   0;  y =   0;  w = 191;  h =  32; }   // ano_31
+    sprite_14  { sheet = 2;  x = 396;  y = 320;  w =  57;  h =  18; }   // ano_33
+    sprite_15  { sheet = 1;  x = 228;  y =  96;  w = 112;  h =  48; }   // ano_38
+    sprite_16  { sheet = 1;  x = 340;  y =  96;  w = 112;  h =  48; }   // ano_39
+    sprite_17  { sheet = 1;  x = 452;  y =  96;  w =  40;  h =  48; }   // ano_40, ano_50
+    sprite_18  { sheet = 1;  x = 472;  y = 154;  w =  40;  h =  48; }   // ano_41, ano_51
+    sprite_19  { sheet = 1;  x = 472;  y = 211;  w =  40;  h =  48; }   // ano_42, ano_52
+    sprite_20  { sheet = 1;  x =   0;  y = 268;  w =  40;  h =  48; }   // ano_43, ano_53
+    sprite_21  { sheet = 1;  x =  40;  y = 268;  w =  40;  h =  48; }   // ano_44, ano_54
+    sprite_22  { sheet = 1;  x =  80;  y = 268;  w =  40;  h =  48; }   // ano_45, ano_55
+    sprite_23  { sheet = 1;  x = 120;  y = 268;  w =  40;  h =  48; }   // ano_46, ano_56
+    sprite_24  { sheet = 1;  x = 160;  y = 268;  w =  40;  h =  48; }   // ano_47, ano_57
+    sprite_25  { sheet = 1;  x = 200;  y = 268;  w =  40;  h =  48; }   // ano_48, ano_58
+    sprite_26  { sheet = 1;  x = 240;  y = 268;  w =  40;  h =  48; }   // ano_49, ano_59
+    sprite_27  { sheet = 2;  x = 352;  y = 288;  w =  56;  h =  30; }   // ano_82
+    sprite_28  { sheet = 3;  x = 193;  y =   0;  w =  110;  h =  32; }   // ano_84
+    sprite_29  { sheet = 1;  x =   0;  y = 316;  w = 264;  h =  40; }   // ano_85, ano_218, ano_240, ano_241
+    sprite_30  { sheet = 2;  x =   0;  y = 320;  w = 232;  h =  28; }   // ano_86, ano_288
+    sprite_31  { sheet = 0;  x =   0;  y = 324;  w = 469;  h = 119; }   // ano_88, ano_89, ano_90, ano_150, ano_151, ano_152
+    sprite_32  { sheet = 1;  x =   0;  y = 154;  w = 471;  h =  57; }   // ano_91, ano_257, ano_286
+    sprite_33  { sheet = 1;  x =   0;  y = 211;  w = 471;  h =  57; }   // ano_92
+    sprite_34  { sheet = 1;  x = 300;  y =   0;  w = 128;  h =  58; }   // ano_93
+    sprite_35  { sheet = 1;  x =   0;  y =  96;  w = 128;  h =  58; }   // ano_94
+    sprite_36  { sheet = 1;  x = 240;  y = 434;  w = 192;  h =  37; }   // ano_95
+    sprite_37  { sheet = 2;  x = 128;  y = 374;  w = 288;  h =  17; }   // ano_96
+    sprite_38  { sheet = 2;  x =   0;  y = 392;  w = 212;  h =   7; }   // ano_97
+    sprite_39  { sheet = 2;  x = 224;  y =   0;  w =  32;  h =  32; }   // ano_98
+    sprite_40  { sheet = 2;  x = 492;  y = 128;  w =  16;  h =  18; }   // ano_99
+    sprite_41  { sheet = 2;  x = 456;  y = 320;  w =  16;  h =  18; }   // ano_100
+    sprite_42  { sheet = 2;  x = 472;  y = 320;  w =  16;  h =  18; }   // ano_101
+    sprite_43  { sheet = 2;  x = 488;  y = 320;  w =  16;  h =  18; }   // ano_102
+    sprite_44  { sheet = 2;  x = 136;  y = 348;  w =  16;  h =  18; }   // ano_103
+    sprite_45  { sheet = 2;  x = 152;  y = 348;  w =  16;  h =  18; }   // ano_104
+    sprite_46  { sheet = 2;  x = 168;  y = 348;  w =  16;  h =  18; }   // ano_105
+    sprite_47  { sheet = 2;  x = 184;  y = 348;  w =  16;  h =  18; }   // ano_106
+    sprite_48  { sheet = 2;  x = 200;  y = 348;  w =  16;  h =  18; }   // ano_107
+    sprite_49  { sheet = 2;  x = 216;  y = 348;  w =  16;  h =  18; }   // ano_108
+    sprite_50  { sheet = 2;  x = 232;  y = 348;  w =  16;  h =  18; }   // ano_109
+    sprite_51  { sheet = 2;  x = 248;  y = 348;  w =  16;  h =  18; }   // ano_110
+    sprite_52  { sheet = 2;  x = 264;  y = 348;  w =  16;  h =  18; }   // ano_111
+    sprite_53  { sheet = 2;  x = 280;  y = 348;  w =  16;  h =  18; }   // ano_112
+    sprite_54  { sheet = 2;  x = 296;  y = 348;  w =  16;  h =  18; }   // ano_113
+    sprite_55  { sheet = 2;  x = 312;  y = 348;  w =  16;  h =  18; }   // ano_114
+    sprite_56  { sheet = 2;  x = 328;  y = 348;  w =  16;  h =  18; }   // ano_115
+    sprite_57  { sheet = 2;  x = 344;  y = 348;  w =  16;  h =  18; }   // ano_116
+    sprite_58  { sheet = 2;  x = 360;  y = 348;  w =  16;  h =  18; }   // ano_117
+    sprite_59  { sheet = 2;  x = 376;  y = 348;  w =  16;  h =  18; }   // ano_118
+    sprite_60  { sheet = 2;  x = 392;  y = 348;  w =  16;  h =  18; }   // ano_119
+    sprite_61  { sheet = 2;  x = 408;  y = 348;  w =  16;  h =  18; }   // ano_130
+    sprite_62  { sheet = 2;  x = 424;  y = 348;  w =  16;  h =  18; }   // ano_131
+    sprite_63  { sheet = 2;  x = 440;  y = 348;  w =  16;  h =  18; }   // ano_132
+    sprite_64  { sheet = 2;  x = 456;  y = 348;  w =  16;  h =  18; }   // ano_133
+    sprite_65  { sheet = 2;  x = 472;  y = 348;  w =  16;  h =  18; }   // ano_134
+    sprite_66  { sheet = 2;  x = 488;  y = 348;  w =  16;  h =  18; }   // ano_135
+    sprite_67  { sheet = 2;  x =   0;  y = 374;  w =  16;  h =  18; }   // ano_136
+    sprite_68  { sheet = 2;  x =  16;  y = 374;  w =  16;  h =  18; }   // ano_137
+    sprite_69  { sheet = 2;  x =  32;  y = 374;  w =  16;  h =  18; }   // ano_138
+    sprite_70  { sheet = 2;  x =  48;  y = 374;  w =  16;  h =  18; }   // ano_139
+    sprite_71  { sheet = 2;  x =  64;  y = 374;  w =  16;  h =  18; }   // ano_140
+    sprite_72  { sheet = 2;  x =  80;  y = 374;  w =  16;  h =  18; }   // ano_141
+    sprite_73  { sheet = 2;  x =  96;  y = 374;  w =  16;  h =  18; }   // ano_142
+    sprite_74  { sheet = 2;  x = 112;  y = 374;  w =  16;  h =  18; }   // ano_143
+    sprite_75  { sheet = 2;  x = 256;  y =   0;  w =  72;  h =  32; }   // ano_144, ano_145
+    sprite_76  { sheet = 2;  x = 328;  y =   0;  w = 112;  h =  32; }   // ano_153
+    sprite_77  { sheet = 3;  x = 305;  y =   0;  w =  115;  h =  32; }   // ano_154
+    sprite_78  { sheet = 3;  x =   0;  y =  34;  w =  142;  h =  32; }   // ano_155
+    sprite_79  { sheet = 2;  x =  96;  y =  32;  w = 160;  h =  32; }   // ano_156
+    sprite_80  { sheet = 3;  x = 144;  y =  34;  w = 178;  h =  32; }   // ano_157
+    sprite_81  { sheet = 3;  x = 324;  y =  34;  w =  90;  h =  32; }   // ano_158
+    sprite_82  { sheet = 3;  x =   416;  y =  34;  w =  67;  h =  32; }   // ano_159
+    sprite_83  { sheet = 3;  x = 0;  y =  68;  w =  71;  h =  32; }   // ano_160
+    sprite_84  { sheet = 2;  x =  64;  y =  64;  w = 112;  h =  32; }   // ano_161
+    sprite_85  { sheet = 2;  x = 176;  y =  64;  w = 128;  h =  32; }   // ano_162
+    sprite_86  { sheet = 2;  x = 304;  y =  64;  w = 128;  h =  32; }   // ano_163
+    sprite_87  { sheet = 2;  x =   0;  y =  96;  w = 192;  h =  32; }   // ano_164
+    sprite_88  { sheet = 2;  x = 192;  y =  96;  w = 192;  h =  32; }   // ano_165
+    sprite_89  { sheet = 2;  x =   0;  y = 128;  w = 144;  h =  32; }   // ano_166
+    sprite_90  { sheet = 2;  x = 432;  y =  64;  w =  32;  h =  32; }   // ano_167
+    sprite_91  { sheet = 1;  x = 372;  y = 268;  w =  36;  h =  36; }   // ano_168, ano_169, ano_255, ano_256, ano_260, ano_261...
+    sprite_92  { sheet = 2;  x = 464;  y =  64;  w =  48;  h =  32; }   // ano_178
+    sprite_93  { sheet = 3;  x = 73;  y =  68;  w =  73;  h =  32; }   // ano_179
+    sprite_94  { sheet = 3;  x = 148;  y =  68;  w =  81;  h =  32; }   // ano_180
+    sprite_95  { sheet = 2;  x = 144;  y = 128;  w =  80;  h =  32; }   // ano_181
+    sprite_96  { sheet = 2;  x = 224;  y = 128;  w =  48;  h =  32; }   // ano_182
+    sprite_97  { sheet = 2;  x = 272;  y = 128;  w =  48;  h =  32; }   // ano_183
+    sprite_98  { sheet = 2;  x = 320;  y = 128;  w =  64;  h =  32; }   // ano_184
+    sprite_99  { sheet = 2;  x = 384;  y = 128;  w =  20;  h =  32; }   // ano_185, ano_231
+    sprite_100 { sheet = 2;  x = 404;  y = 128;  w =  22;  h =  32; }   // ano_186, ano_232
+    sprite_101 { sheet = 2;  x = 428;  y = 128;  w =  20;  h =  32; }   // ano_187, ano_233
+    sprite_102 { sheet = 2;  x = 448;  y = 128;  w =  20;  h =  32; }   // ano_188, ano_234
+    sprite_103 { sheet = 2;  x = 468;  y = 128;  w =  21;  h =  32; }   // ano_189, ano_235
+    sprite_104 { sheet = 2;  x =   0;  y = 160;  w =  20;  h =  32; }   // ano_190, ano_236
+    sprite_105 { sheet = 2;  x =  20;  y = 160;  w =  21;  h =  32; }   // ano_191, ano_237
+    sprite_106 { sheet = 2;  x =  44;  y = 160;  w =  21;  h =  32; }   // ano_192, ano_238
+    sprite_107 { sheet = 2;  x =  68;  y = 160;  w = 128;  h =  32; }   // ano_193
+    sprite_108 { sheet = 2;  x = 196;  y = 160;  w =  80;  h =  32; }   // ano_194
+    sprite_109 { sheet = 2;  x = 276;  y = 160;  w =  64;  h =  32; }   // ano_195
+    sprite_110 { sheet = 2;  x =   0;  y = 192;  w = 192;  h =  32; }   // ano_196
+    sprite_111 { sheet = 2;  x = 340;  y = 160;  w =  48;  h =  32; }   // ano_197
+    sprite_112 { sheet = 2;  x = 388;  y = 160;  w = 112;  h =  32; }   // ano_198
+    sprite_113 { sheet = 3;  x = 314;  y = 68;  w =  58;  h =  32; }   // ano_199
+    sprite_114 { sheet = 1;  x =   0;  y = 434;  w = 240;  h =  38; }   // ano_200, ano_201, ano_202, ano_203, ano_204, ano_205...
+    sprite_115 { sheet = 1;  x = 408;  y = 268;  w =  35;  h =  34; }   // ano_213
+    sprite_116 { sheet = 2;  x = 232;  y = 320;  w = 161;  h =  28; }   // ano_225, ano_279, ano_297, ano_299
+    sprite_117 { sheet = 3;  x = 374;  y = 68;  w = 130;  h =  32; }   // ano_226
+    sprite_118 { sheet = 3;  x = 0;  y = 102;  w =  70;  h =  32; }   // ano_227, ano_243, ano_244
+    sprite_119 { sheet = 2;  x =   0;  y = 224;  w = 144;  h =  32; }   // ano_228
+    sprite_120 { sheet = 2;  x = 496;  y =  96;  w =  11;  h =  32; }   // ano_229
+    sprite_121 { sheet = 2;  x = 416;  y = 192;  w =  20;  h =  32; }   // ano_230
+    sprite_122 { sheet = 2;  x = 436;  y = 192;  w =  20;  h =  32; }   // ano_239
+    sprite_123 { sheet = 2;  x = 144;  y = 224;  w =  80;  h =  32; }   // ano_245
+    sprite_124 { sheet = 2;  x = 224;  y = 224;  w = 144;  h =  32; }   // ano_246
+    sprite_125 { sheet = 1;  x = 264;  y = 316;  w = 168;  h =  40; }   // ano_249
+    sprite_126 { sheet = 1;  x =   0;  y = 356;  w = 168;  h =  40; }   // ano_250, ano_303
+    sprite_127 { sheet = 1;  x = 168;  y = 356;  w = 169;  h =  40; }   // ano_251
+    sprite_128 { sheet = 2;  x = 368;  y = 224;  w =  96;  h =  32; }   // ano_252
+    sprite_129 { sheet = 2;  x =   0;  y = 256;  w = 120;  h =  32; }   // ano_253
+    sprite_130 { sheet = 3;  x = 137;  y = 102;  w = 125;  h =  32; }   // ano_254
+    sprite_131 { sheet = 2;  x = 240;  y = 256;  w =  64;  h =  32; }   // ano_258, ano_265
+    sprite_132 { sheet = 3;  x = 72;  y = 102;  w =  63;  h =  32; }   // ano_259
+    sprite_133 { sheet = 3;  x = 264;  y = 102;  w =  68;  h =  32; }   // ano_263, ano_276
+    sprite_134 { sheet = 2;  x = 368;  y = 256;  w =  96;  h =  32; }   // ano_264
+    sprite_135 { sheet = 2;  x = 416;  y = 374;  w =  18;  h =  16; }   // ano_272
+    sprite_136 { sheet = 1;  x =   0;  y =   0;  w = 236;  h =  96; }   // ano_277, ano_278
+    sprite_137 { sheet = 3;  x =   231;  y = 68;  w =  81;  h =  32; }   // ano_280
+    sprite_138 { sheet = 2;  x =  64;  y = 288;  w =  80;  h =  32; }   // ano_281
+    sprite_139 { sheet = 2;  x = 464;  y = 224;  w =  48;  h =  32; }   // ano_282
+    sprite_140 { sheet = 2;  x = 144;  y = 288;  w =  64;  h =  32; }   // ano_283
+    sprite_141 { sheet = 3;  x = 334;  y = 102;  w =  104;  h =  32; }   // ano_294
+    sprite_142 { sheet = 2;  x = 288;  y = 288;  w =  64;  h =  32; }   // ano_295
+    sprite_143 { sheet = 1;  x = 236;  y =   0;  w =  64;  h =  64; }   // ano_302
+    sprite_144 { sheet = 2;  x =   0;  y = 348;  w = 136;  h =  26; }   // ano_304
+    sprite_145 { sheet = 3;  x = 0;  y = 136;  w =  121;  h =  26; }   // ano_305
+    sprite_146 { sheet = 3;  x = 123;  y = 136;  w = 190;  h = 32; }   // frase del ano_223
+    sprite_147 { sheet = 3;  x = 315;  y = 136;  w = 70;  h = 32; }   // frase del ano_245
+    sprite_148 { sheet = 3;  x = 387;  y = 136;  w = 80;  h = 32; }   // frase del ano_258
+    sprite_149 { sheet = 3;  x = 0;  y = 170;  w = 152;  h = 32; }   // frase del ano_200
+    sprite_150 { sheet = 3;  x = 154;  y = 170;  w = 199;  h = 32; }   // frase del ano_211
+    sprite_151 { sheet = 3;  x = 0;  y = 204;  w = 199;  h = 32; }   // frase del ano_284
+    sprite_152 { sheet = 3;  x = 201;  y = 204;  w = 134;  h = 32; }   // frase del ano_214
+    sprite_153 { sheet = 3;  x = 337;  y = 204;  w = 165;  h = 32; }   // frase del ano_216
+    sprite_154 { sheet = 3;  x = 0;  y = 238;  w = 225;  h = 32; }   // frase del ano_225
+    sprite_155 { sheet = 3;  x = 227;  y = 238;  w = 92;  h = 22; }   // frase del ano_252
+    sprite_156 { sheet = 3;  x = 321;  y = 238;  w = 92;  h = 22; }   // frase del ano_253
+    sprite_157 { sheet = 3;  x = 415;  y = 238;  w = 92;  h = 22; }   // frase del ano_254
+}

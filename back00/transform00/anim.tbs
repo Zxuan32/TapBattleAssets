@@ -1,0 +1,56 @@
+animation {
+    // Animaciones del personaje. Cada bloque 'ano_N' es la animacion
+    // que el motor pide con ese numero; 'ano_M = ano_N;' es un alias,
+    // los dos numeros comparten la misma animacion.
+    //
+    // Regla del lenguaje: 'clave = valor;' es un dato, una palabra
+    // suelta es un flag, y una declaracion con argumentos ('hurtbox
+    // at ... size ...') declara algo que el frame contiene.
+    //
+    // Los flags del binario NO se escriben: se deducen de los campos
+    // presentes. Quita 'sound = 80;' y el bit se apaga solo, asi que
+    // no hay forma de dejarlos descuadrados.
+    //
+    // 'link' es otra animacion que corre A LA VEZ que esta (los rayos
+    // de Vegito, por ejemplo). Con flag 12 va muy lenta y con 4 al
+    // ritmo normal. Son por ano: hay que repetirlos en cada uno.
+    //
+    // Cajas de un frame: 'hurtbox' la del personaje, 'hitbox' la de
+    // ataque, 'spawn ano_N' lanza el ano N (201-255), y ademas
+    // 'blackscreen', 'shake N', 'charf N', 'collision'.
+    //
+    // Flags del frame (lo que hacen en el motor):
+    //   loop        al acabar vuelve al primer frame de este ano
+    //   flip_x/_y   espeja las cajas en X / en Y
+    //   keep_speed  conserva la velocidad del frame anterior; sin el,
+    //               la velocidad se pone a cero
+    //
+    // El bloque 'options':
+    //   effect = N  que polvo levanta (1-15)
+    //   cancel      deja seguir pulsando / disparar mas balas
+    //   wall        el golpe va contra la pared
+    //   power = N   potencia del dano
+    //   damage = N  indice de dano (tablas 14-33 del bin)
+    //   tween       interpola giro, alfa y zoom hasta el frame que viene
+    //
+    // 'padding' son bytes cero detras del ultimo frame. El motor pide
+    // una animacion en base + indice*4, asi que todas empiezan en un
+    // multiplo de 4; el original redondeaba el bloque entero a esa
+    // rejilla y esos bytes son lo que sobra. Nadie los lee: se
+    // conservan solo para que un .pac sin tocar salga identico, y
+    // cambiarlos no rompe nada.
+
+    anos  = 3;   // tamano de la tabla: no hay anos por encima de este
+
+    ano_0 {
+        frame { time = 1; sprite = sprite_0; origin = 0, 1; }
+    }
+
+    ano_1 {
+        frame { time = 1; sprite = sprite_1; origin = 0, -234; }
+    }
+
+    ano_2 {
+        frame { time = 1; sprite = sprite_2; origin = 0, -330; }
+    }
+}

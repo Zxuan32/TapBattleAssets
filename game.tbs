@@ -1,0 +1,136 @@
+game {
+    // Indice de los assets del juego. Cada 'package' es una carpeta
+    // con su pack.tbs dentro, que se compila a un .pac. Lo demas son
+    // ficheros que el motor abre por nombre, sin contenedor.
+    //
+    // Para los paquetes manda la CARPETA, no esta lista: al construir
+    // se compila todo directorio que tenga pack.tbs, este aqui o no.
+    // Asi copiar una carpeta anade un personaje y renombrarla lo muda
+    // de ranura, igual que en la utilidad del movil.
+    //
+    // Borrar una carpeta NO quita el asset: build_apk.sh copia primero
+    // los .pac originales de src/assets y encima lo compilado, asi que
+    // el original vuelve a salir. Para quitar uno de verdad esta
+    // 'hide': el fichero no llega al APK. Escondiendo el chardemoNN de
+    // un personaje desaparece del plantel sin tocar codigo, porque
+    // CheckCharctorFiles (TCBManajer1 /*0115E*/) exige los tres:
+    // charNN.pac, chardemoNN.pac y charf00NN.pac.
+
+    package "back00";
+    package "back01";
+    package "back02";
+    package "back03";
+    package "bobj01";
+    package "bobj02";
+    package "bobj03";
+    package "bobj04";
+    package "card000";
+    package "card001";
+    package "card002";
+    package "card003";
+    package "card004";
+    package "card005";
+    package "card006";
+    package "card007";
+    package "card008";
+    package "card009";
+    package "card010";
+    package "card011";
+    package "card012";
+    package "card013";
+    package "card014";
+    package "card015";
+    package "card016";
+    package "card017";
+    package "card018";
+    package "card019";
+    package "card020";
+    package "card021";
+    package "card022";
+    package "card023";
+    package "card024";
+    package "card025";
+    package "card026";
+    package "card027";
+    package "card028";
+    package "card029";
+    package "card030";
+    package "card031";
+    package "card032";
+    package "card033";
+    package "card034";
+    package "card035";
+    package "card036";
+    package "card037";
+    package "card038";
+    package "card039";
+    package "card040";
+    package "card041";
+    package "card042";
+    package "card043";
+    package "card044";
+    package "card045";
+    package "card046";
+    package "card047";
+    package "card048";
+    package "card049";
+    package "card050";
+    package "card_preview";
+    package "char00";
+    package "char01";
+    package "char02";
+    package "char03";
+    package "char04";
+    package "char05";
+    package "char06";
+    package "char07";
+    package "char08";
+    package "char09";
+    package "char10";
+    package "char11";
+    package "char12";
+    package "char13";
+    package "chardemo00";
+    package "chardemo01";
+    package "chardemo02";
+    package "chardemo03";
+    package "chardemo04";
+    package "chardemo05";
+    package "chardemo06";
+    package "chardemo07";
+    package "chardemo08";
+    package "chardemo09";
+    package "chardemo10";
+    package "chardemo11";
+    package "chardemo12";
+    package "chardemo13";
+    package "chardemo99";
+    package "charf0000";
+    package "charf0001";
+    package "charf0002";
+    package "charf0003";
+    package "charf0004";
+    package "charf0005";
+    package "charf0006";
+    package "charf0007";
+    package "charf0008";
+    package "charf0009";
+    package "charf0010";
+    package "charf0011";
+    package "charf0012";
+    package "charf0013";
+    package "common";
+    package "demo_00";
+    package "demo_08";
+    package "effect";
+    package "font00";
+    package "gamedata";
+    package "select0";
+    package "text00";
+
+    audio "audio.tbs";
+    file "loose/loading.png" as "loading.png";
+    file "loose/mk.bin" as "mk.bin";
+    file "loose/save.bin" as "save.bin";
+    file "loose/save1.bin" as "save1.bin";
+}

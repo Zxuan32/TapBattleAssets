@@ -1,0 +1,59 @@
+package "char06.pac" {
+    // Contenido del .pac, EN ORDEN: asi lo lee GameData.Init y el
+    // orden es significativo. El numero de 'image' es la hoja que
+    // nombra 'sheet' en sprites.tbs, y el de 'sound' la voz que pide
+    // 'sound = N' en animation.tbs. Mover una entrada renumera todas
+    // las de su tipo, asi que se anade al final ('extract.py adopt').
+    //
+    // Una voz N se pide desde un frame con 'sound = 80 + N':
+    // TCBManajer1 /*00DC1*/ hace playAudio(no - 80); por debajo de 80
+    // /*00DBD*/ es un se_NN.ogg suelto, no una voz del personaje.
+    //
+    // 'extra' son 4 bytes que el juego NO LEE: GameData.Init saca de
+    // cada entrada el offset (pos+0..3), el tamano (pos+4..7) y el
+    // tipo (pos+8..11), y a decodeData solo le pasa esos tres; los
+    // pos+12..15 no los toca nadie. Tampoco son checksum: hay tres
+    // wav de contenido identico con tres 'extra' distintos. Se
+    // conservan tal cual solo para que el .pac salga identico; en una
+    // entrada nueva se deja sin poner y ya.
+
+    image   "png00.png"   extra = 0xf20a3d00;   // hoja 0
+    image   "png01.png"   extra = 0x70b7e100;   // hoja 1
+    image   "png02.png"   extra = 0x01f0c600;   // hoja 2
+    image   "png03.png"   extra = 0xf72cde00;   // hoja 3
+    image   "png04.png"   extra = 0xa0c4e100;   // hoja 4
+    image   "png05.png"   extra = 0x71868900;   // hoja 5
+    image   "png06.png"   extra = 0xb92e7000;   // hoja 6
+    image   "png07.png"   extra = 0x7d02bd00;   // hoja 7
+    image   "png08.png"   extra = 0x0c830f00;   // hoja 8
+    image   "png09.png"   extra = 0x343f6f00;   // hoja 9
+    image   "png10.png"   extra = 0x4fed8d00;   // hoja 10
+    image   "png11.png"   extra = 0x6cee6200;   // hoja 11
+    image   "png12.png"   extra = 0x5666eb00;   // hoja 12
+    image   "png13.png"   extra = 0xfece4500;   // hoja 13
+    image   "png14.png"   extra = 0xb7a43700;   // hoja 14
+    image   "png15.png"   extra = 0xd7a8e900;   // hoja 15
+    image   "png16.png"   extra = 0xe3b1b900;   // hoja 16
+    image   "png17.png"   extra = 0x3343dd00;   // hoja 17
+    image   "png18.png"   extra = 0x66c63f00;   // hoja 18
+    image   "png19.png"   extra = 0x44a4a600;   // hoja 19
+    tables  "tables.tbs"  extra = 0xfdd26300;
+    sprites "sprites.tbs" extra = 0x6c33ef00;
+    anim    "anim.tbs"    extra = 0x45cc1600;
+    sound   "wav00.wav"   extra = 0x9fb63200;   // 22050 Hz, 16 bit, mono, 0.84 s
+    sound   "wav01.wav"   extra = 0x1fc1e300;   // 22050 Hz, 16 bit, mono, 0.93 s
+    sound   "wav02.wav"   extra = 0x12ad1200;   // 22050 Hz, 16 bit, mono, 0.01 s
+    sound   "wav03.wav"   extra = 0x82c3f600;   // 22050 Hz, 16 bit, mono, 0.01 s
+    sound   "wav04.wav"   extra = 0x7ef08600;   // 22050 Hz, 16 bit, mono, 0.01 s
+    sound   "wav05.wav"   extra = 0x80dc8c00;   // 22050 Hz, 16 bit, mono, 0.96 s
+    sound   "wav06.wav"   extra = 0x1ed5bd00;   // 22050 Hz, 16 bit, mono, 1.04 s
+    sound   "wav07.wav"   extra = 0xd3b8f800;   // 22050 Hz, 16 bit, mono, 0.40 s
+    sound   "wav08.wav"   extra = 0x13523d00;   // 22050 Hz, 16 bit, mono, 0.58 s
+    sound   "wav09.wav"   extra = 0xc98b0f00;   // 22050 Hz, 16 bit, mono, 0.76 s
+    sound   "wav10.wav"   extra = 0x0a3c3d00;   // 22050 Hz, 16 bit, mono, 3.44 s
+    sound   "wav11.wav"   extra = 0xccfe1600;   // 22050 Hz, 16 bit, mono, 1.32 s
+    sound   "wav12.wav"   extra = 0xc3043200;   // 22050 Hz, 16 bit, mono, 2.10 s
+    sound   "wav13.wav"   extra = 0xc55c6200;   // 22050 Hz, 16 bit, mono, 0.81 s
+    sound   "wav14.wav"   extra = 0x4283a300;   // 22050 Hz, 16 bit, mono, 1.14 s
+    info    "info.tbs";
+}

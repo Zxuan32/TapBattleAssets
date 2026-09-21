@@ -1,0 +1,879 @@
+animation {
+    // Animaciones del personaje. Cada bloque 'ano_N' es la animacion
+    // que el motor pide con ese numero; 'ano_M = ano_N;' es un alias,
+    // los dos numeros comparten la misma animacion.
+    //
+    // Regla del lenguaje: 'clave = valor;' es un dato, una palabra
+    // suelta es un flag, y una declaracion con argumentos ('hurtbox
+    // at ... size ...') declara algo que el frame contiene.
+    //
+    // Los flags del binario NO se escriben: se deducen de los campos
+    // presentes. Quita 'sound = 80;' y el bit se apaga solo, asi que
+    // no hay forma de dejarlos descuadrados.
+    //
+    // 'link' es otra animacion que corre A LA VEZ que esta (los rayos
+    // de Vegito, por ejemplo). Con flag 12 va muy lenta y con 4 al
+    // ritmo normal. Son por ano: hay que repetirlos en cada uno.
+    //
+    // Cajas de un frame: 'hurtbox' la del personaje, 'hitbox' la de
+    // ataque, 'spawn ano_N' lanza el ano N (201-255), y ademas
+    // 'blackscreen', 'shake N', 'charf N', 'collision'.
+    //
+    // Flags del frame (lo que hacen en el motor):
+    //   loop        al acabar vuelve al primer frame de este ano
+    //   flip_x/_y   espeja las cajas en X / en Y
+    //   keep_speed  conserva la velocidad del frame anterior; sin el,
+    //               la velocidad se pone a cero
+    //
+    // El bloque 'options':
+    //   effect = N  que polvo levanta (1-15)
+    //   cancel      deja seguir pulsando / disparar mas balas
+    //   wall        el golpe va contra la pared
+    //   power = N   potencia del dano
+    //   damage = N  indice de dano (tablas 14-33 del bin)
+    //   tween       interpola giro, alfa y zoom hasta el frame que viene
+    //
+    // 'padding' son bytes cero detras del ultimo frame. El motor pide
+    // una animacion en base + indice*4, asi que todas empiezan en un
+    // multiplo de 4; el original redondeaba el bloque entero a esa
+    // rejilla y esos bytes son lo que sobra. Nadie los lee: se
+    // conservan solo para que un .pac sin tocar salga identico, y
+    // cambiarlos no rompe nada.
+
+    anos  = 183;   // tamano de la tabla: no hay anos por encima de este
+    padding = 1;   // relleno de ceros al final, ver el comentario
+
+    ano_0 {
+        link ano_1 { flag = 12; }
+        link ano_61 { flag = 12; offset = 242, 0; }
+        frame { time = 1; sprite = sprite_0; origin = 130, 8; }
+    }
+
+    ano_1 {
+        priority = 1;
+        frame { time = 1; sprite = sprite_1; origin = 8, 8; }
+    }
+
+    ano_2 {
+        link ano_1 { flag = 12; }
+        link ano_3 { flag = 12; }
+        frame { time = 1; sprite = sprite_2; origin = 168, 6; }
+    }
+
+    ano_3 {
+        frame { sprite = sprite_3; origin = 232, 5; }
+    }
+
+    ano_4 {
+        priority = 1;
+        frame { sprite = sprite_4; origin = -16, 4; }
+    }
+
+    ano_5 {
+        priority = 1;
+        frame {
+            time = 30; sprite = sprite_5; origin = -16, 4;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+            options { tween; }
+        }
+        frame {
+            time = 1; sprite = sprite_5; origin = -16, 4;
+            render { rotate = 0; alpha = 511; zoom = 100, 100; }
+            options { tween; }
+        }
+    }
+
+    ano_6 {
+        frame {
+            time = 1; sprite = sprite_6; origin = -141, 282;
+            render { rotate = 0; alpha = 255; zoom = 500, 100; }
+        }
+    }
+
+    ano_7 {
+        frame { sprite = sprite_7; origin = -8, 0; }
+    }
+
+    ano_8 {
+        frame { time = 1; sprite = sprite_8; origin = -16, -8; }
+    }
+
+    ano_9 {
+        frame { time = 1; sprite = sprite_8; origin = -16, -8; }
+    }
+
+    ano_10 {
+        frame {
+            time = 1; sprite = sprite_8; origin = -16, -8;
+            options { tween; }
+        }
+    }
+
+    ano_11 {
+        frame {
+            time = 1; sprite = sprite_9; origin = -3, 3;
+            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+        }
+    }
+
+    ano_12 {
+        frame {
+            time = 1; sprite = sprite_10; origin = -3, 3;
+            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+        }
+    }
+
+    ano_13 {
+        frame {
+            time = 1; sprite = sprite_11; origin = -3, 3;
+            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+        }
+    }
+
+    ano_14 {
+        frame {
+            time = 1; sprite = sprite_12; origin = -3, 3;
+            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+        }
+    }
+
+    ano_15 {
+        frame {
+            time = 1; sprite = sprite_13; origin = -3, 3;
+            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+        }
+    }
+
+    ano_16 {
+        frame {
+            time = 1; sprite = sprite_14; origin = -3, 3;
+            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+        }
+    }
+
+    ano_17 {
+        frame {
+            time = 1; sprite = sprite_15; origin = -3, 3;
+            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+        }
+    }
+
+    ano_18 {
+        frame { sprite = -1; }
+    }
+
+    ano_19 {
+        frame { sprite = -1; }
+    }
+
+    ano_20 {
+        link ano_4 { flag = 12; }
+        link ano_11 { flag = 12; }
+        frame { time = 10; sprite = sprite_16; origin = 94, 8; speed_x = -1572864; }
+    }
+
+    ano_21 {
+        link ano_4 { flag = 12; }
+        link ano_11 { flag = 12; }
+        frame { sprite = sprite_16; origin = 94, 8; }
+    }
+
+    ano_22 {
+        link ano_5 { flag = 4; }
+        link ano_11 { flag = 12; }
+        link ano_4 { flag = 4; }
+        frame { time = 30; sprite = sprite_16; origin = 94, 8; }
+    }
+
+    ano_23 {
+        link ano_4 { flag = 12; }
+        link ano_11 { flag = 12; }
+        frame { time = 30; sprite = sprite_16; origin = 94, 8; speed_x = -1572864; }
+    }
+
+    ano_24 {
+        link ano_4 { flag = 12; }
+        link ano_12 { flag = 12; }
+        frame { time = 10; sprite = sprite_17; origin = 64, 8; speed_x = -1572864; }
+    }
+
+    ano_25 {
+        link ano_4 { flag = 12; }
+        link ano_12 { flag = 12; }
+        frame { sprite = sprite_17; origin = 64, 8; }
+    }
+
+    ano_26 {
+        link ano_5 { flag = 4; }
+        link ano_12 { flag = 12; }
+        link ano_4 { flag = 4; }
+        frame { time = 30; sprite = sprite_17; origin = 64, 8; }
+    }
+
+    ano_27 {
+        link ano_4 { flag = 12; }
+        link ano_12 { flag = 12; }
+        frame { time = 30; sprite = sprite_17; origin = 64, 8; speed_x = -1572864; }
+    }
+
+    ano_28 {
+        link ano_4 { flag = 12; }
+        link ano_13 { flag = 12; }
+        frame { time = 10; sprite = sprite_18; origin = 37, 8; speed_x = -1572864; }
+    }
+
+    ano_29 {
+        link ano_4 { flag = 12; }
+        link ano_13 { flag = 12; }
+        frame { sprite = sprite_18; origin = 37, 8; }
+    }
+
+    ano_30 {
+        link ano_5 { flag = 4; }
+        link ano_13 { flag = 12; }
+        link ano_4 { flag = 4; }
+        frame { time = 30; sprite = sprite_18; origin = 37, 8; }
+    }
+
+    ano_31 {
+        link ano_4 { flag = 12; }
+        link ano_13 { flag = 12; }
+        frame { time = 30; sprite = sprite_18; origin = 37, 8; speed_x = -1572864; }
+    }
+
+    ano_32 {
+        link ano_4 { flag = 12; }
+        link ano_14 { flag = 12; }
+        frame { time = 10; sprite = sprite_19; origin = 72, 8; speed_x = -1572864; }
+    }
+
+    ano_33 {
+        link ano_4 { flag = 12; }
+        link ano_14 { flag = 12; }
+        frame { sprite = sprite_19; origin = 72, 8; }
+    }
+
+    ano_34 {
+        link ano_5 { flag = 4; }
+        link ano_14 { flag = 12; }
+        link ano_4 { flag = 4; }
+        frame { time = 30; sprite = sprite_19; origin = 72, 8; }
+    }
+
+    ano_35 {
+        link ano_4 { flag = 12; }
+        link ano_14 { flag = 12; }
+        frame { time = 30; sprite = sprite_19; origin = 72, 8; speed_x = -1572864; }
+    }
+
+    ano_36 {
+        link ano_4 { flag = 12; }
+        link ano_15 { flag = 12; }
+        frame { time = 10; sprite = sprite_20; origin = 58, 8; speed_x = -1572864; }
+    }
+
+    ano_37 {
+        link ano_4 { flag = 12; }
+        link ano_15 { flag = 12; }
+        frame { sprite = sprite_20; origin = 58, 8; }
+    }
+
+    ano_38 {
+        link ano_5 { flag = 4; }
+        link ano_15 { flag = 12; }
+        link ano_4 { flag = 4; }
+        frame { time = 30; sprite = sprite_20; origin = 58, 8; }
+    }
+
+    ano_39 {
+        link ano_4 { flag = 12; }
+        link ano_15 { flag = 12; }
+        frame { time = 30; sprite = sprite_20; origin = 58, 8; speed_x = -1572864; }
+    }
+
+    ano_40 {
+        link ano_4 { flag = 12; }
+        link ano_16 { flag = 12; }
+        frame { time = 10; sprite = sprite_21; origin = 72, 8; speed_x = -1572864; }
+    }
+
+    ano_41 {
+        link ano_4 { flag = 12; }
+        link ano_16 { flag = 12; }
+        frame { sprite = sprite_21; origin = 72, 8; }
+    }
+
+    ano_42 {
+        link ano_5 { flag = 4; }
+        link ano_16 { flag = 12; }
+        link ano_4 { flag = 4; }
+        frame { time = 30; sprite = sprite_21; origin = 72, 8; }
+    }
+
+    ano_43 {
+        link ano_4 { flag = 12; }
+        link ano_16 { flag = 12; }
+        frame { time = 30; sprite = sprite_21; origin = 72, 8; speed_x = -1572864; }
+    }
+
+    ano_44 {
+        frame { sprite = -1; }
+    }
+
+    ano_45 {
+        frame { sprite = -1; }
+    }
+
+    ano_46 {
+        frame { sprite = -1; }
+    }
+
+    ano_47 {
+        frame { sprite = -1; }
+    }
+
+    ano_48 {
+        frame { sprite = -1; }
+    }
+
+    ano_49 {
+        frame { sprite = -1; }
+    }
+
+    ano_50 {
+        link ano_1 { flag = 12; }
+        link ano_3 { flag = 12; }
+        frame { sprite = sprite_16; origin = 204, 9; }
+    }
+
+    ano_51 {
+        link ano_1 { flag = 12; }
+        frame { sprite = sprite_17; origin = 175, 8; }
+    }
+
+    ano_52 {
+        link ano_4 { flag = 12; offset = 0, -8; }
+        frame { sprite = sprite_22; origin = 76, -2; }
+    }
+
+    ano_53 {
+        link ano_5 { flag = 4; offset = 0, -8; }
+        link ano_4 { flag = 4; offset = 0, -8; }
+        frame { time = 30; sprite = sprite_22; origin = 76, -2; }
+    }
+
+    ano_54 {
+        link ano_4 { flag = 12; offset = 0, -4; }
+        frame { sprite = sprite_23; origin = 76, 3; }
+    }
+
+    ano_55 {
+        link ano_5 { flag = 4; offset = 0, -4; }
+        link ano_4 { flag = 4; offset = 0, -4; }
+        frame { time = 30; sprite = sprite_23; origin = 76, 3; }
+    }
+
+    ano_56 {
+        link ano_4 { flag = 12; }
+        frame { sprite = sprite_24; origin = 68, 7; }
+    }
+
+    ano_57 {
+        link ano_5 { flag = 4; }
+        link ano_4 { flag = 4; }
+        frame { time = 30; sprite = sprite_24; origin = 68, 7; }
+    }
+
+    ano_58 {
+        frame { sprite = -1; }
+    }
+
+    ano_59 {
+        frame { sprite = -1; }
+    }
+
+    ano_60 {
+        link ano_1 { flag = 12; }
+        frame { time = 1; sprite = sprite_0; origin = 130, 8; }
+    }
+
+    ano_61 {
+        frame { sprite = sprite_25; origin = 0, 8; }
+    }
+
+    ano_62 {
+        frame { sprite = -1; }
+    }
+
+    ano_63 {
+        frame { sprite = -1; }
+    }
+
+    ano_64 {
+        frame { sprite = -1; }
+    }
+
+    ano_65 {
+        frame { sprite = -1; }
+    }
+
+    ano_66 {
+        frame { sprite = -1; }
+    }
+
+    ano_67 {
+        frame { sprite = -1; }
+    }
+
+    ano_68 {
+        frame { sprite = -1; }
+    }
+
+    ano_69 {
+        frame { sprite = -1; }
+    }
+
+    ano_70 {
+        frame { sprite = -1; }
+    }
+
+    ano_71 {
+        frame { sprite = -1; }
+    }
+
+    ano_72 {
+        frame { sprite = -1; }
+    }
+
+    ano_73 {
+        frame { sprite = -1; }
+    }
+
+    ano_74 {
+        frame { sprite = -1; }
+    }
+
+    ano_75 {
+        frame { sprite = -1; }
+    }
+
+    ano_76 {
+        frame { sprite = -1; }
+    }
+
+    ano_77 {
+        frame { sprite = -1; }
+    }
+
+    ano_78 {
+        frame { sprite = -1; }
+    }
+
+    ano_79 {
+        frame { sprite = -1; }
+    }
+
+    ano_80 {
+        frame { sprite = -1; }
+    }
+
+    ano_81 {
+        frame { sprite = -1; }
+    }
+
+    ano_82 {
+        frame { sprite = -1; }
+    }
+
+    ano_83 {
+        frame { sprite = -1; }
+    }
+
+    ano_84 {
+        frame { sprite = -1; }
+    }
+
+    ano_85 {
+        frame { sprite = -1; }
+    }
+
+    ano_86 {
+        frame { sprite = -1; }
+    }
+
+    ano_87 {
+        frame { sprite = -1; }
+    }
+
+    ano_88 {
+        frame { sprite = -1; }
+    }
+
+    ano_89 {
+        frame { sprite = -1; }
+    }
+
+    ano_90 {
+        frame { sprite = -1; }
+    }
+
+    ano_91 {
+        frame { sprite = -1; }
+    }
+
+    ano_92 {
+        frame { sprite = -1; }
+    }
+
+    ano_93 {
+        frame { sprite = -1; }
+    }
+
+    ano_94 {
+        frame { sprite = -1; }
+    }
+
+    ano_95 {
+        frame { sprite = -1; }
+    }
+
+    ano_96 {
+        frame { sprite = -1; }
+    }
+
+    ano_97 {
+        frame { sprite = -1; }
+    }
+
+    ano_98 {
+        frame { sprite = -1; }
+    }
+
+    ano_99 {
+        frame { sprite = -1; }
+    }
+
+    ano_102 {
+        frame { sprite = -1; }
+    }
+
+    ano_103 {
+        frame { sprite = -1; }
+    }
+
+    ano_104 {
+        frame { sprite = -1; }
+    }
+
+    ano_105 {
+        frame { sprite = -1; }
+    }
+
+    ano_106 {
+        frame { sprite = -1; }
+    }
+
+    ano_107 {
+        frame { sprite = -1; }
+    }
+
+    ano_108 {
+        frame { sprite = -1; }
+    }
+
+    ano_109 {
+        frame { sprite = -1; }
+    }
+
+    ano_110 {
+        frame { sprite = -1; }
+    }
+
+    ano_111 {
+        frame { sprite = -1; }
+    }
+
+    ano_112 {
+        frame { sprite = -1; }
+    }
+
+    ano_113 {
+        frame { sprite = -1; }
+    }
+
+    ano_114 {
+        frame { sprite = -1; }
+    }
+
+    ano_115 {
+        frame { sprite = -1; }
+    }
+
+    ano_116 {
+        frame { sprite = -1; }
+    }
+
+    ano_117 {
+        frame { sprite = -1; }
+    }
+
+    ano_118 {
+        frame { sprite = -1; }
+    }
+
+    ano_119 {
+        frame { sprite = -1; }
+    }
+
+    ano_120 {
+        frame { sprite = -1; }
+    }
+
+    ano_121 {
+        frame { sprite = -1; }
+    }
+
+    ano_122 {
+        frame { sprite = -1; }
+    }
+
+    ano_123 {
+        frame { sprite = -1; }
+    }
+
+    ano_124 {
+        frame { sprite = -1; }
+    }
+
+    ano_125 {
+        frame { sprite = -1; }
+    }
+
+    ano_126 {
+        frame { sprite = -1; }
+    }
+
+    ano_127 {
+        frame { sprite = -1; }
+    }
+
+    ano_128 {
+        frame { sprite = -1; }
+    }
+
+    ano_129 {
+        frame { sprite = -1; }
+    }
+
+    ano_130 {
+        frame { sprite = -1; }
+    }
+
+    ano_131 {
+        frame { sprite = -1; }
+    }
+
+    ano_132 {
+        frame { sprite = -1; }
+    }
+
+    ano_133 {
+        frame { sprite = -1; }
+    }
+
+    ano_134 {
+        frame { sprite = -1; }
+    }
+
+    ano_135 {
+        frame { sprite = -1; }
+    }
+
+    ano_136 {
+        frame { sprite = -1; }
+    }
+
+    ano_137 {
+        frame { sprite = -1; }
+    }
+
+    ano_138 {
+        frame { sprite = -1; }
+    }
+
+    ano_139 {
+        frame { sprite = -1; }
+    }
+
+    ano_140 {
+        frame { sprite = -1; }
+    }
+
+    ano_141 {
+        frame { sprite = -1; }
+    }
+
+    ano_142 {
+        frame { sprite = -1; }
+    }
+
+    ano_143 {
+        frame { sprite = -1; }
+    }
+
+    ano_144 {
+        frame { sprite = -1; }
+    }
+
+    ano_145 {
+        frame { sprite = -1; }
+    }
+
+    ano_146 {
+        frame { sprite = -1; }
+    }
+
+    ano_147 {
+        frame { sprite = -1; }
+    }
+
+    ano_148 {
+        frame { sprite = -1; }
+    }
+
+    ano_149 {
+        frame { sprite = -1; }
+    }
+
+    ano_150 {
+        frame { sprite = -1; }
+    }
+
+    ano_151 {
+        frame { sprite = -1; }
+    }
+
+    ano_152 {
+        frame { sprite = -1; }
+    }
+
+    ano_153 {
+        frame { sprite = -1; }
+    }
+
+    ano_154 {
+        frame { sprite = -1; }
+    }
+
+    ano_155 {
+        frame { sprite = -1; }
+    }
+
+    ano_156 {
+        frame { sprite = -1; }
+    }
+
+    ano_157 {
+        frame { sprite = -1; }
+    }
+
+    ano_158 {
+        frame { sprite = -1; }
+    }
+
+    ano_159 {
+        frame { sprite = -1; }
+    }
+
+    ano_160 {
+        frame { sprite = -1; }
+    }
+
+    ano_161 {
+        frame { sprite = -1; }
+    }
+
+    ano_162 {
+        frame { sprite = -1; }
+    }
+
+    ano_163 {
+        frame { sprite = -1; }
+    }
+
+    ano_164 {
+        frame { sprite = -1; }
+    }
+
+    ano_165 {
+        frame { sprite = -1; }
+    }
+
+    ano_166 {
+        frame { sprite = -1; }
+    }
+
+    ano_167 {
+        frame { sprite = -1; }
+    }
+
+    ano_168 {
+        frame { sprite = -1; }
+    }
+
+    ano_169 {
+        frame { sprite = -1; }
+    }
+
+    ano_170 {
+        frame { sprite = -1; }
+    }
+
+    ano_171 {
+        frame { sprite = -1; }
+    }
+
+    ano_172 {
+        frame { sprite = -1; }
+    }
+
+    ano_173 {
+        frame { sprite = -1; }
+    }
+
+    ano_174 {
+        frame { sprite = -1; }
+    }
+
+    ano_175 {
+        frame { sprite = -1; }
+    }
+
+    ano_176 {
+        frame { sprite = -1; }
+    }
+
+    ano_177 {
+        frame { sprite = -1; }
+    }
+
+    ano_178 {
+        frame { sprite = -1; }
+    }
+
+    ano_179 {
+        frame { sprite = -1; }
+    }
+
+    ano_180 {
+        frame { sprite = -1; }
+    }
+
+    ano_181 {
+        frame { sprite = -1; }
+    }
+
+    ano_182 {
+        frame { sprite = -1; }
+    }
+}

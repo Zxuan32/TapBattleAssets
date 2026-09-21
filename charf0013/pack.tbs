@@ -1,0 +1,25 @@
+package "charf0013.pac" {
+    // Contenido del .pac, EN ORDEN: asi lo lee GameData.Init y el
+    // orden es significativo. El numero de 'image' es la hoja que
+    // nombra 'sheet' en sprites.tbs, y el de 'sound' la voz que pide
+    // 'sound = N' en animation.tbs. Mover una entrada renumera todas
+    // las de su tipo, asi que se anade al final ('extract.py adopt').
+    //
+    // Una voz N se pide desde un frame con 'sound = 80 + N':
+    // TCBManajer1 /*00DC1*/ hace playAudio(no - 80); por debajo de 80
+    // /*00DBD*/ es un se_NN.ogg suelto, no una voz del personaje.
+    //
+    // 'extra' son 4 bytes que el juego NO LEE: GameData.Init saca de
+    // cada entrada el offset (pos+0..3), el tamano (pos+4..7) y el
+    // tipo (pos+8..11), y a decodeData solo le pasa esos tres; los
+    // pos+12..15 no los toca nadie. Tampoco son checksum: hay tres
+    // wav de contenido identico con tres 'extra' distintos. Se
+    // conservan tal cual solo para que el .pac salga identico; en una
+    // entrada nueva se deja sin poner y ya.
+
+    image   "png00.png"   extra = 0xb6585300;   // hoja 0
+    image   "png01.png"   extra = 0xcdae7d00;   // hoja 1
+    image   "png02.png"   extra = 0x77fcec00;   // hoja 2
+    sprites "sprites.tbs" extra = 0x9de26500;
+    anim    "anim.tbs"    extra = 0x03622e00;
+}

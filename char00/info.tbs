@@ -1,0 +1,11 @@
+info {
+    // Nombre del personaje, para las utilidades. El juego NO lo lee:
+    // el que sale en la barra de vida es un dibujo, el de
+    // charf00NN.pac.
+    //
+    // Vive aqui dentro para que viaje con la carpeta: si mudas al
+    // personaje de ranura o lo copias para crear uno nuevo, el nombre
+    // va con el. Cambialo y lo veran las dos utilidades.
+
+    name = "Goku SSJ";
+}

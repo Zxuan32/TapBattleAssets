@@ -1,0 +1,906 @@
+animation {
+    // Animaciones del personaje. Cada bloque 'ano_N' es la animacion
+    // que el motor pide con ese numero; 'ano_M = ano_N;' es un alias,
+    // los dos numeros comparten la misma animacion.
+    //
+    // Regla del lenguaje: 'clave = valor;' es un dato, una palabra
+    // suelta es un flag, y una declaracion con argumentos ('hurtbox
+    // at ... size ...') declara algo que el frame contiene.
+    //
+    // Los flags del binario NO se escriben: se deducen de los campos
+    // presentes. Quita 'sound = 80;' y el bit se apaga solo, asi que
+    // no hay forma de dejarlos descuadrados.
+    //
+    // 'link' es otra animacion que corre A LA VEZ que esta (los rayos
+    // de Vegito, por ejemplo). Con flag 12 va muy lenta y con 4 al
+    // ritmo normal. Son por ano: hay que repetirlos en cada uno.
+    //
+    // Cajas de un frame: 'hurtbox' la del personaje, 'hitbox' la de
+    // ataque, 'spawn ano_N' lanza el ano N (201-255), y ademas
+    // 'blackscreen', 'shake N', 'charf N', 'collision'.
+    //
+    // Flags del frame (lo que hacen en el motor):
+    //   loop        al acabar vuelve al primer frame de este ano
+    //   flip_x/_y   espeja las cajas en X / en Y
+    //   keep_speed  conserva la velocidad del frame anterior; sin el,
+    //               la velocidad se pone a cero
+    //
+    // El bloque 'options':
+    //   effect = N  que polvo levanta (1-15)
+    //   cancel      deja seguir pulsando / disparar mas balas
+    //   wall        el golpe va contra la pared
+    //   power = N   potencia del dano
+    //   damage = N  indice de dano (tablas 14-33 del bin)
+    //   tween       interpola giro, alfa y zoom hasta el frame que viene
+    //
+    // 'padding' son bytes cero detras del ultimo frame. El motor pide
+    // una animacion en base + indice*4, asi que todas empiezan en un
+    // multiplo de 4; el original redondeaba el bloque entero a esa
+    // rejilla y esos bytes son lo que sobra. Nadie los lee: se
+    // conservan solo para que un .pac sin tocar salga identico, y
+    // cambiarlos no rompe nada.
+
+    anos  = 405;   // tamano de la tabla: no hay anos por encima de este
+
+    ano_0 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_0;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_1 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_1;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_2 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_2;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_3 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_3;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_4 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_4;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_5 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_5;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_6 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_6;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_7 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_7;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_8 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_8;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_9 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_9;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_10 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_10;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_11 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_11;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_12 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_12;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_13 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_13;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_14 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_14;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_15 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_15;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_16 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_16;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_17 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_17;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_18 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_18;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_19 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_19;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_20 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_20;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_21 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_21;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_22 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_22;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_23 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_23;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_24 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_24;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_25 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_25;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_26 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_26;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_27 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_27;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_28 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_28;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_29 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_29;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_30 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_30;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_31 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_31;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_32 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_32;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_33 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_33;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_34 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_34;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_35 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_35;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_36 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_36;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_37 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_37;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_38 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_38;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_39 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_39;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_40 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_40;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_41 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_41;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_42 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_42;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_43 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_43;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_44 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_44;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_45 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_45;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_46 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_46;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_47 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_47;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_48 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_48;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_49 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_49;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_50 {
+        link ano_404 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_50;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_200 {
+        link ano_0 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_201 {
+        link ano_1 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_202 {
+        link ano_2 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_203 {
+        link ano_3 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_204 {
+        link ano_4 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_205 {
+        link ano_5 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_206 {
+        link ano_6 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_207 {
+        link ano_7 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_208 {
+        link ano_8 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_209 {
+        link ano_9 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_210 {
+        link ano_10 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_211 {
+        link ano_11 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_212 {
+        link ano_12 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_213 {
+        link ano_13 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_214 {
+        link ano_14 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_215 {
+        link ano_15 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_216 {
+        link ano_16 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_217 {
+        link ano_17 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_218 {
+        link ano_18 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_219 {
+        link ano_19 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_220 {
+        link ano_20 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_221 {
+        link ano_21 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_222 {
+        link ano_22 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_223 {
+        link ano_23 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_224 {
+        link ano_24 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_225 {
+        link ano_25 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_226 {
+        link ano_26 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_227 {
+        link ano_27 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_228 {
+        link ano_28 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_229 {
+        link ano_29 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_230 {
+        link ano_30 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_231 {
+        link ano_31 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_232 {
+        link ano_32 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_233 {
+        link ano_33 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_234 {
+        link ano_34 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_235 {
+        link ano_35 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_236 {
+        link ano_36 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_237 {
+        link ano_37 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_238 {
+        link ano_38 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_239 {
+        link ano_39 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_240 {
+        link ano_40 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_241 {
+        link ano_41 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_242 {
+        link ano_42 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_243 {
+        link ano_43 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_244 {
+        link ano_44 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_245 {
+        link ano_45 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_246 {
+        link ano_46 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_247 {
+        link ano_47 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_248 {
+        link ano_48 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_249 {
+        link ano_49 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_250 {
+        link ano_50 { flag = 12; }
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_300 {
+        frame {
+            time = 1; sprite = sprite_51;
+            render { rotate = 0; alpha = 80; zoom = 65, 65; }
+        }
+    }
+
+    ano_399 {
+        frame { sprite = sprite_52; }
+    }
+
+    ano_400 {
+        frame {
+            time = 1; sprite = sprite_53;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_401 {
+        frame {
+            time = 1; sprite = sprite_54;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_402 {
+        frame {
+            time = 1; sprite = sprite_55;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_403 {
+        frame {
+            time = 1; sprite = sprite_56;
+            render { rotate = 0; alpha = 0; zoom = 65, 65; }
+        }
+    }
+
+    ano_404 {
+        frame {
+            time = 1; sprite = sprite_57; origin = -7, -6;
+            render { rotate = 0; alpha = 256; zoom = 91, 81; }
+        }
+    }
+}

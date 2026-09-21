@@ -1,0 +1,183 @@
+animation {
+    // Animaciones del personaje. Cada bloque 'ano_N' es la animacion
+    // que el motor pide con ese numero; 'ano_M = ano_N;' es un alias,
+    // los dos numeros comparten la misma animacion.
+    //
+    // Regla del lenguaje: 'clave = valor;' es un dato, una palabra
+    // suelta es un flag, y una declaracion con argumentos ('hurtbox
+    // at ... size ...') declara algo que el frame contiene.
+    //
+    // Los flags del binario NO se escriben: se deducen de los campos
+    // presentes. Quita 'sound = 80;' y el bit se apaga solo, asi que
+    // no hay forma de dejarlos descuadrados.
+    //
+    // 'link' es otra animacion que corre A LA VEZ que esta (los rayos
+    // de Vegito, por ejemplo). Con flag 12 va muy lenta y con 4 al
+    // ritmo normal. Son por ano: hay que repetirlos en cada uno.
+    //
+    // Cajas de un frame: 'hurtbox' la del personaje, 'hitbox' la de
+    // ataque, 'spawn ano_N' lanza el ano N (201-255), y ademas
+    // 'blackscreen', 'shake N', 'charf N', 'collision'.
+    //
+    // Flags del frame (lo que hacen en el motor):
+    //   loop        al acabar vuelve al primer frame de este ano
+    //   flip_x/_y   espeja las cajas en X / en Y
+    //   keep_speed  conserva la velocidad del frame anterior; sin el,
+    //               la velocidad se pone a cero
+    //
+    // El bloque 'options':
+    //   effect = N  que polvo levanta (1-15)
+    //   cancel      deja seguir pulsando / disparar mas balas
+    //   wall        el golpe va contra la pared
+    //   power = N   potencia del dano
+    //   damage = N  indice de dano (tablas 14-33 del bin)
+    //   tween       interpola giro, alfa y zoom hasta el frame que viene
+    //
+    // 'padding' son bytes cero detras del ultimo frame. El motor pide
+    // una animacion en base + indice*4, asi que todas empiezan en un
+    // multiplo de 4; el original redondeaba el bloque entero a esa
+    // rejilla y esos bytes son lo que sobra. Nadie los lee: se
+    // conservan solo para que un .pac sin tocar salga identico, y
+    // cambiarlos no rompe nada.
+
+    anos  = 14;   // tamano de la tabla: no hay anos por encima de este
+    padding = 1;   // relleno de ceros al final, ver el comentario
+
+    ano_0 {
+        link ano_8 { flag = 4; }
+        link ano_5 { flag = 4; }
+        frame { time = 50; sprite = sprite_0; origin = 128, 62; }
+        frame { time = 1; sprite = sprite_0; origin = 128, 62; }
+    }
+
+    ano_1 {
+        link ano_8 { flag = 4; }
+        frame { time = 120; sprite = sprite_0; origin = 128, 62; }
+    }
+
+    ano_2 {
+        link ano_8 { flag = 4; }
+        link ano_6 { flag = 4; }
+        frame { time = 50; sprite = sprite_0; origin = 128, 62; }
+        frame { time = 30; sprite = sprite_0; origin = 128, 62; }
+        frame { time = 50; sprite = sprite_1; origin = 180, 99; }
+        frame { time = 1; sprite = sprite_1; origin = 180, 99; }
+    }
+
+    ano_3 {
+        link ano_8 { flag = 4; }
+        frame { time = 120; sprite = sprite_1; origin = 180, 99; }
+    }
+
+    ano_4 {
+        link ano_9 { flag = 4; }
+        link ano_10 { flag = 4; }
+        link ano_7 { flag = 4; }
+        frame { time = 50; sprite = sprite_1; origin = 180, 99; }
+        frame { time = 1; sprite = sprite_1; origin = 180, 99; }
+        frame { time = 1; sprite = -1; origin = 180, 99; }
+    }
+
+    ano_5 {
+        priority = 254;
+        frame {
+            time = 50; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 0; zoom = 220, 210; }
+            options { tween; }
+        }
+        frame {
+            time = 1; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 255; zoom = 220, 210; }
+        }
+    }
+
+    ano_6 {
+        priority = 254;
+        frame {
+            time = 50; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 255; zoom = 220, 210; }
+            options { tween; }
+        }
+        frame {
+            time = 30; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 0; zoom = 220, 210; }
+        }
+        frame {
+            time = 50; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 0; zoom = 220, 210; }
+            options { tween; }
+        }
+        frame {
+            time = 1; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 255; zoom = 220, 210; }
+        }
+    }
+
+    ano_7 {
+        priority = 254;
+        frame {
+            time = 50; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 255; zoom = 220, 210; }
+            options { tween; }
+        }
+        frame {
+            time = 1; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 0; zoom = 220, 210; }
+        }
+        frame {
+            time = 1; sprite = -1; origin = -88, -15;
+            render { rotate = 0; alpha = 0; zoom = 220, 210; }
+        }
+    }
+
+    ano_8 {
+        frame {
+            time = 1; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 0; zoom = 220, 210; }
+        }
+    }
+
+    ano_9 {
+        frame {
+            time = 60; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 0; zoom = 220, 210; }
+        }
+        frame {
+            time = 50; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 0; zoom = 220, 210; }
+            options { tween; }
+        }
+        frame {
+            time = 1; sprite = sprite_2; origin = -88, -15;
+            render { rotate = 0; alpha = 255; zoom = 220, 210; }
+        }
+    }
+
+    ano_10 {
+        frame {
+            time = 1; sprite = sprite_3; origin = -119, -15;
+            render { rotate = 0; alpha = 0; zoom = 999, 210; }
+        }
+    }
+
+    ano_11 {
+        link ano_12 { flag = 4; }
+        frame { time = 1; sprite = sprite_4; origin = -32, -32; }
+    }
+
+    ano_12 {
+        priority = 255;
+        frame {
+            time = 60; sprite = sprite_5; origin = -32, -32;
+            options { tween; }
+        }
+        frame {
+            time = 1; sprite = sprite_5; origin = -32, -32; loop;
+            render { rotate = 359; alpha = 0; zoom = 100, 100; }
+        }
+    }
+
+    ano_13 {
+        frame { sprite = sprite_6; origin = -49, -8; }
+    }
+}
