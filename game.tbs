@@ -1,21 +1,4 @@
 game {
-    // Indice de los assets del juego. Cada 'package' es una carpeta
-    // con su pack.tbs dentro, que se compila a un .pac. Lo demas son
-    // ficheros que el motor abre por nombre, sin contenedor.
-    //
-    // Para los paquetes manda la CARPETA, no esta lista: al construir
-    // se compila todo directorio que tenga pack.tbs, este aqui o no.
-    // Asi copiar una carpeta anade un personaje y renombrarla lo muda
-    // de ranura, igual que en la utilidad del movil.
-    //
-    // Borrar una carpeta NO quita el asset: build_apk.sh copia primero
-    // los .pac originales de src/assets y encima lo compilado, asi que
-    // el original vuelve a salir. Para quitar uno de verdad esta
-    // 'hide': el fichero no llega al APK. Escondiendo el chardemoNN de
-    // un personaje desaparece del plantel sin tocar codigo, porque
-    // CheckCharctorFiles (TCBManajer1 /*0115E*/) exige los tres:
-    // charNN.pac, chardemoNN.pac y charf00NN.pac.
-
     package "back00";
     package "back01";
     package "back02";

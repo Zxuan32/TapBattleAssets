@@ -1,7 +1,4 @@
 dump {
-    // Entrada 'cnv' que ningun decodificador supo leer:
-    // ningun decodificador lo entiende
-    // Queda en hexadecimal, editable byte a byte.
     bytes = "04002000000092001402f6031000480260030100020003000400050006000700";
     bytes = "080009000a000b000c000d000e000f0010001100120013001400150001000200";
     bytes = "03000400050006000700080009000a000b000c000d000e000f00100011001200";

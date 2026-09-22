@@ -1,27 +1,8 @@
 tables {
-    // Tablas de datos del personaje (GameData.binCnv). Cada 'row_N'
-    // es una fila de bytes; el numero es su indice, para poder ir a
-    // una fila concreta sin ponerse a contar.
-    //
-    // 'columns' y 'rows' son lo que declara la cabecera del binario;
-    // 'real' son las filas que de verdad ocupa el bloque, que suelen
-    // ser mas: el motor indexa sin mirar el alto declarado y guarda
-    // datos ahi (la ultimate esta en la fila 22 de la tabla 4 aunque
-    // esa declare 19, y los efectos de cinematica en la 44 de la 13).
-    //
-    // 'gap' y 'tail' son bytes entre tablas que la cabecera no
-    // describe; se conservan tal cual.
-    //
-    // Al compilar se recalculan las posiciones, asi que cambiar el
-    // tamano de una tabla puede dejar mal las celdas que sean
-    // punteros a otra.
-
     table_0 {
-        // cada COLUMNA es una CPUSeq, asignada segun el nivel de CPU;
-        // al final, los datos del CPURand
         columns = 4;
-        rows    = 400;   // lo que declara la cabecera
-        real    = 500;   // las que de verdad hay (tamano / columns)
+        rows    = 400;
+        real    = 500;
         row_0   = 129,  64,   0,   0;
         row_1   =   0, 129,  73,   0;
         row_2   =  12,   0, 129, 103;
@@ -525,10 +506,9 @@ tables {
     }
 
     table_1 {
-        // synchro que se suma segun el cambio de dano
         columns = 4;
-        rows    = 400;   // lo que declara la cabecera
-        real    = 500;   // las que de verdad hay (tamano / columns)
+        rows    = 400;
+        real    = 500;
         row_0   = 150, 179,   1,   0;
         row_1   =   0, 144, 167,   1;
         row_2   =  12,   0, 140, 192;
@@ -1032,10 +1012,9 @@ tables {
     }
 
     table_2 {
-        // textos del personaje
         columns = 4;
-        rows    = 400;   // lo que declara la cabecera
-        real    = 500;   // las que de verdad hay (tamano / columns)
+        rows    = 400;
+        real    = 500;
         row_0   = 140, 142,   2,   0;
         row_1   =   0, 150, 194,   2;
         row_2   =  12,   0, 144, 183;
@@ -1539,17 +1518,9 @@ tables {
     }
 
     table_3 {
-        // stats base (18 bytes):
-        //   0 Y,X ispeed move (val<<16)   9 defensa de carta
-        //   1 X move (val<<16)           11 iHP
-        //   3 iXSize/iLeft/iRight        12 iattack (val*10)
-        //   4 limite Y del jugador       13 idefence (val*10)
-        //   5 iXSize/x move              16 ANO por defecto
-        //   6 tipo de aire               17 coste
-        //   8 isynchro (val*100)
         columns = 4;
-        rows    = 400;   // lo que declara la cabecera
-        real    = 500;   // las que de verdad hay (tamano / columns)
+        rows    = 400;
+        real    = 500;
         row_0   = 136, 200,   3,   0;
         row_1   =   0, 149, 189,   3;
         row_2   =  12,   0, 150, 125;
@@ -2053,17 +2024,8 @@ tables {
     }
 
     table_4 {
-        // registro de ataque. Un registro son DOS filas (48 bytes) y se
-        // indexa por SpecialType*2: la fila 22 es la ultimate de suelo y la
-        // 24 la de aire. Columnas del registro, en u16 LE:
-        //   0 SpecialKind/flag de ano1   13 flag de switch
-        //   1 ano1 (la animacion)        14 angulo
-        //   2-3 BulletAction[0..1]       15 max. de balas
-        //   4 ano                        16 iActNoBHit (ano)
-        //   5-8 iActNo1/2 tipos 1 y 2    17-18 BulletAction[0]
-        //   9-10 twork 4/5, de la bala   19-21 twork 12/13 (anos)
         columns = 4;
-        rows    = 160;   // lo que declara la cabecera
+        rows    = 160;
         row_0   =  32,   4,   0,   0;
         row_1   =  33,   4,  12,   0;
         row_2   =  34,   4,  24,   0;

@@ -1,26 +1,7 @@
 tables {
-    // Tablas de datos del personaje (GameData.binCnv). Cada 'row_N'
-    // es una fila de bytes; el numero es su indice, para poder ir a
-    // una fila concreta sin ponerse a contar.
-    //
-    // 'columns' y 'rows' son lo que declara la cabecera del binario;
-    // 'real' son las filas que de verdad ocupa el bloque, que suelen
-    // ser mas: el motor indexa sin mirar el alto declarado y guarda
-    // datos ahi (la ultimate esta en la fila 22 de la tabla 4 aunque
-    // esa declare 19, y los efectos de cinematica en la 44 de la 13).
-    //
-    // 'gap' y 'tail' son bytes entre tablas que la cabecera no
-    // describe; se conservan tal cual.
-    //
-    // Al compilar se recalculan las posiciones, asi que cambiar el
-    // tamano de una tabla puede dejar mal las celdas que sean
-    // punteros a otra.
-
     table_0 {
-        // cada COLUMNA es una CPUSeq, asignada segun el nivel de CPU;
-        // al final, los datos del CPURand
         columns = 16;
-        rows    = 45;   // lo que declara la cabecera
+        rows    = 45;
         row_0  =  0,  0,  0,  0,  0,  0,  0, 37,  0,  0,  0, 12, 12, 12, 12, 14;
         row_1  =  0,  0,  1,  1,  1,  1,  1,  3,  9,  9,  9,  9,  9,  9,  9,  3;
         row_2  =  1,  1,  2,  3,  3,  3,  3, 38, 12, 12, 12, 12, 12, 12, 12, 19;
@@ -69,17 +50,15 @@ tables {
     }
 
     table_1 {
-        // synchro que se suma segun el cambio de dano
         columns = 8;
-        rows    = 1;   // lo que declara la cabecera
+        rows    = 1;
         row_0 = 1, 1, 1, 1, 2, 1, 2, 1;
     }
 
     table_2 {
-        // textos del personaje
         columns = 1;
-        rows    = 128;   // lo que declara la cabecera
-        real    = 3863;   // las que de verdad hay (tamano / columns)
+        rows    = 128;
+        real    = 3863;
         text_0   = "El orguyoso principe de los sayajin_ﾂ｡es un guerrero de clase alta!";
         text_1   = "Vegeta se puede utilizar transformado��";
         text_2   = "蠑ｷ謾ｻ謦ィ(蝨ｰ荳�)_縲��｢蠑ｷ謾ｻ謦ィ�｣繧偵♀縺ｼ縺医◆!";
@@ -211,32 +190,15 @@ tables {
     }
 
     table_3 {
-        // stats base (18 bytes):
-        //   0 Y,X ispeed move (val<<16)   9 defensa de carta
-        //   1 X move (val<<16)           11 iHP
-        //   3 iXSize/iLeft/iRight        12 iattack (val*10)
-        //   4 limite Y del jugador       13 idefence (val*10)
-        //   5 iXSize/x move              16 ANO por defecto
-        //   6 tipo de aire               17 coste
-        //   8 isynchro (val*100)
         columns = 18;
-        rows    = 1;   // lo que declara la cabecera
+        rows    = 1;
         row_0 =   5,   5,  25,  56,  64,  80,   1,  10,   1,   2,   2, 100, 100,   0,   0,  48, 211,  11;
     }
 
     table_4 {
-        // registro de ataque. Un registro son DOS filas (48 bytes) y se
-        // indexa por SpecialType*2: la fila 22 es la ultimate de suelo y la
-        // 24 la de aire. Columnas del registro, en u16 LE:
-        //   0 SpecialKind/flag de ano1   13 flag de switch
-        //   1 ano1 (la animacion)        14 angulo
-        //   2-3 BulletAction[0..1]       15 max. de balas
-        //   4 ano                        16 iActNoBHit (ano)
-        //   5-8 iActNo1/2 tipos 1 y 2    17-18 BulletAction[0]
-        //   9-10 twork 4/5, de la bala   19-21 twork 12/13 (anos)
         columns = 24;
-        rows    = 19;   // lo que declara la cabecera
-        real    = 38;   // las que de verdad hay (tamano / columns)
+        rows    = 19;
+        real    = 38;
         row_0  =   0,   0,  40,   0,  47,   0, 211,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_1  =   0,   0,   1,   0,   0,   0,   1,   0,   0,   0,  47,   0,  47,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_2  =   0,   0,  93,   0,   0,   0,   0,   0,  48,   0,  92,   0,  63,   0,  92,   0,  63,   0,   0,   0,   0,   0,  48,   0;
@@ -279,17 +241,15 @@ tables {
 
     table_5 {
         columns = 40;
-        rows    = 1;   // lo que declara la cabecera
-        real    = 2;   // las que de verdad hay (tamano / columns)
+        rows    = 1;
+        real    = 2;
         row_0 = 244,   1, 244,   1,  44,   1, 100,   0, 200,   0, 100,   0, 100,   0, 100,   0, 200,   0, 200,   0, 200,   0, 200,   0, 200,   0,   0,   0,   0,   0,   0,   0,  88,   2,  88,   2,  44,   1, 100,   0;
         row_1 =  44,   1,   0,   0, 100,   0,   0,   0,   0,   0,  88,   2, 100,   0, 100,   0,  44,   1,   0,   0,   0,   0,   0,   0, 100,   0,  44,   1, 100,   0, 100,   0, 200,   0,   0,   0, 200,   0, 200,   0;
     }
 
     table_6 {
-        // la CPUSeq: index count, cpu count, 3 pares mas, next cpu seq,
-        // seq flag
         columns = 10;
-        rows    = 180;   // lo que declara la cabecera
+        rows    = 180;
         row_0   =  1, 15,  0,  0,  0,  0,  0,  0,  0,  0;
         row_1   = 13,  0,  0,  0,  0,  0,  0,  0,  0,  0;
         row_2   =  5,  6,  3,  0, 14,  0,  0,  0,  0,  0;
@@ -473,9 +433,8 @@ tables {
     }
 
     table_7 {
-        // por NIVEL: iHP, attacklv (x1000), iSynchro, defense LV, coste
         columns = 22;
-        rows    = 99;   // lo que declara la cabecera
+        rows    = 99;
         row_0  =   0,   0, 200,   0,   0,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   0;
         row_1  =   0,   2,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   5;
         row_2  =   0,   2,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   3;
@@ -579,7 +538,7 @@ tables {
 
     table_8 {
         columns = 1;
-        rows    = 48;   // lo que declara la cabecera
+        rows    = 48;
         row_0  =  0;
         row_1  = 28;
         row_2  = 39;
@@ -632,7 +591,7 @@ tables {
 
     table_9 {
         columns = 1;
-        rows    = 9;   // lo que declara la cabecera
+        rows    = 9;
         row_0 = 129;
         row_1 = 139;
         row_2 = 140;
@@ -646,18 +605,18 @@ tables {
 
     table_10 {
         columns = 16;
-        rows    = 1;   // lo que declara la cabecera
+        rows    = 1;
         row_0 = 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0;
     }
 
     table_11 {
         columns = 0;
-        rows    = 0;   // lo que declara la cabecera
+        rows    = 0;
     }
 
     table_12 {
         columns = 1;
-        rows    = 4;   // lo que declara la cabecera
+        rows    = 4;
         row_0 = 0;
         row_1 = 0;
         row_2 = 0;
@@ -665,12 +624,9 @@ tables {
     }
 
     table_13 {
-        // flags de acttype, limite de pt, ano left/right, flag de iBackPos
-        // y flag para ejecutar el md 925. La fila 44 son los efectos de
-        // cinematica (el comando de hit 20 la lee en parametro*2)
         columns = 8;
-        rows    = 26;   // lo que declara la cabecera
-        real    = 52;   // las que de verdad hay (tamano / columns)
+        rows    = 26;
+        real    = 52;
         row_0  =   0,   0,   1,   0,   1,   0, 145,   0;
         row_1  = 145,   0,   1,   0,   0,   0,   0,   0;
         row_2  =   0,   0,   0,   0,   1,   0, 146,   0;
@@ -726,190 +682,148 @@ tables {
     }
 
     table_14 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 1;   // lo que declara la cabecera
+        rows    = 1;
         row_0 = 255, 255,  20, 226, 120,   0,  10, 226, 120,   0,  10,  18,   4,  85;
     }
 
     table_15 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 2;   // lo que declara la cabecera
+        rows    = 2;
         row_0 =   8,   8,  20, 196, 166,   0,   5, 196, 186,   0,   5,  17,   2,   0;
         row_1 = 255, 255,  20, 255, 255,   0,   6, 255, 255,   0,   6,  17,   2,   0;
     }
 
     table_16 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 2;   // lo que declara la cabecera
+        rows    = 2;
         row_0 =   8,   8,  20, 251, 128,   0,   5, 251, 128,   0,   5,  12,   0,   0;
         row_1 = 255, 255,  20, 255, 255,   0,   6, 255, 255,   0,   6,  12,   0,   0;
     }
 
     table_17 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 0;
-        rows    = 0;   // lo que declara la cabecera
+        rows    = 0;
     }
 
     table_18 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 1;   // lo que declara la cabecera
+        rows    = 1;
         row_0 = 255, 255,  20, 136, 120,   0,  10, 136, 120,   0,  10,  35,   0,  85;
     }
 
     table_19 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 3;   // lo que declara la cabecera
+        rows    = 3;
         row_0 =   8,   8,  67,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_1 =   6,   6,  23,   0, 246,   0,   2,   0, 254,   0,   2,   0,   0,   0;
         row_2 =  36,  36, 111,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
     }
 
     table_20 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 2;   // lo que declara la cabecera
+        rows    = 2;
         row_0 =   4,   4,  20, 136, 236, 236,   0, 136, 236, 236,   0,   0,   0,   0;
         row_1 = 255, 255,  72, 255,   0,   0,   0, 255,   0,   0,   0,  33,   0,   0;
     }
 
     table_21 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 0;
-        rows    = 0;   // lo que declara la cabecera
+        rows    = 0;
     }
 
     table_22 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 0;
-        rows    = 0;   // lo que declara la cabecera
+        rows    = 0;
     }
 
     table_23 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 1;   // lo que declara la cabecera
+        rows    = 1;
         row_0 = 255, 255,  20, 136,  30,   0,   0, 136,  30,   0,   0,  17,   3,   0;
     }
 
     table_24 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 2;   // lo que declara la cabecera
+        rows    = 2;
         row_0 =   1,   1,  20, 136, 246,   0,   0, 136, 246,   0,   0,  41,   3,   0;
         row_1 = 255, 255,  20, 255,   0,   0,   0, 255,   0,   0,   0,  41,   3,   0;
     }
 
     table_25 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 3;   // lo que declara la cabecera
+        rows    = 3;
         row_0 =   1,   1,  68,  10,   0,   0,   0,  10,   0,   0,   0,   0,   0,   0;
         row_1 =  44,  44,  20,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_2 = 255, 255,  20,   0,   0,   0,   5,   0,   0,   0,   5,  44,   0,   0;
     }
 
     table_26 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 0;
-        rows    = 0;   // lo que declara la cabecera
+        rows    = 0;
     }
 
     table_27 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 2;   // lo que declara la cabecera
+        rows    = 2;
         row_0 =   8,   8,  20, 226, 186,   0,   5, 226, 206,   0,   5,  44,   0,   0;
         row_1 = 255, 255,  20, 255, 255,   0,   6, 255, 255,   0,   6,  44,   0,   0;
     }
 
     table_28 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 3;   // lo que declara la cabecera
+        rows    = 3;
         row_0 =   4,   8,  24,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_1 =   6,   6,  23, 236, 226, 254,   5, 254, 254, 254,   5,   0,   0,   0;
         row_2 = 255, 255,  24, 255, 255, 255, 255, 255, 255, 255, 255,  11,   0,   0;
     }
 
     table_29 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 2;   // lo que declara la cabecera
+        rows    = 2;
         row_0 =   1,   1,  20, 136, 246,   0,   0, 136, 246,   0,   0,  17,   3,   0;
         row_1 = 255, 255,  20, 255,   0,   0,   0, 255,   0,   0,   0,  17,   3,   0;
     }
 
     table_30 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 3;   // lo que declara la cabecera
+        rows    = 3;
         row_0 =   5,   5,  20,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_1 =   8,   8,  20, 196, 176,   0,   5, 196, 196,   0,   5,  44,   0,   0;
         row_2 = 255, 255,  20, 255, 255,   0,   6, 255, 255,   0,   6,  44,   0,   0;
     }
 
     table_31 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 2;   // lo que declara la cabecera
+        rows    = 2;
         row_0 =   1,   1,  20, 136, 246,   0,   0, 136, 246,   0,   0,  48,   3,   0;
         row_1 = 255, 255,  20, 255,   0,   0,   0, 255,   0,   0,   0,  48,   3,   0;
     }
 
     table_32 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 2;   // lo que declara la cabecera
+        rows    = 2;
         row_0 =   4,   4,  68, 136,   0,   0,   0, 136,   0,   0,   0, 255,   1,   0;
         row_1 = 255, 255,  20, 255,   0,   0,   0, 255,   0,   0,   0, 255,   1,   0;
     }
 
     table_33 {
-        // un indice de dano por fila: duracion a/b, ano, velocidades y
-        // aceleraciones, tipo de dano, flag, se
         columns = 14;
-        rows    = 1;   // lo que declara la cabecera
+        rows    = 1;
         row_0 = 255, 255,  20, 136,   0,   0,   0, 136,   0,   0,   0, 255,   1,   0;
     }
 
     table_34 {
-        // animacion especial + interruptor (SpecialPushAno)
         columns = 1;
-        rows    = 2;   // lo que declara la cabecera
+        rows    = 2;
         row_0 = 51;
         row_1 =  0;
     }
 
     table_35 {
-        // EventDamage
         columns = 2;
-        rows    = 7;   // lo que declara la cabecera
-        real    = 14;   // las que de verdad hay (tamano / columns)
+        rows    = 7;
+        real    = 14;
         row_0  = 30,  0;
         row_1  =  0,  0;
         row_2  = 10,  0;
@@ -927,9 +841,8 @@ tables {
     }
 
     table_36 {
-        // indices de sonido
         columns = 1;
-        rows    = 16;   // lo que declara la cabecera
+        rows    = 16;
         row_0  = 92;
         row_1  = 90;
         row_2  = 80;
@@ -949,31 +862,28 @@ tables {
     }
 
     table_37 {
-        // potencia de dano / angry power
         columns = 1;
-        rows    = 1;   // lo que declara la cabecera
+        rows    = 1;
         row_0 = 120;
     }
 
     table_38 {
-        // ID de carta
         columns = 1;
-        rows    = 1;   // lo que declara la cabecera
-        real    = 2;   // las que de verdad hay (tamano / columns)
+        rows    = 1;
+        real    = 2;
         row_0 = 6;
         row_1 = 0;
     }
 
     table_39 {
         columns = 1;
-        rows    = 1;   // lo que declara la cabecera
+        rows    = 1;
         row_0 = 1;
     }
 
     table_40 {
-        // la ruta de pelea, el jefe y el personaje inicial
         columns = 14;
-        rows    = 4;   // lo que declara la cabecera
+        rows    = 4;
         row_0 =  1,  6, 12,  2,  4,  3,  7,  8, 11, 10, 13, 14, 15,  0;
         row_1 =  9,  5,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0;
         row_2 =  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0;
@@ -982,17 +892,16 @@ tables {
 
     table_41 {
         columns = 2;
-        rows    = 3;   // lo que declara la cabecera
+        rows    = 3;
         row_0 = 0, 0;
         row_1 = 4, 0;
         row_2 = 4, 0;
     }
 
     table_42 {
-        // por boton: numero y gauge (x100)
         columns = 3;
-        rows    = 120;   // lo que declara la cabecera
-        real    = 240;   // las que de verdad hay (tamano / columns)
+        rows    = 120;
+        real    = 240;
         row_0   =  60,   0,   0;
         row_1   =   0,   0,   0;
         row_2   =  61,   0,   0;

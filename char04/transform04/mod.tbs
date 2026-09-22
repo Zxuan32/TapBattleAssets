@@ -1,11 +1,7 @@
 mod {
-    // Ajustes de mod de este personaje. NO es del juego original: es
-    // una entrada 'mod' anadida al .pac, que el motor sin parchear
-    // ignora sin tocarla.
-
     version           = 1;
-    transform_into    = none;   // en quien se transforma: charNN, 'self' o 'none'
-    animation         = 500;   // el cinematico de ESTA forma; por convencion el 500
-    ult_life_cost_pct = 35;   // dano propio al lanzar la ultimate, en % de vida
-    created_ano       = 500;   // el ano que creo la utilidad; el juego NO lo lee
+    transform_into    = none;
+    animation         = 500;
+    ult_life_cost_pct = 35;
+    created_ano       = 500;
 }

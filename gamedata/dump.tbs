@@ -1,6 +1,3 @@
 dump {
-    // Entrada 'cnv' que ningun decodificador supo leer:
-    // ningun decodificador lo entiende
-    // Queda en hexadecimal, editable byte a byte.
     bytes = "00";
 }

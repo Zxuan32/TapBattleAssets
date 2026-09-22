@@ -1,27 +1,8 @@
 tables {
-    // Tablas de datos del personaje (GameData.binCnv). Cada 'row_N'
-    // es una fila de bytes; el numero es su indice, para poder ir a
-    // una fila concreta sin ponerse a contar.
-    //
-    // 'columns' y 'rows' son lo que declara la cabecera del binario;
-    // 'real' son las filas que de verdad ocupa el bloque, que suelen
-    // ser mas: el motor indexa sin mirar el alto declarado y guarda
-    // datos ahi (la ultimate esta en la fila 22 de la tabla 4 aunque
-    // esa declare 19, y los efectos de cinematica en la 44 de la 13).
-    //
-    // 'gap' y 'tail' son bytes entre tablas que la cabecera no
-    // describe; se conservan tal cual.
-    //
-    // Al compilar se recalculan las posiciones, asi que cambiar el
-    // tamano de una tabla puede dejar mal las celdas que sean
-    // punteros a otra.
-
     table_0 {
-        // cada COLUMNA es una CPUSeq, asignada segun el nivel de CPU;
-        // al final, los datos del CPURand
         columns = 1;
-        rows    = 2;   // lo que declara la cabecera
-        real    = 86;   // las que de verdad hay (tamano / columns)
+        rows    = 2;
+        real    = 89;
         text_0 = "#c4Guardia del Gran Patriarca#c0";
         text_1 = "Tipo: bueno _Rango +#a1 _Costo #a2 _Atq #a3 / Def #a4";
     }

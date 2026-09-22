@@ -1,16 +1,4 @@
 color {
-    // Una paleta de color del personaje. Las hojas repintadas son los
-    // pngNN.png de esta carpeta -el numero es la hoja que pisan- y,
-    // si hay, los de demo/, que pisan las del chardemoNN (el modelo
-    // de la pantalla de seleccion). Lo que no este aqui se hereda sin
-    // tocar, asi que una paleta solo lleva lo que cambia.
-    //
-    // 'swatch' es el color del boton en el selector: se pinta con
-    // drawFillRect, no sale de ningun atlas. Es un 0xRRGGBB normal,
-    // el mismo #RRGGBB de CSS. Para que sea el color que de verdad
-    // pinta esta paleta:
-    //   tools/extract.py color <esta carpeta> --swatch auto
-
     name    = "Base";
-    swatch  = 0x1E3E7E;   // RRGGBB
+    swatch  = 0x1E3E7E;
 }

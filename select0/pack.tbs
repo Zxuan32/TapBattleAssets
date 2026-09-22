@@ -1,42 +1,24 @@
 package "select0.pac" {
-    // Contenido del .pac, EN ORDEN: asi lo lee GameData.Init y el
-    // orden es significativo. El numero de 'image' es la hoja que
-    // nombra 'sheet' en sprites.tbs, y el de 'sound' la voz que pide
-    // 'sound = N' en animation.tbs. Mover una entrada renumera todas
-    // las de su tipo, asi que se anade al final ('extract.py adopt').
-    //
-    // Una voz N se pide desde un frame con 'sound = 80 + N':
-    // TCBManajer1 /*00DC1*/ hace playAudio(no - 80); por debajo de 80
-    // /*00DBD*/ es un se_NN.ogg suelto, no una voz del personaje.
-    //
-    // 'extra' son 4 bytes que el juego NO LEE: GameData.Init saca de
-    // cada entrada el offset (pos+0..3), el tamano (pos+4..7) y el
-    // tipo (pos+8..11), y a decodeData solo le pasa esos tres; los
-    // pos+12..15 no los toca nadie. Tampoco son checksum: hay tres
-    // wav de contenido identico con tres 'extra' distintos. Se
-    // conservan tal cual solo para que el .pac salga identico; en una
-    // entrada nueva se deja sin poner y ya.
-
-    image   "png00.png"     extra = 0xc80c3d00;   // hoja 0
-    image   "png01.png"     extra = 0x5dda3f00;   // hoja 1
-    image   "png02.png";   // hoja 2
+    image   "png00.png"     extra = 0xc80c3d00;
+    image   "png01.png"     extra = 0x5dda3f00;
+    image   "png02.png";
     sprites "sprites.tbs"   extra = 0x27876000;
     anim    "anim.tbs"      extra = 0xb3e48b00;
     group "spr00" extra = 0x01b78200 {
-        image "spr00/png00.png"     extra = 0x4ae4a500;   // hoja 0
-        image "spr00/png01.png"     extra = 0x39ae0400;   // hoja 1
-        image "spr00/png02.png"     extra = 0x8dc22800;   // hoja 2
-        image "spr00/png03.png"     extra = 0x971d3600;   // hoja 3
-        image "spr00/png04.png"     extra = 0x1a1a7300;   // hoja 4
-        image "spr00/png05.png"     extra = 0x5538b700;   // hoja 5
-        image "spr00/png06.png"     extra = 0x04f90000;   // hoja 6
-        image "spr00/png07.png"     extra = 0xfa59e400;   // hoja 7
-        image "spr00/png08.png"     extra = 0x557adc00;   // hoja 8
-        image "spr00/png09.png"     extra = 0x2d794e00;   // hoja 9
-        image "spr00/png10.png"     extra = 0x5f78a200;   // hoja 10
-        image "spr00/png11.png"     extra = 0xe2184100;   // hoja 11
-        image "spr00/png12.png"     extra = 0x99e79f00;   // hoja 12
-        data  "spr00/raw/bin00.bin" type = "bin" extra = 0x2053ec00;   // sin decodificar, 279138 bytes
+        image "spr00/png00.png"     extra = 0x4ae4a500;
+        image "spr00/png01.png"     extra = 0x39ae0400;
+        image "spr00/png02.png"     extra = 0x8dc22800;
+        image "spr00/png03.png"     extra = 0x971d3600;
+        image "spr00/png04.png"     extra = 0x1a1a7300;
+        image "spr00/png05.png"     extra = 0x5538b700;
+        image "spr00/png06.png"     extra = 0x04f90000;
+        image "spr00/png07.png"     extra = 0xfa59e400;
+        image "spr00/png08.png"     extra = 0x557adc00;
+        image "spr00/png09.png"     extra = 0x2d794e00;
+        image "spr00/png10.png"     extra = 0x5f78a200;
+        image "spr00/png11.png"     extra = 0xe2184100;
+        image "spr00/png12.png"     extra = 0x99e79f00;
+        data  "spr00/raw/bin00.bin" type = "bin" extra = 0x2053ec00;
     }
-    data    "raw/plt00.plt" type = "plt" extra = 0x0a379200;   // sin decodificar, 9 bytes
+    data    "raw/plt00.plt" type = "plt" extra = 0x0a379200;
 }

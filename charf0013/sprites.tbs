@@ -1,31 +1,19 @@
 sprites {
-    // Recortes del atlas. 'sheet' es el numero de 'image' de
-    // pack.tbs, o sea que hoja .png se recorta.
-    // Las coordenadas van a MEDIA resolucion: el motor las multiplica
-    // por 2 al dibujar personajes (DrawImage, acttype 3 o 4), asi que
-    // un recorte de 70x64 se ve a 140x128.
-    // El numero de cada sprite es su POSICION: son un array, no se
-    // pueden saltar ni reordenar. Para quitar uno de en medio hay que
-    // reapuntar los frames que lo usan.
-    // El comentario de la derecha dice que anos lo usan; 'sin usar'
-    // es un recorte que no dibuja nadie (suele sobrar de un
-    // trasplante y se puede reaprovechar).
-
-    sprite_0  { sheet = 0;  x =   0;  y =   0;  w =  96;  h =  24; }   // ano_0, ano_1, ano_2
-    sprite_1  { sheet = 0;  x =  88;  y =  72;  w =  80;  h =  64; }   // ano_3, ano_13
-    sprite_2  { sheet = 0;  x =   0;  y =  72;  w =  88;  h =  56; }   // ano_4
-    sprite_3  { sheet = 1;  x =   0;  y = 120;  w = 192;  h = 128; }   // ano_5
-    sprite_4  { sheet = 2;  x =   0;  y =   0;  w =  88;  h = 128; }   // ano_6, ano_37, ano_38
-    sprite_5  { sheet = 1;  x = 168;  y =   0;  w =  80;  h = 120; }   // ano_7, ano_39, ano_40
-    sprite_6  { sheet = 0;  x =  48;  y = 136;  w =  48;  h =  80; }   // ano_8, ano_15
-    sprite_7  { sheet = 0;  x =  96;  y = 136;  w = 112;  h =  80; }   // ano_9
-    sprite_8  { sheet = 0;  x =   0;  y = 136;  w =  48;  h =  72; }   // ano_10
-    sprite_9  { sheet = 0;  x =   0;  y =  24;  w =  64;  h =  48; }   // ano_11, ano_33, ano_34
-    sprite_10 { sheet = 0;  x =  64;  y =  24;  w =  80;  h =  48; }   // ano_12
-    sprite_11 { sheet = 1;  x =   0;  y =   0;  w =  64;  h =  80; }   // ano_14
-    sprite_12 { sheet = 2;  x =  88;  y =   0;  w =  80;  h = 168; }   // ano_16
-    sprite_13 { sheet = 0;  x = 144;  y =  24;  w =  32;  h =  48; }   // ano_35
-    sprite_14 { sheet = 1;  x =  64;  y =   0;  w = 104;  h = 104; }   // ano_36
-    sprite_15 { sheet = 0;  x = 168;  y =  72;  w =  48;  h =  64; }   // ano_41, ano_43
-    sprite_16 { sheet = 0;  x =  96;  y =   0;  w = 104;  h =  24; }   // ano_42
+    sprite_0  { sheet = 0;  x =   0;  y =   0;  w =  96;  h =  24; }
+    sprite_1  { sheet = 0;  x =  88;  y =  72;  w =  80;  h =  64; }
+    sprite_2  { sheet = 0;  x =   0;  y =  72;  w =  88;  h =  56; }
+    sprite_3  { sheet = 1;  x =   0;  y = 120;  w = 192;  h = 128; }
+    sprite_4  { sheet = 2;  x =   0;  y =   0;  w =  88;  h = 128; }
+    sprite_5  { sheet = 1;  x = 168;  y =   0;  w =  80;  h = 120; }
+    sprite_6  { sheet = 0;  x =  48;  y = 136;  w =  48;  h =  80; }
+    sprite_7  { sheet = 0;  x =  96;  y = 136;  w = 112;  h =  80; }
+    sprite_8  { sheet = 0;  x =   0;  y = 136;  w =  48;  h =  72; }
+    sprite_9  { sheet = 0;  x =   0;  y =  24;  w =  64;  h =  48; }
+    sprite_10 { sheet = 0;  x =  64;  y =  24;  w =  80;  h =  48; }
+    sprite_11 { sheet = 1;  x =   0;  y =   0;  w =  64;  h =  80; }
+    sprite_12 { sheet = 2;  x =  88;  y =   0;  w =  80;  h = 168; }
+    sprite_13 { sheet = 0;  x = 144;  y =  24;  w =  32;  h =  48; }
+    sprite_14 { sheet = 1;  x =  64;  y =   0;  w = 104;  h = 104; }
+    sprite_15 { sheet = 0;  x = 168;  y =  72;  w =  48;  h =  64; }
+    sprite_16 { sheet = 0;  x =  96;  y =   0;  w = 104;  h =  24; }
 }

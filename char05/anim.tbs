@@ -1,49 +1,8 @@
 animation {
-    // Animaciones del personaje. Cada bloque 'ano_N' es la animacion
-    // que el motor pide con ese numero; 'ano_M = ano_N;' es un alias,
-    // los dos numeros comparten la misma animacion.
-    //
-    // Regla del lenguaje: 'clave = valor;' es un dato, una palabra
-    // suelta es un flag, y una declaracion con argumentos ('hurtbox
-    // at ... size ...') declara algo que el frame contiene.
-    //
-    // Los flags del binario NO se escriben: se deducen de los campos
-    // presentes. Quita 'sound = 80;' y el bit se apaga solo, asi que
-    // no hay forma de dejarlos descuadrados.
-    //
-    // 'link' es otra animacion que corre A LA VEZ que esta (los rayos
-    // de Vegito, por ejemplo). Con flag 12 va muy lenta y con 4 al
-    // ritmo normal. Son por ano: hay que repetirlos en cada uno.
-    //
-    // Cajas de un frame: 'hurtbox' la del personaje, 'hitbox' la de
-    // ataque, 'spawn ano_N' lanza el ano N (201-255), y ademas
-    // 'blackscreen', 'shake N', 'charf N', 'collision'.
-    //
-    // Flags del frame (lo que hacen en el motor):
-    //   loop        al acabar vuelve al primer frame de este ano
-    //   flip_x/_y   espeja las cajas en X / en Y
-    //   keep_speed  conserva la velocidad del frame anterior; sin el,
-    //               la velocidad se pone a cero
-    //
-    // El bloque 'options':
-    //   effect = N  que polvo levanta (1-15)
-    //   cancel      deja seguir pulsando / disparar mas balas
-    //   wall        el golpe va contra la pared
-    //   power = N   potencia del dano
-    //   damage = N  indice de dano (tablas 14-33 del bin)
-    //   tween       interpola giro, alfa y zoom hasta el frame que viene
-    //
-    // 'padding' son bytes cero detras del ultimo frame. El motor pide
-    // una animacion en base + indice*4, asi que todas empiezan en un
-    // multiplo de 4; el original redondeaba el bloque entero a esa
-    // rejilla y esos bytes son lo que sobra. Nadie los lee: se
-    // conservan solo para que un .pac sin tocar salga identico, y
-    // cambiarlos no rompe nada.
+    anos  = 354;
+    padding = 1;
 
-    anos  = 354;   // tamano de la tabla: no hay anos por encima de este
-    padding = 1;   // relleno de ceros al final, ver el comentario
-
-    ano_0 {   // parado
+    ano_0 {
         frame {
             time = 7; sprite = sprite_0; origin = -20, -120;
             hurtbox       at -31, -111  size 64, 112;
@@ -66,7 +25,7 @@ animation {
         }
     }
 
-    ano_1 {   // volando
+    ano_1 {
         frame {
             time = 7; sprite = sprite_0; origin = -20, -120;
             hurtbox       at -31, -111  size 64, 112;
@@ -94,7 +53,7 @@ animation {
         }
     }
 
-    ano_2 {   // dash
+    ano_2 {
         priority = 255;
         frame {
             time = 3; sprite = sprite_1; origin = -52, -96;
@@ -110,7 +69,7 @@ animation {
         }
     }
 
-    ano_3 {   // dash
+    ano_3 {
         priority = 255;
         frame {
             time = 3; sprite = sprite_1; origin = -52, -96; flip_x;
@@ -126,7 +85,7 @@ animation {
         }
     }
 
-    ano_4 {   // dash
+    ano_4 {
         frame {
             time = 12; sprite = -1; origin = -109, -253;
             hurtbox       at -31, -111  size 64, 112;
@@ -135,7 +94,7 @@ animation {
         }
     }
 
-    ano_5 {   // dash
+    ano_5 {
         priority = 255;
         frame {
             time = 6; sprite = sprite_2; origin = -40, -105;
@@ -149,7 +108,7 @@ animation {
         }
     }
 
-    ano_6 {   // dash
+    ano_6 {
         priority = 255;
         frame {
             time = 1; sprite = sprite_1; origin = -52, -96; sound = 16; speed_x = 917504;
@@ -179,7 +138,7 @@ animation {
         }
     }
 
-    ano_7 {   // dash
+    ano_7 {
         priority = 255;
         frame {
             time = 1; sprite = sprite_3; origin = -21, -110; sound = 16; speed_x = -917503;
@@ -210,7 +169,7 @@ animation {
         }
     }
 
-    ano_8 {   // dash
+    ano_8 {
         priority = 255;
         frame {
             time = 1; sprite = sprite_1; origin = -52, -96; sound = 16; speed_x = 917504;
@@ -239,7 +198,7 @@ animation {
         }
     }
 
-    ano_9 {   // dash
+    ano_9 {
         priority = 255;
         frame {
             time = 1; sprite = sprite_3; origin = -21, -110; sound = 16; speed_x = -917503;
@@ -269,7 +228,7 @@ animation {
         }
     }
 
-    ano_10 {   // salto
+    ano_10 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_4; origin = -50, -111; speed_y = -1048575; accel_y = 65536;
@@ -291,7 +250,7 @@ animation {
         }
     }
 
-    ano_11 {   // salto
+    ano_11 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_4; origin = -50, -111; speed_x = 393216; speed_y = -1048575; accel_y = 65536;
@@ -313,7 +272,7 @@ animation {
         }
     }
 
-    ano_12 {   // salto
+    ano_12 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_4; origin = -50, -111; speed_x = -393215; speed_y = -1048575; accel_y = 65536;
@@ -335,18 +294,18 @@ animation {
         }
     }
 
-    ano_13 {   // aterrizar
+    ano_13 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_5; origin = -25, -97;
             options { effect = 1; }
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_213 at -84, -102;
-            hit 52        at   0,  -32  size 16,  16;
+            bubble 52     at   0,  -32  size 16,  16;
         }
     }
 
-    ano_14 {   // introduccion
+    ano_14 {
         frame {
             time = 5; sprite = sprite_8; origin = -23, -120; sound = 92;
             spawn ano_212 at -8, 0;
@@ -357,7 +316,7 @@ animation {
         }
     }
 
-    ano_15 {   // victoria
+    ano_15 {
         frame {
             time = 5; sprite = sprite_9; origin = -38, -119; sound = 90;
             spawn ano_212 at -8, 0;
@@ -410,7 +369,7 @@ animation {
         }
     }
 
-    ano_20 {   // golpe recibido
+    ano_20 {
         frame {
             time = 1; sprite = sprite_10; origin = -56, -100;
             hurtbox       at -31, -111  size 64, 112;
@@ -418,11 +377,11 @@ animation {
         }
     }
 
-    ano_21 {   // golpe recibido
+    ano_21 {
         frame { time = 1; sprite = sprite_11; origin = -46, -85; }
     }
 
-    ano_22 {   // golpe recibido
+    ano_22 {
         frame {
             time = 3; sprite = sprite_12; origin = -57, -30;
             options { effect = 1; }
@@ -446,11 +405,11 @@ animation {
         }
     }
 
-    ano_23 {   // golpe recibido
+    ano_23 {
         frame { time = 1; sprite = sprite_12; origin = -57, -46; }
     }
 
-    ano_24 {   // golpe recibido
+    ano_24 {
         frame {
             time = 20; sprite = sprite_12; origin = -57, -30;
             options { effect = 1; }
@@ -458,7 +417,7 @@ animation {
         }
     }
 
-    ano_25 {   // golpe recibido
+    ano_25 {
         frame { time = 3; sprite = sprite_12; origin = -57, -30; }
         frame { time = 3; sprite = sprite_13; origin = -60, -100; }
         frame {
@@ -468,7 +427,7 @@ animation {
         frame { time = 4; sprite = sprite_15; origin = -39, -80; }
     }
 
-    ano_26 {   // derrota
+    ano_26 {
         frame {
             time = 4; sprite = sprite_6; origin = -37, -104;
             hurtbox       at -31, -111  size 64, 112;
@@ -481,7 +440,7 @@ animation {
         }
     }
 
-    ano_27 {   // arranque de lanzamiento (suelo)
+    ano_27 {
         link ano_127 { flag = 12; }
         frame {
             time = 3; sprite = sprite_16; origin = -25, -119;
@@ -509,14 +468,14 @@ animation {
         }
     }
 
-    ano_28 {   // arranque de lanzamiento (aire)
+    ano_28 {
         frame {
             time = 1; sprite = -1;
             hurtbox at -32, -112  size 64, 112;
         }
     }
 
-    ano_29 {   // ataque basico
+    ano_29 {
         priority = 255;
         frame {
             time = 3; sprite = sprite_18; origin = -57, -113;
@@ -547,7 +506,7 @@ animation {
         }
     }
 
-    ano_30 {   // ataque basico
+    ano_30 {
         priority = 255;
         link ano_130 { flag = 12; }
         frame {
@@ -579,7 +538,7 @@ animation {
         }
     }
 
-    ano_31 {   // ataque basico
+    ano_31 {
         priority = 255;
         link ano_131 { flag = 12; }
         frame {
@@ -619,7 +578,7 @@ animation {
         }
     }
 
-    ano_32 {   // ataque basico
+    ano_32 {
         priority = 255;
         link ano_132 { flag = 12; }
         link ano_353 { flag = 12; }
@@ -652,7 +611,7 @@ animation {
         }
     }
 
-    ano_33 {   // ataque basico
+    ano_33 {
         priority = 255;
         link ano_133 { flag = 12; }
         link ano_352 { flag = 12; }
@@ -686,7 +645,7 @@ animation {
         }
     }
 
-    ano_34 {   // ataque basico
+    ano_34 {
         priority = 255;
         link ano_134 { flag = 12; }
         frame {
@@ -724,7 +683,7 @@ animation {
         }
     }
 
-    ano_35 {   // ataque basico
+    ano_35 {
         priority = 255;
         link ano_135 { flag = 12; }
         frame {
@@ -768,7 +727,7 @@ animation {
         }
     }
 
-    ano_36 {   // ataque basico
+    ano_36 {
         priority = 255;
         link ano_136 { flag = 12; }
         frame {
@@ -809,7 +768,7 @@ animation {
         }
     }
 
-    ano_37 {   // ataque basico
+    ano_37 {
         priority = 255;
         link ano_137 { flag = 12; }
         frame {
@@ -847,7 +806,7 @@ animation {
         }
     }
 
-    ano_38 {   // ataque basico
+    ano_38 {
         priority = 255;
         link ano_138 { flag = 12; }
         frame {
@@ -886,7 +845,7 @@ animation {
         }
     }
 
-    ano_39 {   // ataque basico
+    ano_39 {
         priority = 255;
         link ano_139 { flag = 12; }
         frame {
@@ -923,7 +882,7 @@ animation {
         }
     }
 
-    ano_40 {   // kiblast
+    ano_40 {
         priority = 255;
         link ano_140 { flag = 12; }
         link ano_349 { flag = 12; }
@@ -940,7 +899,7 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -88;
-            hit 41        at  40, -112  size 16,  16;
+            bubble 41     at  40, -112  size 16,  16;
         }
         frame {
             time = 9; sprite = sprite_17; origin = -25, -119;
@@ -949,17 +908,17 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -88;
-            hit 41        at  40, -112  size 16,  16;
+            bubble 41     at  40, -112  size 16,  16;
         }
         frame {
             time = 24; sprite = sprite_17; origin = -25, -119;
             hurtbox       at -15, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
-            hit 41        at  40, -112  size 16,  16;
+            bubble 41     at  40, -112  size 16,  16;
         }
     }
 
-    ano_41 {   // kiblast
+    ano_41 {
         priority = 255;
         link ano_141 { flag = 12; }
         link ano_349 { flag = 12; }
@@ -977,7 +936,7 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -84;
-            hit 41        at  32,  -48  size 16,  16;
+            bubble 41     at  32,  -48  size 16,  16;
         }
         frame {
             time = 9; sprite = sprite_17; origin = -25, -119;
@@ -987,17 +946,17 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -84;
-            hit 41        at  32,  -48  size 16,  16;
+            bubble 41     at  32,  -48  size 16,  16;
         }
         frame {
             time = 24; sprite = sprite_17; origin = -25, -119;
             hurtbox       at -15, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
-            hit 41        at  32,  -48  size 16,  16;
+            bubble 41     at  32,  -48  size 16,  16;
         }
     }
 
-    ano_42 {   // kiblast
+    ano_42 {
         priority = 255;
         link ano_142 { flag = 12; }
         frame {
@@ -1035,7 +994,7 @@ animation {
             hurtbox       at -24,  -96  size 64,  96;
             hitbox        at   0, -112  size 48, 104;
             spawn ano_214 at -64,  -72;
-            blackscreen   at   0,    0  size 18,   0;
+            cutscene      at   0,    0  size 18,   0;
             shake 5       at   0,    0  size 16,  16;
             spawn ano_206 at  32,  -96;
         }
@@ -1072,8 +1031,8 @@ animation {
             collision     at   0,    0;
             spawn ano_220 at -56,  -56;
             spawn ano_217 at -72,  -64;
-            hit 42        at  32,  -32  size 16,  16;
-            blackscreen   at   0,    0  size 18,   0;
+            bubble 42     at  32,  -32  size 16,  16;
+            cutscene      at   0,    0  size 18,   0;
         }
         frame {
             time = 2; sprite = sprite_26; origin = -48, -112; sound = 16;
@@ -1082,27 +1041,27 @@ animation {
             hitbox        at   8,  -40  size 112,  64;
             spawn ano_220 at -56,  -56;
             spawn ano_217 at -72,  -64;
-            hit 42        at  32,  -32  size  16,  16;
-            hit 27        at   0,    0  size  16,  16;
+            bubble 42     at  32,  -32  size  16,  16;
+            state 27      at   0,    0  size  16,  16;
         }
         frame {
             time = 15; sprite = sprite_20; origin = -40, -99; speed_x = -131072; speed_y = -393216; accel_y = 32768;
             options { effect = 6; power = 13; damage = 52; }
             hurtbox       at -16,  -96  size 64, 112;
-            hit 27        at  10,    4;
+            state 27      at  10,    4;
             spawn ano_215 at  64, -104;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104; keep_speed; accel_y = 65536;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_213 at -80, -104;
-            hit 27        at   0,    0  size 16,  16;
+            state 27      at   0,    0  size 16,  16;
         }
         frame {
             time = 36; sprite = sprite_7; origin = -18, -129; keep_speed; accel_y = 65536;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_216 at -40,  -80;
-            hit 27        at   0,    0  size 16,  16;
+            state 27      at   0,    0  size 16,  16;
         }
     }
 
@@ -1225,7 +1184,7 @@ animation {
             hurtbox       at -8, -120  size 64, 112;
             hitbox        at  8, -100  size 96, 112;
             spawn ano_201 at  0,  -24;
-            blackscreen   at  0,    0  size 18,   0;
+            cutscene      at  0,    0  size 18,   0;
         }
         frame {
             time = 6; sprite = sprite_13; origin = -66, -120; speed_x = -262144; speed_y = -196608;
@@ -1249,9 +1208,9 @@ animation {
         }
     }
 
-    ano_47 {   // bola de ki generica
+    ano_47 {
         priority = 1;
-        link ano_248 { flag = 12; }   // efecto
+        link ano_248 { flag = 12; }
         frame {
             time = 3; sprite = sprite_27; origin = -7, -8; speed_x = 1572864;
             render { rotate = 0; alpha = 256; zoom = 100, 100; }
@@ -1391,7 +1350,7 @@ animation {
             spawn ano_255 at  48, -40;
             spawn ano_217 at -80, -64;
             spawn ano_220 at  40, -48;
-            hit 41        at  48, -72  size 16,  16;
+            bubble 41     at  48, -72  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_29; origin = -25, -119;
@@ -1399,7 +1358,7 @@ animation {
             spawn ano_255 at  48, -40;
             spawn ano_217 at -80, -64;
             spawn ano_220 at  40, -48;
-            hit 41        at  48, -72  size 16,  16;
+            bubble 41     at  48, -72  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104; speed_x = -65536; speed_y = -262144; accel_y = 32768;
@@ -1505,7 +1464,7 @@ animation {
             options { power = 6; damage = 69; }
             hurtbox       at -7,  -79  size 64,  96;
             hitbox        at 16, -123  size 96, 128;
-            blackscreen   at  0,    0  size 18,   0;
+            cutscene      at  0,    0  size 18,   0;
             spawn ano_223 at 96,  -24;
         }
         frame {
@@ -1529,13 +1488,13 @@ animation {
         }
     }
 
-    ano_51 {   // ataque especial (suelo)
+    ano_51 {
         link ano_102 { flag = 4; offset = 0, -224; }
         link ano_127 { flag = 12; }
         frame {
             time = 4; sprite = sprite_30; origin = -22, -142;
             hurtbox       at -31, -111  size 64, 112;
-            blackscreen   at   0,    0  size  8,   0;
+            cutscene      at   0,    0  size  8,   0;
             spawn ano_227 at   0, -168;
         }
         frame {
@@ -1590,44 +1549,44 @@ animation {
             time = 6; sprite = sprite_31; origin = -44, -109; sound = 8; speed_x = -262144; accel_x = 65536;
             hurtbox   at -15, -111  size 64, 112;
             collision at  80, -136;
-            hit 27    at   0,    0;
+            state 27  at   0,    0;
             shake 5   at   0,    7;
-            hit 43    at   0,    0  size 16,  16;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109; sound = 8;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 24; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 3; sprite = sprite_6; origin = -37, -104;
@@ -1648,9 +1607,9 @@ animation {
             time = 3; sprite = sprite_32; origin = -128, -128; speed_x = 524288;
             render { rotate = 0; alpha = 256; zoom = 200, 200; }
             options { power = 4; damage = 52; }
-            hitbox      at -96, -96  size 192, 192;
-            blackscreen at   0,   0  size  18,   0;
-            shake 5     at   0,   0  size  16,  16;
+            hitbox   at -96, -96  size 192, 192;
+            cutscene at   0,   0  size  18,   0;
+            shake 5  at   0,   0  size  16,  16;
         }
         frame {
             time = 3; sprite = sprite_32; origin = -124, -124; keep_speed;
@@ -1789,40 +1748,40 @@ animation {
         link ano_154 { flag = 12; }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox     at -15, -111  size 64, 112;
-            hit 27      at   0,    0;
-            blackscreen at   0,    0  size  1,   0;
+            hurtbox  at -15, -111  size 64, 112;
+            state 27 at   0,    0;
+            cutscene at   0,    0  size  1,   0;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -15, -111  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -15, -111  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -15, -111  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 24; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            hit 31  at   0,    0;
+            hurtbox  at -15, -111  size 64, 112;
+            state 27 at   0,    0;
+            zoom_alt at   0,    0;
         }
         frame {
             time = 3; sprite = sprite_6; origin = -37, -104;
-            hurtbox at -15, -111  size 64, 112;
-            hit 31  at   0,    0;
+            hurtbox  at -15, -111  size 64, 112;
+            zoom_alt at   0,    0;
         }
         frame {
             time = 3; sprite = sprite_4; origin = -50, -111;
-            hurtbox at -15, -111  size 64, 112;
-            hit 31  at   0,    0;
+            hurtbox  at -15, -111  size 64, 112;
+            zoom_alt at   0,    0;
         }
     }
 
@@ -1860,53 +1819,53 @@ animation {
             hurtbox       at -31,  -95  size 64, 96;
             collision     at 112, -562  size 16, 16;
             collision     at 160, -626  size 16, 16;
-            hit 37        at   0,    0;
-            hit 27        at   0,    0;
+            state 37      at   0,    0;
+            state 27      at   0,    0;
             spawn ano_213 at -88, -112;
-            hit 42        at  48,  -48  size 16, 16;
-            blackscreen   at   0,    0  size 18,  0;
+            bubble 42     at  48,  -48  size 16, 16;
+            cutscene      at   0,    0  size 18,  0;
         }
         frame {
             time = 27; sprite = sprite_34; origin = -36, -111;
             hurtbox       at -31,  -95  size 64, 96;
             collision     at 192, -560  size 16, 16;
             collision     at  80, -624  size 16, 16;
-            hit 37        at  -2,    6  size 16, 16;
-            hit 27        at   0,    0  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
+            state 27      at   0,    0  size 16, 16;
             spawn ano_213 at -88, -112;
-            hit 42        at  48,  -48  size 16, 16;
+            bubble 42     at  48,  -48  size 16, 16;
         }
         frame {
             time = 18; sprite = sprite_34; origin = -36, -111;
             options { cancel; }
             hurtbox       at -31,  -95  size 64, 96;
-            hit 37        at  -2,    6  size 16, 16;
-            hit 27        at   0,    0  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
+            state 27      at   0,    0  size 16, 16;
             spawn ano_213 at -88, -112;
-            hit 42        at  48,  -48  size 16, 16;
+            bubble 42     at  48,  -48  size 16, 16;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
             hurtbox       at -31,  -95  size 64, 96;
-            hit 37        at  -2,    6  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -112;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
             hurtbox       at -31,  -95  size 64, 96;
-            hit 37        at  -2,    6  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -112;
         }
         frame {
             time = 4; sprite = sprite_4; origin = -50, -111; accel_y = 65536;
             hurtbox       at -31,  -95  size 64, 96;
-            hit 37        at  -2,    6  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -104;
         }
         frame {
             time = 46; sprite = sprite_7; origin = -18, -129; keep_speed; accel_y = 65536;
             hurtbox       at -31, -95  size 64, 96;
-            hit 37        at  -2,   6  size 16, 16;
+            state 37      at  -2,   6  size 16, 16;
             spawn ano_216 at -40, -80;
         }
     }
@@ -1915,49 +1874,49 @@ animation {
         link ano_192 { flag = 4; offset = -64, -40; }
         frame {
             time = 1; sprite = -1; origin = -125, -261; speed_x = 7864320;
-            hit 27 at 0, 0  size 16, 16;
+            state 27 at 0, 0  size 16, 16;
         }
         frame {
             time = 2; sprite = -1; origin = -125, -261; sound = 6;
-            hit 27        at 0, 0  size 16, 16;
+            state 27      at 0, 0  size 16, 16;
             spawn ano_209 at 0, 0;
         }
         frame {
             time = 2; sprite = sprite_6; origin = -37, -104; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
             spawn ano_209 at   0,    0;
         }
         frame {
             time = 2; sprite = -1; origin = -125, -261; sound = 6;
-            hit 27        at 0, 0  size 16, 16;
+            state 27      at 0, 0  size 16, 16;
             spawn ano_209 at 0, 0;
         }
         frame {
             time = 2; sprite = sprite_6; origin = -37, -104; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
             spawn ano_209 at   0,    0;
         }
         frame {
             time = 1; sprite = sprite_6; origin = -37, -104; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
         }
         frame {
             time = 3; sprite = sprite_35; origin = -34, -110; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_220 at  40,  -32;
             spawn ano_215 at -80, -112;
         }
         frame {
             time = 3; sprite = sprite_35; origin = -34, -110; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_220 at  40,  -32;
             spawn ano_215 at -80, -112;
         }
@@ -1967,9 +1926,9 @@ animation {
             hurtbox       at -32, -112  size  64, 112;
             hitbox        at -32, -128  size 128, 144;
             charf 6       at  -8,   10;
-            hit 27        at   0,    0;
-            hit 37        at   0,    0;
-            hit 40        at -90,    0;
+            state 27      at   0,    0;
+            state 37      at   0,    0;
+            move_rival    at -90,    0;
             spawn ano_215 at -72, -104;
         }
         frame {
@@ -1978,44 +1937,44 @@ animation {
             hurtbox       at -32, -112  size  64, 112;
             hitbox        at -32, -128  size 128, 144;
             shake 5       at  -8,   10;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
-            hit 43        at  56,  -64  size  16,  16;
-            blackscreen   at   0,    0  size  18,   0;
+            bubble 43     at  56,  -64  size  16,  16;
+            cutscene      at   0,    0  size  18,   0;
         }
         frame {
             time = 12; sprite = sprite_34; origin = -36, -111; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
-            hit 43        at  56,  -64  size 16,  16;
+            bubble 43     at  56,  -64  size 16,  16;
         }
         frame {
             time = 1; sprite = sprite_34; origin = -36, -111; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
-            hit 43        at  56,  -64  size 16,  16;
+            bubble 43     at  56,  -64  size 16,  16;
         }
         frame {
             time = 10; sprite = sprite_34; origin = -36, -111; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
-            hit 43        at  56,  -64  size 16,  16;
+            bubble 43     at  56,  -64  size 16,  16;
         }
         frame {
             time = 8; sprite = sprite_6; origin = -37, -104; flip_x; speed_x = 262144; speed_y = -524288; accel_y = 65536;
             options { power = 8; }
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -80, -104;
         }
         frame {
             time = 44; sprite = sprite_7; origin = -18, -129; flip_x; keep_speed; accel_y = 65536;
             options { power = 8; }
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
         }
     }
@@ -2027,7 +1986,7 @@ animation {
         frame {
             time = 3; sprite = sprite_30; origin = -22, -142;
             hurtbox       at -31, -111  size 64, 112;
-            blackscreen   at -80,  -64  size  8,   0;
+            cutscene      at -80,  -64  size  8,   0;
             spawn ano_227 at   0, -168;
         }
         frame {
@@ -2076,44 +2035,44 @@ animation {
             time = 6; sprite = sprite_31; origin = -44, -109; sound = 7; speed_x = -262144; accel_x = 65536;
             hurtbox   at -15, -111  size 64, 112;
             collision at  80, -136;
-            hit 27    at   0,    0;
+            state 27  at   0,    0;
             shake 5   at   0,    7;
-            hit 43    at   0,    0  size 16,  16;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 30; sprite = sprite_31; origin = -44, -109;
-            hurtbox at -15, -111  size 64, 112;
-            hit 27  at   0,    0;
-            shake 5 at   0,    7;
-            hit 43  at   0,    0  size 16,  16;
+            hurtbox   at -15, -111  size 64, 112;
+            state 27  at   0,    0;
+            shake 5   at   0,    7;
+            bubble 43 at   0,    0  size 16,  16;
         }
         frame {
             time = 3; sprite = sprite_6; origin = -37, -104; accel_y = 65536;
@@ -2325,7 +2284,7 @@ animation {
         }
     }
 
-    ano_61 {   // ultimate (suelo)
+    ano_61 {
         link ano_104 { flag = 4; offset = 80, 208; }
         link ano_104 { flag = 4; offset = 192, 272; }
         link ano_105 { flag = 4; offset = 112, 288; }
@@ -2359,47 +2318,47 @@ animation {
             hurtbox       at -31,  -95  size 64, 96;
             collision     at 112, -544  size 16, 16;
             collision     at 160, -626  size 16, 16;
-            hit 37        at   0,    0;
-            hit 27        at   0,    0;
+            state 37      at   0,    0;
+            state 27      at   0,    0;
             spawn ano_213 at -88, -112;
-            hit 42        at  48,  -48  size 16, 16;
-            blackscreen   at   0,    0  size 18,  0;
+            bubble 42     at  48,  -48  size 16, 16;
+            cutscene      at   0,    0  size 18,  0;
         }
         frame {
             time = 27; sprite = sprite_34; origin = -36, -111;
             hurtbox       at -31,  -95  size 64, 96;
             collision     at 192, -560  size 16, 16;
             collision     at  80, -624  size 16, 16;
-            hit 37        at  -2,    6  size 16, 16;
-            hit 27        at   0,    0  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
+            state 27      at   0,    0  size 16, 16;
             spawn ano_213 at -88, -112;
-            hit 42        at  48,  -48  size 16, 16;
+            bubble 42     at  48,  -48  size 16, 16;
         }
         frame {
             time = 18; sprite = sprite_34; origin = -36, -111;
             options { cancel; }
             hurtbox       at -31,  -95  size 64, 96;
-            hit 37        at  -2,    6  size 16, 16;
-            hit 27        at   0,    0  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
+            state 27      at   0,    0  size 16, 16;
             spawn ano_213 at -88, -112;
-            hit 42        at  48,  -48  size 16, 16;
+            bubble 42     at  48,  -48  size 16, 16;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
             hurtbox       at -31,  -95  size 64, 96;
-            hit 37        at  -2,    6  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -112;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
             hurtbox       at -31,  -95  size 64, 96;
-            hit 37        at  -2,    6  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -112;
         }
         frame {
             time = 8; sprite = sprite_4; origin = -50, -111;
             hurtbox       at -31,  -95  size 64, 96;
-            hit 37        at  -2,    6  size 16, 16;
+            state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -104;
         }
     }
@@ -2408,49 +2367,49 @@ animation {
         link ano_192 { flag = 4; offset = -64, -40; }
         frame {
             time = 1; sprite = -1; origin = -125, -261; speed_x = 7864320;
-            hit 27 at 0, 0  size 16, 16;
+            state 27 at 0, 0  size 16, 16;
         }
         frame {
             time = 2; sprite = -1; origin = -125, -261;
-            hit 27        at 0, 0  size 16, 16;
+            state 27      at 0, 0  size 16, 16;
             spawn ano_209 at 0, 0;
         }
         frame {
             time = 2; sprite = sprite_6; origin = -37, -104; sound = 28; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
             spawn ano_209 at   0,    0;
         }
         frame {
             time = 2; sprite = -1; origin = -125, -261;
-            hit 27        at 0, 0;
+            state 27      at 0, 0;
             spawn ano_209 at 0, 0;
         }
         frame {
             time = 2; sprite = sprite_6; origin = -37, -104; sound = 28; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
             spawn ano_209 at   0,    0;
         }
         frame {
             time = 1; sprite = sprite_6; origin = -37, -104; sound = 28; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
         }
         frame {
             time = 3; sprite = sprite_35; origin = -34, -110; sound = 28; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_220 at  40,  -32;
             spawn ano_215 at -80, -112;
         }
         frame {
             time = 3; sprite = sprite_35; origin = -34, -110; sound = 28; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_220 at  40,  -32;
             spawn ano_215 at -80, -112;
         }
@@ -2460,9 +2419,9 @@ animation {
             hurtbox       at -32, -112  size  64, 112;
             hitbox        at -32, -128  size 128, 144;
             charf 6       at  -8,   10;
-            hit 27        at   0,    0;
-            hit 37        at   0,    0;
-            hit 40        at -90,    0;
+            state 27      at   0,    0;
+            state 37      at   0,    0;
+            move_rival    at -90,    0;
             spawn ano_215 at -72, -104;
         }
         frame {
@@ -2471,45 +2430,45 @@ animation {
             hurtbox       at -32, -112  size  64, 112;
             hitbox        at -32, -128  size 128, 144;
             shake 5       at  -8,   10;
-            hit 27        at   0,    0;
-            hit 37        at   0,    0;
+            state 27      at   0,    0;
+            state 37      at   0,    0;
             spawn ano_215 at -72, -104;
-            hit 43        at  56,  -64  size  16,  16;
-            blackscreen   at   0,    0  size  18,   0;
+            bubble 43     at  56,  -64  size  16,  16;
+            cutscene      at   0,    0  size  18,   0;
         }
         frame {
             time = 12; sprite = sprite_34; origin = -36, -111; sound = 28; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
-            hit 43        at  56,  -64  size 16,  16;
+            bubble 43     at  56,  -64  size 16,  16;
         }
         frame {
             time = 1; sprite = sprite_34; origin = -36, -111; sound = 28; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
-            hit 43        at  56,  -64  size 16,  16;
+            bubble 43     at  56,  -64  size 16,  16;
         }
         frame {
             time = 10; sprite = sprite_34; origin = -36, -111; sound = 28; flip_x;
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
-            hit 43        at  56,  -64  size 16,  16;
+            bubble 43     at  56,  -64  size 16,  16;
         }
         frame {
             time = 8; sprite = sprite_6; origin = -37, -104; sound = 28; flip_x;
             options { power = 8; }
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -80, -104;
         }
         frame {
             time = 44; sprite = sprite_4; origin = -50, -111; sound = 28; flip_x;
             options { power = 8; }
             hurtbox       at -32, -112  size 64, 112;
-            hit 27        at   0,    0;
+            state 27      at   0,    0;
             spawn ano_215 at -72, -104;
         }
     }
@@ -2563,7 +2522,7 @@ animation {
         frame { time = 1; sprite = -1; }
     }
 
-    ano_67 {   // golpe recibido
+    ano_67 {
         link ano_167 { flag = 12; }
         frame {
             time = 6; sprite = sprite_11; origin = -30, 17; flip_x; flip_y;
@@ -2573,7 +2532,7 @@ animation {
         }
     }
 
-    ano_68 {   // golpe recibido
+    ano_68 {
         link ano_168 { flag = 12; }
         frame {
             time = 3; sprite = sprite_11; origin = -30, -69;
@@ -2586,7 +2545,7 @@ animation {
         }
     }
 
-    ano_69 {   // golpe recibido
+    ano_69 {
         link ano_169 { flag = 12; }
         frame {
             time = 6; sprite = sprite_11; origin = -30, 17; flip_x; flip_y;
@@ -2599,7 +2558,7 @@ animation {
         }
     }
 
-    ano_70 {   // golpe recibido
+    ano_70 {
         link ano_169 { flag = 12; }
         frame {
             time = 6; sprite = sprite_11; origin = -30, 17; flip_x; flip_y;
@@ -2608,7 +2567,7 @@ animation {
         frame { time = 6; sprite = sprite_11; origin = -30, 17; loop; flip_x; flip_y; }
     }
 
-    ano_71 {   // golpe recibido
+    ano_71 {
         link ano_167 { flag = 12; }
         frame {
             time = 6; sprite = sprite_11; origin = -30, 17; flip_x; flip_y;
@@ -2617,14 +2576,14 @@ animation {
         }
     }
 
-    ano_72 {   // golpe recibido
+    ano_72 {
         frame {
             time = 1; sprite = sprite_11; origin = -38, -89;
             hurtbox at -31, -127  size 64, 112;
         }
     }
 
-    ano_73 {   // golpe recibido
+    ano_73 {
         frame {
             time = 1; sprite = sprite_11; origin = 10, -33;
             render { rotate = 269; alpha = 0; zoom = 100, 100; }
@@ -2678,7 +2637,7 @@ animation {
         frame { sprite = sprite_37; origin = -48, -49; }
     }
 
-    ano_77 {   // retrato de la barra de vida
+    ano_77 {
         priority = 131;
         frame { sprite = sprite_38; origin = -48, -49; }
     }
@@ -2756,7 +2715,7 @@ animation {
         }
     }
 
-    ano_84 {   // carga
+    ano_84 {
         link ano_184 { flag = 12; }
         frame {
             time = 5; sprite = sprite_5; origin = -25, -97;
@@ -2775,7 +2734,7 @@ animation {
         }
     }
 
-    ano_85 {   // carga
+    ano_85 {
         link ano_185 { flag = 12; }
         frame {
             time = 6; sprite = sprite_5; origin = -25, -97; loop;
@@ -2783,12 +2742,12 @@ animation {
             shake 3       at   0,   0  size 32, 32;
             spawn ano_201 at   0,   0;
             spawn ano_218 at -48, -64;
-            hit 49        at   0,   0;
+            bubble 49     at   0,   0;
             spawn ano_227 at   0,   0;
         }
     }
 
-    ano_86 {   // carga
+    ano_86 {
         link ano_186 { flag = 12; }
         frame {
             time = 6; sprite = sprite_5; origin = -25, -97; sound = 29;
@@ -2828,38 +2787,38 @@ animation {
             time = 3; sprite = sprite_6; origin = -29, -104;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_209 at   0,    0;
-            hit 50        at   0,    0;
+            bubble 50     at   0,    0;
             spawn ano_213 at -64, -112;
         }
         frame {
             time = 1; sprite = -1;
             spawn ano_209 at 0, 0;
-            hit 50        at 0, 0;
+            bubble 50     at 0, 0;
         }
         frame {
             time = 1; sprite = sprite_6; origin = -29, -104;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_209 at   0,    0;
-            hit 50        at   0,    0;
+            bubble 50     at   0,    0;
             spawn ano_213 at -64, -112;
         }
         frame {
             time = 1; sprite = -1;
             spawn ano_209 at 0, 0;
-            hit 50        at 0, 0;
+            bubble 50     at 0, 0;
         }
         frame {
             time = 1; sprite = sprite_6; origin = -29, -104;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_209 at   0,    0;
-            hit 50        at   0,    0;
+            bubble 50     at   0,    0;
             spawn ano_213 at -64, -112;
         }
         frame {
             time = 3; sprite = -1;
             options { cancel; }
             spawn ano_209 at 0, 0;
-            hit 50        at 0, 0;
+            bubble 50     at 0, 0;
         }
     }
 
@@ -2870,31 +2829,31 @@ animation {
             time = 1; sprite = sprite_6; origin = -29, -104; sound = 6;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_209 at   0,    0;
-            hit 51        at   0,    0;
+            bubble 51     at   0,    0;
             spawn ano_213 at -72, -112;
         }
         frame {
             time = 1; sprite = -1;
             spawn ano_209 at 0, 0;
-            hit 51        at 0, 0;
+            bubble 51     at 0, 0;
         }
         frame {
             time = 1; sprite = sprite_6; origin = -29, -104;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_209 at   0,    0;
-            hit 51        at   0,    0;
+            bubble 51     at   0,    0;
             spawn ano_213 at -64, -112;
         }
         frame {
             time = 1; sprite = -1;
             spawn ano_209 at 0, 0;
-            hit 51        at 0, 0;
+            bubble 51     at 0, 0;
         }
         frame {
             time = 3; sprite = sprite_6; origin = -29, -104;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_209 at   0,    0;
-            hit 51        at   0,    0;
+            bubble 51     at   0,    0;
             spawn ano_213 at -72, -112;
         }
     }
@@ -2948,14 +2907,14 @@ animation {
         frame {
             time = 255; sprite = -1; origin = -109, -253;
             options { damage = 234; }
-            blackscreen at   0,    0  size   6,   0;
-            hitbox      at -60, -196  size 140, 180;
+            cutscene at   0,    0  size   6,   0;
+            hitbox   at -60, -196  size 140, 180;
         }
         frame {
             time = 255; sprite = -1; origin = -109, -253;
             options { damage = 234; }
-            blackscreen at   0,    0  size   6,   0;
-            hitbox      at -60, -196  size 140, 180;
+            cutscene at   0,    0  size   6,   0;
+            hitbox   at -60, -196  size 140, 180;
         }
     }
 
@@ -2963,8 +2922,8 @@ animation {
         link ano_192 { flag = 12; }
         frame {
             time = 6; sprite = -1; origin = -109, -253;
-            blackscreen at 0, 0  size 7, 0;
-            shake 5     at 0, 0;
+            cutscene at 0, 0  size 7, 0;
+            shake 5  at 0, 0;
         }
         frame {
             time = 6; sprite = -1; origin = -109, -253;
@@ -2977,19 +2936,19 @@ animation {
             time = 3; sprite = sprite_7; origin = -18, -129;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_216 at -40,  -80;
-            hit 52        at   0,  -16  size 16,  16;
+            bubble 52     at   0,  -16  size 16,  16;
         }
         frame {
             time = 9; sprite = sprite_15; origin = -39, -80;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_213 at -80,  -88;
-            hit 52        at   0,  -16  size 16,  16;
+            bubble 52     at   0,  -16  size 16,  16;
         }
         frame {
             time = 3; sprite = sprite_5; origin = -25, -97;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_213 at -88, -104;
-            hit 52        at   0,  -16  size 16,  16;
+            bubble 52     at   0,  -16  size 16,  16;
         }
     }
 
@@ -2998,19 +2957,19 @@ animation {
             time = 3; sprite = sprite_7; origin = -18, -129; flip_x;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_215 at -80, -104;
-            hit 52        at   0,  -16  size 16,  16;
+            bubble 52     at   0,  -16  size 16,  16;
         }
         frame {
             time = 9; sprite = sprite_15; origin = -39, -80; flip_x;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_215 at -80,  -88;
-            hit 52        at   0,  -16  size 16,  16;
+            bubble 52     at   0,  -16  size 16,  16;
         }
         frame {
             time = 3; sprite = sprite_5; origin = -25, -97; flip_x;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_215 at -80, -104;
-            hit 52        at   0,  -16  size 16,  16;
+            bubble 52     at   0,  -16  size 16,  16;
         }
     }
 
@@ -3030,8 +2989,8 @@ animation {
             collision     at   0,    0;
             spawn ano_220 at -56,  -56;
             spawn ano_217 at -72,  -64;
-            hit 42        at  32,  -32  size 16,  16;
-            blackscreen   at   0,    0  size 18,   0;
+            bubble 42     at  32,  -32  size 16,  16;
+            cutscene      at   0,    0  size 18,   0;
         }
         frame {
             time = 2; sprite = sprite_26; origin = -48, -112; sound = 16;
@@ -3040,8 +2999,8 @@ animation {
             hitbox        at   8,  -40  size 112,  64;
             spawn ano_220 at -56,  -56;
             spawn ano_217 at -72,  -64;
-            hit 42        at  32,  -32  size  16,  16;
-            hit 27        at   0,    0  size  16,  16;
+            bubble 42     at  32,  -32  size  16,  16;
+            state 27      at   0,    0  size  16,  16;
         }
         frame {
             time = 45; sprite = sprite_20; origin = -40, -99;
@@ -3049,19 +3008,19 @@ animation {
             hurtbox       at -16,  -96  size 64, 112;
             charf 6       at  10,    4;
             spawn ano_215 at  64, -104;
-            hit 27        at   0,    0  size 16,  16;
+            state 27      at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104; keep_speed;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_213 at -80, -104;
-            hit 27        at   0,    0  size 16,  16;
+            state 27      at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_4; origin = -50, -111;
             hurtbox       at -32, -112  size 64, 112;
             spawn ano_213 at -76, -104;
-            hit 27        at   0,    0  size 16,  16;
+            state 27      at   0,    0  size 16,  16;
         }
     }
 
@@ -3447,7 +3406,7 @@ animation {
         link ano_342 { flag = 4; offset = -24, -216; }
         frame {
             time = 4; sprite = sprite_47; origin = -47, -121;
-            blackscreen at 0, 0  size 9, 0;
+            cutscene at 0, 0  size 9, 0;
         }
         frame { time = 2; sprite = sprite_6; origin = -37, -104; speed_x = -393216; speed_y = -786432; accel_y = 32768; }
         frame { time = 3; sprite = sprite_7; origin = -18, -129; keep_speed; accel_y = 32768; }
@@ -3496,47 +3455,47 @@ animation {
             options { power = 2; damage = 5; }
             hurtbox   at -16, -112  size 64, 112;
             collision at   0, -204;
-            hit 27    at   0,    0;
+            state 27  at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 36; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
-            hurtbox at -32, -112  size 64, 112;
-            hit 38  at   0,    0  size 16,  16;
+            hurtbox  at -32, -112  size 64, 112;
+            state 38 at   0,    0  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_4; origin = -50, -111;
-            hurtbox at -32, -112  size 64, 112;
-            hit 38  at   0,    0;
+            hurtbox  at -32, -112  size 64, 112;
+            state 38 at   0,    0;
         }
     }
 
@@ -3546,7 +3505,7 @@ animation {
         link ano_342 { flag = 4; offset = -24, -216; }
         frame {
             time = 4; sprite = sprite_47; origin = -47, -121;
-            blackscreen at 0, 0  size 9, 0;
+            cutscene at 0, 0  size 9, 0;
         }
         frame { time = 2; sprite = sprite_6; origin = -37, -104; }
         frame { time = 3; sprite = sprite_7; origin = -18, -129; }
@@ -3595,52 +3554,52 @@ animation {
             options { power = 2; damage = 5; }
             hurtbox   at -16, -112  size 64, 112;
             collision at   0, -204;
-            hit 27    at   0,    0;
+            state 27  at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 36; sprite = sprite_49; origin = -45, -77;
             options { power = 2; damage = 5; }
-            hurtbox at -16, -112  size 64, 112;
-            hit 27  at   0,    0;
+            hurtbox  at -16, -112  size 64, 112;
+            state 27 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
-            hurtbox at -32, -112  size 64, 112;
-            hit 38  at   0,    0;
+            hurtbox  at -32, -112  size 64, 112;
+            state 38 at   0,    0;
         }
         frame {
             time = 6; sprite = sprite_4; origin = -50, -111; accel_y = 65536;
-            hurtbox at -32, -112  size 64, 112;
-            hit 38  at   0,    0;
+            hurtbox  at -32, -112  size 64, 112;
+            state 38 at   0,    0;
         }
         frame {
             time = 46; sprite = sprite_7; origin = -18, -129; keep_speed; accel_y = 65536;
-            hurtbox at -32, -112  size 64, 112;
-            hit 38  at   0,    0;
+            hurtbox  at -32, -112  size 64, 112;
+            state 38 at   0,    0;
         }
     }
 
@@ -3658,49 +3617,49 @@ animation {
         frame {
             time = 30; sprite = sprite_49; origin = -45, -77;
             hurtbox       at -16, -112  size 64, 112;
-            hit 27        at   0,    0;
-            hit 38        at   0,    0;
-            blackscreen   at   0,    0  size  1,   0;
+            state 27      at   0,    0;
+            state 38      at   0,    0;
+            cutscene      at   0,    0  size  1,   0;
             spawn ano_213 at -72, -112;
         }
         frame {
             time = 60; sprite = sprite_49; origin = -45, -77;
             hurtbox       at -16, -112  size 64, 112;
-            hit 27        at   0,    0;
-            hit 38        at   0,    0;
+            state 27      at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -72, -112;
-            blackscreen   at   0,    0  size  2,   0;
-            blackscreen   at   0,    0  size 21,   0;
+            cutscene      at   0,    0  size  2,   0;
+            cutscene      at   0,    0  size 21,   0;
         }
         frame {
             time = 30; sprite = sprite_49; origin = -45, -77;
             hurtbox       at -16, -112  size 64, 112;
-            hit 27        at   0,    0;
-            hit 38        at   0,    0;
+            state 27      at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -72, -112;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
             hurtbox       at -32, -112  size 64, 112;
-            hit 38        at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -72, -104;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
             hurtbox       at -32, -112  size 64, 112;
-            hit 38        at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -72, -104;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
             hurtbox       at -32, -112  size 64, 112;
-            hit 38        at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -72, -104;
         }
         frame {
             time = 6; sprite = sprite_4; origin = -50, -111;
             hurtbox       at -32, -112  size 64, 112;
-            hit 38        at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -80, -104;
         }
     }
@@ -3710,43 +3669,43 @@ animation {
         frame {
             time = 30; sprite = sprite_49; origin = -45, -77;
             hurtbox       at -16, -112  size 64, 112;
-            hit 27        at   0,    0;
-            hit 38        at   0,    0;
+            state 27      at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -72, -112;
-            blackscreen   at   0,    0  size  1,   0;
+            cutscene      at   0,    0  size  1,   0;
         }
         frame {
             time = 60; sprite = sprite_49; origin = -45, -77;
             hurtbox       at -16, -112  size 64, 112;
-            hit 27        at   0,    0;
-            hit 38        at   0,    0;
+            state 27      at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -72, -112;
-            blackscreen   at   0,    0  size  2,   0;
-            blackscreen   at   0,    0  size 21,   0;
+            cutscene      at   0,    0  size  2,   0;
+            cutscene      at   0,    0  size 21,   0;
         }
         frame {
             time = 30; sprite = sprite_49; origin = -45, -77;
             hurtbox       at -16, -112  size 64, 112;
-            hit 27        at   0,    0;
-            hit 38        at   0,    0;
+            state 27      at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -72, -112;
         }
         frame {
             time = 6; sprite = sprite_6; origin = -37, -104;
             hurtbox       at -32, -112  size 64, 112;
-            hit 38        at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -72, -104;
         }
         frame {
             time = 6; sprite = sprite_4; origin = -50, -111; accel_y = 65536;
             hurtbox       at -32, -112  size 64, 112;
-            hit 38        at   0,    0;
+            state 38      at   0,    0;
             spawn ano_213 at -80, -104;
         }
         frame {
             time = 46; sprite = sprite_7; origin = -18, -129; keep_speed; accel_y = 65536;
             hurtbox       at -32, -112  size 64, 112;
-            hit 38        at   0,    0;
+            state 38      at   0,    0;
             spawn ano_216 at -40,  -80;
         }
     }
@@ -4592,7 +4551,7 @@ animation {
         frame {
             time = 3; sprite = sprite_33; origin = -165, -165;
             render { rotate = 0; alpha = 0; zoom = 260, 260; }
-            blackscreen at 0, 0  size 18, 0;
+            cutscene at 0, 0  size 18, 0;
         }
         frame {
             time = 3; sprite = sprite_33; origin = -160, -160;
@@ -4667,7 +4626,7 @@ animation {
         frame { sprite = -1; }
     }
 
-    ano_178 {   // el otro retrato
+    ano_178 {
         priority = 127;
         frame {
             time = 100; sprite = sprite_39; origin = -208, -156; speed_x = 41943;
@@ -4932,7 +4891,7 @@ animation {
         frame { time = 12; sprite = -1; }
     }
 
-    ano_201 {   // pieza de aura
+    ano_201 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_59; origin = -90, -168;
@@ -4948,7 +4907,7 @@ animation {
         }
     }
 
-    ano_202 {   // pieza de aura
+    ano_202 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_59; origin = -90, -168;
@@ -4964,7 +4923,7 @@ animation {
         }
     }
 
-    ano_203 {   // pieza de aura
+    ano_203 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_59; origin = -90, -184;
@@ -4980,7 +4939,7 @@ animation {
         }
     }
 
-    ano_204 {   // pieza de aura
+    ano_204 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_59; origin = -90, -184;
@@ -4996,7 +4955,7 @@ animation {
         }
     }
 
-    ano_205 {   // pieza de aura
+    ano_205 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_59; origin = -90, -184;
@@ -5012,7 +4971,7 @@ animation {
         }
     }
 
-    ano_206 {   // pieza de aura
+    ano_206 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_59; origin = -90, -184;
@@ -5028,7 +4987,7 @@ animation {
         }
     }
 
-    ano_207 {   // pieza de aura
+    ano_207 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_59; origin = -90, -184;
@@ -5044,7 +5003,7 @@ animation {
         }
     }
 
-    ano_208 {   // pieza de aura
+    ano_208 {
         priority = 255;
         frame {
             time = 8; sprite = sprite_59; origin = -90, -184;
@@ -5060,7 +5019,7 @@ animation {
         }
     }
 
-    ano_209 {   // efecto
+    ano_209 {
         frame {
             time = 3; sprite = sprite_62; origin = -21, -126;
             render { rotate = 0; alpha = 256; zoom = 100, 100; }
@@ -5091,12 +5050,12 @@ animation {
         }
     }
 
-    ano_210 {   // efecto
+    ano_210 {
         frame { time = 5; sprite = sprite_63; origin = -38, -116; }
         frame { time = 5; sprite = sprite_63; origin = -38, -116; loop; }
     }
 
-    ano_211 {   // efecto
+    ano_211 {
         priority = 1;
         frame {
             time = 3; sprite = sprite_64; origin = -52, -33;
@@ -5118,44 +5077,44 @@ animation {
         frame { time = 1; sprite = -1; origin = -29, -33; }
     }
 
-    ano_212 {   // efecto
+    ano_212 {
         priority = 1;
         frame { time = 16; sprite = sprite_68; origin = -45, -58; }
         frame { time = 16; sprite = sprite_69; origin = -50, -58; }
         frame { time = 16; sprite = sprite_58; origin = -31, -60; loop; }
     }
 
-    ano_213 {   // efecto
+    ano_213 {
         priority = 1;
         frame { sprite = sprite_50; origin = 3, 4; }
     }
 
-    ano_214 {   // efecto
+    ano_214 {
         priority = 1;
         frame { sprite = sprite_57; origin = 6, 4; }
     }
 
-    ano_215 {   // efecto
+    ano_215 {
         priority = 1;
         frame { sprite = sprite_50; origin = 3, 4; flip_x; }
     }
 
-    ano_216 {   // efecto
+    ano_216 {
         priority = 1;
         frame { time = 3; sprite = sprite_52; origin = -11, -58; }
     }
 
-    ano_217 {   // efecto
+    ano_217 {
         priority = 1;
         frame { sprite = sprite_53; origin = 3, 2; }
     }
 
-    ano_218 {   // efecto
+    ano_218 {
         priority = 1;
         frame { sprite = sprite_51; origin = 2, 2; }
     }
 
-    ano_220 {   // efecto
+    ano_220 {
         priority = 246;
         frame {
             time = 3; sprite = sprite_70; origin = -32, -32;
@@ -5167,7 +5126,7 @@ animation {
         }
     }
 
-    ano_221 {   // efecto
+    ano_221 {
         priority = 251;
         frame {
             time = 6; sprite = sprite_71; origin = -57, -13;
@@ -5180,7 +5139,7 @@ animation {
         }
     }
 
-    ano_222 {   // efecto
+    ano_222 {
         priority = 251;
         frame {
             time = 6; sprite = sprite_71; origin = -86, -16;
@@ -5193,7 +5152,7 @@ animation {
         }
     }
 
-    ano_223 {   // efecto
+    ano_223 {
         priority = 251;
         frame {
             time = 6; sprite = sprite_72; origin = -42, -24; flip_y;
@@ -5206,7 +5165,7 @@ animation {
         }
     }
 
-    ano_224 {   // efecto
+    ano_224 {
         priority = 251;
         frame {
             time = 6; sprite = sprite_72; origin = -80, -64;
@@ -5219,7 +5178,7 @@ animation {
         }
     }
 
-    ano_225 {   // efecto
+    ano_225 {
         priority = 251;
         frame {
             time = 6; sprite = sprite_72; origin = -48, -24; flip_x; flip_y;
@@ -5232,7 +5191,7 @@ animation {
         }
     }
 
-    ano_226 {   // efecto
+    ano_226 {
         priority = 251;
         frame {
             time = 6; sprite = sprite_72; origin = -80, -64;
@@ -5245,7 +5204,7 @@ animation {
         }
     }
 
-    ano_227 {   // efecto
+    ano_227 {
         priority = 253;
         frame {
             time = 3; sprite = sprite_43; origin = -64, -129;
@@ -5285,7 +5244,7 @@ animation {
         }
     }
 
-    ano_228 {   // efecto
+    ano_228 {
         priority = 1;
         link ano_101 { flag = 4; }
         frame {
@@ -5306,7 +5265,7 @@ animation {
         }
     }
 
-    ano_229 {   // efecto
+    ano_229 {
         frame {
             time = 2; sprite = -1; origin = -175, -93;
             options { effect = 12; }
@@ -5334,7 +5293,7 @@ animation {
         }
     }
 
-    ano_230 {   // efecto
+    ano_230 {
         priority = 241;
         frame {
             time = 27; sprite = sprite_73; origin = -47, -47;
@@ -5348,7 +5307,7 @@ animation {
         frame { time = 3; sprite = -1; origin = -59, -59; }
     }
 
-    ano_231 {   // efecto
+    ano_231 {
         link ano_101 { flag = 0; }
         frame {
             time = 2; sprite = sprite_32; origin = -128, -128;
@@ -5408,7 +5367,7 @@ animation {
         }
     }
 
-    ano_232 {   // efecto
+    ano_232 {
         priority = 1;
         frame {
             time = 3; sprite = sprite_64; origin = -52, -33;
@@ -5430,7 +5389,7 @@ animation {
         frame { time = 1; sprite = -1; origin = -29, -33; }
     }
 
-    ano_233 {   // efecto
+    ano_233 {
         link ano_158 { flag = 12; }
         frame {
             time = 6; sprite = -1; sound = 7;
@@ -5441,21 +5400,21 @@ animation {
         frame { time = 6; sprite = -1; }
     }
 
-    ano_234 {   // efecto
+    ano_234 {
         frame { sprite = -1; }
     }
 
-    ano_235 {   // efecto
+    ano_235 {
         priority = 237;
         frame { time = 2; sprite = -1; }
     }
 
-    ano_236 {   // efecto
-        link ano_228 { flag = 12; offset = 52, 0; }   // efecto
+    ano_236 {
+        link ano_228 { flag = 12; offset = 52, 0; }
         frame { sprite = -1; }
     }
 
-    ano_237 {   // efecto
+    ano_237 {
         link ano_346 { flag = 8; }
         frame {
             time = 4; sprite = sprite_32; origin = -128, -128;
@@ -5483,8 +5442,8 @@ animation {
         }
     }
 
-    ano_238 {   // efecto
-        link ano_239 { flag = 0; }   // efecto
+    ano_238 {
+        link ano_239 { flag = 0; }
         frame {
             time = 27; sprite = -1; origin = -192, -192;
             render { rotate = 0; alpha = 256; zoom = 200, 200; }
@@ -5515,7 +5474,7 @@ animation {
         }
     }
 
-    ano_239 {   // efecto
+    ano_239 {
         priority = 255;
         frame {
             time = 27; sprite = -1; origin = -136, -128;
@@ -5551,7 +5510,7 @@ animation {
         }
     }
 
-    ano_240 {   // efecto
+    ano_240 {
         link ano_110 { flag = 0; }
         frame {
             time = 3; sprite = sprite_32; origin = -138, -138;
@@ -5581,7 +5540,7 @@ animation {
         }
     }
 
-    ano_241 {   // efecto
+    ano_241 {
         link ano_110 { flag = 0; }
         frame {
             time = 3; sprite = sprite_33; origin = -167, -167;
@@ -5611,7 +5570,7 @@ animation {
         }
     }
 
-    ano_242 {   // efecto
+    ano_242 {
         frame {
             time = 3; sprite = sprite_32; origin = -128, -128;
             render { rotate = 0; alpha = 256; zoom = 200, 200; }
@@ -5654,7 +5613,7 @@ animation {
         }
     }
 
-    ano_243 {   // efecto
+    ano_243 {
         priority = 255;
         frame {
             time = 3; sprite = sprite_43; origin = -90, -106;
@@ -5702,7 +5661,7 @@ animation {
         }
     }
 
-    ano_244 {   // efecto
+    ano_244 {
         priority = 253;
         frame {
             time = 60; sprite = sprite_32; origin = -43, 213;
@@ -5715,7 +5674,7 @@ animation {
         }
     }
 
-    ano_245 {   // efecto
+    ano_245 {
         priority = 254;
         frame {
             time = 3; sprite = sprite_74; origin = -184, -46; flip_x;
@@ -5727,7 +5686,7 @@ animation {
         }
     }
 
-    ano_246 {   // efecto
+    ano_246 {
         priority = 254;
         frame {
             time = 3; sprite = sprite_75; origin = -184, -7; flip_x;
@@ -5739,7 +5698,7 @@ animation {
         }
     }
 
-    ano_247 {   // efecto
+    ano_247 {
         priority = 254;
         frame {
             time = 3; sprite = sprite_76; origin = -193, 20;
@@ -5751,7 +5710,7 @@ animation {
         }
     }
 
-    ano_248 {   // efecto
+    ano_248 {
         priority = 246;
         frame {
             time = 3; sprite = sprite_78; origin = -79, -4;
@@ -5835,7 +5794,7 @@ animation {
         }
     }
 
-    ano_249 {   // efecto
+    ano_249 {
         priority = 254;
         frame {
             time = 12; sprite = sprite_73; origin = -64, -64;
@@ -5848,7 +5807,7 @@ animation {
         }
     }
 
-    ano_250 {   // efecto
+    ano_250 {
         priority = 255;
         frame { time = 6; sprite = -1; origin = -80, -80; }
         frame {
@@ -5862,12 +5821,12 @@ animation {
         }
     }
 
-    ano_251 {   // efecto
+    ano_251 {
         priority = 254;
-        link ano_252 { flag = 4; offset = -24, 8; }   // efecto
-        link ano_254 { flag = 4; offset = -40, 0; }   // efecto
-        link ano_245 { flag = 4; offset = -80, 8; }   // efecto
-        link ano_246 { flag = 4; offset = -56, 0; }   // efecto
+        link ano_252 { flag = 4; offset = -24, 8; }
+        link ano_254 { flag = 4; offset = -40, 0; }
+        link ano_245 { flag = 4; offset = -80, 8; }
+        link ano_246 { flag = 4; offset = -56, 0; }
         frame {
             time = 3; sprite = sprite_77; origin = -179, -44;
             render { rotate = 10; alpha = 0; zoom = 100, 100; }
@@ -5878,7 +5837,7 @@ animation {
         }
     }
 
-    ano_252 {   // efecto
+    ano_252 {
         priority = 254;
         frame {
             time = 3; sprite = sprite_77; origin = -171, -28; flip_x;
@@ -5890,9 +5849,9 @@ animation {
         }
     }
 
-    ano_253 {   // efecto
+    ano_253 {
         priority = 254;
-        link ano_252 { flag = 12; }   // efecto
+        link ano_252 { flag = 12; }
         frame {
             time = 3; sprite = sprite_77; origin = -147, -36;
             render { rotate = 15; alpha = 0; zoom = 100, 100; }
@@ -5903,7 +5862,7 @@ animation {
         }
     }
 
-    ano_254 {   // efecto
+    ano_254 {
         priority = 254;
         frame {
             time = 3; sprite = sprite_77; origin = -169, -28;
@@ -5915,9 +5874,9 @@ animation {
         }
     }
 
-    ano_255 {   // efecto
+    ano_255 {
         priority = 254;
-        link ano_253 { flag = 4; offset = -24, 16; }   // efecto
+        link ano_253 { flag = 4; offset = -24, 16; }
         frame {
             time = 3; sprite = sprite_77; origin = -171, -28;
             render { rotate = 60; alpha = 0; zoom = 100, 100; }
@@ -6035,10 +5994,10 @@ animation {
     }
 
     ano_260 {
-        link ano_250 { flag = 4; offset = -24, -56; }   // efecto
+        link ano_250 { flag = 4; offset = -24, -56; }
         frame {
             time = 3; sprite = sprite_30; origin = -22, -142; sound = 80;
-            blackscreen   at   0,    0  size 8, 0;
+            cutscene      at   0,    0  size 8, 0;
             spawn ano_231 at   0, -224;
             spawn ano_218 at -40,  -64;
         }
@@ -6288,7 +6247,7 @@ animation {
     ano_280 {
         priority = 254;
         link ano_338 { flag = 0; }
-        link ano_244 { flag = 4; }   // efecto
+        link ano_244 { flag = 4; }
         frame {
             time = 20; sprite = -1; origin = 56, 198; sound = 8;
             render { rotate = 0; alpha = 256; zoom = 100, 100; }
@@ -6423,7 +6382,7 @@ animation {
     ano_281 {
         priority = 254;
         link ano_338 { flag = 0; }
-        link ano_244 { flag = 4; }   // efecto
+        link ano_244 { flag = 4; }
         frame {
             time = 20; sprite = -1; origin = 56, 198; sound = 8;
             render { rotate = 0; alpha = 256; zoom = 100, 100; }
@@ -6546,39 +6505,39 @@ animation {
         frame { time = 1; sprite = -1; origin = -99, -242; }
     }
 
-    ano_290 {   // secuencia cinematica
+    ano_290 {
         link ano_291 { flag = 12; }
         frame { time = 3; sprite = sprite_4; origin = -50, -111; sound = 16; }
         frame {
             time = 2; sprite = sprite_6; origin = -37, -104;
             spawn ano_209 at 0, 0;
-            hit 50        at 0, 0;
+            bubble 50     at 0, 0;
         }
         frame {
             time = 1; sprite = -1;
             spawn ano_209 at 0, 0;
-            hit 50        at 0, 0;
+            bubble 50     at 0, 0;
         }
         frame {
             time = 1; sprite = sprite_6; origin = -37, -104;
             spawn ano_209 at 0, 0;
-            hit 50        at 0, 0;
+            bubble 50     at 0, 0;
         }
         frame {
             time = 1; sprite = -1;
             spawn ano_209 at 0, 0;
-            hit 50        at 0, 0;
+            bubble 50     at 0, 0;
         }
         frame {
             time = 1; sprite = sprite_6; origin = -37, -104;
             spawn ano_209 at 0, 0;
-            hit 50        at 0, 0;
+            bubble 50     at 0, 0;
         }
         frame {
             time = 1; sprite = -1;
             options { cancel; }
             spawn ano_209 at 0, 0;
-            hit 50        at 0, 0;
+            bubble 50     at 0, 0;
         }
     }
 
@@ -6592,33 +6551,33 @@ animation {
         frame { time = 3; sprite = -1; origin = -80, -112; }
     }
 
-    ano_292 {   // secuencia cinematica
+    ano_292 {
         link ano_293 { flag = 14; }
         frame { time = 1; sprite = -1; }
         frame {
             time = 1; sprite = sprite_4; origin = -50, -111; sound = 16;
             spawn ano_209 at 0, 0;
-            hit 51        at 0, 0;
+            bubble 51     at 0, 0;
         }
         frame {
             time = 1; sprite = -1;
             spawn ano_209 at 0, 0;
-            hit 51        at 0, 0;
+            bubble 51     at 0, 0;
         }
         frame {
             time = 1; sprite = sprite_6; origin = -37, -104;
             spawn ano_209 at 0, 0;
-            hit 51        at 0, 0;
+            bubble 51     at 0, 0;
         }
         frame {
             time = 1; sprite = -1;
             spawn ano_209 at 0, 0;
-            hit 51        at 0, 0;
+            bubble 51     at 0, 0;
         }
         frame {
             time = 1; sprite = sprite_6; origin = -37, -104;
             spawn ano_209 at 0, 0;
-            hit 51        at 0, 0;
+            bubble 51     at 0, 0;
         }
     }
 
@@ -6631,7 +6590,7 @@ animation {
         frame { time = 3; sprite = sprite_50; origin = -77, -108; }
     }
 
-    ano_294 {   // secuencia cinematica
+    ano_294 {
         link ano_295 { flag = 12; }
         frame { time = 1; sprite = sprite_20; origin = -40, -99; }
         frame {
@@ -6641,22 +6600,22 @@ animation {
         }
         frame {
             time = 12; sprite = sprite_19; origin = -25, -91;
-            blackscreen   at -257, -270  size  26, 0;
+            cutscene      at -257, -270  size  26, 0;
             spawn ano_249 at    0,  -80;
-            hit 30        at    0,  -88  size 150, 4;
-            hit 27        at    0,    0;
+            zoom          at    0,  -88  size 150, 4;
+            state 27      at    0,    0;
         }
         frame {
             time = 12; sprite = sprite_19; origin = -25, -91;
-            blackscreen   at 0,   0  size 14, 0;
+            cutscene      at 0,   0  size 14, 0;
             spawn ano_249 at 0, -80;
-            hit 27        at 0,   0;
+            state 27      at 0,   0;
         }
         frame {
             time = 1; sprite = sprite_19; origin = -25, -91;
-            blackscreen   at 0,   0  size 14,  0;
+            cutscene      at 0,   0  size 14,  0;
             spawn ano_249 at 0, -80;
-            hit 27        at 0,   0  size 16, 16;
+            state 27      at 0,   0  size 16, 16;
         }
         frame { time = 6; sprite = sprite_20; origin = -40, -99; }
         frame { time = 6; sprite = sprite_6; origin = -37, -104; }
@@ -6785,14 +6744,14 @@ animation {
         }
     }
 
-    ano_310 {   // carga de ki
+    ano_310 {
         frame {
             time = 5; sprite = sprite_47; origin = -47, -121; sound = 91;
             spawn ano_201 at   0,    0;
             spawn ano_249 at   0,  -64;
-            blackscreen   at   0,    0  size 20,  0;
+            cutscene      at   0,    0  size 20,  0;
             spawn ano_213 at -80, -112;
-            hit 43        at   0,  -80  size 16, 16;
+            bubble 43     at   0,  -80  size 16, 16;
             charf 16      at   0,  -72  size 16, 16;
         }
         frame {
@@ -6800,9 +6759,9 @@ animation {
             options { power = 6; damage = 61; }
             spawn ano_201 at    0,    0;
             hitbox        at -112, -216  size 224, 272;
-            blackscreen   at    0,    0  size  18,   0;
+            cutscene      at    0,    0  size  18,   0;
             spawn ano_213 at  -80, -112;
-            hit 43        at    0,  -80  size  16,  16;
+            bubble 43     at    0,  -80  size  16,  16;
             charf 16      at    0,  -72  size  16,  16;
         }
         frame {
@@ -6810,7 +6769,7 @@ animation {
             hurtbox       at -31,  -95  size 64, 96;
             spawn ano_201 at   0,    0;
             spawn ano_213 at -80, -112;
-            hit 43        at   0,  -80  size 16, 16;
+            bubble 43     at   0,  -80  size 16, 16;
             charf 16      at   0,  -72  size 16, 16;
         }
         frame {
@@ -6828,14 +6787,14 @@ animation {
         frame { time = 1; sprite = -1; origin = -109, -253; }
     }
 
-    ano_312 {   // carga de ki
+    ano_312 {
         frame {
             time = 5; sprite = sprite_47; origin = -47, -121; sound = 91;
             spawn ano_201 at   0,    0;
             spawn ano_249 at   0,  -64;
-            blackscreen   at   0,    0  size 20,  0;
+            cutscene      at   0,    0  size 20,  0;
             spawn ano_213 at -80, -112;
-            hit 43        at   0,  -80  size 16, 16;
+            bubble 43     at   0,  -80  size 16, 16;
             charf 16      at   0,  -72  size 16, 16;
         }
         frame {
@@ -6843,9 +6802,9 @@ animation {
             options { power = 6; damage = 61; }
             spawn ano_201 at    0,    0;
             hitbox        at -112, -216  size 224, 272;
-            blackscreen   at    0,    0  size  18,   0;
+            cutscene      at    0,    0  size  18,   0;
             spawn ano_213 at  -80, -112;
-            hit 43        at    0,  -80  size  16,  16;
+            bubble 43     at    0,  -80  size  16,  16;
             charf 16      at    0,  -72  size  16,  16;
         }
         frame {
@@ -6853,7 +6812,7 @@ animation {
             hurtbox       at -31,  -95  size 64, 96;
             spawn ano_201 at   0,    0;
             spawn ano_213 at -80, -112;
-            hit 43        at   0,  -80  size 16, 16;
+            bubble 43     at   0,  -80  size 16, 16;
             charf 16      at   0,  -72  size 16, 16;
         }
         frame {
@@ -6984,10 +6943,10 @@ animation {
     }
 
     ano_320 {
-        link ano_238 { flag = 4; offset = 152, -72; }   // efecto
-        link ano_239 { flag = 4; offset = 144, -56; }   // efecto
-        link ano_242 { flag = 4; offset = 0, -224; }   // efecto
-        link ano_243 { flag = 4; offset = -16, -216; }   // efecto
+        link ano_238 { flag = 4; offset = 152, -72; }
+        link ano_239 { flag = 4; offset = 144, -56; }
+        link ano_242 { flag = 4; offset = 0, -224; }
+        link ano_243 { flag = 4; offset = -16, -216; }
         link ano_341 { flag = 12; }
         frame { time = 3; sprite = sprite_30; origin = -22, -142; }
         frame { time = 6; sprite = sprite_30; origin = -22, -142; }
@@ -8024,7 +7983,7 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -88;
-            hit 41        at  40, -112  size 16,  16;
+            bubble 41     at  40, -112  size 16,  16;
         }
         frame {
             time = 2; sprite = sprite_17; origin = -25, -119;
@@ -8032,7 +7991,7 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -88;
-            hit 41        at  40, -112  size 16,  16;
+            bubble 41     at  40, -112  size 16,  16;
         }
         frame {
             time = 6; sprite = sprite_17; origin = -25, -119;
@@ -8048,7 +8007,7 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -84;
-            hit 41        at  32,  -48  size 16,  16;
+            bubble 41     at  32,  -48  size 16,  16;
         }
         frame {
             time = 9; sprite = sprite_17; origin = -25, -119;
@@ -8057,7 +8016,7 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -84;
-            hit 41        at  32,  -48  size 16,  16;
+            bubble 41     at  32,  -48  size 16,  16;
         }
         frame {
             time = 12; sprite = sprite_16; origin = -25, -119;
@@ -8072,7 +8031,7 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -88;
-            hit 41        at  40, -112  size 16,  16;
+            bubble 41     at  40, -112  size 16,  16;
         }
         frame {
             time = 9; sprite = sprite_17; origin = -25, -119;
@@ -8080,19 +8039,19 @@ animation {
             spawn ano_253 at -40,  -88;
             spawn ano_217 at -80,  -64;
             spawn ano_220 at  56,  -88;
-            hit 41        at  40, -112  size 16,  16;
+            bubble 41     at  40, -112  size 16,  16;
         }
         frame {
             time = 24; sprite = sprite_17; origin = -25, -119;
             hurtbox       at -15, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
-            hit 41        at  40, -112  size 16,  16;
+            bubble 41     at  40, -112  size 16,  16;
         }
         frame {
             time = 24; sprite = sprite_17; origin = -25, -119;
             hurtbox       at -15, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
-            hit 41        at  40, -112  size 16,  16;
+            bubble 41     at  40, -112  size 16,  16;
         }
         frame {
             time = 1; sprite = sprite_17; origin = -25, -119;

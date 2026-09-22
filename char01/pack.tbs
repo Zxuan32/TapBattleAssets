@@ -1,56 +1,38 @@
 package "char01.pac" {
-    // Contenido del .pac, EN ORDEN: asi lo lee GameData.Init y el
-    // orden es significativo. El numero de 'image' es la hoja que
-    // nombra 'sheet' en sprites.tbs, y el de 'sound' la voz que pide
-    // 'sound = N' en animation.tbs. Mover una entrada renumera todas
-    // las de su tipo, asi que se anade al final ('extract.py adopt').
-    //
-    // Una voz N se pide desde un frame con 'sound = 80 + N':
-    // TCBManajer1 /*00DC1*/ hace playAudio(no - 80); por debajo de 80
-    // /*00DBD*/ es un se_NN.ogg suelto, no una voz del personaje.
-    //
-    // 'extra' son 4 bytes que el juego NO LEE: GameData.Init saca de
-    // cada entrada el offset (pos+0..3), el tamano (pos+4..7) y el
-    // tipo (pos+8..11), y a decodeData solo le pasa esos tres; los
-    // pos+12..15 no los toca nadie. Tampoco son checksum: hay tres
-    // wav de contenido identico con tres 'extra' distintos. Se
-    // conservan tal cual solo para que el .pac salga identico; en una
-    // entrada nueva se deja sin poner y ya.
-
-    image   "png00.png"   extra = 0xc747a200;   // hoja 0
-    image   "png01.png"   extra = 0xa2cfdf00;   // hoja 1
-    image   "png02.png"   extra = 0x9aa5d700;   // hoja 2
-    image   "png03.png"   extra = 0x5b485300;   // hoja 3
-    image   "png04.png"   extra = 0xf686e700;   // hoja 4
-    image   "png05.png"   extra = 0x788e0200;   // hoja 5
-    image   "png06.png"   extra = 0x84283500;   // hoja 6
-    image   "png07.png"   extra = 0x6aad3f00;   // hoja 7
-    image   "png08.png"   extra = 0x58ae1e00;   // hoja 8
-    image   "png09.png"   extra = 0x3a21e400;   // hoja 9
-    image   "png10.png"   extra = 0x45613a00;   // hoja 10
-    image   "png11.png"   extra = 0xe61daf00;   // hoja 11
-    image   "png12.png"   extra = 0x09eaf400;   // hoja 12
-    image   "png13.png"   extra = 0x4a1bc800;   // hoja 13
-    image   "png14.png"   extra = 0x7e5e5d00;   // hoja 14
-    image   "png15.png"   extra = 0x0dbb3e00;   // hoja 15
-    image   "png16.png"   extra = 0x362c0900;   // hoja 16
+    image   "png00.png"   extra = 0xc747a200;
+    image   "png01.png"   extra = 0xa2cfdf00;
+    image   "png02.png"   extra = 0x9aa5d700;
+    image   "png03.png"   extra = 0x5b485300;
+    image   "png04.png"   extra = 0xf686e700;
+    image   "png05.png"   extra = 0x788e0200;
+    image   "png06.png"   extra = 0x84283500;
+    image   "png07.png"   extra = 0x6aad3f00;
+    image   "png08.png"   extra = 0x58ae1e00;
+    image   "png09.png"   extra = 0x3a21e400;
+    image   "png10.png"   extra = 0x45613a00;
+    image   "png11.png"   extra = 0xe61daf00;
+    image   "png12.png"   extra = 0x09eaf400;
+    image   "png13.png"   extra = 0x4a1bc800;
+    image   "png14.png"   extra = 0x7e5e5d00;
+    image   "png15.png"   extra = 0x0dbb3e00;
+    image   "png16.png"   extra = 0x362c0900;
     tables  "tables.tbs"  extra = 0x2157f000;
     sprites "sprites.tbs" extra = 0xfa869600;
     anim    "anim.tbs"    extra = 0x36574100;
-    sound   "wav00.wav"   extra = 0x21402300;   // 22050 Hz, 16 bit, mono, 1.17 s
-    sound   "wav01.wav"   extra = 0x82d97b00;   // 22050 Hz, 16 bit, mono, 0.01 s
-    sound   "wav02.wav"   extra = 0x40a19500;   // 22050 Hz, 16 bit, mono, 0.75 s
-    sound   "wav03.wav"   extra = 0x5cca6700;   // 22050 Hz, 16 bit, mono, 0.01 s
-    sound   "wav04.wav"   extra = 0xb0103800;   // 22050 Hz, 16 bit, mono, 0.01 s
-    sound   "wav05.wav"   extra = 0x8f5b2d00;   // 22050 Hz, 16 bit, mono, 0.27 s
-    sound   "wav06.wav"   extra = 0xb8afba00;   // 22050 Hz, 16 bit, mono, 0.49 s
-    sound   "wav07.wav"   extra = 0x16556600;   // 22050 Hz, 16 bit, mono, 0.28 s
-    sound   "wav08.wav"   extra = 0x0ce3e700;   // 22050 Hz, 16 bit, mono, 0.67 s
-    sound   "wav09.wav"   extra = 0x8bbfa400;   // 22050 Hz, 16 bit, mono, 0.73 s
-    sound   "wav10.wav"   extra = 0x04738b00;   // 22050 Hz, 16 bit, mono, 2.59 s
-    sound   "wav11.wav"   extra = 0x8e84d800;   // 22050 Hz, 16 bit, mono, 0.70 s
-    sound   "wav12.wav"   extra = 0x7324af00;   // 22050 Hz, 16 bit, mono, 1.27 s
-    sound   "wav13.wav"   extra = 0xafccd200;   // 22050 Hz, 16 bit, mono, 1.19 s
-    sound   "wav14.wav"   extra = 0x55682e00;   // 22050 Hz, 16 bit, mono, 0.01 s
+    sound   "wav00.wav"   extra = 0x21402300;
+    sound   "wav01.wav"   extra = 0x82d97b00;
+    sound   "wav02.wav"   extra = 0x40a19500;
+    sound   "wav03.wav"   extra = 0x5cca6700;
+    sound   "wav04.wav"   extra = 0xb0103800;
+    sound   "wav05.wav"   extra = 0x8f5b2d00;
+    sound   "wav06.wav"   extra = 0xb8afba00;
+    sound   "wav07.wav"   extra = 0x16556600;
+    sound   "wav08.wav"   extra = 0x0ce3e700;
+    sound   "wav09.wav"   extra = 0x8bbfa400;
+    sound   "wav10.wav"   extra = 0x04738b00;
+    sound   "wav11.wav"   extra = 0x8e84d800;
+    sound   "wav12.wav"   extra = 0x7324af00;
+    sound   "wav13.wav"   extra = 0xafccd200;
+    sound   "wav14.wav"   extra = 0x55682e00;
     info    "info.tbs";
 }
