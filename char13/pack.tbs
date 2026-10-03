@@ -32,6 +32,8 @@ package "char13.pac" {
     image   "png30.png";
     image   "png31.png";
     image   "png32.png";
+    image   "png33.png";
+    image   "png34.png";
     tables  "tables.tbs"  extra = 0xe3984100;
     sprites "sprites.tbs" extra = 0x521ba300;
     anim    "anim.tbs"    extra = 0xb8acf200;

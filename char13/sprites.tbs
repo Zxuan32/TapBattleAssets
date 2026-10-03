@@ -239,9 +239,21 @@ sprites {
     sprite_237 { sheet = 31;  x = 364;  y = 282;  w = 136;  h = 112; }
     sprite_238 { sheet = 30;  x = 250;  y =   1;  w =  91;  h = 117; }
     sprite_239 { sheet = 30;  x = 367;  y =   1;  w = 132;  h = 117; }
-    sprite_240 { sheet = 32;  x =   2;  y =   1;  w = 244;  h = 144; }
-    sprite_241 { sheet = 32;  x = 257;  y =   1;  w = 244;  h = 182; }
-    sprite_242 { sheet = 32;  x =   2;  y = 182;  w = 244;  h = 170; }
-    sprite_243 { sheet = 32;  x =  13;  y = 361;  w = 110;  h = 242; }
-    sprite_244 { sheet = 32;  x = 256;  y = 194;  w = 208;  h = 208; }
+    sprite_240 { sheet = 32;  x =   0;  y =   0;  w = 214;  h = 126; }
+    sprite_241 { sheet = 32;  x = 223;  y =   0;  w = 214;  h = 159; }
+    sprite_242 { sheet = 32;  x =   0;  y = 158;  w = 214;  h = 150; }
+    sprite_243 { sheet = 32;  x =   9;  y = 315;  w =  97;  h = 197; }
+    sprite_244 { sheet = 32;  x = 236;  y = 163;  w = 157;  h = 158; }
+    sprite_245 { sheet = 31;  x = 356;  y = 415;  w = 134;  h =  87; }
+    sprite_246 { sheet = 34;  x = 146;  y =  59;  w =  83;  h =  89; }
+    sprite_247 { sheet = 33;  x =   0;  y =  71;  w =  51;  h = 146; }
+    sprite_248 { sheet = 34;  x =  68;  y =   0;  w =  77;  h = 106; }
+    sprite_249 { sheet = 34;  x =   0;  y =   0;  w =  67;  h = 133; }
+    sprite_250 { sheet = 34;  x =   0;  y = 134;  w =  92;  h = 117; }
+    sprite_251 { sheet = 33;  x =   0;  y =   0;  w = 240;  h =  70; }
+    sprite_252 { sheet = 33;  x =  52;  y =  71;  w = 145;  h =  77; }
+    sprite_253 { sheet = 33;  x =  52;  y = 149;  w = 134;  h =  97; }
+    sprite_254 { sheet = 34;  x = 146;  y =   0;  w = 106;  h =  58; }
+    sprite_255 { sheet = 32;  x = 196;  y = 334;  w = 110;  h = 144; }
+    sprite_256 { sheet = 32;  x = 323;  y = 338;  w = 110;  h = 144; }
 }
