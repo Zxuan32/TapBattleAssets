@@ -1,5 +1,5 @@
 animation {
-    anos  = 442;
+    anos  = 444;
     padding = 3;
 
     ano_0 {
@@ -7749,5 +7749,18 @@ animation {
             render { rotate = 0; alpha = 256; zoom = 100, 100; }
             collision at 0, 0  size 16, 16;
         }
+    }
+
+
+    ano_442 {
+        // aviso del modo Tap Battle con el ki al maximo, pegado a la izquierda (ModTransform.TAP_TRANS_HINT)
+        priority = 255;
+        frame { time = 1; sprite = sprite_182; origin = 0, -10; }
+    }
+
+    ano_443 {
+        // el mismo, pegado a la derecha: para el jugador del lado derecho
+        priority = 255;
+        frame { time = 1; sprite = sprite_182; origin = -115, -10; }
     }
 }

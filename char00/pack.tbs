@@ -40,4 +40,5 @@ package "char00.pac" {
     sound   "wav16.wav"   extra = 0xc1df0700;
     sound   "wav17.wav"   extra = 0x8b929c00;
     info    "info.tbs";
+    mod     "mod.tbs";
 }

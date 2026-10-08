@@ -1,6 +1,6 @@
 animation {
-    anos  = 41;
-    padding = 3;
+    anos  = 51;
+    padding = 1;
 
     ano_0 {
         priority = 131;
@@ -25,13 +25,8 @@ animation {
 
     ano_4 {
         priority = 128;
-        frame { time = 3; sprite = sprite_2; origin = -80, -64; }
-        frame { time = 3; sprite = sprite_2; origin = -72, -72; }
-        frame { time = 3; sprite = sprite_2; origin = -80, -64; }
-        frame { time = 3; sprite = sprite_2; origin = -72, -72; }
-        frame { time = 3; sprite = sprite_2; origin = -80, -64; }
-        frame { time = 3; sprite = sprite_2; origin = -72, -72; }
-        frame { time = 6; sprite = -1; origin = -80, -64; }
+        frame { time = 10; sprite = sprite_2; origin = -48, -64; }
+        frame { time = 6; sprite = -1; origin = -48, -64; }
     }
 
     ano_5 {
@@ -47,6 +42,7 @@ animation {
 
     ano_6 {
         priority = 128;
+        link ano_36 { flag = 12; }
         frame { time = 3; sprite = sprite_4; origin = -96, -144; }
         frame { time = 3; sprite = sprite_4; origin = -88, -152; }
         frame { time = 3; sprite = sprite_4; origin = -96, -144; }
@@ -58,18 +54,61 @@ animation {
 
     ano_7 {
         priority = 128;
-        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
-        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
-        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
-        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
-        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
-        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
-        frame { time = 3; sprite = -1; origin = -136, -104; }
+        link ano_38 { flag = 12; offset = -16, 0; }
+        link ano_39 { flag = 12; offset = 8, -16; }
+        link ano_40 { flag = 12; offset = 16, -32; }
+        frame { time = 3; sprite = -1; origin = -32, -144; }
+        frame { time = 3; sprite = sprite_5; origin = -24, -144; }
+        frame { time = 3; sprite = sprite_5; origin = -32, -136; }
+        frame { time = 3; sprite = sprite_5; origin = -24, -144; }
+        frame { time = 3; sprite = sprite_5; origin = -32, -136; }
+        frame { time = 3; sprite = sprite_5; origin = -24, -144; }
+        frame { time = 3; sprite = sprite_5; origin = -32, -136; }
+        frame { time = 3; sprite = sprite_5; origin = -24, -144; }
+        frame { time = 3; sprite = sprite_5; origin = -32, -136; }
+        frame { time = 3; sprite = sprite_5; origin = -24, -144; }
+        frame { time = 3; sprite = sprite_5; origin = -32, -136; }
+        frame { time = 3; sprite = -1; origin = -72, -104; }
+    }
+
+    ano_8 {
+        priority = 128;
+        link ano_8 { flag = 12; offset = 32, 32; }
+        link ano_8 { flag = 12; offset = 64, 72; }
+        link ano_41 { flag = 12; }
+        frame { time = 3; sprite = sprite_6; origin = -112, -208; }
+        frame { time = 3; sprite = sprite_6; origin = -107, -203; }
+        frame { time = 3; sprite = sprite_6; origin = -112, -208; }
+        frame { time = 3; sprite = sprite_6; origin = -107, -203; }
+        frame { time = 3; sprite = sprite_6; origin = -112, -208; }
+        frame { time = 3; sprite = sprite_6; origin = -107, -203; }
+        frame { time = 3; sprite = sprite_6; origin = -112, -208; }
+        frame { time = 3; sprite = -1; origin = -107, -203; }
+    }
+
+    ano_9 {
+        priority = 128;
+        frame {
+            time = 5; sprite = sprite_7; origin = -48, -64;
+            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+            options { tween; }
+        }
+        frame { time = 10; sprite = sprite_7; origin = -56, -80; }
+        frame { time = 1; sprite = -1; origin = -48, -80; }
     }
 
     ano_10 {
-        priority = 236;
-        frame { sprite = -1; }
+        priority = 128;
+        link ano_41 { flag = 12; offset = 80, -8; }
+        link ano_42 { flag = 12; }
+        frame { time = 3; sprite = sprite_8; origin = -112, -80; }
+        frame { time = 3; sprite = sprite_8; origin = -107, -75; }
+        frame { time = 3; sprite = sprite_8; origin = -112, -80; }
+        frame { time = 3; sprite = sprite_8; origin = -107, -75; }
+        frame { time = 3; sprite = sprite_8; origin = -112, -80; }
+        frame { time = 3; sprite = sprite_8; origin = -107, -75; }
+        frame { time = 3; sprite = sprite_8; origin = -112, -80; }
+        frame { time = 3; sprite = -1; origin = -107, -75; }
     }
 
     ano_11 {
@@ -77,18 +116,18 @@ animation {
         link ano_33 { flag = 12; }
         link ano_34 { flag = 12; }
         link ano_35 { flag = 12; }
-        frame { time = 3; sprite = sprite_5; origin = -88, -160; }
-        frame { time = 3; sprite = sprite_5; origin = -90, -164; loop; }
+        frame { time = 3; sprite = sprite_9; origin = -88, -160; }
+        frame { time = 3; sprite = sprite_9; origin = -90, -164; loop; }
     }
 
     ano_12 {
         priority = 236;
         frame {
-            time = 6; sprite = sprite_6; origin = -63, -117;
+            time = 6; sprite = sprite_10; origin = -63, -117;
             options { tween; }
         }
         frame {
-            time = 1; sprite = sprite_6; origin = -63, -117;
+            time = 1; sprite = sprite_10; origin = -63, -117;
             render { rotate = 0; alpha = 255; zoom = 100, 100; }
         }
     }
@@ -101,18 +140,122 @@ animation {
 
     ano_14 {
         priority = 128;
-        frame { time = 6; sprite = sprite_7; origin = -16, -32; }
+        frame { time = 6; sprite = sprite_11; origin = -16, -32; }
         frame { time = 6; sprite = -1; origin = -16, -32; }
+    }
+
+    ano_15 {
+        priority = 236;
+        link ano_43 { flag = 12; }
+        frame { time = 10; sprite = sprite_6; origin = -40, -80; }
+        frame { time = 10; sprite = -1; }
+    }
+
+    ano_16 {
+        priority = 128;
+        link ano_41 { flag = 12; offset = 48, 0; }
+        frame { time = 3; sprite = sprite_12; origin = -96, -176; }
+        frame { time = 3; sprite = sprite_12; origin = -90, -170; }
+        frame { time = 3; sprite = sprite_12; origin = -96, -176; }
+        frame { time = 3; sprite = sprite_12; origin = -90, -170; }
+        frame { time = 3; sprite = sprite_12; origin = -96, -176; }
+        frame { time = 3; sprite = sprite_12; origin = -90, -170; }
+        frame { time = 3; sprite = sprite_12; origin = -96, -176; }
+        frame { time = 3; sprite = -1; origin = -90, -170; }
+    }
+
+    ano_17 {
+        priority = 255;
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -36;
+            render { rotate = 355; alpha = 0; zoom = 700, 150; }
+        }
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -24;
+            render { rotate = 355; alpha = 0; zoom = 700, 100; }
+        }
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -14;
+            render { rotate = 355; alpha = 0; zoom = 700, 60; }
+        }
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -7;
+            render { rotate = 355; alpha = 0; zoom = 700, 30; }
+        }
+        frame {
+            time = 1; sprite = sprite_17; origin = -875, -3;
+            render { rotate = 355; alpha = 0; zoom = 700, 12; }
+        }
+        frame {
+            time = 1; sprite = sprite_17; origin = -875, -1;
+            render { rotate = 355; alpha = 0; zoom = 700, 4; }
+        }
+    }
+
+    ano_18 {
+        priority = 255;
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -36;
+            render { rotate = 355; alpha = 0; zoom = 700, 150; }
+        }
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -24;
+            render { rotate = 355; alpha = 0; zoom = 700, 100; }
+        }
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -14;
+            render { rotate = 355; alpha = 0; zoom = 700, 60; }
+        }
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -7;
+            render { rotate = 355; alpha = 0; zoom = 700, 30; }
+        }
+        frame {
+            time = 1; sprite = sprite_17; origin = -875, -3;
+            render { rotate = 355; alpha = 0; zoom = 700, 12; }
+        }
+        frame {
+            time = 1; sprite = sprite_17; origin = -875, -1;
+            render { rotate = 355; alpha = 0; zoom = 700, 4; }
+        }
+    }
+
+    ano_19 {
+        priority = 255;
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -36;
+            render { rotate = 355; alpha = 0; zoom = 700, 150; }
+        }
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -24;
+            render { rotate = 355; alpha = 0; zoom = 700, 100; }
+        }
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -14;
+            render { rotate = 355; alpha = 0; zoom = 700, 60; }
+        }
+        frame {
+            time = 2; sprite = sprite_17; origin = -875, -7;
+            render { rotate = 355; alpha = 0; zoom = 700, 30; }
+        }
+        frame {
+            time = 1; sprite = sprite_17; origin = -875, -3;
+            render { rotate = 355; alpha = 0; zoom = 700, 12; }
+        }
+        frame {
+            time = 1; sprite = sprite_17; origin = -875, -1;
+            render { rotate = 355; alpha = 0; zoom = 700, 4; }
+        }
     }
 
     ano_33 {
         priority = 236;
         frame {
-            time = 3; sprite = sprite_5; origin = -80, -128;
+            time = 3; sprite = sprite_9; origin = -80, -128;
             render { rotate = 0; alpha = 0; zoom = 95, 95; }
         }
         frame {
-            time = 3; sprite = sprite_5; origin = -82, -132; loop;
+            time = 3; sprite = sprite_9; origin = -82, -132; loop;
             render { rotate = 0; alpha = 0; zoom = 95, 95; }
         }
     }
@@ -120,18 +263,119 @@ animation {
     ano_34 {
         priority = 236;
         frame {
-            time = 3; sprite = sprite_5; origin = -72, -96;
+            time = 3; sprite = sprite_9; origin = -72, -96;
             render { rotate = 0; alpha = 0; zoom = 90, 90; }
         }
         frame {
-            time = 3; sprite = sprite_5; origin = -74, -100; loop;
+            time = 3; sprite = sprite_9; origin = -74, -100; loop;
             render { rotate = 0; alpha = 0; zoom = 90, 90; }
         }
     }
 
     ano_35 {
         priority = 236;
-        frame { time = 3; sprite = sprite_8; origin = -56, -56; }
-        frame { time = 3; sprite = sprite_8; origin = -58, -60; loop; }
+        frame { time = 3; sprite = sprite_13; origin = -56, -56; }
+        frame { time = 3; sprite = sprite_13; origin = -58, -60; loop; }
+    }
+
+    ano_36 {
+        priority = 128;
+        frame { time = 3; sprite = sprite_14; origin = 0, -144; }
+        frame { time = 3; sprite = sprite_14; origin = 8, -152; }
+        frame { time = 3; sprite = sprite_14; origin = 0, -144; }
+        frame { time = 3; sprite = sprite_14; origin = 8, -152; }
+        frame { time = 3; sprite = sprite_14; origin = 0, -144; }
+        frame { time = 3; sprite = sprite_14; origin = 8, -152; }
+        frame { time = 3; sprite = -1; origin = -40, -104; }
+    }
+
+    ano_37 {
+        priority = 128;
+        link ano_36 { flag = 12; }
+        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
+        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
+        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
+        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
+        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
+        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
+        frame { time = 3; sprite = -1; origin = -136, -104; }
+    }
+
+    ano_38 {
+        priority = 128;
+        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
+        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
+        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
+        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
+        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
+        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
+        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
+        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
+        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
+        frame { time = 3; sprite = sprite_4; origin = -88, -152; }
+        frame { time = 3; sprite = sprite_4; origin = -96, -144; }
+        frame { time = 3; sprite = -1; origin = -136, -104; }
+    }
+
+    ano_39 {
+        priority = 128;
+        frame { time = 3; sprite = -1; origin = 32, -144; }
+        frame { time = 3; sprite = -1; origin = 40, -152; }
+        frame { time = 3; sprite = sprite_5; origin = 32, -136; }
+        frame { time = 3; sprite = sprite_5; origin = 40, -144; }
+        frame { time = 3; sprite = sprite_5; origin = 32, -136; }
+        frame { time = 3; sprite = sprite_5; origin = 40, -144; }
+        frame { time = 3; sprite = sprite_5; origin = 32, -136; }
+        frame { time = 3; sprite = sprite_5; origin = 40, -144; }
+        frame { time = 3; sprite = sprite_5; origin = 32, -136; }
+        frame { time = 3; sprite = sprite_5; origin = 40, -144; }
+        frame { time = 3; sprite = sprite_5; origin = 32, -136; }
+        frame { time = 3; sprite = -1; origin = -8, -104; }
+    }
+
+    ano_40 {
+        priority = 128;
+        frame { time = 3; sprite = -1; origin = 96, -144; }
+        frame { time = 3; sprite = -1; origin = 104, -152; }
+        frame { time = 3; sprite = -1; origin = 96, -144; }
+        frame { time = 3; sprite = sprite_5; origin = 104, -144; }
+        frame { time = 3; sprite = sprite_5; origin = 96, -136; }
+        frame { time = 3; sprite = sprite_5; origin = 104, -144; }
+        frame { time = 3; sprite = sprite_5; origin = 96, -136; }
+        frame { time = 3; sprite = sprite_5; origin = 104, -144; }
+        frame { time = 3; sprite = sprite_5; origin = 96, -136; }
+        frame { time = 3; sprite = sprite_5; origin = 104, -144; }
+        frame { time = 3; sprite = sprite_5; origin = 96, -136; }
+        frame { time = 3; sprite = -1; origin = 56, -104; }
+    }
+
+    ano_41 {
+        priority = 128;
+        frame { time = 3; sprite = sprite_15; origin = -16, -80; }
+        frame { time = 3; sprite = sprite_15; origin = -11, -75; }
+        frame { time = 3; sprite = sprite_15; origin = -16, -80; }
+        frame { time = 3; sprite = sprite_15; origin = -11, -75; }
+        frame { time = 3; sprite = sprite_15; origin = -16, -80; }
+        frame { time = 3; sprite = sprite_15; origin = -11, -75; }
+        frame { time = 3; sprite = sprite_15; origin = -16, -80; }
+        frame { time = 3; sprite = -1; origin = -11, -75; }
+    }
+
+    ano_42 {
+        priority = 128;
+        frame { time = 3; sprite = sprite_16; origin = -48, -80; }
+        frame { time = 3; sprite = sprite_16; origin = -43, -75; }
+        frame { time = 3; sprite = sprite_16; origin = -48, -80; }
+        frame { time = 3; sprite = sprite_16; origin = -43, -75; }
+        frame { time = 3; sprite = sprite_16; origin = -48, -80; }
+        frame { time = 3; sprite = sprite_16; origin = -43, -75; }
+        frame { time = 3; sprite = sprite_16; origin = -48, -80; }
+        frame { time = 3; sprite = -1; origin = -43, -75; }
+    }
+
+    ano_43 {
+        priority = 128;
+        frame { time = 10; sprite = sprite_15; origin = 8, -80; }
+        frame { time = 10; sprite = -1; origin = 48, 0; }
     }
 }

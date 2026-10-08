@@ -1,0 +1,6 @@
+sprites {
+    sprite_0  { sheet =  0;  x =    1;  y =    1;  w = 152;  h =  32; }
+    sprite_1  { sheet =  0;  x =  155;  y =    1;  w = 172;  h =  32; }
+    sprite_2  { sheet =  0;  x =  329;  y =    1;  w = 188;  h =  32; }
+    sprite_3  { sheet =  0;  x =  519;  y =    1;  w = 184;  h =  32; }
+}

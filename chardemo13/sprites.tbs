@@ -1,7 +1,19 @@
 sprites {
-    sprite_0 { sheet = 0;  x =   0;  y = 480;  w = 368;  h =  32; }
-    sprite_1 { sheet = 0;  x =   0;  y = 320;  w = 112;  h = 160; }
-    sprite_2 { sheet = 0;  x = 368;  y =   0;  w = 144;  h = 192; }
-    sprite_3 { sheet = 0;  x =   0;  y =   0;  w = 368;  h = 320; }
-    sprite_4 { sheet = 0;  x = 112;  y = 320;  w = 160;  h =  56; }
+    // Recortes del atlas. 'sheet' es el numero de 'image' de
+    // pack.tbs, o sea que hoja .png se recorta.
+    // Las coordenadas van a MEDIA resolucion: el motor las multiplica
+    // por 2 al dibujar personajes (DrawImage, acttype 3 o 4), asi que
+    // un recorte de 70x64 se ve a 140x128.
+    // El numero de cada sprite es su POSICION: son un array, no se
+    // pueden saltar ni reordenar. Para quitar uno de en medio hay que
+    // reapuntar los frames que lo usan.
+    // El comentario de la derecha dice que anos lo usan; 'sin usar'
+    // es un recorte que no dibuja nadie (suele sobrar de un
+    // trasplante y se puede reaprovechar).
+
+    sprite_0 { sheet = 0;  x =   0;  y = 480;  w = 368;  h =  32; }   // ano_0
+    sprite_1 { sheet = 0;  x =   0;  y = 320;  w = 112;  h = 160; }   // ano_1, ano_2, ano_3, ano_5, ano_6
+    sprite_2 { sheet = 0;  x = 368;  y =   0;  w = 144;  h = 192; }   // ano_4
+    sprite_3 { sheet = 0;  x =   0;  y =   0;  w = 368;  h = 320; }   // ano_8, ano_9, ano_10, ano_11, ano_12, ano_13...
+    sprite_4 { sheet = 0;  x = 112;  y = 320;  w = 160;  h =  56; }   // ano_20
 }

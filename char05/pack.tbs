@@ -38,4 +38,5 @@ package "char05.pac" {
     sound   "wav13.wav"   extra = 0xf0b8c500;
     sound   "wav14.wav"   extra = 0xc46cdf00;
     info    "info.tbs";
+    mod     "mod.tbs";
 }

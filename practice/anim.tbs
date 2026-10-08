@@ -1,0 +1,20 @@
+animation {
+    anos  = 8;
+
+    ano_0 {
+        frame { sprite = sprite_0; origin = 34, 14; }
+    }
+
+    ano_1 {
+        frame { sprite = sprite_1; origin = 272, 14; }
+    }
+
+    ano_2 {
+        frame { sprite = sprite_2; origin = 272, 14; }
+    }
+
+    ano_3 {
+        frame { sprite = sprite_3; origin = 272, 14; }
+    }
+
+}

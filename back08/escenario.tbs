@@ -1,0 +1,32 @@
+// El laboratorio del Dr. Gero del Super Butouden 2. Fondos de DSP27
+// (dsp27.deviantart.com), sacados con tools/gero_sb2.py. Seccion 34f de
+// docs/MODDING.md. A tamano original: la computadora de Gero mide casi el
+// doble que un personaje.
+escenario {
+    ancho = 3072;
+
+    // 1/3: la pared circular, con su espejo; arriba, la roca de la cueva.
+    capa lejos {
+        pon "00.png" at 0, -319 repite;
+    }
+
+    // 1/2: la estructura de luces, colgando en medio.
+    capa media {
+        pon "01.png" at 72, -92;
+    }
+
+    // 1:1: el piso en toda la vuelta, las maquinas grandes en medio y las
+    // dos pequenas a los lados.
+    capa suelo {
+        pon "02.png" at 0, 203 repite;
+        pon "03.png" at -84, 8;
+        pon "04.png" at -504, 112;
+        pon "05.png" at 1044, 137;
+    }
+
+    // La persecucion: la cueva de fondo, el piso delante.
+    persecucion {
+        frente "06.png" at 0, 203;
+        fondo "07.png" at 0, 3 cielo 200 abajo 120;
+    }
+}

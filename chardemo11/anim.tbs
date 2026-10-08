@@ -125,11 +125,11 @@ animation {
 
     ano_14 {
         priority = 255;
-        frame { time = 20; sprite = sprite_3; origin = -304, 2; speed_x = 1572864; }
+        frame { time = 20; sprite = sprite_3; origin = -296, 2; speed_x = 1572864; }
     }
 
     ano_15 {
-        frame { sprite = sprite_3; origin = -200, -318; }
+        frame { sprite = sprite_3; origin = -184, -318; }
     }
 
     ano_16 {

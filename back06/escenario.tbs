@@ -1,0 +1,39 @@
+// Capsule Corp. Fondos de DSP27 (dsp27.deviantart.com), sacados con
+// tools/recorta_dsp27.py. Seccion 34 de docs/MODDING.md.
+// Medidas en pixeles del mundo (480x320) con la camara quieta: pies en y=240.
+escenario {
+    ancho = 2048;
+
+    // 1/3 de la camara: el cielo morado con el mar y las torres lejanas,
+    // cuatro veces con su espejo alterno.
+    capa lejos {
+        pon "00.png" at 0, -1 cielo 300 abajo 120;
+        pon "00.png" at 512, -1 espejo cielo 300 abajo 120;
+        pon "00.png" at 1024, -1 cielo 300 abajo 120;
+        pon "00.png" at 1536, -1 espejo cielo 300 abajo 120;
+    }
+
+    // 1/2 de la camara, para que se vea lejos: la plaza a lo largo de toda
+    // la vuelta y, encima, el edificio una vez, corrido para que la puerta
+    // salga en medio al empezar.
+    capa media {
+        pon "02.png" at 0, 195 repite abajo 60;
+        pon "01.png" at -320, -293 abajo 60;
+    }
+
+    // 1:1: el piso de baldosas, delante, con el borde de arriba fundido con
+    // la plaza; los pies quedan 35 px dentro.
+    capa suelo {
+        pon "03.png" at 0, 205 abajo 60 fundido 24;
+        pon "03.png" at 512, 205 espejo abajo 60 fundido 24;
+        pon "03.png" at 1024, 205 abajo 60 fundido 24;
+        pon "03.png" at 1536, 205 espejo abajo 60 fundido 24;
+    }
+
+    // La persecucion (BattleEvents456): el cielo de fondo y la plaza delante,
+    // sin el edificio.
+    persecucion {
+        frente "02.png" at 0, 195 repite abajo 60;
+        fondo "04.png" at 0, -1 cielo 300 abajo 120;
+    }
+}

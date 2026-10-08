@@ -58,9 +58,9 @@ tables {
     table_2 {
         columns = 1;
         rows    = 200;
-        real    = 3586;
-        text_0   = "¡Más allá del que superó al Súper Saiyajin!_¡¡Esto es el Súper Saiyajin 3!!";
-        text_1   = "¡Ya puedes usar a Goku [Súper Saiyajin 3]!";
+        real    = 3378;
+        text_0   = "¡Gotenks, la fusión de Goten y Trunks,_se transformó todavía más!";
+        text_1   = "¡Ya puedes usar a Gotenks [Súper Saiyajin 3]!";
         text_2   = "";
         text_3   = "";
         text_4   = "";
@@ -78,23 +78,23 @@ tables {
         text_16  = "Ultimate (aire)_　¡Aprendiste «Genkidama»!";
         text_17  = "";
         text_18  = "";
-        text_19  = "Este es el resultado de entrenar en el otro mundo._¡Ven con todo!";
-        text_20  = "Este es el resultado de entrenar en el otro mundo._¡Ven con todo!";
-        text_21  = "Este es el resultado de entrenar en el otro mundo._¡Ven con todo!";
-        text_22  = "Este es el resultado de entrenar en el otro mundo._¡Ven con todo!";
-        text_23  = "Este es el resultado de entrenar en el otro mundo._¡Ven con todo!";
-        text_24  = "Este es el resultado de entrenar en el otro mundo._¡Ven con todo!";
-        text_25  = "Perdón por ocultarlo._Es lo que entrené en el otro mundo";
-        text_26  = "¿Tú otra vez...? ¡Ya no me voy a contener!";
-        text_27  = "¡Así como estoy ahora no voy a perder!";
-        text_28  = "Este es el resultado de entrenar en el otro mundo._¡Ven con todo!";
-        text_29  = "No puedo durar mucho en este estado..._¡Terminemos rápido!";
-        text_30  = "Súper Saiyajin 3 contra Súper Saiyajin 3..._¡Esto va a ser tremendo!";
-        text_31  = "Súper Saiyajin 3 contra Súper Saiyajin 3..._¡Esto va a ser tremendo!";
-        text_32  = "Eres idéntico a mí..._¿Quién rayos eres...?";
-        text_33  = "Qué ki tan grande, pero no es una fusión..._¿Qué técnica usaron?";
-        text_34  = "Increíble... ni en Súper Saiyajin 3_siento que pueda ganar...";
-        text_35  = "No siento su ki..._Es la primera vez que me pasa...";
+        text_19  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_20  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_21  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_22  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_23  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_24  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_25  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_26  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_27  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_28  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_29  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_30  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_31  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_32  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_33  = "¡Yeah! ¡Con cara de villano, pero aquí llega_el justiciero Ultra Súper Saiyajin!";
+        text_34  = "¿Súper Saiyajin Dios?_¡Eso es trampa!";
+        text_35  = "¡Qué cara de malo tienes!_¡El gran Gotenks será tu rival!";
         text_36  = "";
         text_37  = "";
         text_38  = "";
@@ -158,23 +158,23 @@ tables {
         text_96  = "";
         text_97  = "";
         text_98  = "";
-        text_99  = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_100 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_101 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_102 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_103 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_104 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_105 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_106 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_107 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_108 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_109 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_110 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_111 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_112 = "No entiendo bien por qué,_pero siento algo muy familiar...";
-        text_113 = "Con cuerpo vivo, el Súper Saiyajin 3_gasta muchísimo ki. No puedo usarlo a la ligera...";
-        text_114 = "Qué poder tan increíble..._¿Yo también podré llegar a eso?";
-        text_115 = "No peleaste en serio ni un momento..._Así como estoy, no podría ganarte...";
+        text_99  = "¡Je, je!_¡Este es el poder del Ultra Súper Saiyajin!";
+        text_100 = "¡Je, je!_¡Este es el poder del Ultra Súper Saiyajin!";
+        text_101 = "¡Je, je!_¡Este es el poder del Ultra Súper Saiyajin!";
+        text_102 = "¡Señor Krilin, no se exija tanto!_¡Déjeme las peleas a mí!";
+        text_103 = "¡Je, je!_¡Este es el poder del Ultra Súper Saiyajin!";
+        text_104 = "¡Es que soy fuertísimo!_¿Ya lo entendió, señor Piccolo?";
+        text_105 = "¡Je, je!_¡Este es el poder del Ultra Súper Saiyajin!";
+        text_106 = "¡¿Aprendiste la lección, malvado?!";
+        text_107 = "¡¿Aprendiste la lección, malvado?!";
+        text_108 = "¡Je, je!_¡Este es el poder del Ultra Súper Saiyajin!";
+        text_109 = "¿Eh? ¿Se murió?_¡Ja, ja, ja! ¡Creo que me pasé!";
+        text_110 = "¿Eh? ¿Esto se llama Súper Saiyajin 3?_¡Ultra Súper Saiyajin suena más genial!";
+        text_111 = "¡¿Aprendiste la lección, impostor?!";
+        text_112 = "¡Je, je!_¡Este es el poder del Ultra Súper Saiyajin!";
+        text_113 = "¡Je, je!_¡Este es el poder del Ultra Súper Saiyajin!";
+        text_114 = "Ay, ay, ay... Gané de milagro..._¡Rayos! Ya no me siento tan seguro...";
+        text_115 = "¡Je... je, je!_¡F-fue facilísimo...!";
         text_116 = "";
         text_117 = "";
         text_118 = "";
@@ -264,50 +264,50 @@ tables {
     table_3 {
         columns = 18;
         rows    = 1;
-        row_0 =   5,   5,  25,  56,  64,  80,   1,  10,   1,   0,   2, 100, 100,   0,   0,  48, 211,  13;
+        row_0 =   5,   5,  25,  56,  64,  80,   1,  10,   1,   0,   2, 100, 100,   0,   0,  48, 211,  14;
     }
 
     table_4 {
         columns = 24;
         rows    = 19;
         real    = 38;
-        row_0  =   0,   0,  40,   0,  47,   0, 167,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_0  =   0,   0,  40,   0,  47,   0, 211,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_1  =   0,   0,   1,   0,   0,   0,   2,   0,   0,   0,  47,   0,  47,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_2  =   0,   0,  94,   0,   0,   0,   0,   0,  48,   0,  43,   0,   0,   0,  43,   0,   0,   0,   0,   0,   0,   0,  48,   0;
+        row_2  =  16,   0,  43,   0,   0,   0,   0,   0,  48,   0,   0,   0,   0,   0,  59,   0,   0,   0,   0,   0,   0,   0,  48,   0;
         row_3  =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_4  =   0,   0,  45,   0,   0,   0,   0,   0,  48,   0,  46,   0,   0,   0,  46,   0,   0,   0,   0,   0,   0,   0,  48,   0;
+        row_4  =  16,   0,  45,   0,   0,   0,   0,   0,   0,   0,  46,   0,   0,   0,  46,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_5  =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_6  =   0,   0,  56,   0,  60,   0, 168,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_6  =   0,   0,  56,   0,  60,   0, 212,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_7  =   0,   0,   1,   0,   0,   0,   0,   0,   0,   0,  60,   0,  60,   0,   0,   0,  58,   0,   0,   0,   0,   0,   0,   0;
-        row_8  =   0,   0, 170,   0,   0,   0,   0,   0,  48,   0,   0,   0,   0,   0,  44,   0,   0,   0,   0,   0,   0,   0,  48,   0;
+        row_8  =  16,   0, 167,   0,   0,   0,   0,   0,  48,   0,  44,   0,   0,   0,  44,   0,   0,   0,   0,   0,   0,   0,  48,   0;
         row_9  =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_10 =  16,   0,  95,   0,   0,   0,   0,   0,  96,   0,  54,   0,   0,   0,  54,   0,   0,   0,   0,   0,   0,   0,  96,   0;
+        row_10 =  16,   0, 170,   0,   0,   0,   0,   0,  48,   0,  46,   0,   0,   0,  46,   0,   0,   0,   0,   0,   0,   0,  48,   0;
         row_11 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_12 =   0,   0,  40,   0,  47,   0, 167,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_12 =   0,   0,  40,   0,  47,   0, 211,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_13 =   0,   0,   1,   0,   0,   0,   2,   0,   0,   0,  47,   0,  47,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_14 =   0,   0, 170,   0,   0,   0,   0,   0,  48,   0,   0,   0,   0,   0,  44,   0,   0,   0,   0,   0,   0,   0,  48,   0;
+        row_14 =  16,   0, 167,   0,   0,   0,   0,   0,  48,   0,  44,   0,   0,   0,  44,   0,   0,   0,   0,   0,   0,   0,  48,   0;
         row_15 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_16 =  16,   0,  95,   0,   0,   0,   0,   0,  96,   0,  54,   0,   0,   0,  54,   0,   0,   0,   0,   0,   0,   0,  96,   0;
+        row_16 =  16,   0,  45,   0,   0,   0,   0,   0,  48,   0,  46,   0,   0,   0,  46,   0,   0,   0,   0,   0,   0,   0,  48,   0;
         row_17 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_18 =   0,   0,  51,   0,  49,   0,  50,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_19 =   0,   0,   1,   0,   0,   0,   0,   0,   0,   0,  49,   0,  49,   0,   0,   0,   0,   0,   0,   0,   4,   1,   0,   0;
         row_20 =   0,   0,  57,   0,  49,   0,  50,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_21 =   0,   0,   1,   0,   0,   0,   0,   0,   0,   0,  49,   0,  49,   0,   0,   0,   0,   0,   0,   0,   4,   1,   0,   0;
-        row_22 =  16,   0,  61,   0,  55,   0,   0,   0,  96,   0,  63,   0,   0,   0,  63,   0,   0,   0,   0,   0,   0,   0,  48,   0;
-        row_23 =   0,   0,   1,   0,   0,   0,   0,   0,  64,   0,  55,   0,  55,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_24 =  16,   0,  61,   0,  55,   0,   0,   0,  96,   0,  63,   0,   0,   0,  63,   0,   0,   0,   0,   0,   0,   0,  48,   0;
-        row_25 =   0,   0,   1,   0,   0,   0,   0,   0,  64,   0,  55,   0,  55,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_22 =  16,   0,  95,   0,  86,   1,   0,   0,  48,   0,  64,   0,  63,   0,  64,   0,  63,   0,   0,   0,   0,   0,  48,   0;
+        row_23 =   0,   0,   1,   0,   0,   0,   0,   0,   0,   0,  86,   1,  86,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_24 =  16,   0,  94,   0,  52,   0, 146,   0,   0,   0,  92,   0,   0,   0,  92,   0,   0,   0,   0,   0,   0,   0,  48,   0;
+        row_25 =   0,   0,   1,   0,   0,   0,   0,   0,  92,   0,  52,   0,  52,   0,   0,   0,   0,   0,  53,   0,   0,   0,   0,   0;
         row_26 =   0,   0,  59,   0,  94,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_27 =   0,   0,   1,   0,   0,   0,   0,   0,   0,   0,  94,   0,  94,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_28 =   0,   0,  54,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_29 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_30 =   0,   0,  56,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_31 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_32 =   0,   0, 104,   1,  47,   0, 167,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_32 =   0,   0, 112,   1,  47,   0, 211,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_33 =   0,   0,   1,   0,   0,   0,   1,   0,   0,   0,  47,   0,  47,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_34 =   0,   0, 104,   1,  47,   0, 167,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_34 =   0,   0, 112,   1,  47,   0, 211,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_35 =   0,   0,   1,   0,   0,   0,   1,   0,   0,   0,  47,   0,  47,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_36 =   0,   0, 104,   1,  47,   0, 167,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_36 =   0,   0, 112,   1,  47,   0, 211,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_37 =   0,   0,   1,   0,   0,   0,   1,   0,   0,   0,  47,   0,  47,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
     }
 
@@ -315,8 +315,8 @@ tables {
         columns = 40;
         rows    = 1;
         real    = 2;
-        row_0 = 244,   1, 244,   1,  44,   1, 100,   0, 200,   0, 100,   0, 100,   0, 100,   0, 200,   0, 200,   0, 200,   0, 200,   0, 200,   0,   0,   0,   0,   0,   0,   0, 200,   0,  44,   1,  44,   1, 100,   0;
-        row_1 =  44,   1,   0,   0, 100,   0,   0,   0,   0,   0,  88,   2, 100,   0,  44,   1,   0,   0,   0,   0,   0,   0,   0,   0, 232,   3,  44,   1,  44,   1, 100,   0, 100,   0,   0,   0, 200,   0, 200,   0;
+        row_0 = 244,   1, 244,   1,  44,   1, 100,   0, 200,   0, 100,   0, 100,   0, 100,   0, 200,   0, 200,   0, 200,   0, 200,   0, 200,   0,   0,   0,   0,   0,   0,   0, 200,   0, 200,   0,   0,   0, 200,   0;
+        row_1 =  44,   1,   0,   0, 100,   0,   0,   0,   0,   0, 100,   0, 100,   0, 100,   0,  44,   1,   0,   0,   0,   0,   0,   0, 200,   0,  44,   1, 100,   0, 100,   0, 100,   0, 176,   4, 200,   0, 200,   0;
     }
 
     table_6 {
@@ -508,8 +508,8 @@ tables {
         columns = 22;
         rows    = 99;
         row_0  =   0,   2, 200,   2,   0,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   0;
-        row_1  =   0,   3,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   3;
-        row_2  =   0,   3,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   3;
+        row_1  =   0,   4,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   4;
+        row_2  =   0,   4,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   4;
         row_3  =   0,   3,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   4;
         row_4  =   0,   3,   0,   2,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   4;
         row_5  =   0,   3,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   4;
@@ -562,11 +562,11 @@ tables {
         row_52 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_53 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_54 =   0,   1,   0,   2,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   1;
-        row_55 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_56 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_57 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_55 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_56 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_57 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_58 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_59 =   0,   1, 100,   2,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   1;
+        row_59 =   0,   0, 100,   2,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   1;
         row_60 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_61 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_62 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
@@ -601,11 +601,11 @@ tables {
         row_91 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_92 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_93 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_94 =   0,   1,   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   1;
+        row_94 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   1;
         row_95 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_96 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_97 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_98 =   0,   1,   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   1;
+        row_98 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   1;
     }
 
     table_8 {
@@ -697,8 +697,8 @@ tables {
 
     table_13 {
         columns = 8;
-        rows    = 22;
-        real    = 44;
+        rows    = 23;
+        real    = 46;
         row_0  =   0,   0,   1,   0,   1,   0, 145,   0;
         row_1  = 145,   0,   1,   0,   0,   0,   0,   0;
         row_2  =   0,   0,   0,   0,   1,   0, 146,   0;
@@ -743,103 +743,113 @@ tables {
         row_41 = 136,   0,   1,   0,   0,   0,   0,   0;
         row_42 =   0,   0,   1,   0,   1,   0,  34,   1;
         row_43 =  34,   1,   1,   0,   0,   0,   0,   0;
+        row_44 =   1,   0,   1,   0,   2,   0, 114,   1;
+        row_45 = 114,   1,   1,   0,   1,   0,   0,   0;
     }
 
     table_14 {
         columns = 14;
-        rows    = 4;
-        row_0 =   8,   8,  21, 156, 206,   0,   5, 156, 206,   0,   5,  17,   2,   0;
-        row_1 =   8,   8,  21, 255, 255,   0,   5, 255, 255,   0,   5,  17,   2,   0;
-        row_2 =   8,   8,  21, 255, 255,   0,   5, 255, 255,   0,   5,  17,   2,   0;
-        row_3 = 255, 255,  68, 255, 255,   0,   5, 255, 255,   0,   5,  17,   2,   0;
+        rows    = 1;
+        row_0 = 255, 255,  20, 246, 120,   0,   0, 246, 120,   0,   0,  32,   0,   0;
     }
 
     table_15 {
         columns = 14;
-        rows    = 5;
-        row_0 =   8,   8,  20,   0,   0,   0,   0,   0,   0,   0,   0, 255,   0,   0;
-        row_1 =   8,   8,  20, 156, 206,   0,   5, 156, 206,   0,   5,  17,   2,   0;
-        row_2 =   8,   8,  20, 255, 255,   0,   5, 255, 255,   0,   5,  17,   2,   0;
-        row_3 =   8,   8,  20, 255, 255,   0,   5, 255, 255,   0,   5,  17,   2,   0;
-        row_4 = 255, 255,  68, 255, 255,   0,   5, 255, 255,   0,   5,  17,   2,   0;
+        rows    = 2;
+        row_0 =   8,   8,  20, 196, 166,   0,   5, 196, 186,   0,   5,  17,   2,   0;
+        row_1 = 255, 255,  20, 255, 255,   0,   6, 255, 255,   0,   6,  17,   2,   0;
     }
 
     table_16 {
         columns = 14;
-        rows    = 2;
-        row_0 =   4,   4,  20, 136, 236, 236,   0, 136, 236, 236,   0,   0,   0,   0;
-        row_1 = 255, 255,  72, 255,   0,   0,   0, 255,   0,   0,   0,  33,   0,   0;
+        rows    = 3;
+        row_0 =   4,   4,  67,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_1 =  48,  48, 111,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_2 =  14,  14,  25,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
     }
 
     table_17 {
         columns = 14;
         rows    = 2;
-        row_0 =   4,   4,  72, 136,   0,   0,   0, 136,   0,   0,   0,   0,   0,   0;
-        row_1 =  60,  60,  72, 255,   0,   0,   0, 255,   0,   0,   0, 255,   0,   0;
+        row_0 =  33,  33,  20, 136,   0,   0,   0, 136,   0,   0,   0,  34,   3,   0;
+        row_1 = 255, 255,  20, 255,   0,   0,   2, 255,   0,   2,   0,  35,   0,   0;
     }
 
     table_18 {
         columns = 14;
-        rows    = 2;
-        row_0 =  48,  48,  72, 136,   0,   0,   0, 136,   0,   0,   0, 255,   0,   0;
-        row_1 = 255, 255,  72, 255,   0,   0,   4, 255,   0,   0,   4,  24,   0,   0;
+        rows    = 3;
+        row_0 =   2,   2,  68,  10,   0,   0,   0,  10,   0,   0,   0,   0,   0,   0;
+        row_1 =  80,  80,  20,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_2 = 255, 255,  20,   0,   0,   0,   5,   0,   0,   0,   5,  44,   0,   0;
     }
 
     table_19 {
         columns = 14;
-        rows    = 2;
-        row_0 =   4,   4,  20, 206,   0,   3,   0, 206,   0,   3,   0, 255,   4,   0;
-        row_1 =  20,  20,  20, 226,   0,   3,   0, 226,   0,   3,   0, 255,   0,   0;
+        rows    = 4;
+        row_0 =   4,   4,  70,   0,   0,   0,   0,   0,   0,   0,   0,   0,   1,   0;
+        row_1 =  12,  12,  70, 206,   0, 254,   0, 254, 254, 254,   5,   0,   1,   0;
+        row_2 =   8,   8,  23, 255, 249,   0,   5, 255, 255, 255, 255,  11,   0,   0;
+        row_3 = 255, 255,  24, 255, 255, 255, 255, 255, 255, 255, 255,  11,   0,   0;
     }
 
     table_20 {
         columns = 14;
-        rows    = 1;
-        row_0 = 255, 255,  20, 136, 120,   0,  10, 136, 120,   0,  10,  18,   4,   0;
+        rows    = 2;
+        row_0 =  33,  33,  20, 136,   0,   0,   0, 136,   0,   0,   0,  37,   3,   0;
+        row_1 = 255, 255,  20, 255,   0,   0,   2, 255,   0,   0,   2,  35,   0,   0;
     }
 
     table_21 {
         columns = 14;
-        rows    = 1;
-        row_0 =  26,  26,  20, 136, 226,   0,   3, 136, 226,   0,   3,  17,   3,   0;
+        rows    = 3;
+        row_0 =   2,   2,  68,  10,   0,   0,   0,  10,   0,   0,   0,   0,   0,   0;
+        row_1 =  32,  32,  20,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_2 = 255, 255,  20,   0,   0,   0,   5,   0,   0,   0,   5,  44,   0,   0;
     }
 
     table_22 {
         columns = 14;
         rows    = 2;
-        row_0 =   1,   1,  72,   0,   0,   0,   0,   0,   0,   0,   0,   0,   4,   0;
-        row_1 = 255, 255,  72, 136, 246,   0,   0, 136, 246,   0,   0,  39,   3,   0;
+        row_0 =   8,   8,  20, 226, 176,   0,   5, 226, 176,   0,   5,  44,   0,   0;
+        row_1 = 255, 255,  20, 255, 255,   0,   6, 255, 255,   0,   6,  44,   0,   0;
     }
 
     table_23 {
         columns = 14;
-        rows    = 2;
-        row_0 =   4,   8,  68, 136, 246,   0,   0, 136, 246,   0,   0,   0,   1,   0;
-        row_1 = 255, 255,  20, 255, 255,   0,   0, 255, 255,   0,   0,   0,   1,   0;
+        rows    = 1;
+        row_0 = 255, 255,  20, 216, 120,   0,   0, 216, 120,   0,   0,  32,   4,   0;
     }
 
     table_24 {
         columns = 14;
         rows    = 2;
-        row_0 =   8,   8,  20, 226, 136,   0,   5, 226, 136,   0,   5,  12,   0,   0;
-        row_1 = 255, 255,  20, 255, 255,   0,   6, 255, 255,   0,   6,  12,   4,   0;
+        row_0 =  12,  12,  20,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_1 = 255, 255,  20, 136, 236,   0,   0, 136, 236,   0,   0,  17,   3,   0;
     }
 
     table_25 {
         columns = 14;
-        rows    = 1;
-        row_0 = 255, 255,  72, 136, 216, 251,   0, 136, 216, 251,   0,  42,   3,   0;
+        rows    = 2;
+        row_0 =   1,   1,  28, 246, 120,   0,  40, 246, 120,   0,  40,  42,   4,   0;
+        row_1 = 255, 255,  28, 255, 255,   0,   0, 255, 255,   0,   0,  42,   0,   0;
     }
 
     table_26 {
         columns = 14;
         rows    = 3;
-        row_0 =   4,   4,  68,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_1 =  32,  32,  20,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_2 = 255, 255,  20,   0,   0,   0,   0,   0,   5,   0,   5,  43,   0,   0;
+        row_0 =   4,   4,  71,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_1 =  48,  48, 111,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_2 =  14,  14,  25,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
     }
 
     table_27 {
+        columns = 14;
+        rows    = 2;
+        row_0 =   8,   8,  20, 226, 186,   0,   5, 226, 206,   0,   5,  44,   0,   0;
+        row_1 = 255, 255,  20, 255, 255,   0,   6, 255, 255,   0,   6,  44,   0,   0;
+    }
+
+    table_28 {
         columns = 14;
         rows    = 3;
         row_0 =   4,   8,  24,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
@@ -847,39 +857,40 @@ tables {
         row_2 = 255, 255,  24, 255, 255, 255, 255, 255, 255, 255, 255,  11,   0,   0;
     }
 
-    table_28 {
-        columns = 14;
-        rows    = 2;
-        row_0 =   4,   4,  20, 186,   0,   3,   0, 186,   0,   3,   0, 255,   0,   0;
-        row_1 =  20, 255,  72, 206,   0,   3,   0, 206,   0,   3,   0, 255,   0,   0;
-    }
-
     table_29 {
         columns = 14;
         rows    = 2;
-        row_0 =  16,  16,  20, 206, 176,   0,   4, 206, 176,   0,   4,  12,   0,  85;
-        row_1 =  20,  20,  72, 255, 255,   0,   5, 255, 255,   0,   5,  12,   0,   0;
+        row_0 =  17,  17, 111,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_1 = 255, 255,  28,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
     }
 
     table_30 {
         columns = 14;
         rows    = 1;
-        row_0 = 255, 255,  73, 216, 120,   0,  10, 216, 120,   0,  10,  18,   0,   0;
+        row_0 = 255, 255,  20, 136,  60,   0,   0, 136,  60,   0,   0,  47,   4,   0;
     }
 
     table_31 {
         columns = 14;
-        rows    = 0;
+        rows    = 4;
+        row_0 =   1,   1,  69, 156, 246,   0,   0, 156, 246,   0,   0,   0,   0,   0;
+        row_1 =   8,   8,  69, 255,   0,   0,   0, 255,   0,   0,   0,   0,   0,   0;
+        row_2 =  96,  96, 111,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_3 =  14,  14,  25,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
     }
 
     table_32 {
-        columns = 0;
-        rows    = 0;
+        columns = 14;
+        rows    = 2;
+        row_0 =   4,   4,  20, 136, 236, 236,   0, 136, 236, 236,   0,   0,   0,   0;
+        row_1 = 255, 255,  72, 255,   0,   0,   0, 255,   0,   0,   0,  49,   0,   0;
     }
 
     table_33 {
-        columns = 0;
-        rows    = 0;
+        columns = 14;
+        rows    = 2;
+        row_0 =   4,   4,  72, 136,   0,   0,   0, 136,   0,   0,   0,   0,   0,   0;
+        row_1 =  60,  60,  72, 255,   0,   0,   0, 255,   0,   0,   0, 255,   0,   0;
     }
 
     table_34 {
@@ -920,7 +931,7 @@ tables {
         row_5  = 88;
         row_6  = 89;
         row_7  = 88;
-        row_8  = 92;
+        row_8  = 94;
         row_9  = 94;
         row_10 = 93;
         row_11 =  0;
@@ -940,20 +951,20 @@ tables {
         columns = 1;
         rows    = 1;
         real    = 2;
-        row_0 = 20;
+        row_0 = 21;
         row_1 =  0;
     }
 
     table_39 {
         columns = 1;
         rows    = 1;
-        row_0 = 0;
+        row_0 = 3;
     }
 
     table_40 {
         columns = 14;
         rows    = 4;
-        row_0 =  1,  3,  2,  4,  8,  5,  6, 12, 11, 10, 13, 14, 15,  0;
+        row_0 =  2,  4,  3,  8,  6,  1,  5, 11, 10, 12, 13, 14,  0,  0;
         row_1 =  9,  7,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0;
         row_2 =  2,  4,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0;
         row_3 =  2,  2,  2,  2,  4,  6,  3,  7,  0,  0,  0,  0,  0,  0;

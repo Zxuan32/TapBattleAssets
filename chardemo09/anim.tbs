@@ -4,7 +4,7 @@ animation {
 
     ano_0 {
         priority = 255;
-        frame { time = 8; sprite = sprite_0; origin = -96, -8; }
+        frame { time = 8; sprite = sprite_0; origin = -102, -8; }
     }
 
     ano_1 {
@@ -125,11 +125,11 @@ animation {
 
     ano_14 {
         priority = 255;
-        frame { time = 20; sprite = sprite_3; origin = -320, 2; speed_x = 1572864; }
+        frame { time = 20; sprite = sprite_3; origin = -312, 2; speed_x = 1572864; }
     }
 
     ano_15 {
-        frame { sprite = sprite_3; origin = -248, -318; }
+        frame { sprite = sprite_3; origin = -200, -318; }
     }
 
     ano_16 {

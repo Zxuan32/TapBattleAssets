@@ -1,0 +1,6 @@
+package "bobj20.pac" {
+    image   "png00.png"   extra = 0x80b5fb00;
+    image   "png01.png"   extra = 0xde806e00;
+    sprites "sprites.tbs" extra = 0xa873e300;
+    anim    "anim.tbs"    extra = 0x9bab4400;
+}

@@ -1,0 +1,16 @@
+// buu1: escenario de MUGEN convertido con mugen_stage.py y
+// hecho vuelta con stage_loop.py (cada capa, su tramo y su espejo).
+// Seccion 37 de docs/MODDING.md.
+escenario {
+    ancho = 1280;
+    en_orden;              // el piso tapa el pie de las salpicaduras
+    capa suelo {
+        pon "00.png" at -78, -119;
+        pon "00.png" at 562, -119 espejo;
+        pon "01.png" at -78, -113;
+        pon "01.png" at 562, -113;
+    }
+    persecucion {
+        fondo "02.png" at 0, -119 cielo 200;
+    }
+}

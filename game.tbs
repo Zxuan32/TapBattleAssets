@@ -72,7 +72,6 @@ game {
     package "char10";
     package "char11";
     package "char12";
-    package "char13";
     package "chardemo00";
     package "chardemo01";
     package "chardemo02";
@@ -86,7 +85,6 @@ game {
     package "chardemo10";
     package "chardemo11";
     package "chardemo12";
-    package "chardemo13";
     package "chardemo99";
     package "charf0000";
     package "charf0001";
@@ -101,7 +99,6 @@ game {
     package "charf0010";
     package "charf0011";
     package "charf0012";
-    package "charf0013";
     package "common";
     package "demo_00";
     package "demo_08";
@@ -116,4 +113,5 @@ game {
     file "loose/mk.bin" as "mk.bin";
     file "loose/save.bin" as "save.bin";
     file "loose/save1.bin" as "save1.bin";
+    file "loose/bgm_variants.txt" as "bgm_variants.txt";
 }

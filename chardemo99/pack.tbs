@@ -14,6 +14,22 @@ package "chardemo99.pac" {
     image   "../bgm/bgm_07.png";
     image   "../bgm/bgm_14.png";
     image   "../bgm/bgm_15.png";
-    image   "../char04/transform04/cara.png";
-    image   "../char04/transform04_1/cara.png";
+    image   "../bgm/bgm_19.png";
+    image   "../bgm/bgm_20.png";
+    image   "../bgm/bgm_21.png";
+    image   "../bgm/bgm_22.png";
+    image   "../bgm/bgm_23.png";
+    image   "../bgm/bgm_24.png";
+    image   "../bgm/bgm_25.png";
+    image   "../bgm/bgm_26.png";
+    image   "../bgm/bgm_27.png";
+    image   "../bgm/bgm_28.png";
+    image   "../bgm/bgm_29.png";
+    image   "../bgm/bgm_30.png";
+    image   "../bgm/bgm_31.png";
+    image   "../bgm/bgm_32.png";
+    image   "../bgm/bgm_33.png";
+    image   "../bgm/bgm_34.png";
+    image   "../bgm/bgm_35.png";
+    image   "../bgm/bgm_36.png";
 }

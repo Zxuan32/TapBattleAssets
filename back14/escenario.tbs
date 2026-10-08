@@ -1,0 +1,23 @@
+// Time_Chamber_HR: escenario de MUGEN (Time_Chamber_HR.def + Time_Chamber_HR.sff),
+// con tools/mugen_stage.py a escala 1.25. Seccion 37 de docs/MODDING.md.
+escenario {
+    ancho = 1664;
+    capa lejos {
+        pon "00.png" at -114, -239 repite;
+        pon "01.png" at 101, -91 suma 50;
+        pon "01.png" at 517, -91 suma 50;
+        pon "01.png" at 933, -91 suma 50;
+        pon "01.png" at 1349, -91 suma 50;
+        pon "03.png" at 43, 98 suma repite;
+    }
+    deriva lejos -4;
+    capa suelo {
+        pon "02.png" at 42, 142 repite;
+        pon "04.png" at 142, 76;
+        pon "05.png" at 141, 129 suma 35;
+        pon "06.png" at 141, 130;
+    }
+    persecucion {
+        fondo "07.png" at 0, -39 cielo 200;
+    }
+}

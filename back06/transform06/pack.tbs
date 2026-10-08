@@ -1,0 +1,3 @@
+package "backt06.pac" {
+    escenario "escenario.tbs";
+}

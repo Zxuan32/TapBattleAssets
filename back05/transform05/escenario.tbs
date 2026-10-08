@@ -1,0 +1,27 @@
+// Torneo de Artes Marciales, DESTRUIDO (sale al reventar el planeta). Fondos de DSP27 (dsp27.deviantart.com),
+// sacados con tools/recorta_dsp27.py. Seccion 34 de docs/MODDING.md.
+// Medidas en pixeles del mundo (480x320) con la camara quieta: pies en y=240.
+escenario {
+    ancho = 1376;
+
+    // 1/3 de la camara: el edificio con su cielo, y la otra mitad de la
+    // vuelta sin edificio (02.png), para que la casa salga una sola vez.
+    // abajo: los arbustos siguen por debajo, que se ven por la puerta del muro.
+    capa lejos {
+        pon "00.png" at 0, -70 cielo 300 abajo 200;
+        pon "02.png" at 688, -70 cielo 300 abajo 200;
+    }
+
+    // 1:1: el muro con su suelo, y su espejo. La puerta queda en medio de
+    // cada mitad. 'abajo' alarga el suelo para las pantallas 16:9.
+    capa suelo {
+        pon "01.png" at 0, 59 abajo 60;
+        pon "01.png" at 688, 59 espejo abajo 60;
+    }
+
+    // La persecucion (BattleEvents456): el relleno sin edificio, en bucle, y
+    // nada delante.
+    persecucion {
+        fondo "03.png" at 0, -70 cielo 300 abajo 200;
+    }
+}

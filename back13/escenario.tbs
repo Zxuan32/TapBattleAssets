@@ -1,0 +1,16 @@
+// PlanetaKaioshin: escenario de MUGEN (PlanetaKaioshin.def + PlanetaKaioshin.sff),
+// con tools/mugen_stage.py a escala 1.25, el fondo en espejo. Seccion 37 de docs/MODDING.md.
+escenario {
+    ancho = 960;
+    capa suelo {
+        pon "00.png" at 6, -284 repite;
+        pon "01.png" at 292, 8 suma;
+        pon "01.png" at 608, 8 espejo suma;
+        pon "02.png" at -12, 116 suma desliza -1539 repite;
+        pon "03.png" at 90, 108 suma;
+        pon "03.png" at 839, 108 espejo suma;
+    }
+    persecucion {
+        fondo "04.png" at 0, -84 cielo 200;
+    }
+}

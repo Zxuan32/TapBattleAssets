@@ -1,0 +1,18 @@
+// Karim Tower: capas de Karim Tower, con
+// tools/bg_capas.py a escala 0.9, pasadas por Real-ESRGAN, media y suelo a hd 2.
+// Seccion 34g de docs/MODDING.md.
+escenario {
+    ancho = 1856;
+    capa lejos {
+        pon "00.png" at -164, -405 repite;
+    }
+    capa media {
+        pon "01.png" at -164, -245 repite hd 2;
+    }
+    capa suelo {
+        pon "02.png" at -164, -245 repite hd 2;
+    }
+    persecucion {
+        fondo "03.png" at 0, -405;
+    }
+}

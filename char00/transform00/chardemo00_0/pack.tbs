@@ -1,0 +1,5 @@
+package "chardemot00_0.pac" {
+    sprites "sprites.tbs" extra = 0x77f13a00;
+    anim    "anim.tbs"    extra = 0x21460900;
+    image   "png00.png"   extra = 0x72b69800;
+}

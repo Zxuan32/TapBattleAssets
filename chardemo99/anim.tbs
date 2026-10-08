@@ -1,5 +1,5 @@
 animation {
-    anos  = 344;
+    anos  = 260;
 
     ano_0 {
         frame { sprite = sprite_0; origin = -25, -62; }
@@ -38,22 +38,18 @@ animation {
     }
 
     ano_9 {
-        frame { sprite = sprite_9; origin = -25, -62; }
-    }
-
-    ano_10 {
         frame { sprite = sprite_10; origin = -25, -62; }
     }
 
-    ano_11 {
+    ano_10 {
         frame { sprite = sprite_11; origin = -25, -62; }
     }
 
-    ano_12 {
+    ano_11 {
         frame { sprite = sprite_12; origin = -25, -62; }
     }
 
-    ano_13 {
+    ano_12 {
         frame { sprite = sprite_13; origin = -25, -62; }
     }
 
@@ -147,39 +143,107 @@ animation {
         frame { sprite = sprite_32; origin = -118, -32; }
     }
 
-    ano_103 {
-        frame { sprite = sprite_33; origin = -78, -22; }
+    ano_233 {
+        frame { sprite = sprite_33; origin = -8, -18; }
     }
 
-    ano_104 {
+    ano_103 {
         frame { sprite = sprite_34; origin = -78, -22; }
     }
 
-    ano_105 {
+    ano_104 {
         frame { sprite = sprite_35; origin = -78, -22; }
     }
 
-    ano_106 {
+    ano_105 {
         frame { sprite = sprite_36; origin = -78, -22; }
     }
 
-    ano_107 {
+    ano_106 {
         frame { sprite = sprite_37; origin = -78, -22; }
     }
 
-    ano_114 {
+    ano_107 {
         frame { sprite = sprite_38; origin = -78, -22; }
     }
 
-    ano_115 {
+    ano_114 {
         frame { sprite = sprite_39; origin = -78, -22; }
     }
 
-    ano_340 {
-        frame { sprite = sprite_40; origin = -25, -62; }
+    ano_115 {
+        frame { sprite = sprite_40; origin = -78, -22; }
     }
 
-    ano_341 {
-        frame { sprite = sprite_41; origin = -25, -62; }
+    ano_119 {
+        frame { sprite = sprite_41; origin = -78, -22; }
+    }
+
+    ano_120 {
+        frame { sprite = sprite_42; origin = -78, -22; }
+    }
+
+    ano_121 {
+        frame { sprite = sprite_43; origin = -78, -22; }
+    }
+
+    ano_122 {
+        frame { sprite = sprite_44; origin = -78, -22; }
+    }
+
+    ano_123 {
+        frame { sprite = sprite_45; origin = -78, -22; }
+    }
+
+    ano_124 {
+        frame { sprite = sprite_46; origin = -78, -22; }
+    }
+
+    ano_125 {
+        frame { sprite = sprite_47; origin = -78, -22; }
+    }
+
+    ano_126 {
+        frame { sprite = sprite_48; origin = -78, -22; }
+    }
+
+    ano_127 {
+        frame { sprite = sprite_49; origin = -78, -22; }
+    }
+
+    ano_128 {
+        frame { sprite = sprite_50; origin = -78, -22; }
+    }
+
+    ano_129 {
+        frame { sprite = sprite_51; origin = -78, -22; }
+    }
+
+    ano_130 {
+        frame { sprite = sprite_52; origin = -78, -22; }
+    }
+
+    ano_131 {
+        frame { sprite = sprite_53; origin = -78, -22; }
+    }
+
+    ano_132 {
+        frame { sprite = sprite_54; origin = -78, -22; }
+    }
+
+    ano_133 {
+        frame { sprite = sprite_55; origin = -78, -22; }
+    }
+
+    ano_134 {
+        frame { sprite = sprite_56; origin = -78, -22; }
+    }
+
+    ano_135 {
+        frame { sprite = sprite_57; origin = -78, -22; }
+    }
+
+    ano_136 {
+        frame { sprite = sprite_58; origin = -78, -22; }
     }
 }

@@ -1,0 +1,4 @@
+color {
+    name    = "Verde";
+    swatch  = 0x00D438;
+}

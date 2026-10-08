@@ -1,0 +1,9 @@
+# Pistas al azar por fila de la tabla 161 (ModOst.BgmVariant).
+# Lo escribe tools/yt_bgm.py: fila: pistas
+1: 17 29 37 42
+2: 17 29 37 42
+12: 18
+23: 18
+24: 43 44
+25: 38 39 40 41
+45: 18

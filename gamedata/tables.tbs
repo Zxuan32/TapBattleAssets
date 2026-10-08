@@ -4568,13 +4568,13 @@ tables {
         row_99  =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_100 =   9,   0,   0,   0, 176,   4,   0,   0,   0,   0,   0;
         row_101 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_102 =  10,   0,   1,   0,   0,   0,   0,   0,   0,   0, 164;
+        row_102 =   1,   0,   1,   0,   0,   0,   0,   0,   0,   0, 164;
         row_103 =   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_104 =  11,   0,   0,   0,   0,   0,   7,   0,   0,   0,   0;
+        row_104 =  10,   0,   0,   0,   0,   0,   7,   0,   0,   0,   0;
         row_105 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_106 =  12,   0,   1,   0,   0,   0,   0,   0,   1,   0,   0;
+        row_106 =  11,   0,   1,   0,   0,   0,   0,   0,   1,   0,   0;
         row_107 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_108 =  13,   0,   0,   0, 120,   5,   0,   0,   0,   0,   0;
+        row_108 =  12,   0,   0,   0, 120,   5,   0,   0,   0,   0,   0;
         row_109 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_110 =   8,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_111 =   0,   0,   0,   0,   0,   1,   0,   0,   0,   0,   0;
@@ -4582,13 +4582,13 @@ tables {
         row_113 =   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_114 =   9,   0,   0,   0, 220,   5,   0,   0,   0,   0,   0;
         row_115 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_116 =  10,   0,   1,   0,   0,   0,   0,   0,   1,   0,   0;
+        row_116 =   1,   0,   1,   0,   0,   0,   0,   0,   1,   0,   0;
         row_117 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_118 =  11,   0,   0,   0,   0,   0,   8,   0,   0,   0,   0;
+        row_118 =  10,   0,   0,   0,   0,   0,   8,   0,   0,   0,   0;
         row_119 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_120 =  12,   0,   1,   0,   0,   0,   0,   0,   0,   0,  44;
+        row_120 =  11,   0,   1,   0,   0,   0,   0,   0,   0,   0,  44;
         row_121 =   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_122 =  13,   0,   0,   0, 164,   6,   0,   0,   0,   0,   0;
+        row_122 =  12,   0,   0,   0, 164,   6,   0,   0,   0,   0,   0;
         row_123 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_124 =   9,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_125 =   0,   0,   0,   0,   0,   1,   0,   0,   0,   0,   0;
@@ -4596,29 +4596,29 @@ tables {
         row_127 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_128 =   9,   0,   2,   0, 152,   8,   0,   0,   0,   0,   0;
         row_129 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_130 =  10,   0,   2,   0,   0,   0,   8,   0,   0,   0,   0;
+        row_130 =   1,   0,   2,   0,   0,   0,   8,   0,   0,   0,   0;
         row_131 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_132 =  11,   0,   2,   0,  40,  10,   0,   0,   0,   0,   0;
+        row_132 =  10,   0,   2,   0,  40,  10,   0,   0,   0,   0,   0;
         row_133 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_134 =  12,   0,   2,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_134 =  11,   0,   2,   0,   0,   0,   0,   0,   0,   0,   0;
         row_135 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_136 =  13,   0,   2,   0, 184,  11,   0,   0,   0,   0,   0;
+        row_136 =  12,   0,   2,   0, 184,  11,   0,   0,   0,   0,   0;
         row_137 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_138 =  10,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_138 =   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_139 =   0,   0,   0,   0,   0,   1,   0,   0,   0,   0,   0;
         row_140 =   8,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
         row_141 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_142 =   9,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
         row_143 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_144 =  10,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_144 =   1,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
         row_145 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_146 =  11,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_146 =  10,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
         row_147 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_148 =  12,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_148 =  11,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
         row_149 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_150 =  13,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_150 =  12,   0,   3,   0,   0,   0,   0,   0,   0,   0,   0;
         row_151 =   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
-        row_152 =  11,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
+        row_152 =  10,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0;
         row_153 =   0,   0,   0,   0,   0,   1,   0,   0,   0,   0,   0;
     }
 
@@ -4677,28 +4677,28 @@ tables {
         text_48 = "Con [Cell perfecto]_Gana un combate versus";
         text_49 = "Con [Trunks SSJ] en Fácil_Supera el modo arcade";
         text_50 = "Con [Majin Boo]_Supera el arcade con 120.000 puntos o más";
-        text_51 = "Con [Goku SSJ3] en Fácil_Supera el arcade en menos de 7 minutos";
+        text_51 = "Con [Goku SSJ] en Fácil_Supera el arcade en menos de 7 minutos";
         text_52 = "Con [Gotenks SSJ3]_Supera el arcade con un combo de 7 golpes";
         text_53 = "Con [Bardock] en Fácil_Supera el arcade sin perder ningún round";
         text_54 = "Con [Vegetto SSJ]_Supera el arcade con 140.000 puntos o más";
         text_55 = "Con [Trunks SSJ]_Gana un combate versus";
         text_56 = "Con [Trunks SSJ] en Fácil_Supera el arcade en menos de 6 minutos";
         text_57 = "Con [Majin Boo]_Supera el arcade con 150.000 puntos o más";
-        text_58 = "Con [Goku SSJ3] en Fácil_Supera el arcade sin perder ningún round";
+        text_58 = "Con [Goku SSJ] en Fácil_Supera el arcade sin perder ningún round";
         text_59 = "Con [Gotenks SSJ3]_Supera el arcade con un combo de 8 golpes";
         text_60 = "Con [Bardock] en Fácil_Supera el arcade en menos de 5 minutos";
         text_61 = "Con [Vegetto SSJ]_Supera el arcade con 170.000 puntos o más";
         text_62 = "Con [Majin Boo]_Gana un combate versus";
         text_63 = "Con [Trunks SSJ] en Normal_Supera el modo arcade";
         text_64 = "Con [Majin Boo] en Normal_Supera el arcade con 220.000 puntos o más";
-        text_65 = "Con [Goku SSJ3] en Normal_Supera el arcade con un combo de 8 golpes";
+        text_65 = "Con [Goku SSJ] en Normal_Supera el arcade con un combo de 8 golpes";
         text_66 = "Con [Gotenks SSJ3] en Normal_Supera el arcade con 260.000 puntos o más";
         text_67 = "Con [Bardock] en Normal_Supera el modo arcade";
         text_68 = "Con [Vegetto SSJ] en Normal_Supera el arcade con 300.000 puntos o más";
-        text_69 = "Con [Goku SSJ3]_Gana un combate versus";
+        text_69 = "Con [Goku SSJ]_Gana un combate versus";
         text_70 = "Con [Trunks SSJ] en Difícil_Supera el modo arcade";
         text_71 = "Con [Majin Boo] en Difícil_Supera el modo arcade";
-        text_72 = "Con [Goku SSJ3] en Difícil_Supera el modo arcade";
+        text_72 = "Con [Goku SSJ] en Difícil_Supera el modo arcade";
         text_73 = "Con [Gotenks SSJ3] en Difícil_Supera el modo arcade";
         text_74 = "Con [Bardock] en Difícil_Supera el modo arcade";
         text_75 = "Con [Vegetto SSJ] en Difícil_Supera el modo arcade";
@@ -4969,8 +4969,8 @@ tables {
 
     table_158 {
         columns = 2;
-        rows    = 13;
-        real    = 14;
+        rows    = 12;
+        real    = 13;
         row_0  =  0,  1;
         row_1  =  1,  1;
         row_2  =  2,  1;
@@ -4983,8 +4983,7 @@ tables {
         row_9  =  9,  1;
         row_10 = 10,  1;
         row_11 = 11,  1;
-        row_12 = 12,  1;
-        row_13 =  0,  0;
+        row_12 =  0,  0;
     }
 
     table_159 {

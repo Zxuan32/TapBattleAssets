@@ -1,0 +1,14 @@
+// gta1: escenario de MUGEN convertido con mugen_stage.py y
+// hecho vuelta con stage_loop.py (cada capa, su tramo y su espejo).
+// Seccion 37 de docs/MODDING.md.
+escenario {
+    ancho = 1472;
+    en_orden;              // el piso tapa el pie de las salpicaduras
+    capa suelo {
+        pon "00.png" at -158, -54;
+        pon "00.png" at 578, -54;
+    }
+    persecucion {
+        fondo "01.png" at 0, -54 cielo 200;
+    }
+}

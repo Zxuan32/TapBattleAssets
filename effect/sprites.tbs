@@ -181,4 +181,5 @@ sprites {
     sprite_179 { sheet =  7;  x = 240;  y =  64;  w =  48;  h =  56; }
     sprite_180 { sheet =  7;  x = 296;  y =  64;  w =  48;  h =  56; }
     sprite_181 { sheet =  7;  x = 352;  y =  64;  w =  48;  h =  56; }
+    sprite_182 { sheet = 14;  x =   0;  y =   0;  w = 115;  h =  20; }
 }

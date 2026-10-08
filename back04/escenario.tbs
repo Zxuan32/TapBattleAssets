@@ -1,0 +1,19 @@
+// Escenario simple (seccion 34 de docs/MODDING.md). Las medidas van en
+// pixeles de pantalla (480x320) con la camara en reposo: los pies en y=240.
+escenario {
+    // Lo que mide la vuelta entera: el fondo se repite cada tanto.
+    ancho = 1280;
+
+    // 1/3 de la camara. El GIF y su espejo seguido, para que empalme al
+    // dar la vuelta; 'cielo' estira la fila de arriba por si la camara sube.
+    capa lejos {
+        pon "00.gif" at 0, -110 cielo 300;
+        pon "00.gif" at 640, -110 espejo cielo 300;
+    }
+
+    // 1:1, donde se pisa. Los pies quedan en y=240, 24 px dentro del suelo.
+    capa suelo {
+        pon "01.png" at 0, 216;
+        pon "01.png" at 640, 216 espejo;
+    }
+}

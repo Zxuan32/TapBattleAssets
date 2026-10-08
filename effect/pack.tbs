@@ -13,6 +13,7 @@ package "effect.pac" {
     image   "png11.png"   extra = 0x0ffaca00;
     image   "png12.png";
     image   "png13.png";
+    image   "png14.png";
     sprites "sprites.tbs" extra = 0xfe3cc900;
     anim    "anim.tbs"    extra = 0xb2095e00;
 }
