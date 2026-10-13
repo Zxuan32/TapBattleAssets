@@ -1,0 +1,481 @@
+;---------------------------------------------------------------------------
+; 每一帧执行(statedef -2)
+;---------------------------------------------------------------------------
+
+[Statedef -2]
+
+;---------------------------------------------------------------------------
+;变量还原
+
+[State 0, 跳跃和冲刺限制]
+type = VarSet
+trigger1 = statetype != A
+v = 5
+value = 0
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 追击冲刺限制]
+type = VarSet
+trigger1 = statetype != A
+v = 6
+value = 0
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 超能力抓取限制]
+type = VarSet
+trigger1 = Enemynear(var(58)),movetype != H
+v = 7
+value = 0
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 瞬移限制]
+type = VarSet
+trigger1 = statetype != A
+v = 8
+value = 0
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 普通特写变量]
+type = VarSet
+trigger1 = Enemynear(var(58)),movetype != H
+v = 9
+value = 0
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 瞬移特写变量]
+type = VarSet
+trigger1 = Enemynear(var(58)),movetype != H
+v = 10
+value = 0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;连击修正
+
+[State 0, 连击数记录]
+type = VarAdd
+triggerall = fvar(8) = 0.6
+trigger1 = movehit = 1
+v = 12
+value = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 连击数记录2]
+type = VarAdd
+triggerall = fvar(8) = 0.4
+trigger1 = movehit = 1
+v = 12
+value = 2
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 连击数记录3]
+type = VarAdd
+triggerall = fvar(8) = 0.35
+trigger1 = movehit = 1
+v = 12
+value = 2
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 连击数记录4]
+type = VarAdd
+triggerall = fvar(8) = 0.2
+trigger1 = movehit = 1
+v = 12
+value = 2
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 记录修正]
+type = VarSet
+triggerall = fvar(8) = 0.6
+trigger1 = var(12) > 30
+v = 12
+value = 30
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 记录修正2]
+type = VarSet
+triggerall = fvar(8) = 0.4
+trigger1 = var(12) > 30
+v = 12
+value = 30
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 记录修正3]
+type = VarSet
+triggerall = fvar(8) = 0.35
+trigger1 = var(12) > 35
+v = 12
+value = 35
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 记录修正4]
+type = VarSet
+triggerall = fvar(8) = 0.2
+trigger1 = var(12) > 20
+v = 12
+value = 20
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 记录清零]
+type = VarSet
+trigger1 = Enemynear(var(58)),movetype != H
+v = 12
+value = 0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;攻击系数设置
+[State 0, 攻击系数]
+type = AttackMulSet
+trigger1 = 1
+value = 1 - fvar(8) - (0.01*var(12))
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;敌方位置检测
+[State 0, VarSet]
+type = VarSet
+trigger1 = Numtarget
+trigger1 = target,ishelper != 1
+v = 15
+value = ((target,pos X)-pos X)*facing
+ignorehitpause = 1
+persistent = 1
+
+[State 0, VarSet]
+type = VarSet
+trigger1 = Numtarget
+trigger1 = target,ishelper != 1
+v = 16
+value = ((target,pos Y)-pos Y)
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;敌方状态和时间检测
+[State 0, VarSet]
+type = VarSet
+trigger1 = Numtarget
+trigger1 = target,ishelper != 1
+v = 17
+value = target,stateno
+ignorehitpause = 1
+persistent = 1
+
+[State 0, VarSet]
+type = VarSet
+trigger1 = Numtarget
+trigger1 = target,ishelper != 1
+v = 18
+value = target,time
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;敌方到背部屏幕边缘距离
+[State 0, VarSet]
+type = VarSet
+trigger1 = Numtarget
+trigger1 = target,ishelper != 1
+v = 19
+value = target,BackEdgeBodyDist
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;敌方速度
+[State 0, 横轴速度]
+type = VarSet
+trigger1 = 1
+fv = 4
+value = facing*enemynear(var(58)),facing*enemynear(var(58)),Vel X
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 纵轴速度]
+type = VarSet
+trigger1 = 1
+fv = 5
+value = Enemynear(var(58)),Vel Y
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;起手修正系数
+
+[State 0, 修正系数设置]
+type = VarSet
+triggerall = fvar(8) = 0
+trigger1 = stateno = 200
+trigger1 = movehit = 1
+trigger2 = stateno = 400
+trigger2 = movehit = 1
+trigger3 = projhit790 = 1
+trigger4 = stateno = 810
+trigger4 = movehit = 1
+trigger5 = stateno = 860
+trigger5 = time = 1
+trigger6 = stateno = 910
+trigger6 = movehit = 1
+trigger7 = projhit1000 = 1
+trigger8 = projhit1040 = 1
+fv = 8
+value = 0.6
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 修正系数设置2]
+type = VarSet
+triggerall = fvar(8) = 0
+trigger1 = stateno = 210
+trigger1 = movehit = 1
+trigger2 = stateno = 240
+trigger2 = movehit = 1
+trigger3 = stateno = 430
+trigger3 = movehit = 1
+trigger4 = stateno = 600
+trigger4 = movehit = 1
+trigger5 = stateno = 610
+trigger5 = movehit = 1
+trigger6 = stateno = 1100
+trigger6 = movehit = 1
+trigger7 = stateno = 1200
+trigger7 = movehit = 1
+trigger8 = stateno = 1300
+trigger9 = stateno = 1350
+trigger10 = stateno = 1400
+fv = 8
+value = 0.4
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 修正系数设置3]
+type = VarSet
+triggerall = fvar(8) = 0
+trigger1 = stateno = 620
+trigger1 = movehit = 1
+trigger2 = stateno = 1150
+trigger2 = movehit = 1
+trigger3 = stateno = 1500
+trigger3 = movehit = 1
+trigger4 = stateno = 1550
+trigger4 = movehit = 1
+trigger5 = stateno = 1600
+trigger5 = movehit = 1
+fv = 8
+value = 0.35
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 修正系数设置4]
+type = VarSet
+triggerall = fvar(8) = 0
+trigger1 = stateno = 300
+trigger1 = movehit = 1
+trigger2 = stateno = 460
+trigger2 = movehit = 1
+trigger3 = stateno = 630
+trigger3 = movehit = 1
+fv = 8
+value = 0.2
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 修正系数清零]
+type = VarSet
+trigger1 = Enemynear(var(58)),movetype != H
+fv = 8
+value = 0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;敌方最大生命值
+[State 0, VarSet]
+type = VarSet
+trigger1 = 1
+fv = 10
+value = Enemynear(var(58)),lifemax
+ignorehitpause = 1
+persistent = 1
+
+;-----------------------------------------------------------------------------
+; AI用重力加速度测量
+;-----------------------------------------------------------------------------
+[State -2, yaccel]
+type = VarSet
+triggerall = NumHelper(30000)
+triggerall = EnemyNear(var(58)),Vel Y != 0
+triggerall = EnemyNear(var(58)),Pos Y < (((EnemyNear(var(58)),Anim != [5051,5059]) && (EnemyNear(var(58)),Anim != [5061,5069])) && (EnemyNear(var(58)),StateNo = 5050))*25 ;参考Statedef 5050
+triggerall = fvar(20) != Helper(30000),fvar(0)
+trigger1 = EnemyNear(var(58)),StateNo != [5000,5210]
+trigger2 = EnemyNear(var(58)),Movetype != H
+fv = 20
+value = Helper(30000),fvar(0)
+IgnoreHitPause = 1
+
+[State -2, yaccel]
+type = VarSet
+triggerall = EnemyNear(var(58)),Vel Y != 0
+triggerall = EnemyNear(var(58)),Movetype = H
+triggerall = EnemyNear(var(58)),Pos Y < (((EnemyNear(var(58)),Anim != [5051,5059]) && (EnemyNear(var(58)),Anim != [5061,5069])) && (EnemyNear(var(58)),StateNo = 5050))*25 ;参考Statedef 5050
+triggerall = fvar(20) != EnemyNear(var(58)),GetHitVar(yaccel)
+trigger1 = EnemyNear(var(58)),StateNo = [5000,5210]
+fv = 20
+value = EnemyNear(var(58)),GetHitVar(yaccel)
+IgnoreHitPause = 1
+
+;敌人不在空中时
+[State -2, yaccel]
+type = VarSet
+trigger1 = fvar(20) != 0 && EnemyNear(var(58)),Vel Y = 0
+fv = 20
+value = 0
+IgnoreHitPause = 1
+
+;================================================================当身记录
+[State 当身记录]
+type = VarSet
+trigger1 = var(21) = 0
+trigger1 = MoveReversed
+v = 21
+value = enemynear(var(58)),prevstateno
+ignorehitpause = 1
+
+[State 当身记录]
+type = VarSet
+trigger1 = var(22) = 0
+trigger1 = MoveReversed
+V = 22
+value = enemynear(var(58)),stateno
+ignorehitpause = 1
+
+[State 当身记录]
+type = VarSet
+trigger1 = var(23) = 0
+trigger1 = var(21) != 0
+trigger1 = MoveReversed
+trigger1 = var(21) != enemynear(var(58)),prevstateno
+v = 23
+value = enemynear(var(58)),prevstateno
+ignorehitpause = 1
+
+[State 当身记录]
+type = VarSet
+trigger1 = var(24) = 0
+trigger1 = var(22) != 0
+trigger1 = MoveReversed
+trigger1 = var(22) != enemynear(var(58)),stateno
+V = 24
+value = enemynear(var(58)),stateno
+ignorehitpause = 1
+
+;---------------------------------------------------------------------------
+;回气系统
+[State 0, PowerAdd]
+type = PowerAdd
+trigger1 = Vel X > 0
+trigger1 = stateno <= 700
+trigger1 = gametime%5 = 1
+value = Abs(Vel X)*Abs((enemynear,pos X)-pos X)*0.1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;电击辅助效果
+
+[State 6050,电击辅助效果]
+type = Explod
+triggerall = Numtarget
+triggerall = random < 200
+triggerall = target,ishelper != 1
+triggerall = target,movetype = H
+trigger1 = Projhittime(790) >= 0 && Projhittime(790) <= 35
+anim = 6050
+ID = 6050
+postype = P2
+pos = -10,-60
+random = 40,90
+velocity = 0,0
+bindtime = 1
+sprpriority = 3
+ownpal = 1
+ignorehitpause = 1
+
+[State 6055,电击辅助效果2]
+type = Explod
+triggerall = Numtarget
+triggerall = random < 100
+triggerall = target,ishelper != 1
+triggerall = target,movetype = H
+trigger1 = Projhittime(790) >= 0 && Projhittime(790) <= 35
+anim = 6055
+ID = 6055
+postype = P2
+pos = -10,-60
+random = 40,90
+velocity = 0,0
+bindtime = 1
+sprpriority = 3
+ownpal = 1
+ignorehitpause = 1
+
+;---------------------------------------------------------------------------
+;记录屏幕宽高helper
+
+[State 0, Helper]
+type = Helper
+triggerall = !ishelper
+triggerall = roundstate = 2
+trigger1 = !numhelper(40000)
+helpertype = normal
+name = "40000"
+ID = 40000
+stateno = 40000
+pos = 0,0
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 1
+supermovetime = 999999999
+pausemovetime = 999999999
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;招式次数记录helper
+
+[State 0, Helper]
+type = Helper
+triggerall = !ishelper
+triggerall = roundstate = 2
+trigger1 = !numhelper(40010)
+helpertype = normal
+name = "40010"
+ID = 40010
+stateno = 40010
+pos = 0,0
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 1
+supermovetime = 999999999
+pausemovetime = 999999999
+ignorehitpause = 1
+persistent = 0

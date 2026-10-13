@@ -1,0 +1,4749 @@
+;---------------------------------------------------------------------------
+;超能力球
+[Statedef 1000]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1000                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;攻击判定
+
+[State 1000]
+type = Projectile ;攻击类型
+trigger1 = time = 15
+projID = 1000 ;飞道ID号
+projanim = 1005 ;飞道动画
+projhitanim = 1006 ;击中时的动画
+projremanim = 1006 ;销毁时的动画
+projremove = 1 ;击中后是否消失
+projremovetime = -1 ;飞道持续多久后消失
+projedgebound = 6
+velocity = 6,0;6,0 ;飞道的初速度
+accel = 0,0
+projpriority = 43967777777 ;优先级
+projsprpriority = 5 ;图像优先级
+projshadow = 0,0,0 ;影子颜色
+offset = 20,0 ;飞道发射的位置
+getpower = 100,100
+givepower = 50,0
+attr = S, SP
+animtype = Hard
+damage = 30,15
+hitflag = MAF
+guardflag = MA
+hitsound = s400,1
+guardsound = s100,9
+pausetime = 0,12
+guard.pausetime = 0,12
+sparkno = -1
+guard.sparkno = -1
+sparkxy = 10,-55
+ground.type = High
+ground.hittime = 20
+guard.ctrltime = 20
+ground.slidetime = 5
+ground.velocity = -5
+air.velocity = -3.6,-3.8
+air.fall = 1
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 0, 人物音效]
+type = PlaySnd
+trigger1 = time = 1
+value = s1,0
+
+[State 0, 发射音效]
+type = PlaySnd
+trigger1 = time = 14
+value = s8,3
+
+;---------------------------------------------------------------------------
+;继续攻击
+
+[State 1000, 2]
+type = ChangeState
+triggerall = var(59) = 0
+trigger1 = time >= 22
+trigger1 = command = "a"
+value = 1020
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1000, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;超能力球p2
+[statedef 1002, 超能力球p2]
+type    = S
+movetype= H
+physics = S
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1002
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = [12,20]
+x = -5
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, selfState]
+type = selfState
+trigger1 = time >= 35
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;超能力球连续
+[Statedef 1020]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1020                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;攻击判定
+
+[State 1020]
+type = Projectile ;攻击类型
+trigger1 = time = 13
+projID = 1000 ;飞道ID号
+projanim = 1005 ;飞道动画
+projhitanim = 1006 ;击中时的动画
+projremanim = 1006 ;销毁时的动画
+projremove = 1 ;击中后是否消失
+projremovetime = -1 ;飞道持续多久后消失
+projedgebound = 6
+velocity = 6,0;6,0 ;飞道的初速度
+accel = 0,0
+projpriority = 43967777777 ;优先级
+projsprpriority = 5 ;图像优先级
+projshadow = 0,0,0 ;影子颜色
+offset = 20,0 ;飞道发射的位置
+getpower = 100,100
+givepower = 50,0
+attr = S, SP
+animtype = Hard
+damage = 50,25
+hitflag = MAF
+guardflag = MA
+hitsound = s400,1
+guardsound = s100,9
+pausetime = 0,12
+guard.pausetime = 0,12
+sparkno = -1
+guard.sparkno = -1
+sparkxy = 10,-55
+ground.type = High
+ground.hittime = 25
+guard.ctrltime = 25
+ground.slidetime = 5
+ground.velocity = -5
+air.velocity = -3.6,-3.8
+air.fall = 1
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 0, 发射音效]
+type = PlaySnd
+trigger1 = time = 12
+value = s8,3
+
+;---------------------------------------------------------------------------
+;继续攻击
+
+[State 1020, 2]
+type = ChangeState
+triggerall = var(59) = 0
+trigger1 = time >= 22
+trigger1 = command = "a"
+value = 1040
+ctrl = 0
+
+;---------------------------------------------------------------------------
+[State 1020, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;精神力球
+[Statedef 1040]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1040                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;位置移动
+
+[State 0, 位置移动]
+type = PosAdd
+trigger1 = time = [0,14]
+x = -3
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;攻击判定
+
+[State 1040]
+type = Projectile ;攻击类型
+trigger1 = time = 15
+projID = 1040 ;飞道ID号
+projanim = 1045 ;飞道动画
+projhitanim = 1046 ;击中时的动画
+projremanim = 1046 ;销毁时的动画
+projremove = 1 ;击中后是否消失
+projremovetime = -1 ;飞道持续多久后消失
+projedgebound = 6
+velocity = 8,0;6,0 ;飞道的初速度
+accel = 0,0
+projpriority = 43967777777 ;优先级
+projsprpriority = 5 ;图像优先级
+projshadow = 0,0,0 ;影子颜色
+offset = 30,-12 ;飞道发射的位置
+getpower = 100,100
+givepower = 50,0
+attr = S, SP
+animtype = Hard
+damage = 80,35
+hitflag = MAF
+guardflag = MA
+hitsound = s5,5
+guardsound = s100,9
+pausetime = 0,12
+guard.pausetime = 0,12
+sparkno = -1
+guard.sparkno = -1
+sparkxy = 10,-55
+ground.type = High
+ground.hittime = 30
+guard.ctrltime = 30
+ground.slidetime = 5
+ground.velocity = -5
+air.velocity = -3.6,-3.8
+air.fall = 1
+
+;---------------------------------------------------------------------------
+;凝聚
+
+[State 0, 凝聚]
+type = Explod
+trigger1 = time = 1
+anim = 1042
+ID = 1042
+pos = 30,-12
+postype = p1
+facing = 1
+bindtime = -1
+vel = 0,0
+removetime = -2
+removeongethit = 1
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 15
+ownpal = 1
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 0, 人物音效]
+type = PlaySnd
+trigger1 = time = 1
+value = s1,1
+
+[State 0, 发射音效]
+type = PlaySnd
+trigger1 = time = 14
+value = s8,4
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1040, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;混合连打(X型)
+[Statedef 1100]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1100                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 30,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;速度
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = [4,12]
+x = 3
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1100,1]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 40, 0                   ;招式造成的伤害, 防御伤害
+getpower = 80,80
+givepower = 30,0
+animtype = Medium                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 5, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 0, 0                 ;攻击者暂停的时间, 对手在hitshake的时间
+guard.pausetime = 8, 8         ;攻击被防御后暂停的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 3                  ;击中时播放的音效
+guardsound = S100, 9                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime = 20             ;对方在被击中状态的时间
+guard.ctrltime = 20             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 20                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 6
+envshake.freq = 45
+envshake.time = 12
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1100
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+[State 0, 地面]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1105
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;残影
+
+[State 0, 残影]
+type = Explod
+trigger1 = movehit = 1
+anim = 1101
+pos = 0,0
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 15
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6001
+pos = facing*(Enemynear,Pos X - Pos X),-72
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-72
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1,1
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1100, 2]
+type = PlaySnd
+trigger1 = time = 7
+value = s0, 5
+
+[State 1100, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 2
+value = s4, 1
+
+;---------------------------------------------------------------------------
+;连击
+[State 1100, 3]
+type = ChangeState
+trigger1 = movehit = 1
+value = 1110
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1100, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;地面
+[statedef 1105, 中段受击]
+type    = S
+movetype= H
+physics = S
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;坐标修正
+[State 0, Y轴坐标归零]
+type = PosSet
+trigger1 = time = 0
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1105
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = [4,8]
+x = -10
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;是否进入下落设置
+[State 0, 防止进入下落]
+type = HitFallSet
+trigger1 = time = 0
+value = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, selfState]
+type = selfState
+trigger1 = time >= 60
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;混合连打-第二击
+[Statedef 1110]
+type    = C                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = C                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1110                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 30,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, 允许出屏]
+type = ScreenBound
+trigger1 = time = [6,8]
+value = 0
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;瞬移
+[state 0, 瞬移]
+type = posadd
+trigger1 = time = 7
+x = ((enemynear,pos X)-pos X)*facing + 55
+y = ((enemynear,pos Y)-pos Y) + 0
+
+;---------------------------------------------------------------------------
+;转向
+[State 0, Turn]
+type = Turn
+trigger1 = time = 8
+trigger1 = ((enemynear,pos X)-pos X)*facing < 0
+ignorehitpause = 1
+persistent = 0
+
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1110, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = C, NA                     ;Hitdef属性： 蹲，普通攻击
+damage = 30, 0                   ;招式造成的伤害, 防御伤害
+getpower = 70,70
+givepower = 20,0
+animtype = Light                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = LA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 7, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 0, 0                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 1                  ;击中时播放的音效
+guardsound = S100, 8                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime = 15             ;对方在被击中状态的时间
+guard.ctrltime = 15             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 15                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 6
+envshake.freq = 45
+envshake.time = 12
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1110
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+
+[State 0, TargetState]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1115
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;残影
+
+[State 0, 残影]
+type = Explod
+trigger1 = movehit = 1
+anim = 1111
+pos = 0,0
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 15
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6000
+pos = facing*(Enemynear,Pos X - Pos X),-35
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-35
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1110, 2]
+type = PlaySnd
+trigger1 = time = 13
+value = s0, 0
+
+[State 1110, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 3
+value = s4, 0
+
+;---------------------------------------------------------------------------
+;连击
+[State 1110, 3]
+type = ChangeState
+trigger1 = movehit = 1
+value = 1120
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1110, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;地面
+[statedef 1115, 下段受击]
+type    = S
+movetype= H
+physics = S
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;坐标修正
+[State 0, Y轴坐标归零]
+type = PosSet
+trigger1 = time = 0
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1115
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = [4,8]
+x = -10
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;是否进入下落设置
+[State 0, 防止进入下落]
+type = HitFallSet
+trigger1 = time = 0
+value = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, selfState]
+type = selfState
+trigger1 = time >= 60
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;混合连打-第三击
+[Statedef 1120]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1120                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 30,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, 允许出屏]
+type = ScreenBound
+trigger1 = time = [6,8]
+value = 0
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;瞬移
+[state 0, 瞬移]
+type = posadd
+trigger1 = time = 7
+x = ((enemynear,pos X)-pos X)*facing + 55
+y = ((enemynear,pos Y)-pos Y) + 0
+
+;---------------------------------------------------------------------------
+;转向
+[State 0, Turn]
+type = Turn
+trigger1 = time = 8
+trigger1 = ((enemynear,pos X)-pos X)*facing < 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1120,1]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 0, 0                   ;招式造成的伤害, 防御伤害
+getpower = 100,100
+givepower = 50,0
+animtype = Heavy                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 7, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 20, 10                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400,4                  ;击中时播放的音效
+guardsound = S100, 9                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime  = 25             ;对方在被击中状态的时间
+guard.ctrltime  = 25             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 24                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 12
+envshake.freq = 40
+envshake.time = 20
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1120
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+
+[State 0, 击飞]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1125
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;固伤
+
+[State 0, 固伤扣血]
+type = TargetLifeAdd
+triggerall = Numtarget
+trigger1 = movehit = 1
+value = -(fvar(10)*0.05)
+ID = -1
+kill = 1
+absolute = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6002
+pos = facing*(Enemynear,Pos X - Pos X),-82
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-82
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1.2,1.2
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1120, 2]
+type = PlaySnd
+trigger1 = time = 14
+value = s0, 6
+
+[State 1120, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 3
+value = s4, 1
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1120, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+;---------------------------------------------------------------------------
+;空中受击
+[statedef 1125, 空中受击]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 206
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = 16
+x = -5
+y = -8
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 24
+value = 1126
+ctrl = 0
+
+[statedef 1126, 空中p2（下落）]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+ctrl = 0
+sprpriority = -2
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 207
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = Vel Y < 8
+y = 0.6
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 速度修正]
+type = VelSet
+trigger1 = Vel Y >= 8
+y = 8
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 4935 ;Hit ground
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;混合连打(Y型)
+[Statedef 1150]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1150                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 30,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;速度
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = [7,15]
+x = 3
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1100,1]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 40, 0                   ;招式造成的伤害, 防御伤害
+getpower = 80,80
+givepower = 30,0
+animtype = Medium                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 5, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 0, 0                 ;攻击者暂停的时间, 对手在hitshake的时间
+guard.pausetime = 8, 8         ;攻击被防御后暂停的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 3                  ;击中时播放的音效
+guardsound = S100, 9                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime = 20             ;对方在被击中状态的时间
+guard.ctrltime = 20             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 20                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 6
+envshake.freq = 45
+envshake.time = 12
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1150
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+[State 0, 地面]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1155
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;残影
+
+[State 0, 残影]
+type = Explod
+trigger1 = movehit = 1
+anim = 1101
+pos = 0,0
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 15
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6001
+pos = facing*(Enemynear,Pos X - Pos X),-72
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-72
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1,1
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1150, 2]
+type = PlaySnd
+trigger1 = time = 7
+value = s0, 5
+
+[State 1150, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 2
+value = s4, 1
+
+;---------------------------------------------------------------------------
+;连击
+[State 1150, 3]
+type = ChangeState
+trigger1 = movehit = 1
+value = 1160
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1150, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;地面
+[statedef 1155, 中段受击]
+type    = S
+movetype= H
+physics = S
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;坐标修正
+[State 0, Y轴坐标归零]
+type = PosSet
+trigger1 = time = 0
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1105
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = [4,8]
+x = -35
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;是否进入下落设置
+[State 0, 防止进入下落]
+type = HitFallSet
+trigger1 = time = 0
+value = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, selfState]
+type = selfState
+trigger1 = time >= 60
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;混合连打-第二击
+[Statedef 1160]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1160                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 30,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, 允许出屏]
+type = ScreenBound
+trigger1 = time = [6,8]
+value = 0
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;瞬移
+[state 0, 瞬移]
+type = posadd
+trigger1 = time = 7
+x = ((enemynear,pos X)-pos X)*facing + 55
+y = ((enemynear,pos Y)-pos Y) + 0
+
+;---------------------------------------------------------------------------
+;转向
+[State 0, Turn]
+type = Turn
+trigger1 = time = 8
+trigger1 = ((enemynear,pos X)-pos X)*facing < 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1160,1]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 40, 0                   ;招式造成的伤害, 防御伤害
+getpower = 80,80
+givepower = 30,0
+animtype = Medium                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 7, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 0, 0                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 3                  ;击中时播放的音效
+guardsound = S100, 9                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime = 20             ;对方在被击中状态的时间
+guard.ctrltime = 20             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 20                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 6
+envshake.freq = 45
+envshake.time = 12
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1160
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+
+[State 0, TargetState]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1165
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;残影
+
+[State 0, 残影]
+type = Explod
+trigger1 = movehit = 1
+anim = 1161
+pos = 0,0
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 15
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6001
+pos = facing*(Enemynear,Pos X - Pos X),-82
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-82
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1,1
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1120, 2]
+type = PlaySnd
+trigger1 = time = 14
+value = s0, 6
+
+[State 1120, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 3
+value = s4, 1
+
+;---------------------------------------------------------------------------
+;连击
+[State 1160, 3]
+type = ChangeState
+trigger1 = movehit = 1
+value = 1170
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1160, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;地面
+[statedef 1165, 第二击受击]
+type    = S
+movetype= H
+physics = S
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;坐标修正
+[State 0, Y轴坐标归零]
+type = PosSet
+trigger1 = time = 0
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1105
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = [4,8]
+x = -8
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;是否进入下落设置
+[State 0, 防止进入下落]
+type = HitFallSet
+trigger1 = time = 0
+value = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, selfState]
+type = selfState
+trigger1 = time >= 60
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;混合连打-第三击
+[Statedef 1170]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1170                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 30,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, 允许出屏]
+type = ScreenBound
+trigger1 = time = [6,8]
+value = 0
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;瞬移
+[state 0, 瞬移]
+type = posadd
+trigger1 = time = 7
+x = ((enemynear,pos X)-pos X)*facing + 85
+y = ((enemynear,pos Y)-pos Y) + 0
+
+;---------------------------------------------------------------------------
+;转向
+[State 0, Turn]
+type = Turn
+trigger1 = time = 8
+trigger1 = ((enemynear,pos X)-pos X)*facing < 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1170,1]
+type = HitDef
+trigger1 = AnimElem = 6
+attr = S, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 0, 0                   ;招式造成的伤害, 防御伤害
+getpower = 100,100
+givepower = 50,0
+animtype = Heavy                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 7, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 20, 10                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400,4                  ;击中时播放的音效
+guardsound = S100, 9                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime  = 25             ;对方在被击中状态的时间
+guard.ctrltime  = 25             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 24                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 12
+envshake.freq = 40
+envshake.time = 20
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1170
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+
+[State 0, 击飞]
+type = TargetState
+triggerall = NumTarget
+triggerall = var(9) = [0,1]
+trigger1 = movehit = 1
+value = 305
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 重击退]
+type = TargetState
+triggerall = NumTarget
+triggerall = var(9) >= 2
+trigger1 = movehit = 1
+value = 308
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;特写变量
+[State 0, VarAdd]
+type = VarAdd
+trigger1 = movehit = 1
+v = 9
+value = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;固伤
+
+[State 0, 固伤扣血]
+type = TargetLifeAdd
+triggerall = Numtarget
+trigger1 = movehit = 1
+value = -(fvar(10)*0.05)
+ID = -1
+kill = 1
+absolute = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6002
+pos = facing*(Enemynear,Pos X - Pos X),-60
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-60
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1.2,1.2
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;弹墙or弹地helper召唤
+[State 0, Helper]
+type = Helper
+trigger1 = AnimElem = 6
+helpertype = normal
+name = "TD"
+ID = 6140
+stateno = 6140
+pos = 0,0
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 1
+supermovetime = 999999
+pausemovetime = 999999
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 300, 2]
+type = PlaySnd
+trigger1 = time = 20
+value = s2, 15
+
+[State 300, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 2
+value = s4, 1
+
+[State 300, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 7
+value = s4, 2
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1170, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;混合连打(B型)
+[Statedef 1200]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1200                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+poweradd = -500
+
+;---------------------------------------------------------------------------
+;无敌
+
+[State 0, 无敌]
+type = NotHitBy
+trigger1 = time = [0,7]
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 30,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;必杀闪光
+[State 0, 必杀闪光]
+type = Explod
+trigger1 = time = 0
+anim = 10000
+pos = 0,5
+postype = p1
+facing = 1
+bindtime = 1
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.5,0.5
+sprpriority = 10
+ownpal = 1
+ignorehitpause = 1
+
+[State 0, 必杀闪光2]
+type = Explod
+trigger1 = time = 0
+anim = 10001
+pos = 5,5
+postype = p1
+facing = 1
+bindtime = 1
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.5,0.5
+sprpriority = 10
+ownpal = 1
+ignorehitpause = 1
+
+[State 0, 必杀音效]
+type = PlaySnd
+trigger1 = time = 0
+value = S10000, 0
+volumescale = 65
+
+;---------------------------------------------------------------------------
+;速度
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = [3,7]
+x = 6
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1200,1]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 40, 0                   ;招式造成的伤害, 防御伤害
+getpower = 10,10
+givepower = 30,0
+animtype = Medium                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 5, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 0, 0                 ;攻击者暂停的时间, 对手在hitshake的时间
+guard.pausetime = 8, 8         ;攻击被防御后暂停的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 3                  ;击中时播放的音效
+guardsound = S100, 9                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime = 20             ;对方在被击中状态的时间
+guard.ctrltime = 20             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 20                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 6
+envshake.freq = 45
+envshake.time = 12
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1200
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+[State 0, 地面]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1205
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;残影
+
+[State 0, 残影]
+type = Explod
+trigger1 = time = 10
+trigger1 = movehit
+anim = 1101
+pos = 0,0
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 15
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6001
+pos = facing*(Enemynear,Pos X - Pos X),-72
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-72
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1,1
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1200, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 2
+value = s4, 1
+
+;---------------------------------------------------------------------------
+;连击
+[State 1200, 2]
+type = ChangeState
+trigger1 = time = 10
+trigger1 = movehit
+value = 1220
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1200, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;地面
+[statedef 1205, 中段受击]
+type    = S
+movetype= H
+physics = S
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;坐标修正
+[State 0, Y轴坐标归零]
+type = PosSet
+trigger1 = time = 0
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1105
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = [6,10]
+x = -8
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;是否进入下落设置
+[State 0, 防止进入下落]
+type = HitFallSet
+trigger1 = time = 0
+value = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, selfState]
+type = selfState
+trigger1 = time >= 60
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;超能力重击
+[Statedef 1220]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1220                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;位置移动
+
+[State 0, 位置移动]
+type = PosAdd
+trigger1 = time = [0,15]
+x = -10
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;推挤检测设置
+
+[State 0, PlayerPush]
+type = PlayerPush
+trigger1 = time = [0,15]
+value = 0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;攻击判定
+
+[State 1220,0]
+type = HitDef
+trigger1 = AnimElem = 7
+attr = S, NT                     ;Hitdef属性： 站立，普通攻击
+damage = 0, 0                   ;招式造成的伤害, 防御伤害
+getpower = 10,10
+givepower = 50,0
+animtype = Heavy                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag =                      ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 7, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 0, 0                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = -1                  ;击中时播放的音效
+guardsound = -1                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime  = 30             ;对方在被击中状态的时间
+guard.ctrltime  = 30             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 24                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 4
+envshake.freq = 60
+envshake.time = 8
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+numhits = 0
+ID = 1220
+
+[State 1220,1]
+type = HitDef
+trigger1 = AnimElem = 9
+attr = S, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 0, 0                   ;招式造成的伤害, 防御伤害
+getpower = 10,10
+givepower = 50,0
+animtype = Heavy                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 7, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 20, 10                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400,4                  ;击中时播放的音效
+guardsound = S100, 9                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime  = 25             ;对方在被击中状态的时间
+guard.ctrltime  = 25             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 24                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 12
+envshake.freq = 40
+envshake.time = 20
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1220
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+
+[State 0, 定身]
+type = TargetState
+triggerall = NumTarget
+trigger1 = time = [18,22]
+trigger1 = movehit = 1
+value = 1225
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 重击]
+type = TargetState
+triggerall = NumTarget
+trigger1 = time = [46,50]
+trigger1 = movehit = 1
+value = 1226
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;固伤
+
+[State 0, 固伤扣血]
+type = TargetLifeAdd
+triggerall = Numtarget
+trigger1 = time = [46,50]
+trigger1 = movehit = 1
+value = -(fvar(10)*0.09)
+ID = -1
+kill = 1
+absolute = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;辅助效果
+
+[State 0, 星光]
+type = Explod
+trigger1 = time = 18
+anim = 1222
+ID = 1222
+pos = 68,-68
+postype = p1
+facing = 1
+bindtime = -1
+vel = 0,0
+removetime = -2
+removeongethit = 1
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 15
+ownpal = 1
+
+[State 0, 气浪]
+type = Explod
+trigger1 = time = 46
+anim = 1221
+ID = 1221
+pos = facing*(Enemynear,Pos X - Pos X),-68
+postype = p1
+facing = 1
+bindtime = -1
+vel = 0,0
+removetime = -2
+removeongethit = 1
+pausemovetime = 0
+supermovetime = 0
+scale = 0.4,0.4
+sprpriority = 20
+ownpal = 1
+
+;---------------------------------------------------------------------------
+;弹墙or弹地helper召唤
+[State 0, Helper]
+type = Helper
+trigger1 = AnimElem = 9
+helpertype = normal
+name = "TD"
+ID = 6140
+stateno = 6140
+pos = 0,0
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 1
+supermovetime = 999999
+pausemovetime = 999999
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 0, 人物音效]
+type = PlaySnd
+trigger1 = time = 1
+value = s0,10
+
+[State 0, 转身音效]
+type = PlaySnd
+trigger1 = time = 0
+value = s40,3
+ignorehitpause = 1
+
+[State 0, 星光音效]
+type = PlaySnd
+trigger1 = time = 18
+value = s8,2
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1020, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;空中受击
+[statedef 1225, 空中受击]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1225
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 60
+value = 1126
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;超能力重击p2
+[statedef 1226, 超能力重击p2]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, ScreenBound]
+type = ScreenBound
+trigger1 = time > 35
+value = 0
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;检测是否需要转向
+[State 0, Turn]
+type = Turn
+trigger1 = time = 0
+trigger1 = P2BodyDist X < -10
+ignorehitpause = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 305
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = 10
+x = -15
+ignorehitpause = 1
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 10
+Trigger1 = BackEdgeBodyDist <= 5
+value = 1227
+ctrl = 0
+
+[Statedef 1227,弹墙p2]
+type    = A    
+movetype= H    
+physics = N    
+velset = 0,0  
+
+;---------------------------------------------------------------------------
+;时缓效果
+[State 0, Pause]
+type = Pause
+trigger1 = time = [0,15]
+time = 1
+movetime = 1
+pausebg = 0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, ScreenBound]
+type = ScreenBound
+trigger1 = 1
+value = 1
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1  
+
+;---------------------------------------------------------------------------
+;动画改变
+[State 0, ChangeAnim2]
+type = ChangeAnim2
+Trigger1 = time = 0
+value = 306
+
+;---------------------------------------------------------------------------
+;震屏
+[State 0, EnvShake]
+type = EnvShake
+trigger1 = time = 0
+time = 20
+freq = 45
+ampl = -15
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, 速度设置]
+type = VelSet
+trigger1 = time = 10
+x = 1.5
+y = -10.5
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 速度修正]
+type = VelSet
+trigger1 = time > 11
+trigger1 = Vel Y > 8
+y = 8
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 重力加速度]
+type = VelAdd
+trigger1 = time > 11
+y = .6
+
+;---------------------------------------------------------------------------
+;动画改变2
+[State 0, 3]
+type = ChangeAnim2
+trigger1 = time = 18
+value = 307
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time > 18
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 4935 ;Hit ground
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;能量爆破(X型)
+[Statedef 1300]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1300                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 60,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;能量球
+
+[State 0, Helper]
+type = Helper
+trigger1 = time = 14
+helpertype = normal
+name = "NLQ"
+ID = 1310
+stateno = 1310
+pos = 58,-76
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 0
+supermovetime = 0
+pausemovetime = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 0, 人物音效]
+type = PlaySnd
+trigger1 = time = 14
+value = s1,5
+
+[State 0, 挥动音效]
+type = PlaySnd
+trigger1 = time = 0
+value = s4,1
+ignorehitpause = 1
+
+[State 0, 能量音效]
+type = PlaySnd
+trigger1 = time = 14
+value = s8,12
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1300, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;抓取受击
+[statedef 1320, 抓取受击]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;免疫普通投
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = ,NT
+time = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1320
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 60
+value = 1126
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;炸飞
+[statedef 1321, 炸飞]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, 允许出屏]
+type = ScreenBound
+trigger1 = 1
+value = 0
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1321
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = 0
+x = 0
+y = -8
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 12
+value = 1322
+ctrl = 0
+
+[statedef 1322, 旋转下落]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+ctrl = 0
+sprpriority = -2
+
+;---------------------------------------------------------------------------
+;免疫普通投
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = ,NT
+time = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, 允许出屏]
+type = ScreenBound
+trigger1 = 1
+value = 0
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1322
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = Vel Y < 10
+y = 0.6
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 速度修正]
+type = VelSet
+trigger1 = Vel Y >= 10
+y = 10
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 4935 ;Hit ground
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;能量爆破(Y型)
+[Statedef 1350]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1350                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 60,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;能量球
+
+[State 0, Helper]
+type = Helper
+trigger1 = time = 15
+helpertype = normal
+name = "NLQ"
+ID = 1360
+stateno = 1360
+pos = 58,-76
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 0
+supermovetime = 0
+pausemovetime = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 0, 人物音效]
+type = PlaySnd
+trigger1 = time = 15
+value = s1,5
+
+[State 0, 挥动音效]
+type = PlaySnd
+trigger1 = time = 0
+value = s4,1
+ignorehitpause = 1
+
+[State 0, 能量音效]
+type = PlaySnd
+trigger1 = time = 15
+value = s8,12
+
+[State 0, 发射音效]
+type = PlaySnd
+trigger1 = time = 50
+value = s8,4
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1350, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;炸飞
+[statedef 1371, 炸飞]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, 允许出屏]
+type = ScreenBound
+trigger1 = 1
+value = 0
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1321
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = 0
+x = 0
+y = -12
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 12
+value = 1372
+ctrl = 0
+
+[statedef 1372, 旋转下落]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+ctrl = 0
+sprpriority = -2
+
+;---------------------------------------------------------------------------
+;免疫普通投
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = ,NT
+time = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;镜头跟随设置
+[State 0, 允许出屏]
+type = ScreenBound
+trigger1 = 1
+value = 0
+movecamera = 0,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1322
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = Vel Y < 10
+y = 0.6
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 速度修正]
+type = VelSet
+trigger1 = Vel Y >= 10
+y = 10
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 4935 ;Hit ground
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;能量爆破(B型)
+[Statedef 1400]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = S                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1400                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+poweradd = -500
+
+;---------------------------------------------------------------------------
+;无敌
+
+[State 0, 无敌]
+type = NotHitBy
+trigger1 = time = [0,12]
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = 1
+edge = 60,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;必杀闪光
+[State 0, 必杀闪光]
+type = Explod
+trigger1 = time = 0
+anim = 10000
+pos = -5,5
+postype = p1
+facing = 1
+bindtime = 1
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.5,0.5
+sprpriority = 10
+ownpal = 1
+ignorehitpause = 1
+
+[State 0, 必杀闪光2]
+type = Explod
+trigger1 = time = 0
+anim = 10001
+pos = 0,5
+postype = p1
+facing = 1
+bindtime = 1
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.5,0.5
+sprpriority = 10
+ownpal = 1
+ignorehitpause = 1
+
+[State 0, 必杀音效]
+type = PlaySnd
+trigger1 = time = 0
+value = S10000, 0
+volumescale = 65
+
+;---------------------------------------------------------------------------
+;能量球
+
+[State 0, Helper]
+type = Helper
+trigger1 = time = 9
+helpertype = normal
+name = "NLQ"
+ID = 1410
+stateno = 1410
+pos = 58,-76
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 0
+supermovetime = 0
+pausemovetime = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 0, 人物音效]
+type = PlaySnd
+trigger1 = time = 9
+value = s1,5
+
+[State 0, 挥动音效]
+type = PlaySnd
+trigger1 = time = 0
+value = s4,1
+ignorehitpause = 1
+
+[State 0, 能量音效]
+type = PlaySnd
+trigger1 = time = 9
+value = s8,12
+
+[State 0, 发射音效]
+type = PlaySnd
+trigger1 = time = 44
+value = s8,4
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1400, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;凤凰炸弹(X型)
+[Statedef 1500]
+type    = A                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = N                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1500                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, X轴速度设置]
+type = VelSet
+trigger1 = time = 0
+trigger1 = Vel X <= 0
+x = 3
+ignorehitpause = 1
+persistent = 0
+
+[State 0, Y轴速度设置]
+type = VelSet
+trigger1 = time = 0
+trigger1 = Vel Y >= 0
+y = -5
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 重力加速度]
+type = VelAdd
+trigger1 = time > 1
+y = 0.4
+ignorehitpause = 1
+persistent = 1 
+
+;---------------------------------------------------------------------------
+;打击判定
+[State 1500,1]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = A, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 80, 0                   ;招式造成的伤害, 防御伤害
+getpower = 80,80
+givepower = 30,0
+animtype = Medium                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 5, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 8, 10                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 3                  ;击中时播放的音效
+guardsound = S100, 8                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime  = 20             ;对方在被击中状态的时间
+guard.ctrltime  = 20             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 20                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 6
+envshake.freq = 45
+envshake.time = 12
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1500
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+
+[State 0, 敌方受击]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1505
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6001
+pos = facing*(Enemynear,Pos X - Pos X),-50
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-50
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1,1
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1500, 2]
+type = PlaySnd
+triggerall = random <= 500
+trigger1 = time = 5
+value = s0, 4
+
+[State 1500, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 2
+value = s4, 1
+
+;---------------------------------------------------------------------------
+;击中跳转
+[State 1500, 3]
+type = ChangeState
+trigger1 = MoveGuarded = 1
+value = 1510
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1500, 4]
+type = ChangeState
+trigger1 = time >= 4
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 52
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;凤凰炸弹受击
+[statedef 1505, 凤凰炸弹受击]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 206
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = 8
+x = -2
+y = -7
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 12
+value = 1506
+ctrl = 0
+
+[statedef 1506, 受击下落]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+ctrl = 0
+sprpriority = -2
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 207
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = Vel Y < 12
+y = 0.6
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 速度修正]
+type = VelSet
+trigger1 = Vel Y >= 12
+y = 12
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 4935 ;Hit ground
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;后空翻下落
+[Statedef 1510]
+type    = A                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= I                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = N                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = -8,-6                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1510                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;免疫飞道
+
+[State 0, 免疫飞道]
+type = NotHitBy
+trigger1 = time >= 0
+value = ,NP,SP,HP
+time = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, 重力加速度]
+type = VelAdd
+trigger1 = time > 0
+y = 0.8
+ignorehitpause = 1
+persistent = 1 
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1500, 3]
+type = ChangeState
+trigger1 = time >= 4
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 52
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;凤凰炸弹(Y型)
+[Statedef 1550]
+type    = A                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = N                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1550                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, X轴速度设置]
+type = VelSet
+trigger1 = time = 0
+trigger1 = Vel X <= 0
+x = 2
+ignorehitpause = 1
+persistent = 0
+
+[State 0, Y轴速度设置]
+type = VelSet
+trigger1 = time = 0
+trigger1 = Vel Y >= 0
+y = -3
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 重力加速度]
+type = VelAdd
+trigger1 = time > 1
+y = 0.4
+ignorehitpause = 1
+persistent = 1 
+
+;---------------------------------------------------------------------------
+;打击判定
+[State 1550,1]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = A, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 20, 0                   ;招式造成的伤害, 防御伤害
+getpower = 80,80
+givepower = 30,0
+animtype = Medium                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 5, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 12, 10                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 3                  ;击中时播放的音效
+guardsound = S100, 8                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime  = 20             ;对方在被击中状态的时间
+guard.ctrltime  = 20             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 20                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 6
+envshake.freq = 45
+envshake.time = 12
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1550
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+
+[State 0, 敌方受击]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1555
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6001
+pos = facing*(Enemynear,Pos X - Pos X),-50
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-50
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1,1
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1550, 2]
+type = PlaySnd
+triggerall = random <= 500
+trigger1 = time = 5
+value = s0, 4
+
+[State 1550, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 2
+value = s4, 1
+
+;---------------------------------------------------------------------------
+;击中跳转
+[State 1550, 追击]
+type = ChangeState
+trigger1 = movehit = 1
+value = 1570
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;击中跳转
+[State 1550, 4]
+type = ChangeState
+trigger1 = MoveGuarded = 1
+value = 1560
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1550, 5]
+type = ChangeState
+trigger1 = time >= 4
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 52
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;凤凰炸弹受击
+[statedef 1555, 凤凰炸弹受击]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 206
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = 8
+x = -3
+y = -4
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 12
+value = 1556
+ctrl = 0
+
+[statedef 1556, 受击下落]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+ctrl = 0
+sprpriority = -2
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 207
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = Vel Y < 8
+y = 0.6
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 速度修正]
+type = VelSet
+trigger1 = Vel Y >= 8
+y = 8
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 4935 ;Hit ground
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;后空翻下落
+[Statedef 1560]
+type    = A                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= I                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = N                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = -6,-3                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1510                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;免疫飞道
+
+[State 0, 免疫飞道]
+type = NotHitBy
+trigger1 = time >= 0
+value = ,NP,SP,HP
+time = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, 重力加速度]
+type = VelAdd
+trigger1 = time > 0
+y = 0.8
+ignorehitpause = 1
+persistent = 1 
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1500, 3]
+type = ChangeState
+trigger1 = time >= 4
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 52
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;凤凰箭
+[Statedef 1570]
+type    = A                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = N                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 3,-6                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1570                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 5                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, 速度设置]
+type = VelSet
+trigger1 = time > 8
+x = 6.3
+y = 6.3
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;凤凰箭
+
+[State 0, 凤凰箭]
+type = Explod
+trigger1 = time = 8
+anim = 1572
+id = 1570
+pos = 0,0
+postype = p1
+facing = 1
+bindtime = -1
+vel = 0,0
+removetime = -1
+removeongethit = 1
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 0
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1570, 1]
+type = HitDef
+trigger1 = AnimElem = 3
+trigger2 = AnimElem = 7
+attr = A, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 0, 0                   ;招式造成的伤害, 防御伤害
+getpower = 10,10
+givepower = 5,0
+animtype = Medium                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 7, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 1, 4                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 3                  ;击中时播放的音效
+guardsound = S100, 8                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime = 15             ;对方在被击中状态的时间
+guard.ctrltime = 15             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 15                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 4
+envshake.freq = 60
+envshake.time = 5
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1570
+
+;---------------------------------------------------------------------------
+;p2绑定
+
+[State 0, 位置绑定]
+type = TargetBind
+triggerall = Numtarget
+trigger1 = movehit
+trigger1 = Enemynear,movetype = H
+trigger1 = Enemynear,stateno = 1575
+time = 1
+id = -1
+pos = 35,20
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;拉p2
+[State 0, TargetState]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1575
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;固伤
+
+[State 0, 固伤扣血]
+type = TargetLifeAdd
+triggerall = Numtarget
+trigger1 = movehit = 1
+value = -(fvar(10)*0.015)
+ID = -1
+kill = 1
+absolute = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;打击火花helper
+
+[State 0, Helper]
+type = Helper
+trigger1 = Animelem = 2,=5
+trigger2 = Animelem = 6,=1
+trigger3 = Animelem = 10,=1
+helpertype = normal
+name = "1570"
+ID = 1570
+stateno = 1571
+pos = 0,0
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 0
+supermovetime = 0
+pausemovetime = 0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1570, 2]
+type = PlaySnd
+trigger1 = time = 0
+value = s1, 6
+
+[State 1570, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 1
+value = s4, 2
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1570, 3]
+type = ChangeState
+trigger1 = time >= 8
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 1580
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;凤凰箭受击
+[statedef 1575, 凤凰箭受击]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1575
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 60
+value = 1556
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;受击下落
+[statedef 1576, 受击下落]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 1576
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = 0
+x = -1.5
+y = 12
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 4935 ;Hit ground
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;凤凰箭落地
+[Statedef 1580]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = N                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1580                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 5                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;特效消除
+
+[State 0, RemoveExplod]
+type = RemoveExplod
+trigger1 = time = 0
+id = 1570
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, Y轴速度归零]
+type = VelSet
+trigger1 = time = 0
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 摩擦力]
+type = VelMul
+trigger1 = time > 0
+x = .6
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;位置修正
+
+[State 0, 高度修正]
+type = PosSet
+trigger1 = time = 0
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;拉p2
+[State 0, TargetState]
+type = TargetState
+triggerall = NumTarget
+trigger1 = time = 0
+value = 1635
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;凤凰箭消失
+
+[State 0, 凤凰箭消失]
+type = Explod
+trigger1 = time = 0
+anim = 1573
+id = 1580
+pos = 0,0
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+removeongethit = 1
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 0
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+; 灰尘
+[State 0, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 6120
+ID = 6120
+pos = -16,3
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+scale = 0.5,0.5
+sprpriority = -3
+shadow = 0,0,0
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = s6,1
+volumescale = 100
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1580, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;凤凰炸弹(B型)
+[Statedef 1600]
+type    = A                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = N                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1600                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 3                  ;设定p1的贴图优先度到2 (在前面)
+poweradd = -500
+
+;---------------------------------------------------------------------------
+;无敌
+
+[State 0, 无敌]
+type = NotHitBy
+trigger1 = time = [0,6]
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;必杀闪光
+[State 0, 必杀闪光]
+type = Explod
+trigger1 = time = 0
+anim = 10000
+pos = -5,-15
+postype = p1
+facing = 1
+bindtime = 1
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.5,0.5
+sprpriority = 10
+ownpal = 1
+ignorehitpause = 1
+
+[State 0, 必杀闪光2]
+type = Explod
+trigger1 = time = 0
+anim = 10001
+pos = 0,-15
+postype = p1
+facing = 1
+bindtime = 1
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.5,0.5
+sprpriority = 10
+ownpal = 1
+ignorehitpause = 1
+
+[State 0, 必杀音效]
+type = PlaySnd
+trigger1 = time = 0
+value = S10000, 0
+volumescale = 65
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, X轴速度设置]
+type = VelSet
+trigger1 = time = 0
+trigger1 = Vel X <= 0
+x = 2
+ignorehitpause = 1
+persistent = 0
+
+[State 0, Y轴速度设置]
+type = VelSet
+trigger1 = time = 0
+trigger1 = Vel Y > -4
+y = -4
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 重力加速度]
+type = VelAdd
+trigger1 = time > 1
+y = 0.4
+ignorehitpause = 1
+persistent = 1 
+
+;---------------------------------------------------------------------------
+;打击判定
+[State 1600,1]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = A, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 20, 0                   ;招式造成的伤害, 防御伤害
+getpower = 80,80
+givepower = 30,0
+animtype = Medium                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 5, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 12, 10                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 3                  ;击中时播放的音效
+guardsound = S100, 8                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime  = 20             ;对方在被击中状态的时间
+guard.ctrltime  = 20             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 20                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 6
+envshake.freq = 45
+envshake.time = 12
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1600
+
+;---------------------------------------------------------------------------
+;敌方状态控制
+
+[State 0, 敌方受击]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1555
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6001
+pos = facing*(Enemynear,Pos X - Pos X),-50
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-50
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1,1
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1600, 2]
+type = PlaySnd
+trigger1 = time = 5
+value = s0, 4
+
+[State 1600, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 2
+value = s4, 1
+
+;---------------------------------------------------------------------------
+;击中跳转
+[State 1600, 追击]
+type = ChangeState
+trigger1 = movehit = 1
+value = 1620
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;击中跳转
+[State 1600, 4]
+type = ChangeState
+trigger1 = MoveGuarded = 1
+value = 1560
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1600, 5]
+type = ChangeState
+trigger1 = time >= 4
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 52
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;凤凰箭
+[Statedef 1620]
+type    = A                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = N                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 3,-6                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1620                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 5                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, 速度设置]
+type = VelSet
+trigger1 = time > 8
+x = 6.3
+y = 6.3
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;凤凰箭
+
+[State 0, 凤凰箭]
+type = Explod
+trigger1 = time = 8
+anim = 1572
+id = 1620
+pos = 0,0
+postype = p1
+facing = 1
+bindtime = -1
+vel = 0,0
+removetime = -1
+removeongethit = 1
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 0
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1620, 1]
+type = HitDef
+trigger1 = AnimElem = 3
+trigger2 = AnimElem = 7
+attr = A, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 0, 0                   ;招式造成的伤害, 防御伤害
+getpower = 10,10
+givepower = 5,0
+animtype = Medium                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 7, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 1, 4                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400, 3                  ;击中时播放的音效
+guardsound = S100, 8                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime = 15             ;对方在被击中状态的时间
+guard.ctrltime = 15             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 15                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 4
+envshake.freq = 60
+envshake.time = 5
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1620
+
+;---------------------------------------------------------------------------
+;p2绑定
+
+[State 0, 位置绑定]
+type = TargetBind
+triggerall = Numtarget
+trigger1 = movehit
+trigger1 = Enemynear,movetype = H
+trigger1 = Enemynear,stateno = 1575
+time = 1
+id = -1
+pos = 35,20
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;拉p2
+[State 0, TargetState]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1575
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;固伤
+
+[State 0, 固伤扣血]
+type = TargetLifeAdd
+triggerall = Numtarget
+trigger1 = movehit = 1
+value = -(fvar(10)*0.015)
+ID = -1
+kill = 1
+absolute = 1
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;打击火花helper
+
+[State 0, Helper]
+type = Helper
+trigger1 = Animelem = 2,=5
+trigger2 = Animelem = 6,=1
+trigger3 = Animelem = 10,=1
+helpertype = normal
+name = "1621"
+ID = 1621
+stateno = 1621
+pos = 0,0
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 0
+supermovetime = 0
+pausemovetime = 0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 1620, 2]
+type = PlaySnd
+trigger1 = time = 0
+value = s1, 6
+
+[State 1620, 挥动音效]
+type = PlaySnd
+trigger1 = animelem = 1
+value = s4, 2
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1620, 3]
+type = ChangeState
+trigger1 = time >= 8
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 1630
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;凤凰箭落地
+[Statedef 1630]
+type    = S                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= A                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = N                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 1630                       ;改变动作 (不写这行则不改变anim)
+sprpriority = 5                  ;设定p1的贴图优先度到2 (在前面)
+
+;---------------------------------------------------------------------------
+;宽度调整
+[State 0, Width]
+type = Width
+trigger1 = time = 0
+edge = 80,0
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;特效消除
+
+[State 0, RemoveExplod]
+type = RemoveExplod
+trigger1 = time = 0
+id = 1620
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, Y轴速度归零]
+type = VelSet
+trigger1 = time = 0
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 摩擦力]
+type = VelMul
+trigger1 = time > 0
+x = .6
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;位置修正
+
+[State 0, 高度修正]
+type = PosSet
+trigger1 = time = 0
+y = 0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;攻击判定
+[State 1630,1]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, NA                     ;Hitdef属性： 站立，普通攻击
+damage = 0, 0                   ;招式造成的伤害, 防御伤害
+getpower = 100,100
+givepower = 50,0
+animtype = Heavy                 ;动作种类: Light-轻, Medium-中, Heavy-重, Back-后仰 (默认: Light)
+guardflag = HA                   ;能被什么状态的敌人防御
+hitflag = MAF                    ;能击中什么状态的敌人
+priority = 7, Hit                ;攻击优先度: 0 (最低) to 7 (最高), 4 默认，相杀式的处理：Hit-可以击中非dodge情况的敌方/Miss-我方攻击一定miss/Dodge-一定躲避敌方攻击 (默认: Hit)
+pausetime = 20, 10                 ;攻击者暂停的时间, 对手在hitshake的时间
+sparkno = -1                      ;火花的动作号 (默认: 在上面设置的动作好)
+sparkxy = -8, -75               ;火花相对于p2的X坐标偏移量，火花相对于p1的Y坐标偏移量
+guard.sparkno = -1
+hitsound = S400,4                  ;击中时播放的音效
+guardsound = S100, 9                ;被防御时播放的音效
+ground.type = High               ;种类: High-上段, Low-下段, Trip-绊倒 (默认: Normal)
+ground.slidetime = 4             ;对方向后滑的时间
+ground.hittime  = 25             ;对方在被击中状态的时间
+guard.ctrltime  = 25             ;对方在防御状态的时间
+ground.velocity = -2             ;对方被向后推的速度
+airguard.velocity = -1.9,-.8     ;空中防御的速度 (默认: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;空中击中的种类: High-上段, Low-下段, Trip-绊倒 (默认: 和ground.type一样)
+air.velocity = -1,-3           ;空中击中时对方被向后推的横向速度, 空中击中时对方被向后推的纵向速度
+air.hittime = 24                 ;空中击中对方在被击中状态的时间、
+envshake.ampl = 12
+envshake.freq = 40
+envshake.time = 20
+ground.cornerpush.veloff = 0
+air.cornerpush.veloff = 0
+down.cornerpush.veloff = 0
+guard.cornerpush.veloff = 0
+airguard.cornerpush.veloff = 0
+ID = 1630
+
+;---------------------------------------------------------------------------
+;拉p2
+
+[State 0, 空中受击]
+type = TargetState
+triggerall = NumTarget
+trigger1 = time = 0
+value = 1635
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 重击受击]
+type = TargetState
+triggerall = NumTarget
+trigger1 = movehit = 1
+value = 1637
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;p2绑定
+
+[State 0, 位置绑定]
+type = TargetBind
+triggerall = Numtarget
+trigger1 = movehit = 1
+time = 1
+id = -1
+pos = 62,0
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;固伤
+
+[State 0, 固伤扣血]
+type = TargetLifeAdd
+triggerall = Numtarget
+trigger1 = movehit = 1
+value = -(fvar(10)*0.02)
+ID = -1
+kill = 1
+absolute = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;凤凰箭消失
+
+[State 0, 凤凰箭消失]
+type = Explod
+trigger1 = time = 0
+anim = 1573
+id = 1630
+pos = 0,0
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+removeongethit = 1
+pausemovetime = 0
+supermovetime = 0
+scale = 1,1
+sprpriority = 0
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+; 灰尘
+[State 0, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 6120
+ID = 6120
+pos = -16,3
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+scale = 0.5,0.5
+sprpriority = -3
+shadow = 0,0,0
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;打击火花与防御火花
+[State 0, 打击火花]
+type = Explod
+trigger1 = movehit = 1
+anim = 6002
+pos = 64,-58
+postype = p1
+facing = 1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 0.8,0.8
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 0, 防御火花]
+type = Explod
+trigger1 = MoveGuarded = 1
+anim = 6003
+pos = facing*(Enemynear,Pos X - Pos X),-58
+postype = p1
+facing = -1
+bindtime = 1
+vel = 0,0
+removetime = -2
+pausemovetime = 999999
+supermovetime = 999999
+scale = 1.2,1.2
+sprpriority = 999
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;音效
+
+[State 0, 挥动音效]
+type = PlaySnd
+trigger1 = time = 0
+value = s40,6
+
+[State 0, 挥动音效2]
+type = PlaySnd
+trigger1 = time = 6
+value = s4,2
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 1580, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 11
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;空中受击
+[statedef 1635, 空中受击]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 206
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = 0
+x = -1
+y = -4
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 6
+value = 1636
+ctrl = 0
+
+[statedef 1636, 空中p2（下落）]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+ctrl = 0
+sprpriority = -2
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 207
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = Vel Y < 8
+y = 0.6
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 速度修正]
+type = VelSet
+trigger1 = Vel Y >= 8
+y = 8
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 4935 ;Hit ground
+ctrl = 0
+
+;---------------------------------------------------------------------------
+;空中受击2
+[statedef 1637, 空中受击2]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+VelSet = 0,0
+ctrl = 0
+sprpriority = -2
+facep2 = 1
+
+;---------------------------------------------------------------------------
+;helper销毁
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = ishelper
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 206
+
+;---------------------------------------------------------------------------
+;速度设置
+[State 0, VelSet]
+type = VelSet
+trigger1 = time = 18
+x = -10
+y = -7
+ignorehitpause = 1
+persistent = 0
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time >= 26
+value = 1638
+ctrl = 0
+
+[statedef 1638, 空中p2（下落）]
+type    = A
+movetype= H
+physics = N
+poweradd = 0
+ctrl = 0
+sprpriority = -2
+
+;---------------------------------------------------------------------------
+;动画改变
+[state 0]
+type = changeAnim2
+Trigger1 = time = 0
+value = 207
+
+;---------------------------------------------------------------------------
+;速度设置
+
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = Vel Y < 8
+y = 0.6
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 速度修正]
+type = VelSet
+trigger1 = Vel Y >= 8
+y = 8
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;状态转出
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 4935 ;Hit ground
+ctrl = 0

@@ -38,212 +38,200 @@ animation {
     }
 
     ano_9 {
-        frame { sprite = sprite_10; origin = -25, -62; }
+        frame { sprite = sprite_9; origin = -25, -62; }
     }
 
     ano_10 {
-        frame { sprite = sprite_11; origin = -25, -62; }
+        frame { sprite = sprite_10; origin = -25, -62; }
     }
 
     ano_11 {
-        frame { sprite = sprite_12; origin = -25, -62; }
+        frame { sprite = sprite_11; origin = -25, -62; }
     }
 
     ano_12 {
+        frame { sprite = sprite_12; origin = -25, -62; }
+    }
+
+    ano_13 {
         frame { sprite = sprite_13; origin = -25, -62; }
     }
 
-    ano_98 {
+    ano_14 {
         frame { sprite = sprite_14; origin = -25, -62; }
     }
 
+    ano_98 {
+        frame { sprite = sprite_15; origin = -25, -62; }
+    }
+
     ano_99 {
-        frame { sprite = sprite_15; origin = -23, -46; }
+        frame { sprite = sprite_16; origin = -23, -46; }
     }
 
     ano_97 {
-        frame { sprite = sprite_16; origin = -123, -64; }
+        frame { sprite = sprite_17; origin = -123, -64; }
     }
 
     ano_90 {
-        frame { sprite = sprite_17; origin = -120, -34; }
+        frame { sprite = sprite_18; origin = -120, -34; }
     }
 
     ano_91 {
-        frame { sprite = sprite_18; origin = -12, -24; }
-    }
-
-    ano_92 {
         frame { sprite = sprite_19; origin = -12, -24; }
     }
 
-    ano_220 {
-        frame { sprite = sprite_20; origin = -40, -72; }
+    ano_92 {
+        frame { sprite = sprite_20; origin = -12, -24; }
     }
 
-    ano_221 {
+    ano_220 {
         frame { sprite = sprite_21; origin = -40, -72; }
     }
 
+    ano_221 {
+        frame { sprite = sprite_22; origin = -40, -72; }
+    }
+
     ano_222 {
-        frame { sprite = sprite_22; origin = -80, -32; }
+        frame { sprite = sprite_23; origin = -80, -32; }
     }
 
     ano_223 {
-        frame { sprite = sprite_23; origin = -236, -40; }
+        frame { sprite = sprite_24; origin = -236, -40; }
     }
 
     ano_224 {
-        frame { sprite = sprite_24; origin = -17, -28; }
+        frame { sprite = sprite_25; origin = -17, -28; }
     }
 
     ano_225 {
-        frame { time = 20; sprite = sprite_25; origin = -10, -30; }
+        frame { time = 20; sprite = sprite_26; origin = -10, -30; }
         frame { time = 14; sprite = -1; origin = -10, -30; loop; }
     }
 
     ano_226 {
         frame {
-            time = 30; sprite = sprite_26; origin = 6, -6;
+            time = 30; sprite = sprite_27; origin = 6, -6;
             render { rotate = 0; alpha = 256; zoom = 100, 180; }
             options { tween; }
         }
         frame {
-            time = 30; sprite = sprite_26; origin = 6, -6;
+            time = 30; sprite = sprite_27; origin = 6, -6;
             render { rotate = 0; alpha = 511; zoom = 100, 180; }
             options { tween; }
         }
         frame {
-            time = 1; sprite = sprite_26; origin = 6, -6; loop;
+            time = 1; sprite = sprite_27; origin = 6, -6; loop;
             render { rotate = 0; alpha = 256; zoom = 100, 180; }
         }
     }
 
     ano_227 {
-        frame { sprite = sprite_27; origin = -106, -32; }
-    }
-
-    ano_228 {
         frame { sprite = sprite_28; origin = -106, -32; }
     }
 
-    ano_229 {
-        frame { sprite = sprite_29; origin = -118, -32; }
+    ano_228 {
+        frame { sprite = sprite_29; origin = -106, -32; }
     }
 
-    ano_230 {
+    ano_229 {
         frame { sprite = sprite_30; origin = -118, -32; }
     }
 
-    ano_231 {
+    ano_230 {
         frame { sprite = sprite_31; origin = -118, -32; }
     }
 
-    ano_232 {
+    ano_231 {
         frame { sprite = sprite_32; origin = -118, -32; }
     }
 
+    ano_232 {
+        frame { sprite = sprite_33; origin = -118, -32; }
+    }
+
     ano_233 {
-        frame { sprite = sprite_33; origin = -8, -18; }
+        frame { sprite = sprite_34; origin = -8, -18; }
     }
 
     ano_103 {
-        frame { sprite = sprite_34; origin = -78, -22; }
-    }
-
-    ano_104 {
         frame { sprite = sprite_35; origin = -78, -22; }
     }
 
-    ano_105 {
+    ano_104 {
         frame { sprite = sprite_36; origin = -78, -22; }
     }
 
-    ano_106 {
+    ano_105 {
         frame { sprite = sprite_37; origin = -78, -22; }
     }
 
-    ano_107 {
+    ano_106 {
         frame { sprite = sprite_38; origin = -78, -22; }
     }
 
-    ano_114 {
+    ano_107 {
         frame { sprite = sprite_39; origin = -78, -22; }
     }
 
-    ano_115 {
+    ano_114 {
         frame { sprite = sprite_40; origin = -78, -22; }
     }
 
-    ano_119 {
+    ano_115 {
         frame { sprite = sprite_41; origin = -78, -22; }
     }
 
-    ano_120 {
+    ano_117 {
         frame { sprite = sprite_42; origin = -78, -22; }
     }
 
-    ano_121 {
+    ano_118 {
         frame { sprite = sprite_43; origin = -78, -22; }
     }
 
-    ano_122 {
+    ano_119 {
         frame { sprite = sprite_44; origin = -78, -22; }
     }
 
-    ano_123 {
+    ano_120 {
         frame { sprite = sprite_45; origin = -78, -22; }
     }
 
-    ano_124 {
+    ano_121 {
         frame { sprite = sprite_46; origin = -78, -22; }
     }
 
-    ano_125 {
+    ano_122 {
         frame { sprite = sprite_47; origin = -78, -22; }
     }
 
-    ano_126 {
+    ano_123 {
         frame { sprite = sprite_48; origin = -78, -22; }
     }
 
-    ano_127 {
+    ano_124 {
         frame { sprite = sprite_49; origin = -78, -22; }
     }
 
-    ano_128 {
+    ano_125 {
         frame { sprite = sprite_50; origin = -78, -22; }
     }
 
-    ano_129 {
+    ano_126 {
         frame { sprite = sprite_51; origin = -78, -22; }
     }
 
-    ano_130 {
+    ano_127 {
         frame { sprite = sprite_52; origin = -78, -22; }
     }
 
-    ano_131 {
+    ano_128 {
         frame { sprite = sprite_53; origin = -78, -22; }
     }
 
-    ano_132 {
+    ano_129 {
         frame { sprite = sprite_54; origin = -78, -22; }
-    }
-
-    ano_133 {
-        frame { sprite = sprite_55; origin = -78, -22; }
-    }
-
-    ano_134 {
-        frame { sprite = sprite_56; origin = -78, -22; }
-    }
-
-    ano_135 {
-        frame { sprite = sprite_57; origin = -78, -22; }
-    }
-
-    ano_136 {
-        frame { sprite = sprite_58; origin = -78, -22; }
     }
 }

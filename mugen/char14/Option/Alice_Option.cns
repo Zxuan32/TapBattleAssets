@@ -1,0 +1,37 @@
+;---------------------------------------------------------------------------
+;AI设置
+[Statedef 40100]
+type    = U                      ;状态: S-站立, C-蹲, A-空中, L-倒地
+movetype= U                      ;招式种类: A-攻击, I-非攻击, H-受击
+physics = U                      ;物理: S-站立, C-蹲, A-空中
+;常用的控制器:
+velset = 0,0                     ;设定速度 (x,y) (不写这行则不改变速度)
+ctrl = 0                         ;设定可控与否 (不写这行则不改变ctrl)
+anim = 9999                       ;改变动作 (不写这行则不改变anim)
+
+[State 0, AI开关];手操开关
+type = VarSet
+trigger1 = 1
+v = 59
+value = 2;0为手操 1-3为AI 
+ignorehitpause = 1
+persistent = 1
+
+;---------------------------------------------------------------------------
+;隐藏helper用
+
+[State 0, 断言]
+type = AssertSpecial
+trigger1 = 1
+flag = invisible
+flag2 = noshadow
+ignorehitpause = 1
+persistent = 1
+
+[State 0, 关闭推挤]
+type = PlayerPush
+trigger1 = 1
+value = 0
+ignorehitpause = 1
+persistent = 1
+

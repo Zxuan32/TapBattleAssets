@@ -1,0 +1,165 @@
+# Lo escribe tools/mugen/mugen_char.py (seccion 48): el segmento MUGEN de char14.
+def Alice1.0.def
+scale 130
+varset 40100 59 0
+anim 11 448 body 100
+anim 47 449 body 100
+anim 120 450 body 100
+anim 200 451 body 100
+anim 210 452 body 100
+anim 240 453 body 100
+anim 300 454 body 100
+anim 430 455 body 100
+anim 460 456 body 100
+anim 800 457 body 100
+anim 802 458 effect 100
+anim 810 459 body 100
+anim 812 460 effect 100
+anim 1000 461 body 100
+anim 1005 462 body 100
+anim 1006 463 body 100
+anim 1020 464 body 100
+anim 1040 465 body 100
+anim 1042 466 effect 100
+anim 1045 467 body 100
+anim 1046 468 body 100
+anim 1100 469 body 100
+anim 1101 470 effect 100
+anim 1110 471 body 100
+anim 1111 472 effect 100
+anim 1120 473 body 100
+anim 1510 474 body 100
+anim 1572 475 effect 100
+anim 1573 476 effect 100
+anim 1600 477 body 100
+anim 1620 478 body 100
+anim 1630 479 body 100
+anim 2000 480 body 100
+anim 2005 481 effect 100
+anim 2010 482 body 100
+anim 2020 483 body 100
+anim 2022 484 effect 100
+anim 2023 485 effect 100
+anim 2030 486 body 100
+anim 2035 487 body 100
+anim 2040 488 body 100
+anim 2050 489 body 100
+anim 4000 490 body 100
+anim 4005 491 effect 100
+anim 4010 492 body 100
+anim 4015 493 effect 100
+anim 4020 494 body 100
+anim 4050 495 body 100
+anim 4055 496 effect 100
+anim 4060 497 body 100
+anim 4061 498 effect 100
+anim 4062 499 effect 100
+anim 4063 501 effect 100
+anim 4064 502 effect 100
+anim 4070 503 body 100
+anim 4071 504 effect 100
+anim 4080 505 body 100
+anim 4090 506 helper 100
+anim 4091 507 body 100
+anim 4095 508 helper 100
+anim 6000 509 effect 80
+anim 6001 510 effect 100
+anim 6002 511 effect 100
+anim 6003 512 effect 100
+anim 6120 513 effect 50
+anim 6140 514 effect 100
+anim 6141 515 effect 100
+anim 6142 516 helper 100
+anim 6143 517 effect 100
+anim 9999 518 body 100
+anim 10000 519 effect 50
+anim 10001 520 effect 50
+anim 15000 521 effect 40
+anim 15001 522 effect 40
+anim 20000 523 effect 50
+anim 20001 524 effect 50
+sound 1 5 0
+sound 8 12 1
+sound 0 5 2
+sound 1 0 3
+sound 2 21 4
+sound 10 0 5
+sound 10 3 6
+sound 0 0 7
+sound 0 1 8
+sound 0 6 9
+sound 3 0 10
+sound 11 0 11
+sound 3 1 12
+sound 2 0 13
+sound 2 5 14
+sound 1 6 15
+sound 0 4 16
+sound 1 5 17
+sound 1 1 18
+sound 1 2 19
+sound 10 1 20
+sound 10 2 21
+sound 10 4 22
+sound 10 5 23
+sound 0 8 24
+sound 100 13 25
+sound 100 25 26
+sound 100 8 27
+sound 100 9 28
+sound 10000 0 29
+sound 10000 1 30
+sound 105 0 31
+sound 2 10 32
+sound 2 11 33
+sound 2 12 34
+sound 2 13 35
+sound 2 15 36
+sound 2 20 37
+sound 2 4 38
+sound 2 6 39
+sound 2 7 40
+sound 2 8 41
+sound 2 9 42
+sound 4 0 43
+sound 4 1 44
+sound 4 2 45
+sound 40 6 46
+sound 400 0 47
+sound 400 1 48
+sound 400 3 49
+sound 400 4 50
+sound 4000 0 51
+sound 4000 1 52
+sound 5 5 53
+sound 6 1 54
+sound 8 1 55
+sound 8 3 56
+sound 8 4 57
+sound 8000 0 58
+sound 850 0 59
+mute 4
+mute 400
+mute 40
+skipmute 10000
+skipmute 2
+pose 4065 24
+vary 3 18 19
+vary 5 20 21
+vary 6 22 23
+press 45 200 x
+press 45 210 26x
+press 45 810 26b
+redirect 45 810 200 ground
+skip 45 13
+nokeys 45
+skip 51 39
+press 55 810 26b
+skip 55 13
+nokeys 55
+skip 57 34
+press 59 810 26b
+skip 59 13
+nokeys 59
+skip 61 39
+skip 62 39

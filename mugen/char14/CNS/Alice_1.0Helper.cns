@@ -1,0 +1,58 @@
+;---------------------------------------------------------------------------------------------
+;自适应helper记录
+[statedef 40000]
+type = S
+movetype = I
+physics = N
+anim = 9999
+velset = 0,0
+ctrl = 0
+
+;---------------------------------------------------------------------------------------------
+;记录屏幕宽度和高度
+
+[state 40000, 屏幕宽度]
+type = parentvarset
+trigger1 = 1
+fvar(11) = gamewidth;返还宽度
+ignorehitpause = 1
+
+[state 40000, 屏幕高度]
+type = parentvarset
+trigger1 =1
+fvar(12) = gameheight;返还屏幕高度
+ignorehitpause = 1
+
+;----------------------------------------------------------------------------------------------------
+;不显示影子
+[state 40000]
+type = assertspecial
+trigger1 = 1
+flag = noshadow 
+ignorehitpause = 1
+
+;----------------------------------------------------------------------------------------------------
+;镜头不跟随
+[state 40000]
+type = ScreenBound
+trigger1 = 1
+value = 1
+movecamera = 0,0
+ignorehitpause = 1
+
+;----------------------------------------------------------------------------------------------------
+;取消推挤
+[state 40000]
+type = playerpush
+trigger1 = 1
+value = 0
+ignorehitpause = 1
+
+;----------------------------------------------------------------------------------------------------
+;本体误转状态后脱离该状态
+[state 40000]
+type = selfstate
+trigger1 = !ishelper
+trigger1=  name = "Alice"
+value = 0
+ctrl = 1

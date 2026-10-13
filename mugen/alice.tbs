@@ -1,0 +1,440 @@
+// Alice (MUGEN, de TTL) sobre la jugabilidad de Goku (char00).
+// Lo compila tools/mugen_char.py; seccion 41 de docs/MODDING.md.
+// Cada ano de Goku dice que accion de MUGEN lo dibuja (o que cuadros).
+mugen_char {
+    def   = "backup/mugen/Alice1.0/Alice1.0.def";
+    base  = "char00";
+    out   = "char14";
+    name  = "Alice";
+    scale = 130;
+    sheet = 1024;
+
+    // el segmento MUGEN (secciones 48-50): la ultimate (4000), el especial (2000 en
+    // el suelo, 2050 en el aire), el azul en el aire (1620, la Phoenix Arrow) y
+    // los tres rojos (800 el teletransporte y su cadena, 1600 la Phoenix Bomb B)
+    // los ejecuta el interprete con el CNS de Alice. Cada accion que usan sale
+    // como un ano desde el 448, saltando los del mapa y el 500 (el del cinematico
+    // de una transformacion, que no se toca): pasan del 500 sin problema. Los
+    // ficheros de texto van en mugen/char14 (en el APK, sueltos; el juego los
+    // busca por el numero de personaje). La IA de Alice1.0 viene encendida
+    // (var(59) del 40100): 0 es a mano. En 'states' van tambien los eslabones a
+    // los que se llega con un comando (200, 210, 1100, 1600): el calculo de
+    // lo que alcanza un estado no sigue los del estado -1.
+    // Los golpes y los silbidos de MUGEN (grupos 400, 4 y 40 del .snd) no suenan:
+    // suenan los del juego (MugenBridge). En la pausa que se salta al empezar
+    // tampoco el destello del super (10000), que ya sono en la intro del juego, ni
+    // las voces del grupo 2: el grito del especial y el de la ulti van en el primer
+    // cuadro de su ano, como los de Goku, y suenan al activarlos.
+    segment { states = 4000, 2000, 2050, 1620, 800, 810, 200, 210, 1100, 1110, 1120, 1600;
+              first_ano = 448; files = "mugen/char14";
+              varset = 40100, 59, 0;
+              mute = 4, 400, 40;
+              skipmute = 10000, 2;
+              // en la ulti, mientras se le suben las amigas (4060), el rival esta en
+              // el 4065 de Alice (空中受击固定, el 5031,40: de lado en el aire); en el
+              // juego, su pose de tumbado (24) y no la de salir despedido (72)
+              pose = 4065, 24; }
+
+    // los recortes del cuerpo de Goku (42 y 43 son los retratos)
+    body = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19;
+    body = 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 39, 40;
+    body = 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58;
+    body = 59, 60, 61, 62, 63, 64, 67, 68, 69, 70, 75, 93, 94;
+
+    // el aura de SSJ de Goku (llamas amarillas), en el rosa de su poder psiquico
+    tint = 330, 71, 72, 73;
+
+    // ---- fuera del combate: el modelo de la seleccion y del VS, la carta, la
+    // tira de los ojos, el nombre de la seleccion y el de la barra de vida
+    demo {
+        model = 9000, 1;
+        card = 9000, 1;
+        face = 9000, 2;
+        eyes = 14, 26, 94, 54;
+        name = "アリス";
+        hud_name = "アリス";
+    }
+
+    // ---- el banco de voces: wavNN con el sonido N del .snd. Las ranuras son
+    // las de Goku (los anos con su tiempo siguen pidiendo las mismas): 7/8/9
+    // los golpes, 5/6 el dolor, 10 la victoria, 12 la entrada, 13 la carga.
+    // Ojo con los grupos del .snd: 0-3 y 10-11 son su voz; 4, 5, 6, 7, 8, 20,
+    // 40, 100 y 400 son efectos (silbidos, golpes, pasos, caidas, energia).
+    voice = 0, 1, 5;        // Energy Blast (el especial)
+    voice = 1, 8, 12;
+    voice = 2, 0, 5;        // la rafaga
+    voice = 3, 1, 0;        // Psycho Ball
+    voice = 4, 2, 21;       // Psychic Medley
+    // el dolor es su grupo 10 (voz, sin usar en el CNS). Antes eran el 5,2 y el
+    // 7,3, que son efectos de MUGEN (un golpe y una caida): al recibir dano
+    // sonaba MUGEN y no ella
+    voice = 5, 10, 0;       // dolor
+    voice = 6, 10, 3;       // dolor fuerte
+    voice = 7, 0, 0;        // golpe ligero
+    voice = 8, 0, 1;        // golpe medio
+    voice = 9, 0, 6;        // golpe fuerte
+    voice = 10, 3, 0;       // victoria
+    voice = 11, 11, 0;      // KO
+    voice = 12, 3, 1;       // entrada
+    voice = 13, 2, 0;       // carga
+    voice = 14, 2, 5;       // la rafaga de la Medley
+    voice = 15, 1, 6;       // Phoenix Arrow
+    voice = 16, 0, 4;       // Phoenix Bomb
+    voice = 17, 1, 5;       // Psycho Reflector
+    voice = 18, 1, 1;       // la tercera Psycho Ball
+    voice = 19, 1, 2;       // la Psycho Ball dicha de otra forma (el CNS no la usa)
+    voice = 20, 10, 1;      // dolor, otra forma
+    voice = 21, 10, 2;
+    voice = 22, 10, 4;      // dolor fuerte, otra forma
+    voice = 23, 10, 5;
+    // la Psycho Ball la dice de tres formas (1,0 / 1,1 / 1,2): cualquiera de las
+    // tres suena con una al azar (seccion 50)
+    vary = 3, 18, 19;
+    // y el dolor, de tres formas cada uno
+    vary = 5, 20, 21;
+    vary = 6, 22, 23;
+
+    // la voz al elegirla (tabla 36, fila 8; SelConfirmPick): la de su entrada.
+    // Era el 94 de Goku, que en Alice es el «一!!» de la rafaga de la Medley. La
+    // fila 9 (los eventos 555 y 2705) tambien lo era: su grito fuerte
+    tbl = 36, 8, 92;
+    tbl = 36, 9, 89;
+
+    // ---- parada, vuelo, dash y salto
+    ano_0  { action = 0; timing = mugen; }                       // parado
+    ano_1  { timing = mugen; frame 1290,0 8; frame 1290,1 8; frame 1290,2 8; frame 1290,1 8; }   // volando
+    ano_2  { frame 1100,0 3; frame 1100,1 3; }                    // dash adelante
+    ano_3  { action = 106; }                                      // dash atras
+    ano_5  { action = 20; timing = mugen; }                       // caminar adelante
+    ano_6  { action = 100; }                                      // dash adelante: su carrera
+    ano_8  { action = 100; }
+    ano_7  { action = 105; }                                      // paso atras
+    ano_9  { action = 105; }
+    ano_10 { action = 41; }                                       // salto
+    ano_11 { action = 41; }
+    ano_12 { action = 41; }
+    ano_13 { frame 10,0 4; frame 10,1 4; }                       // aterrizar
+    ano_48 { frame 10,0 8; frame 10,1 7; }
+    ano_19 { action = 21; timing = mugen; }                       // caminar atras
+    ano_299 { frame 1100,0 8; frame 1100,1 7; }
+    ano_305 { frame 1100,1 30; frame 1100,0 32; }
+
+    // ---- entrada, victoria, derrota
+    ano_14 { action = 191; frames = 9, 34; }                      // introduccion
+    ano_15 { action = 181; }                                      // victoria
+    ano_16 { frame 1310,0 30; }                                   // de pie
+    ano_17 { frame 1310,0 14; frame 1310,1 14; frame 0,0 14; }
+    ano_26 { action = 170; }                                      // derrota
+
+    // ---- golpes recibidos
+    ano_20 { frame 5000,10 48; }
+    ano_21 { frame 5010,10 1; }
+    ano_22 { action = 5040; }
+    ano_23 { frame 5101,4 1; }
+    ano_24 { frame 5110,0 20; }
+    ano_25 { action = 5120; }
+    ano_67 { frame 5010,0 6; }
+    ano_68 { frame 5010,10 3; frame 5010,20 3; }
+    ano_69 { frame 5000,10 6; frame 5000,20 6; }
+    ano_70 { frame 5010,10 6; frame 5010,20 6; }
+    ano_71 { frame 5010,10 6; }
+    ano_72 { frame 5030,0 6; }                                     // segundo estado de dano: despedida hacia atras
+    ano_73 { frame 5030,10 6; }
+    ano_97 { frame 5110,0 20; }
+    ano_98 { frame 5010,10 1; }
+    ano_99 { frame 5030,10 60; frame 5030,20 60; }
+    ano_286 { frame 5000,10 60; }
+    ano_288 { frame 5010,10 1; }
+    ano_296 { frame 5010,10 1; }
+    ano_303 { action = 5001; }
+    ano_307 { frame 5000,10 60; }
+    ano_333 { frame 5000,0 5; frame 5000,10 5; }
+    ano_335 { frame 5030,0 1; }
+
+    // ---- la cadena de golpes (el verde): los golpes de Tap Battle de siempre,
+    // con los tiempos, cajas y cancelaciones de Goku, y los dibujos de Alice. Su
+    // accion va a su ritmo desde el golpe y, cuando acaba, su parada hasta el
+    // final del ano (rest = 0). Sin eso el ultimo cuadro se estiraba hasta cubrir
+    // la recuperacion de Goku: el 210,3 del tercer golpe, medio segundo quieto
+    ano_30 { action = 200; rest = 0; }                            // 1er eslabon
+    ano_32 { action = 210; rest = 0; }                            // 2o
+    ano_33 { action = 300; rest = 0; }                            // 3o
+    ano_34 { action = 240; }                                      // entra por el 32
+    // las ramas, igual: atras la rafaga X (1100), arriba/abajo su fuerte agachada
+    // (460, que sube y lanza: antes era la patada aerea 620, que acababa en un
+    // cuadro de caida del salto) y adelante su patada voladora (630) sin los
+    // cuadros de caer (41,4-6)
+    ano_31 { action = 1100; rest = 0; }                           // rama atras
+    ano_36 { action = 460; rest = 0; }                            // rama arriba/abajo
+    ano_37 { action = 630; frames = 0, 4; rest = 0; }             // rama adelante
+    ano_29 { action = 1200; }
+    ano_35 { action = 1150; }
+    ano_38 { action = 610; }
+    ano_39 { action = 460; }
+    ano_282 { action = 200; }
+    ano_283 { action = 240; }
+    ano_301 { action = 400; }
+    ano_314 { action = 1110; }
+    ano_316 { action = 1160; }
+    ano_318 { action = 1170; }
+
+    // ---- bolas de ki (amarillo)
+    ano_41 { action = 1020; key_tick = 13; }
+    ano_42 { frame 1000,6 6; }
+    ano_340 { action = 1020; key_tick = 13; }
+
+    // ---- azul: el reflector en el suelo, Phoenix Bomb en el aire
+    ano_43 { action = 1220; }                                     // su remate
+    ano_240 { action = 4020; }                                    // su remate largo
+
+    // ---- especial y ultimate
+    ano_92 { action = 1400; }
+    // el choque de especiales (TcbPushDuel: md 432, 433 y 437) y el 320 de los
+    // eventos: Alice empuja con su pose de lanzar energia (1500), que se queda
+    // mientras dure. Con la accion 1300 sobre los tiempos de Goku, el tramo largo
+    // se quedaba en su ultimo cuadro (205,5)
+    ano_260 { frame 1000,0 3; frame 1000,2 6; frame 1000,4 18; frame 1500,1 3; frame 1500,2 3;
+              frame 1500,3 3; frame 1500,4; }
+    ano_320 { frame 1000,0 3; frame 1000,2 6; frame 1000,4 18; frame 1500,1 3; frame 1500,2 3;
+              frame 1500,3 3; frame 1500,4; }
+    ano_64 { action = 2020; }
+    ano_66 { action = 2150; }
+    ano_95 { action = 2010; }
+    ano_96 { action = 2040; }
+
+    // ---- carga e ira
+    ano_84 { frame 3000,0 4; frame 3000,1 3; frame 3000,2 3; }
+    ano_85 { frame 3000,4 3; frame 3000,5 3; }
+    ano_86 { frame 3000,4 3; frame 3000,5 3; }
+    ano_256 { action = 750; }
+    ano_310 { action = 750; }
+    ano_312 { action = 760; }
+
+    // ---- teletransporte y rafagas
+    ano_87 { action = 900; }
+    ano_88 { action = 800; }
+    ano_290 { action = 900; }
+    ano_292 { action = 800; }
+    ano_294 { action = 910; }
+    // el choque de golpes de los eventos (el de tocar puntos, «PT»: TcbBattleEvents
+    // pinta a cada uno con su 90 y su 91, en bucle). En Goku son rafagas de
+    // punos: 6 cuadros / 18 ticks y 12 / 36. Eran las estelas de la rafaga X
+    // (1101 y 1111, un efecto sin bucle) y Alice se quedaba en un dibujo. Ahora,
+    // sobre los tiempos de Goku: jab y jab (200 y 240) y su rafaga X (1100)
+    ano_90 { frame 200,1 3; frame 200,2 3; frame 200,3 3; frame 240,1 3; frame 240,2 3; frame 240,1 3; }
+    ano_91 { action = 1100; }
+    // la guardia del juego: el luchador desaparece y deja esta imagen
+    // (zanzoken); en Alice, su pose de guardia (acciones 120/150 de MUGEN)
+    ano_210 { frame 120,0 3; frame 120,1 7; }
+
+    // ---- lo que faltaba: arranques, subidas y golpes sueltos
+    ano_27 { action = 2020; }                                     // arranque de lanzamiento
+    ano_74 { frame 1100,1 4; frame 1100,0 4; frame 41,1 5; frame 0,0 5; }
+    ano_75 { frame 41,1 17; frame 41,2 17; frame 41,3 17; }
+    ano_82 { frame 41,2 4; frame 41,3 4; }
+    ano_83 { frame 41,3 16; frame 1290,1 17; }
+    ano_89 { frame 41,3 21; frame 1290,1 21; }
+    ano_111 { frame 5110,0 20; }
+    ano_112 { frame 5010,10 6; }
+
+    // ---- retratos: la cara de la barra de vida y el busto de las cinematicas
+    ano_76  { portrait = 9000,2; align = right; }
+    ano_77  { portrait = 9000,2; align = right; }
+    ano_78  { portrait = 9000,1; }
+    ano_79  { portrait = 9000,1; }
+    ano_178 { portrait = 9000,1; }
+    ano_179 { portrait = 9000,1; }
+    ano_278 { portrait = 9000,1; }
+    ano_279 { portrait = 9000,1; }
+
+    // ================================================================
+    // Los movimientos de MUGEN: el ano sale entero de la accion, con sus
+    // tiempos, y lo que hace el estado del CNS va en su tick. vel y accel en
+    // centesimas de pixel de MUGEN por tick.
+    // ================================================================
+
+    // ---- amarillo: sus tres bolas como el ki de los demas, amarillo + verde
+    // + verde. Es la rafaga del motor (Fighter883): un toque de ataque en la
+    // ventana 'cancel' lanza la siguiente, hasta el tope de la tabla 4 (@30,
+    // aqui 2). La ventana empieza donde el CNS deja seguir (time >= 22 con
+    // "a") y dura hasta el final; 'kinext' dice cual es la siguiente: 1000 ->
+    // 1020 -> 1040. Sin toque vuelve a parada. Voz s1,0 en la primera, ninguna
+    // en la segunda y s1,1 en la tercera.
+    // Psycho Ball (1000, Projectile 1005 a los 15 ticks, 6 px/tick, dano 30),
+    // la continua (1020, a los 13, dano 50) y la grande (1040: retrocede 3 px
+    // por tick hasta el 14 y a los 15 la 1045 a 8 px/tick desde 30,-12, dano
+    // 80). Al rival le hacen el 1002: un empujon de pie, sin salir volando.
+    t4 = 0, 30, 2;
+    t4 = 6, 30, 2;
+    ano_40 { action = 1000; build = mugen;
+             range 22, 55 { options { cancel; } kinext ano_442; }
+             tick 1 { sound = 83; }
+             tick 15 { sound = 14; shoot ano_400 at 26, 0 impact ano_401; } }
+    ano_56 { action = 1000; build = mugen;
+             range 22, 55 { options { cancel; } kinext ano_442; }
+             tick 1 { sound = 83; }
+             tick 15 { sound = 14; shoot ano_400 at 26, 0 impact ano_401; } }
+    ano_442 { action = 1020; build = mugen;
+              range 22, 58 { options { cancel; } kinext ano_443; }
+              tick 13 { sound = 14; shoot ano_444 at 26, 0 impact ano_401; } }
+    ano_443 { action = 1040; build = mugen;
+              tick 0 { vel = -300, 0; }
+              tick 1 { sound = 98; explod ano_447 at 39, -16; }
+              tick 15 { reset; sound = 14; shoot ano_445 at 39, -16 impact ano_446; } }
+    ano_400 { action = 1005; build = mugen; bullet; lowres; loops = 8; priority = 1; hit = 3, psy1;
+              tick 0 { vel = 600, 0; } }
+    ano_444 { action = 1005; build = mugen; bullet; lowres; loops = 8; priority = 1; hit = 5, psy2;
+              tick 0 { vel = 600, 0; } }
+    ano_445 { action = 1045; build = mugen; bullet; lowres; loops = 8; priority = 1; hit = 8, psy3;
+              tick 0 { vel = 800, 0; } }
+    ano_401 { action = 1006; build = mugen; lowres; priority = 1; }
+    ano_446 { action = 1046; build = mugen; lowres; priority = 1; }
+    ano_447 { action = 1042; build = mugen; lowres; priority = 1; }
+
+    // ================================================================
+    // Como sale el rival (seccion 43b): los HitDef y los TargetState de su
+    // CNS, en filas propias de las tablas 14-33 (las del que pega). Velocidad
+    // y gravedad en centesimas de px de MUGEN por tick; 'fall' = cae tumbado
+    // (4935), si no cae de pie. Solo para los anos que ejecuta el juego (las
+    // Psycho Ball): en el segmento el rival hace los
+    // estados de MUGEN con la sombra. Las de los anos hechos a mano del rojo, el
+    // especial y la ultimate se fueron con ellos (seccion 50).
+    // ================================================================
+    reaction_slots = 11, 13, 14, 15, 16, 17, 18, 19, 0, 1, 5, 6, 8, 2;
+    // las Psycho Ball (5000 con pausetime 0,12): 12 de sacudida y su hittime
+    // (20, 25, 30) retrocediendo a 5 px/tick los 5 primeros (slidetime). La
+    // siguiente bola sale a los 22 ticks y llega antes de que acabe: combean
+    reaction psy1   { step { time = 12; } step { time = 5; velocity = -500, 0; } step { time = 15; } }
+    reaction psy2   { step { time = 12; } step { time = 5; velocity = -500, 0; } step { time = 20; } }
+    reaction psy3   { step { time = 12; } step { time = 5; velocity = -500, 0; } step { time = 25; } }
+
+    // ================================================================
+    // Rojo, azul, el especial y la ultimate (secciones 43 y 48-50). Los rojos,
+    // el azul en el aire, el especial y la ultimate los ejecuta el interprete
+    // con el CNS (segmento MUGEN); el azul de suelo, el juego.
+    // ================================================================
+    // las cadenas no siguen los saltos de la tabla 4 al conectar (eran los de Goku)
+    t4 = 1, 10, 0;
+    t4 = 1, 12, 0;
+    t4 = 1, 14, 0;
+    t4 = 1, 16, 0;
+    t4 = 2, 10, 0;
+    t4 = 2, 12, 0;
+    t4 = 2, 14, 0;
+    t4 = 2, 16, 0;
+    t4 = 4, 10, 0;
+    t4 = 4, 12, 0;
+    t4 = 4, 14, 0;
+    t4 = 4, 16, 0;
+    t4 = 5, 10, 0;
+    t4 = 5, 12, 0;
+    t4 = 5, 14, 0;
+    t4 = 5, 16, 0;
+    t4 = 7, 10, 0;
+    t4 = 7, 12, 0;
+    t4 = 7, 14, 0;
+    t4 = 7, 16, 0;
+    t4 = 8, 10, 0;
+    t4 = 8, 12, 0;
+    t4 = 8, 14, 0;
+    t4 = 8, 16, 0;
+
+    // ---- los rojos (seccion 50), como segmentos: un toque y la cadena va sola,
+    // tan de MUGEN como el azul en el aire. En el CNS cada eslabon sale de un
+    // comando con el golpe anterior acertado; aqui ese comando se da por pulsado
+    // ('press') en cuanto el golpe del estado acierta, y el CNS cambia de estado
+    // con sus propios triggers, tiempos, Explod (estelas, chispas, destellos) y
+    // sonidos. Las teclas del jugador no llegan (nokeys). Empiezan 13 ticks
+    // dentro del teletransporte: con sus 23 enteros el golpe llegaba al doble
+    // que el de Goku (12).
+    // - suelo: el teletransporte (800: Explod 802 y PosAdd 30 px delante del
+    //   rival) y, con el rival en el suelo, la cadena de pie en lugar de su golpe
+    //   aereo (810): 200 -x-> 210 -26x-> la rafaga X 1100 -> 1110 -> 1120 (estas
+    //   dos solas con movehit: reaparece detras del rival, con su estela
+    //   1101/1111). El 300 no: despide al rival (305) y, pasada su pausa de golpe,
+    //   la rafaga ya no llega (tampoco en MUGEN). Con el rival en el aire, la del
+    //   aire.
+    // - al saltar (ano 55; el juego da el tipo 5 fuera del suelo sin estar en el
+    //   aire): 800 -> 810 -26b-> Phoenix Bomb B 1600 -> Phoenix Arrow 1620 (sola
+    //   con movehit, el rival atado) -> la patada al caer 1630.
+    // - en el aire (ano 59, tipo 8: volando): la misma del salto. Con la Phoenix
+    //   Bomb B directa (1600) no llegaba al rival desde lejos. Antes era el dibujo
+    //   de la 1620 con los tiempos de Goku.
+    // Antes eran anos hechos a mano (45 -> 409 -> 410 -> 411 -> 412 -> 46 -> 404
+    // y 55 -> 430 -> 420 -> 421 -> 54): sin las estelas de MUGEN, Alice
+    // «desaparecia» en los teletransportes, y el golpe de despues fallaba a veces.
+    ano_45 { action = 800; build = mugen; all { segment 800; } skip = 13; nokeys;
+             redirect = 810, 200, ground;
+             press = 200, "x"; press = 210, "26x"; press = 810, "26b"; }
+    ano_55 { action = 800; build = mugen; all { segment 800; } skip = 13; nokeys;
+             press = 810, "26b"; }
+    ano_59 { action = 800; build = mugen; all { segment 800; } skip = 13; nokeys;
+             press = 810, "26b"; }
+    // los de la base que usaban los rojos hechos a mano
+    drop = 46, 54, 205;
+
+    // ---- azul de suelo: Psycho Reflector (Statedef 790, con su escudo
+    // 795/796). Sus Clsn1 son el ReversalDef: devuelven las balas, y los
+    // golpes de especiales y ultimates que le llegan de frente se los come el
+    // que los dio; y de cerca pegan (en MUGEN el rival sale rebotando, 793/794).
+    ano_94 { action = 790; build = mugen; clsn1 = reflect_hit; hit = 6, 66; lock = blue; link ano_229 flag 4;
+             tick 1 { sound = 97; cutscene at 0, 0 size 18, 0; } }
+    ano_229 { actions = 795, 796; build = mugen; lowres; }
+
+    // ---- azul de aire (seccion 49): la Phoenix Arrow (凤凰箭, Statedef 1620)
+    // como segmento MUGEN, desde donde este. Se hace bola y cae en picada
+    // (velset 3,-6 y a los 8 ticks 6,3/6,3, con su estela 1572); si pilla al
+    // rival (AnimElem 3 y 7) se lo lleva atado (1575, TargetBind 35,20), y al
+    // tocar el suelo (su ChangeState con Pos Y >= 0) da la patada (1630: el
+    // golpe del AnimElem 4, que lo lanza, 1637). El usuario: «se hace bolita,
+    // pega en el suelo y da una patada». En el CNS sale de la Phoenix Bomb B al
+    // conectar; con anos del juego la patada salia por tiempo, a veces en el
+    // aire (el motor cierra la cadena aerea al aterrizar). Antes el azul de
+    // aire era teletransporte -> 810 -> Phoenix Bomb X (1500).
+    ano_44 { action = 1620; build = mugen; all { segment 1620; } }
+
+    // ---- especial (100 de ki): MAX空间移动. En el suelo 2000 (SuperPause de 70
+    // ticks, el Explod 802 a los 40 y PosAdd hasta 50 px detras del rival), en
+    // el aire 2050 (65 ticks); los dos siguen en 2010 (Turn y el golpe), con
+    // movehit 2020 (tres golpes con TargetBind y chispas), a los 40 ticks 2030
+    // (la voltereta) y 2040 (el remate). La pausa del principio (Alice posando
+    // 35-40 ticks) se salta (skip): ya la hizo la intro del juego.
+    // el fondo de cinematica del personaje base: el 8 en el especial, el 9 en la
+    // ultimate; dura lo que dure el segmento (MugenBridge.KeepsCutscene)
+    // el grito al activarlo (el s2,0 de la 2000, ranura 13), como el de Goku en el
+    // primer cuadro: con build = mugen no quedaba ninguno y sonaba tras la intro
+    ano_51 { action = 2000; build = mugen; all { segment 2000; } skip = 39;
+             tick 0 { cutscene at 0, 0 size 8, 0; sound = 93; } }
+    // en el aire, mientras dura la intro del juego, su pose de cargar (3000,4 y
+    // 3000,5, la de sus anos de carga e ira) y no el 3200,1 con que empieza la
+    // 2050 (los brazos en cruz, que es tambien su recuperacion en el aire)
+    ano_57 { frame 3000,4 4; frame 3000,5 4; frame 3000,4 4; frame 3000,5 4; frame 3000,4 4; frame 3000,5;
+             build = mugen; all { segment 2050; } skip = 34;
+             tick 0 { cutscene at 0, 0 size 8, 0; sound = 93; } }
+
+    // ---- ultimate: Psychic Medley (Statedef 4000). La pausa de super con el
+    // fondo negro (se salta: la hizo la intro del juego) y, a los 40 ticks, la
+    // embestida a 12 px/tick con su AfterImage. Si conecta, 4020 (la rafaga, el
+    // rival atado) + 4050 y uno de los dos remates del CNS: 4060 + 4070 (las
+    // amigas y la explosion con la pantalla rota) o 4080 (la onda de corazones),
+    // con adelante / atras o a cara o cruz. Los saltos de la tabla 4 van a 0:
+    // mandaban a la continuacion de Goku cualquier golpe de la ultimate.
+    t4 = 11, 10, 0;
+    t4 = 12, 10, 0;
+    t4 = 11, 14, 0;
+    t4 = 12, 14, 0;
+    t4 = 11, 12, 0;
+    t4 = 12, 12, 0;
+    t4 = 11, 16, 0;
+    t4 = 12, 16, 0;
+    t4 = 11, 32, 0;
+    t4 = 12, 32, 0;
+    // el grito al activarla (el s2,21 de la 4000, «Psychic Medley», ranura 4)
+    ano_61 { action = 4000; build = mugen; all { segment 4000; } skip = 39;
+             tick 0 { cutscene at 0, 0 size 9, 0; sound = 84; } }
+    ano_62 { action = 4000; build = mugen; all { segment 4000; } skip = 39;
+             tick 0 { cutscene at 0, 0 size 9, 0; sound = 84; } }
+    // los de la base que usaban el especial y la ultimate hechos a mano (63, la
+    // rafaga; 202, 204 y 206, sus chispas, la pantalla rota y el destello)
+    drop = 63, 202, 204, 206;
+}
