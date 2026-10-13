@@ -86,4 +86,5 @@ package "char14.pac" {
     sound   "wav59.wav";
     info    "info.tbs";
     mod     "mod.tbs";
+    mugen   "mugen";
 }

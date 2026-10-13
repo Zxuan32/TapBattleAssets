@@ -114,18 +114,4 @@ game {
     file "loose/save.bin" as "save.bin";
     file "loose/save1.bin" as "save1.bin";
     file "loose/bgm_variants.txt" as "bgm_variants.txt";
-    file "mugen/char14/Alice1.0.def" as "mugen/char14/Alice1.0.def";
-    file "mugen/char14/CMD/Alice.cmd" as "mugen/char14/CMD/Alice.cmd";
-    file "mugen/char14/CNS/Alice.cns" as "mugen/char14/CNS/Alice.cns";
-    file "mugen/char14/CNS/Alice_C.cns" as "mugen/char14/CNS/Alice_C.cns";
-    file "mugen/char14/CNS/Alice_N.cns" as "mugen/char14/CNS/Alice_N.cns";
-    file "mugen/char14/CNS/Alice_S.cns" as "mugen/char14/CNS/Alice_S.cns";
-    file "mugen/char14/CNS/Alice_H.cns" as "mugen/char14/CNS/Alice_H.cns";
-    file "mugen/char14/CNS/Alice_1.0Helper.cns" as "mugen/char14/CNS/Alice_1.0Helper.cns";
-    file "mugen/char14/CNS/Alice_AI_Helper.cns" as "mugen/char14/CNS/Alice_AI_Helper.cns";
-    file "mugen/char14/CNS/Alice_-2.cns" as "mugen/char14/CNS/Alice_-2.cns";
-    file "mugen/char14/CNS/Alice_-3.cns" as "mugen/char14/CNS/Alice_-3.cns";
-    file "mugen/char14/Option/Alice_Option.cns" as "mugen/char14/Option/Alice_Option.cns";
-    file "mugen/char14/AIR/Alice.air" as "mugen/char14/AIR/Alice.air";
-    file "mugen/char14/segment.txt" as "mugen/char14/segment.txt";
 }
