@@ -391,19 +391,19 @@ animation {
     }
 
     ano_23 {
-        frame { time = 1; sprite = sprite_82; origin = -74, -72; }
+        frame { time = 1; sprite = sprite_82; origin = -74, -96; }
     }
 
     ano_24 {
         frame {
-            time = 20; sprite = sprite_81; origin = -80, -91;
+            time = 20; sprite = sprite_81; origin = -80, -66;
             options { effect = 1; }
         }
     }
 
     ano_25 {
-        frame { time = 3; sprite = sprite_81; origin = -80, -91; }
-        frame { time = 1; sprite = sprite_81; origin = -80, -91; }
+        frame { time = 3; sprite = sprite_81; origin = -80, -66; }
+        frame { time = 1; sprite = sprite_81; origin = -80, -66; }
         frame { time = 2; sprite = sprite_83; origin = -72, -181; keep_speed; }
         frame {
             time = 2; sprite = sprite_83; origin = -72, -181;
@@ -3239,27 +3239,27 @@ animation {
 
     ano_69 {
         frame {
-            time = 6; sprite = sprite_77; origin = -57, -177; flip_x; flip_y;
+            time = 6; sprite = sprite_77; origin = -57, -177;
             options { effect = 1; }
             hurtbox at -40, -166  size 90, 166;
         }
         frame {
-            time = 6; sprite = sprite_141; origin = -54, -162; loop; flip_x; flip_y;
+            time = 6; sprite = sprite_141; origin = -54, -162; loop;
             hurtbox at -40, -158  size 90, 158;
         }
     }
 
     ano_70 {
         frame {
-            time = 6; sprite = sprite_78; origin = -64, -176; flip_x; flip_y;
+            time = 6; sprite = sprite_78; origin = -64, -176;
             options { effect = 1; }
         }
-        frame { time = 6; sprite = sprite_85; origin = -77, -161; loop; flip_x; flip_y; }
+        frame { time = 6; sprite = sprite_85; origin = -77, -161; loop; }
     }
 
     ano_71 {
         frame {
-            time = 6; sprite = sprite_78; origin = -64, -176; flip_x; flip_y;
+            time = 6; sprite = sprite_78; origin = -64, -176;
             options { effect = 4; }
             shake 5 at 0, 0;
         }
@@ -3833,14 +3833,14 @@ animation {
 
     ano_98 {
         frame {
-            time = 1; sprite = sprite_78; origin = -64, -176; flip_x; flip_y;
+            time = 1; sprite = sprite_78; origin = -64, -176;
             hurtbox at -40, -166  size 90, 166;
         }
     }
 
     ano_99 {
         frame {
-            time = 120; sprite = sprite_81; origin = -80, -124; accel_y = 26214;
+            time = 120; sprite = sprite_81; origin = -80, -76; accel_y = 26214;
             render { rotate = 240; alpha = 0; zoom = 100, 100; }
             options { effect = 4; }
         }
@@ -3908,7 +3908,7 @@ animation {
 
     ano_112 {
         frame {
-            time = 6; sprite = sprite_78; origin = -64, -176; flip_x; flip_y;
+            time = 6; sprite = sprite_78; origin = -64, -176;
             hurtbox at -40, -166  size 90, 166;
         }
     }

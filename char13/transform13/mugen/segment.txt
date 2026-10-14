@@ -4,7 +4,6 @@ def SSJ_VegetaZ2.def
 scale 115
 own_sprites 110
 own_sheets 20
-camera mugen
 anim 48 380 body 100
 anim 1100 381 body 100
 anim 1201 382 body 100
@@ -31,4 +30,7 @@ sound 5 8 29
 sound 6 1 30
 mute 5
 mute 6
+pose 1257 24
+pose 5110 24
+pose 5111 24
 follow 170 1100 1200
