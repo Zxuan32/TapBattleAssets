@@ -1,0 +1,7 @@
+mod {
+    version           = 1;
+    transform_into    = none;
+    animation         = none;
+    ult_life_cost_pct = 0;
+    cut_zoom          = 138;
+}
