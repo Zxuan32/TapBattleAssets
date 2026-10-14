@@ -126,10 +126,6 @@ animation {
 
     ano_4 {
         priority = 254;
-        link ano_394 { flag = 0; offset = -4, -168; }
-        link ano_395 { flag = 0; offset = -4, 64; }
-        link ano_396 { flag = 0; offset = -204, 64; }
-        link ano_397 { flag = 0; offset = -203, -168; }
         frame {
             time = 15; sprite = sprite_9; origin = -67, -135;
             options { tween; }
@@ -6236,10 +6232,6 @@ animation {
 
     ano_399 {
         priority = 254;
-        link ano_394 { flag = 0; offset = 0, -168; }
-        link ano_395 { flag = 0; offset = 0, 64; }
-        link ano_396 { flag = 0; offset = -208, 64; }
-        link ano_397 { flag = 0; offset = -208, -168; }
         link ano_22 { flag = 0; offset = -16, -56; }
         frame {
             time = 15; sprite = sprite_9; origin = -67, -135;
