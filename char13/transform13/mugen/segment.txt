@@ -1,0 +1,34 @@
+# Lo escribe tools/mugen/mugen_char.py (seccion 48): el segmento MUGEN de char13/transform13.
+id shallot_blue
+def SSJ_VegetaZ2.def
+scale 115
+own_sprites 110
+own_sheets 20
+camera mugen
+anim 48 380 body 100
+anim 1100 381 body 100
+anim 1201 382 body 100
+anim 1206 383 effect 80
+anim 1230 384 body 100
+anim 1250 385 body 100
+anim 15999 386 body 100
+anim 17100 387 effect 100
+sound 0 24 15
+sound 1100 0 16
+sound 1100 2 17
+sound 1200 0 18
+sound 1200 1 19
+sound 1230 0 20
+sound 1400 12 21
+sound 15000 0 22
+sound 15000 1 23
+sound 2210 0 24
+sound 3100 1 25
+sound 40 0 26
+sound 40 1 27
+sound 5 5 28
+sound 5 8 29
+sound 6 1 30
+mute 5
+mute 6
+follow 170 1100 1200

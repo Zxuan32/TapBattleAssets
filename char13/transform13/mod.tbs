@@ -1,0 +1,7 @@
+mod {
+    version           = 1;
+    transform_into    = none;
+    animation         = 500;
+    ult_life_cost_pct = 0;
+    created_ano       = 500;
+}
