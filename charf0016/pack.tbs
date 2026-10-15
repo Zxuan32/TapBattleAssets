@@ -1,0 +1,6 @@
+package "charf0016.pac" {
+    image   "png00.png"   extra = 0x3a7b2500;
+    image   "png01.png"   extra = 0x0fa02c00;
+    sprites "sprites.tbs" extra = 0x600a5b00;
+    anim    "anim.tbs"    extra = 0x83ca7300;
+}

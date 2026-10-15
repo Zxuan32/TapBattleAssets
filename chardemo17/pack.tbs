@@ -1,0 +1,5 @@
+package "chardemo17.pac" {
+    sprites "sprites.tbs" extra = 0x649a4c00;
+    anim    "anim.tbs"    extra = 0x27eef200;
+    image   "png00.png"   extra = 0xe3399300;
+}

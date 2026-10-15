@@ -1,0 +1,37 @@
+package "char17.pac" {
+    image   "png00.png"   extra = 0x09f92600;
+    image   "png01.png"   extra = 0x78da5c00;
+    image   "png02.png"   extra = 0x8f4cac00;
+    image   "png03.png"   extra = 0x7eea8f00;
+    image   "png04.png"   extra = 0x364f9300;
+    image   "png05.png"   extra = 0x26478f00;
+    image   "png06.png"   extra = 0xcbfed200;
+    image   "png07.png"   extra = 0x6e1e6800;
+    image   "png08.png"   extra = 0x3ad3a300;
+    image   "png09.png"   extra = 0xc52f5300;
+    image   "png10.png"   extra = 0x2f338300;
+    image   "png11.png"   extra = 0xd3d62f00;
+    image   "png12.png"   extra = 0x41580b00;
+    image   "png13.png"   extra = 0x097a3a00;
+    image   "png14.png"   extra = 0x1ec72f00;
+    image   "png15.png"   extra = 0xecc68200;
+    tables  "tables.tbs"  extra = 0xecb8e900;
+    sprites "sprites.tbs" extra = 0xa8d38600;
+    anim    "anim.tbs"    extra = 0xd68ddd00;
+    sound   "wav00.wav"   extra = 0x6bbf8b00;
+    sound   "wav01.wav"   extra = 0x75023a00;
+    sound   "wav02.wav"   extra = 0xaca8cc00;
+    sound   "wav03.wav"   extra = 0x5f1d7e00;
+    sound   "wav04.wav"   extra = 0xab05e900;
+    sound   "wav05.wav"   extra = 0x4e638200;
+    sound   "wav06.wav"   extra = 0x8a324900;
+    sound   "wav07.wav"   extra = 0x676e2400;
+    sound   "wav08.wav"   extra = 0xe0794300;
+    sound   "wav09.wav"   extra = 0xa1e37b00;
+    sound   "wav10.wav"   extra = 0x152a4300;
+    sound   "wav11.wav"   extra = 0x11665a00;
+    sound   "wav12.wav"   extra = 0x20724e00;
+    sound   "wav13.wav"   extra = 0xcc3a7400;
+    sound   "wav14.wav"   extra = 0x54a06e00;
+    info    "info.tbs";
+}

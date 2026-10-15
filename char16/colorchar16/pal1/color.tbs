@@ -1,0 +1,4 @@
+color {
+    name    = "Color 1";
+    swatch  = 0xFFFF00;
+}
