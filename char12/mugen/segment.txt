@@ -1,0 +1,118 @@
+# Lo escribe tools/mugen/mugen_char.py (seccion 48): el segmento MUGEN de char12.
+id a21
+def Android_21.def
+scale 200
+own_sprites 257
+own_sheets 35
+camera mugen
+helperpause 1
+helpersize 1
+camerazoom 3000 75
+releasedown 5120
+damagesound 3100 5 61 500
+silent 3150
+silent 3155
+nospark 3000
+nospark 3001
+nospark 3002
+nospark 3004
+nospark 3050
+nospark 3055
+tbfx 3150 0 0 0 0 46 39 0 0
+tbfx 3130 198 63 0 0 0 0 0 1
+tbfx 3130 153 33 0 0 0 0 1 2
+rivalhide 3105
+rivalhide 3106
+tbalpha 60
+tbbeam 3150 262 -52 28 -477 3105 31 10
+planet 379 3055 0
+anim 0 454 body 100
+anim 41 455 body 100
+anim 42 456 body 100
+anim 43 457 body 100
+anim 44 458 body 100
+anim 550 459 helper 100
+anim 715 460 helper 100
+anim 1330 461 effect 60
+anim 3000 462 body 100
+anim 3001 463 body 100
+anim 3003 464 body 100
+anim 3004 465 body 100
+anim 3030 466 helper 100
+anim 3035 467 helper 100
+anim 3050 468 helper 100
+anim 3060 469 helper 100
+anim 3100 470 body 100
+anim 3101 471 body 100
+anim 3102 472 body 100
+anim 3103 473 body 100
+anim 3110 474 helper 100
+anim 3155 475 helper 100
+anim 3160 476 helper 100
+anim 3180 477 effect 86
+anim 3181 478 effect 86
+anim 3185 479 effect 70
+anim 3190 480 effect 100
+anim 7000 481 effect 100
+anim 7022 482 effect 30
+anim 7035 483 effect 35
+anim 7040 484 helper 100
+anim 7260 485 helper 100
+anim 7270 486 helper 100
+anim 7400 487 effect 80
+anim 7405 488 effect 40
+anim 8200 489 effect 100
+anim 9024 490 effect 100
+anim 9025 491 effect 100
+anim 9999 492 helper 100
+sound 0 32 15
+sound 0 35 16
+sound 0 36 17
+sound 1 19 18
+sound 10 31 19
+sound 10 32 20
+sound 10 33 21
+sound 10 34 22
+sound 10 35 23
+sound 30 30 24
+sound 30 32 25
+sound 30 33 26
+sound 30 34 27
+sound 30 35 28
+sound 4 1 29
+sound 5 22 30
+sound 5 42 31
+sound 5 43 32
+sound 5 49 33
+sound 5 54 34
+sound 5 55 35
+sound 5 56 36
+sound 5 57 37
+sound 5 58 38
+sound 5 59 39
+sound 5 60 40
+sound 5 61 41
+sound 5 62 42
+sound 5 63 43
+sound 5 64 44
+sound 5 65 45
+sound 5000 1 46
+sound 5010 1 47
+sound 5020 1 48
+sound 950 2 49
+mute 1
+mute 4
+mute 950
+pose 5030 72
+pose 5035 72
+pose 5050 73
+pose 5101 73
+pose 3006 73
+pose 5100 23
+pose 3005 23
+pose 5110 24
+pose 3007 24
+pose 5120 25
+pose -1 24 3004
+skip 118 100
+skip 452 100
