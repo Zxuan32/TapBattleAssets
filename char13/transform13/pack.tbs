@@ -21,6 +21,11 @@ package "chart13.pac" {
     image   "png19.png";
     image   "png20.png";
     image   "png21.png";
+    image   "png22.png";
+    image   "png23.png";
+    image   "png24.png";
+    image   "png25.png";
+    
     tables  "tables.tbs"  extra = 0x8abc2c00;
     sprites "sprites.tbs" extra = 0x5f7c2f00;
     anim    "anim.tbs"    extra = 0x9cf4b600;

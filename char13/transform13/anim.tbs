@@ -266,12 +266,29 @@ animation {
     }
 
     ano_14 {
-        link ano_114 { flag = 12; }
-        frame { time = 5; sprite = sprite_100; origin = -30, -146; sound = 92; }
-        frame { time = 40; sprite = sprite_101; origin = -30, -146; }
-        frame { time = 8; sprite = sprite_100; origin = -30, -146; }
-        frame { time = 8; sprite = -1; origin = -30, -146; }
-        frame { time = 30; sprite = sprite_99; origin = -30, -146; }
+        frame { time = 8; sprite = sprite_149; origin = -35, -109; sound = 89; }
+        frame { time = 8; sprite = sprite_150; origin = -35, -109; 
+        shake 3       at   0,   0  size 16, 16;}
+        frame { time = 8; sprite = sprite_151; origin = -35, -109; 
+        shake 3       at   0,   0  size 16, 16;}
+        frame { time = 8; sprite = sprite_152; origin = -35, -109; 
+        shake 3       at   0,   0  size 16, 16;}
+        frame { time = 8; sprite = sprite_153; origin = -35, -109; 
+        shake 3       at   0,   0  size 16, 16;}
+        
+        frame { time = 8; sprite = sprite_154; origin = -37, -179; 
+        shake 3       at   0,   0  size 16, 16;}
+        frame { time = 8; sprite = sprite_155; origin = -37, -179; 
+        shake 3       at   0,   0  size 16, 16;}
+        frame { time = 8; sprite = sprite_156; origin = -115, -179;
+        shake 3       at   0,   0  size 16, 16; }
+        frame { time = 8; sprite = sprite_157; origin = -105, -179; 
+        shake 3       at   0,   0  size 16, 16;}
+        frame { time = 8; sprite = sprite_158; origin = -115, -179; }
+        
+        frame { time = 8; sprite = sprite_159; origin = -70, -172; }
+        frame { time = 8; sprite = sprite_160; origin = -98, -172; } 
+        frame { time = 20; sprite = sprite_161; origin = -23, -172; }
     }
 
     ano_15 {
@@ -518,6 +535,47 @@ animation {
     }
 
     ano_32 {
+        link ano_131 { flag = 14; }
+        frame {
+            time = 3; sprite = sprite_7; origin = -49, -98;
+            hurtbox at -31, -111  size 64, 112;
+        }
+        frame {
+            time = 2; sprite = sprite_25; origin = -22, -119;
+            hurtbox at -31, -103  size 64, 96;
+        }
+         frame {
+            time = 1; sprite = sprite_25; origin = -22, -119;
+            hurtbox at -31, -103  size 64, 96;
+        }
+        frame {
+            time = 3; sprite = sprite_22; origin = -28, -125; speed_x = 524288;
+            options { cancel; power = 3; }
+            hurtbox at -27, -95  size 64, 96;
+            hitbox  at  16, -89  size 60, 64;
+            charf 6 at   0,   0;
+}
+        frame {
+            time = 6; sprite = sprite_22; origin = -28, -125;
+            options { cancel; }
+            hurtbox at -31, -111  size 64, 96;
+        }
+        frame {
+            time = 12; sprite = sprite_22; origin = -28, -125;
+            options { cancel; }
+            hurtbox at -31, -111  size 64, 96;
+        }
+        frame {
+            time = 6; sprite = sprite_7; origin = -49, -98;
+            hurtbox at -31, -111  size 64, 112;
+        }
+        frame {
+            time = 6; sprite = sprite_4; origin = -41, -108;
+            hurtbox at -31, -111  size 64, 112;
+        }
+    }
+
+    ano_33 {
         link ano_132 { flag = 14; }
         frame {
             time = 6; sprite = sprite_22; origin = -19, -119;
@@ -525,10 +583,11 @@ animation {
         }
         frame {
             time = 3; sprite = sprite_23; origin = -31, -112; speed_x = 524288;
-            options { cancel; power = 3; }
-            hurtbox at -27, -95  size 64, 96;
-            hitbox  at  16, -89  size 48, 64;
-            charf 6 at   0,   0;
+            options { power = 5; damage = 66; }
+            hurtbox       at -31, -103  size 64, 104;
+            hitbox        at   0,  -80  size 72,  64;
+            charf 8       at   0,    0;
+            spawn ano_214 at  48,  -72;
         }
         frame {
             time = 6; sprite = sprite_23; origin = -31, -112; keep_speed; accel_x = -65535;
@@ -542,47 +601,6 @@ animation {
         }
         frame {
             time = 3; sprite = sprite_7; origin = -49, -98; keep_speed;
-            hurtbox at -31, -111  size 64, 112;
-        }
-        frame {
-            time = 6; sprite = sprite_4; origin = -41, -108;
-            hurtbox at -31, -111  size 64, 112;
-        }
-    }
-
-    ano_33 {
-        link ano_133 { flag = 14; }
-        frame {
-            time = 3; sprite = sprite_19; origin = -28, -116; sound = 89;
-            hurtbox at -31, -111  size 64, 112;
-        }
-        frame {
-            time = 3; sprite = sprite_21; origin = -41, -110; speed_x = 131072;
-            options { power = 5; damage = 66; }
-            hurtbox at -31, -103  size 64, 104;
-        }
-        frame {
-            time = 6; sprite = sprite_20; origin = -48, -98; speed_x = 786432; accel_x = -32768;
-            options { power = 5; damage = 66; }
-            hurtbox       at -31, -103  size 64, 104;
-            hitbox        at   0,  -80  size 72,  64;
-            charf 8       at   0,    0;
-            spawn ano_214 at  48,  -72;
-        }
-        frame {
-            time = 6; sprite = sprite_20; origin = -48, -98; keep_speed;
-            hurtbox at -31, -103  size 64, 104;
-        }
-        frame {
-            time = 9; sprite = sprite_20; origin = -48, -98; speed_x = 393216; accel_x = -32768;
-            hurtbox at -31, -95  size 64, 96;
-        }
-        frame {
-            time = 6; sprite = sprite_21; origin = -41, -110; keep_speed;
-            hurtbox at -31, -103  size 64, 104;
-        }
-        frame {
-            time = 6; sprite = sprite_7; origin = -49, -98;
             hurtbox at -31, -111  size 64, 112;
         }
         frame {
@@ -1046,7 +1064,7 @@ animation {
         frame {
             time = 6; sprite = sprite_5; origin = -30, -102; sound = 87;
             hurtbox       at -31, -111  size 64, 112;
-            spawn ano_201 at   8,    0;
+            spawn ano_201 at   8,    20;
         }
         frame {
             time = 11; sprite = sprite_3; origin = -34, -108; sound = 16; speed_x = 1835008;
@@ -1731,7 +1749,7 @@ animation {
         frame {
             time = 6; sprite = sprite_5; origin = -30, -102; sound = 87;
             hurtbox       at -31, -111  size 64, 112;
-            spawn ano_201 at   8,    0;
+            spawn ano_201 at   8,    20;
         }
         frame {
             time = 11; sprite = sprite_3; origin = -34, -108; sound = 16; speed_x = 1835008;
@@ -2208,21 +2226,129 @@ animation {
             spawn ano_201 at   0,    0;
         }
         frame {
-            time = 5; sprite = sprite_19; origin = -28, -116; speed_x = -2097152;
-            hurtbox       at -32, -112  size 64, 112;
-            state 27      at   0,    0  size 16,  16;
-            spawn ano_201 at   0,    0;
+            time = 5; sprite = sprite_6; origin = -46, -129; speed_x = -1048576;
+            hurtbox at -23, -111  size 64, 112;
         }
         frame {
-            time = 5; sprite = sprite_32; origin = -40, -117; keep_speed;
+            time = 5; sprite = sprite_6; origin = -46, -129; keep_speed;
+            hurtbox at -23, -111  size 64, 112;
+        }
+        frame {
+            time = 8; sprite = sprite_5; origin = -30, -102;
+            hurtbox at -23, -111  size 64, 112;
+        }
+        frame {
+            time = 5; sprite = sprite_17; origin = -30, -133;
+            hurtbox at -23, -111  size 64, 112;
+        }
+        frame {
+            time = 3; sprite = sprite_18; origin = -40, -139;
+            hurtbox       at -15, -111  size  64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            shake 5       at   0,    0  size  16,  16;
+            state 27      at   0,    0  size  16,  16;
+            state 38      at   0,    0  size  16,  16;
+            shoot ano_351 at  70, -100;
+        }
+        frame {
+            time = 7; sprite = sprite_30; origin = -31, -139;
+            hurtbox       at -15, -111  size 64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            state 27      at   0,    0  size 16,  16;
+            state 38      at   0,    0  size 16,  16;
+        }
+        frame {
+            time = 3; sprite = sprite_18; origin = -42, -143; sound = 14;
+            hurtbox       at -15, -111  size 64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            bubble 41     at  80, -128  size 16,  16;
+            state 27      at   0,    0  size 16,  16;
+            state 38      at   0,    0  size 16,  16;
+            shoot ano_47  at  71,  -93;
+        }
+        frame {
+            time = 7; sprite = sprite_18; origin = -42, -143;
+            hurtbox       at -15, -111  size 64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            state 27      at   0,    0  size 16,  16;
+            state 38      at   0,    0  size 16,  16;
+        }
+        frame {
+            time = 3; sprite = sprite_18; origin = -40, -139;
+            hurtbox       at -15, -111  size  64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            shake 5       at   0,    0  size  16,  16;
+            state 27      at   0,    0  size  16,  16;
+            state 38      at   0,    0  size  16,  16;
+            shoot ano_351 at  70, -100;
+        }
+        frame {
+            time = 7; sprite = sprite_30; origin = -31, -139;
+            hurtbox       at -15, -111  size 64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            state 27      at   0,    0  size 16,  16;
+            state 38      at   0,    0  size 16,  16;
+        }
+        frame {
+            time = 3; sprite = sprite_18; origin = -42, -143; sound = 14;
+            hurtbox       at -15, -111  size 64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            bubble 41     at  80, -128  size 16,  16;
+            state 27      at   0,    0  size 16,  16;
+            state 38      at   0,    0  size 16,  16;
+            shoot ano_47  at  71,  -93;
+        }
+        frame {
+            time = 7; sprite = sprite_18; origin = -42, -143;
+            hurtbox       at -15, -111  size 64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            state 27      at   0,    0  size 16,  16;
+            state 38      at   0,    0  size 16,  16;
+        }
+        frame {
+            time = 3; sprite = sprite_18; origin = -40, -139;
+            hurtbox       at -15, -111  size  64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            shake 5       at   0,    0  size  16,  16;
+            state 27      at   0,    0  size  16,  16;
+            state 38      at   0,    0  size  16,  16;
+            shoot ano_351 at  70, -100;
+        }
+        frame {
+            time = 7; sprite = sprite_30; origin = -31, -139;
+            hurtbox       at -15, -111  size 64, 112;
+            charf 11      at  58,  -90;
+            spawn ano_253 at -34,  -92;
+            state 27      at   0,    0  size 16,  16;
+            state 38      at   0,    0  size 16,  16;
+        }
+        frame {
+            time = 3; sprite = sprite_18; origin = -40, -139;
+            hurtbox  at -15, -111  size 64, 112;
+            state 27 at   0,    0  size 16,  16;
+            state 38 at   0,    0  size 16,  16;
+        }
+        frame {
+            time = 5; sprite = sprite_32; origin = -40, -117;
             hurtbox       at -32, -112  size 64, 112;
             state 27      at   0,    0  size 16,  16;
+            state 38      at   0,    0  size 16,  16;
             spawn ano_201 at   0,    0;
         }
         frame {
             time = 16; sprite = sprite_33; origin = -30, -113; sound = 81;
             hurtbox       at -32, -112  size 64, 112;
             state 27      at   0,    0  size 16,  16;
+            state 38      at   0,    0  size 16,  16;
             spawn ano_201 at   0,    0;
         }
         frame {
@@ -2988,7 +3114,7 @@ animation {
         frame {
             time = 6; sprite = sprite_5; origin = -30, -102; loop;
             hurtbox       at -39, -95  size 64, 96;
-            spawn ano_201 at  16,   0;
+            spawn ano_201 at  16,   10;
             spawn ano_223 at   0,  -8;
             bubble 49     at   0,   0;
             shake 3       at   0,   0  size 16, 16;
@@ -3000,7 +3126,7 @@ animation {
         frame {
             time = 6; sprite = sprite_5; origin = -30, -102; loop;
             hurtbox       at -31, -95  size 64, 96;
-            spawn ano_201 at   0,   0;
+            spawn ano_201 at   13,   0;
             spawn ano_224 at   0, -80;
         }
     }
@@ -3291,7 +3417,6 @@ animation {
     }
 
     ano_95 {
-        priority = 1;
         link ano_195 { flag = 14; }
         frame {
             time = 2; sprite = sprite_44; origin = -39, -116; sound = 93;
@@ -3348,7 +3473,6 @@ animation {
     }
 
     ano_96 {
-        priority = 1;
         link ano_196 { flag = 14; }
         frame {
             time = 2; sprite = sprite_44; origin = -39, -116; sound = 93;
@@ -4017,7 +4141,21 @@ animation {
         frame { time = 1; sprite = sprite_64; origin = -23, -67; }
         frame { time = 1; sprite = sprite_65; origin = -37, -123; }
         frame { time = 1; sprite = sprite_65; origin = -37, -123; }
-        frame { time = 1; sprite = sprite_60; origin = -41, -56; }
+        frame { time = 3; sprite = sprite_50; origin = -13, -74; }
+        frame { time = 3; sprite = sprite_50; origin = -13, -74; }
+        frame { time = 3; sprite = sprite_49; origin = -40, -48; }
+        frame { time = 3; sprite = sprite_59; origin = -40, -70; }
+        frame { time = 3; sprite = sprite_59; origin = -40, -70; }
+        frame { time = 3; sprite = sprite_59; origin = -40, -70; }
+        frame { time = 3; sprite = sprite_59; origin = -42, -74; }
+        frame { time = 3; sprite = sprite_59; origin = -42, -74; }
+        frame { time = 3; sprite = sprite_59; origin = -40, -70; }
+        frame { time = 3; sprite = sprite_59; origin = -40, -70; }
+        frame { time = 3; sprite = sprite_59; origin = -42, -74; }
+        frame { time = 3; sprite = sprite_59; origin = -42, -74; }
+        frame { time = 3; sprite = sprite_59; origin = -40, -70; }
+        frame { time = 3; sprite = sprite_59; origin = -40, -70; }
+        frame { time = 3; sprite = sprite_59; origin = -40, -70; }
         frame { time = 1; sprite = sprite_48; origin = -27, -60; }
         frame { time = 1; sprite = sprite_69; origin = -21, -60; }
         frame { time = 1; sprite = -1; origin = -19, -69; }
@@ -4162,24 +4300,23 @@ animation {
             segment 1100;
         }
         frame {
-            time = 6; sprite = sprite_111; origin = -55, -103; keep_speed;
+            time = 6; sprite = sprite_111; origin = -55, -113; keep_speed;
             hurtbox      at -27, -82  size   73, 82;
             segment 1100;
         }
         frame {
-            time = 4; sprite = sprite_112; origin = -55, -96; keep_speed;
+            time = 4; sprite = sprite_112; origin = -45, -106; keep_speed;
             hurtbox      at -27, -75  size   77, 75;
             segment 1100;
         }
         frame {
-            time = 4; sprite = sprite_113; origin = -42, -109; keep_speed;
+            time = 4; sprite = sprite_112; origin = -45, -106; keep_speed;
             hurtbox      at -27, -75  size   65, 75;
             segment 1100;
         }
     }
 
     ano_171 {
-        priority = 1;
         link ano_172 { flag = 14; }
         frame {
             time = 9; sprite = sprite_5; origin = -30, -118; sound = 87;
@@ -4212,7 +4349,6 @@ animation {
     }
 
     ano_172 {
-        priority = 1;
         frame { time = 1; sprite = sprite_51; origin = -29, -66; }
         frame { time = 1; sprite = sprite_46; origin = -49, -56; }
         frame { time = 1; sprite = sprite_46; origin = -49, -56; }
@@ -4391,7 +4527,6 @@ animation {
     }
 
     ano_195 {
-        priority = 1;
         frame { time = 6; sprite = sprite_73; origin = -36, -54; }
         frame { time = 6; sprite = sprite_51; origin = -25, -58; }
         frame { time = 6; sprite = sprite_49; origin = -40, -48; }
@@ -4410,7 +4545,6 @@ animation {
     }
 
     ano_196 {
-        priority = 1;
         frame { time = 6; sprite = sprite_73; origin = -36, -54; }
         frame { time = 6; sprite = sprite_51; origin = -25, -58; }
         frame { time = 6; sprite = sprite_49; origin = -40, -48; }
@@ -4445,130 +4579,130 @@ animation {
     }
 
     ano_201 {
-        priority = 255;
+        priority = 1;
         frame {
             time = 8; sprite = sprite_74; origin = -90, -192;
-            render { rotate = 0; alpha = 256; zoom = 220, 220; }
+            render { rotate = 0; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_75; origin = -94, -192;
-            render { rotate = 0; alpha = 256; zoom = 220, 220; }
+            time = 8; sprite = sprite_76; origin = -94, -192;
+            render { rotate = 0; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_76; origin = -88, -192; loop;
-            render { rotate = 0; alpha = 256; zoom = 220, 220; }
+            time = 8; sprite = sprite_74; origin = -88, -192; loop;
+            render { rotate = 0; alpha = 0; zoom = 200, 200; }
         }
     }
 
     ano_202 {
-        priority = 255;
+        priority = 1;
         frame {
             time = 8; sprite = sprite_74; origin = -90, -168;
-            render { rotate = 45; alpha = 256; zoom = 200, 200; }
+            render { rotate = 45; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_75; origin = -94, -168;
-            render { rotate = 45; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_76; origin = -94, -168;
+            render { rotate = 45; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_76; origin = -88, -168; loop;
-            render { rotate = 45; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_74; origin = -88, -168; loop;
+            render { rotate = 45; alpha = 0; zoom = 200, 200; }
         }
     }
 
     ano_203 {
-        priority = 255;
+        priority = 1;
         frame {
             time = 8; sprite = sprite_74; origin = -90, -184;
-            render { rotate = 90; alpha = 256; zoom = 200, 200; }
+            render { rotate = 90; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_75; origin = -94, -184;
-            render { rotate = 90; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_76; origin = -94, -184;
+            render { rotate = 90; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_76; origin = -88, -184; loop;
-            render { rotate = 90; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_74; origin = -88, -184; loop;
+            render { rotate = 90; alpha = 0; zoom = 200, 200; }
         }
     }
 
     ano_204 {
-        priority = 255;
+        priority = 1;
         frame {
             time = 8; sprite = sprite_74; origin = -90, -184;
-            render { rotate = 135; alpha = 256; zoom = 200, 200; }
+            render { rotate = 135; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_75; origin = -94, -184;
-            render { rotate = 135; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_76; origin = -94, -184;
+            render { rotate = 135; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_76; origin = -88, -184; loop;
-            render { rotate = 135; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_74; origin = -88, -184; loop;
+            render { rotate = 135; alpha = 0; zoom = 200, 200; }
         }
     }
 
     ano_205 {
-        priority = 255;
+        priority = 1;
         frame {
             time = 8; sprite = sprite_74; origin = -90, -184;
-            render { rotate = 180; alpha = 256; zoom = 200, 200; }
+            render { rotate = 180; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_75; origin = -94, -184;
-            render { rotate = 180; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_76; origin = -94, -184;
+            render { rotate = 180; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_76; origin = -88, -184; loop;
-            render { rotate = 180; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_74; origin = -88, -184; loop;
+            render { rotate = 180; alpha = 0; zoom = 200, 200; }
         }
     }
 
     ano_206 {
-        priority = 255;
+        priority = 1;
         frame {
             time = 8; sprite = sprite_74; origin = -90, -184;
-            render { rotate = 225; alpha = 256; zoom = 200, 200; }
+            render { rotate = 225; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_75; origin = -94, -184;
-            render { rotate = 225; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_76; origin = -94, -184;
+            render { rotate = 225; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_76; origin = -88, -184; loop;
-            render { rotate = 225; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_74; origin = -88, -184; loop;
+            render { rotate = 225; alpha = 0; zoom = 200, 200; }
         }
     }
 
     ano_207 {
-        priority = 255;
+        priority = 1;
         frame {
             time = 8; sprite = sprite_74; origin = -90, -184;
-            render { rotate = 270; alpha = 256; zoom = 200, 200; }
+            render { rotate = 270; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_75; origin = -94, -184;
-            render { rotate = 270; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_76; origin = -94, -184;
+            render { rotate = 270; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_76; origin = -88, -184; loop;
-            render { rotate = 270; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_74; origin = -88, -184; loop;
+            render { rotate = 270; alpha = 0; zoom = 200, 200; }
         }
     }
 
     ano_208 {
-        priority = 255;
+        priority = 1;
         frame {
             time = 8; sprite = sprite_74; origin = -90, -184;
-            render { rotate = 315; alpha = 256; zoom = 200, 200; }
+            render { rotate = 315; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_75; origin = -94, -184;
-            render { rotate = 315; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_76; origin = -94, -184;
+            render { rotate = 315; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_76; origin = -88, -184; loop;
-            render { rotate = 315; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_74; origin = -88, -184; loop;
+            render { rotate = 315; alpha = 0; zoom = 200, 200; }
         }
     }
 
@@ -5791,13 +5925,13 @@ animation {
         frame {
             time = 15; sprite = sprite_44; origin = -39, -132;
             hurtbox       at -31, -95  size 64, 96;
-            spawn ano_201 at   8,   0;
+            spawn ano_201 at   8,   10;
             spawn ano_249 at   0, -64;
         }
         frame {
             time = 5; sprite = sprite_44; origin = -39, -132;
             hurtbox       at -31, -95  size 64, 96;
-            spawn ano_201 at   8,   0;
+            spawn ano_201 at   8,   10;
         }
         frame {
             time = 6; sprite = sprite_44; origin = -39, -132;
@@ -6634,18 +6768,18 @@ animation {
     }
 
     ano_309 {
-        priority = 255;
+        priority = 1;
         frame {
             time = 8; sprite = sprite_74; origin = -58, -156;
-            render { rotate = 270; alpha = 256; zoom = 200, 200; }
+            render { rotate = 270; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_75; origin = -62, -156;
-            render { rotate = 270; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_76; origin = -62, -156;
+            render { rotate = 270; alpha = 0; zoom = 200, 200; }
         }
         frame {
-            time = 8; sprite = sprite_76; origin = -56, -156; loop;
-            render { rotate = 270; alpha = 256; zoom = 200, 200; }
+            time = 8; sprite = sprite_74; origin = -56, -156; loop;
+            render { rotate = 270; alpha = 0; zoom = 200, 200; }
         }
     }
 
@@ -8415,37 +8549,25 @@ animation {
         priority = 255;
         frame { time = 74; sprite = -1; }
         frame {
-            time = 2; sprite = sprite_86; origin = -32, -64;
+            time = 2; sprite = -1; origin = -32, -64;
             render { rotate = 0; alpha = 256; zoom = 50, 100; }
         }
         frame {
-            time = 2; sprite = sprite_86; origin = -38, -76;
+            time = 2; sprite = -1; origin = -38, -76;
             render { rotate = 0; alpha = 276; zoom = 60, 120; }
         }
         frame {
-            time = 2; sprite = sprite_86; origin = -44, -90;
+            time = 2; sprite = -1; origin = -44, -90;
             render { rotate = 0; alpha = 296; zoom = 70, 140; }
         }
         frame {
-            time = 2; sprite = sprite_86; origin = -50, -103;
+            time = 2; sprite = -1; origin = -50, -103;
             render { rotate = 0; alpha = 316; zoom = 80, 160; }
         }
-        frame {
-            time = 2; sprite = sprite_86; origin = -57, -117;
-            render { rotate = 0; alpha = 336; zoom = 90, 180; }
-        }
-        frame {
-            time = 2; sprite = sprite_86; origin = -64, -129;
-            render { rotate = 0; alpha = 356; zoom = 100, 200; }
-        }
-        frame {
-            time = 2; sprite = sprite_86; origin = -70, -142;
-            render { rotate = 0; alpha = 381; zoom = 110, 220; }
-        }
-        frame {
-            time = 2; sprite = sprite_86; origin = -76, -156;
-            render { rotate = 0; alpha = 406; zoom = 120, 240; }
-        }
+        frame { time = 2; sprite = -1; origin = -57, -117; }
+        frame { time = 2; sprite = -1; origin = -64, -129; }
+        frame { time = 2; sprite = -1; origin = -64, -129; }
+        frame { time = 2; sprite = -1; origin = -64, -129; }
         frame {
             time = 2; sprite = sprite_86; origin = -83, -168;
             render { rotate = 0; alpha = 431; zoom = 130, 260; }
@@ -8482,59 +8604,37 @@ animation {
         frame { time = 15; sprite = sprite_108; origin = -27, -99; }
     }
 
-    ano_380 {
-        frame {
-            time = 3; sprite = sprite_113; origin = -42, -109;
-            hurtbox at -30, -96  size 64, 95;
-        }
-        frame {
-            time = 3; sprite = sprite_114; origin = -44, -104; keep_speed;
-            hurtbox at -30, -96  size 64, 95;
-        }
-        frame {
-            time = 4; sprite = sprite_115; origin = -41, -96; keep_speed;
-            hurtbox at -30, -96  size 64, 95;
-        }
-        frame {
-            time = 3; sprite = sprite_114; origin = -44, -104; keep_speed;
-            hurtbox at -30, -96  size 64, 95;
-        }
-        frame {
-            time = 3; sprite = sprite_113; origin = -42, -109; keep_speed;
-            hurtbox at -30, -96  size 64, 95;
-        }
-    }
-
     ano_381 {
         frame {
             time = 4; sprite = sprite_110; origin = -46, -115;
             hurtbox at -23, -88  size 65, 88;
         }
         frame {
-            time = 6; sprite = sprite_111; origin = -55, -103; keep_speed;
+            time = 6; sprite = sprite_111; origin = -55, -113; keep_speed;
             hurtbox at -27, -82  size 73, 82;
         }
         frame {
-            time = 4; sprite = sprite_112; origin = -55, -96; keep_speed;
+            time = 4; sprite = sprite_112; origin = -45, -106; keep_speed;
             hurtbox at -27, -75  size 77, 75;
         }
         frame {
-            time = 4; sprite = sprite_113; origin = -42, -109; keep_speed;
+            time = 4; sprite = sprite_112; origin = -45, -106; keep_speed;
             hurtbox at -27, -75  size 65, 75;
         }
     }
 
     ano_382 {
+    link ano_394 { flag = 14; }
         frame {
-            time = 1; sprite = sprite_116; origin = -87, -124;
+            time = 1; sprite = sprite_20; origin = -88, -124;
             hurtbox at -51, -96  size 127, 55;
         }
         frame {
-            time = 3; sprite = sprite_116; origin = -87, -124; keep_speed;
+            time = 3; sprite = sprite_20; origin = -88, -124; keep_speed;
             hurtbox at -51, -96  size 127, 55;
         }
         frame {
-            time = 3; sprite = sprite_117; origin = -88, -124; keep_speed;
+            time = 3; sprite = sprite_20; origin = -88, -124; keep_speed;
             hurtbox at -51, -96  size 127, 55;
         }
     }
@@ -8555,25 +8655,20 @@ animation {
     }
 
     ano_384 {
-        frame { time = 4; sprite = sprite_130; origin = -37, -136; }
-        frame { time = 4; sprite = sprite_131; origin = -34, -128; keep_speed; }
-        frame { time = 4; sprite = sprite_132; origin = -40, -136; keep_speed; }
-        frame { time = 1; sprite = sprite_133; origin = -81, -134; keep_speed; }
-        frame { time = 4; sprite = sprite_134; origin = -66, -127; keep_speed; }
-        frame { time = 1; sprite = sprite_135; origin = -64, -133; keep_speed; }
-        frame { time = 4; sprite = sprite_136; origin = -44, -126; keep_speed; }
-        frame { time = 4; sprite = sprite_137; origin = -51, -117; keep_speed; }
-        frame { time = 8; sprite = sprite_138; origin = -52, -110; keep_speed; }
-        frame { time = 8; sprite = sprite_139; origin = -26, -134; keep_speed; }
-    }
+        frame { time = 5; sprite = sprite_139; origin = -37, -136; }
+        frame { time = 4; sprite = sprite_137; origin = -34, -118; keep_speed; }
+        frame { time = 3; sprite = sprite_135; origin = -40, -116; keep_speed; }
+        frame { time = 2; sprite = sprite_133; origin = -20, -124; keep_speed; }
+        frame { time = 10; sprite = sprite_130; origin = -60, -107; keep_speed; }
+       }
 
     ano_385 {
         frame {
-            time = 3; sprite = sprite_140; origin = -46, -107;
+            time = 3; sprite = sprite_112; origin = -45, -106;
             hurtbox at -30, -96  size 64, 95;
         }
         frame {
-            time = 4; sprite = sprite_141; origin = -67, -118; keep_speed;
+            time = 4; sprite = sprite_112; origin = -45, -106; keep_speed;
             hurtbox at -44, -92  size 72, 59;
         }
     }
@@ -8592,12 +8687,300 @@ animation {
         frame { time = 2; sprite = sprite_148; origin = -87, -18; keep_speed; }
     }
 
-    ano_500 {
-        link ano_114 { flag = 12; }
-        frame { time = 5; sprite = sprite_100; origin = -30, -146; sound = 92; }
-        frame { time = 40; sprite = sprite_101; origin = -30, -146; }
-        frame { time = 8; sprite = sprite_100; origin = -30, -146; }
-        frame { time = 8; sprite = -1; origin = -30, -146; }
-        frame { time = 30; sprite = sprite_99; origin = -30, -146; }
+    ano_390 {
+        priority = 255;
+        link ano_391 { flag = 4; }
+        link ano_392 { flag = 4; }
+        link ano_393 { flag = 4; }
+        frame { time = 5; sprite = -1; origin = 184, -151; }
+        frame {
+            time = 5; sprite = sprite_163; origin = 160, 145; sound = 7;
+            render { rotate = 0; alpha = 256; zoom = 50, 50; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 131, 116;
+            render { rotate = 0; alpha = 256; zoom = 110, 110; }
+        }
+        frame {
+            time = 5; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 5; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 286; zoom = 100, 100; }
+        }
+        frame {
+            time = 5; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 316; zoom = 100, 100; }
+        }
+        frame {
+            time = 5; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 346; zoom = 100, 100; }
+        }
+        frame {
+            time = 5; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 386; zoom = 100, 100; }
+        }
+        frame {
+            time = 5; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 416; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 446; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 476; zoom = 100, 100; }
+        }
+        frame {
+            time = 5; sprite = sprite_163; origin = 136, 121;
+            render { rotate = 0; alpha = 506; zoom = 100, 100; }
+        }
+        frame { time = 1; sprite = -1; origin = 112, -103; }
+    }
+
+    ano_391 {
+        priority = 255;
+        frame {
+            time = 10; sprite = -1; origin = 56, 198;
+            render { rotate = 0; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 100, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 27, 185;
+            render { rotate = 340; alpha = 256; zoom = 200, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 190;
+            render { rotate = 340; alpha = 256; zoom = 250, 100; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 32, 188;
+            render { rotate = 340; alpha = 256; zoom = 250, 110; }
+        }
+        frame {
+            time = 3; sprite = sprite_164; origin = 56, 206;
+            render { rotate = 340; alpha = 256; zoom = 300, 50; }
+        }
+        frame { time = 1; sprite = -1; origin = 8, -50; }
+    }
+
+    ano_392 {
+        priority = 252;
+        link ano_390 { flag = 12; }
+        frame {
+            time = 60; sprite = sprite_165; origin = -34, 226;
+            render { rotate = 310; alpha = 256; zoom = 25, 40; }
+            options { tween; }
+        }
+        frame {
+            time = 1; sprite = sprite_165; origin = -133, 82;
+            render { rotate = 310; alpha = 511; zoom = 170, 250; }
+        }
+    }
+
+    ano_393 {
+        priority = 253;
+        frame {
+            time = 60; sprite = sprite_162; origin = -43, 213;
+            render { rotate = 310; alpha = 256; zoom = 40, 60; }
+            options { tween; }
+        }
+        frame {
+            time = 1; sprite = sprite_162; origin = -98, 155;
+            render { rotate = 310; alpha = 256; zoom = 130, 150; }
+        }
+    }
+
+    ano_394 {
+        frame { time = 1; sprite = sprite_61; origin = -44, -117; }
+        frame { time = 1; sprite = sprite_61; origin = -44, -117; }
+        frame { time = 1; sprite = sprite_61; origin = -44, -117; }
+    }
+
+    ano_380 {
+        link ano_113 { flag = 14; }
+        frame {
+            time = 8; sprite = sprite_5; origin = -30, -102;
+            options { effect = 1; }
+            hurtbox   at -31, -95  size 64, 96;
+            bubble 52 at -32, -16  size 16, 16;
+        }
     }
 }
