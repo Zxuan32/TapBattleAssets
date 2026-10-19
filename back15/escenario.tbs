@@ -1,6 +1,4 @@
-// namek1c: escenario de MUGEN convertido con mugen_stage.py y
-// hecho vuelta con stage_loop.py (cada capa, su tramo y su espejo).
-// Seccion 37 de docs/MODDING.md.
+// Namek destruido: escenario de MUGEN (namek1c).
 stage {
     width = 1664;
     in_order;              // el piso tapa el pie de las salpicaduras

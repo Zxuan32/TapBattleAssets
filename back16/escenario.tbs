@@ -1,6 +1,4 @@
-// tdp5: escenario de MUGEN convertido con mugen_stage.py y
-// hecho vuelta con stage_loop.py (cada capa, su tramo y su espejo).
-// Seccion 37 de docs/MODDING.md.
+// Torneo del Poder: escenario de MUGEN (tdp5).
 stage {
     width = 2560;
     in_order;              // el piso tapa el pie de las salpicaduras

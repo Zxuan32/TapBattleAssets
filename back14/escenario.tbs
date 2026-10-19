@@ -1,5 +1,4 @@
-// Time_Chamber_HR: escenario de MUGEN (Time_Chamber_HR.def + Time_Chamber_HR.sff),
-// con tools/mugen_stage.py a escala 1.25. Seccion 37 de docs/MODDING.md.
+// Habitacion del Tiempo: escenario de MUGEN (Time_Chamber_HR).
 stage {
     width = 1664;
     layer far {

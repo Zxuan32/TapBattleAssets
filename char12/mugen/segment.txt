@@ -1,4 +1,4 @@
-# Lo escribe tools/mugen/mugen_char.py (seccion 48): el segmento MUGEN de char12.
+# Segmento MUGEN de char12: una directiva por linea.
 id a21
 def Android_21.def
 scale 200

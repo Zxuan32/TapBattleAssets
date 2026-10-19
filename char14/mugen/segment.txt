@@ -1,4 +1,4 @@
-# Lo escribe tools/mugen/mugen_char.py (seccion 48): el segmento MUGEN de char14.
+# Segmento MUGEN de char14: una directiva por linea.
 id alice
 def Alice1.0.def
 scale 130

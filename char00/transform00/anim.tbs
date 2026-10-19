@@ -9558,8 +9558,7 @@ animation {
     }
 
     ano_500 {
-        // cinematico de la transformacion: Goku SSJ carga ki (su 84 y su 85
-        // x 11, con sus recortes en la hoja 18) y estalla ya en SSJ3 (256)
+        // cinematico de la transformacion: carga de Goku SSJ y estallido en SSJ3
         link ano_501 { flag = 4; }
         link ano_502 { flag = 4; offset = -16, -16; }
         frame {
@@ -9694,8 +9693,7 @@ animation {
     }
 
     ano_502 {
-        // la melena de SSJ3 (la del ano_222) durante el estallido: con el rival
-        // congelado el spawn no llega a arrancar y el pelo no salia
+        // la melena de SSJ3 (la del ano_222) durante el estallido
         priority = 1;
         frame { time = 76; sprite = -1; origin = -47, -108; }
         frame { time = 26; sprite = sprite_86; origin = -47, -108; }

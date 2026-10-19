@@ -1,6 +1,4 @@
-// gla3: escenario de MUGEN convertido con mugen_stage.py y
-// hecho vuelta con stage_loop.py (cada capa, su tramo y su espejo).
-// Seccion 37 de docs/MODDING.md.
+// Glaciar: escenario de MUGEN (gla3).
 stage {
     width = 1856;
     in_order;              // el piso tapa el pie de las salpicaduras

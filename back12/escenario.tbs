@@ -1,6 +1,4 @@
-// Planet of god: capas de Planet of god, con
-// tools/bg_capas.py a escala 0.625, pasadas por Real-ESRGAN, media y suelo a hd 2.
-// Seccion 34g de docs/MODDING.md.
+// Planeta de Bills.
 stage {
     width = 1280;
     layer far {

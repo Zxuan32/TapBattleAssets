@@ -1,5 +1,4 @@
-// PlanetaKaioshin: escenario de MUGEN (PlanetaKaioshin.def + PlanetaKaioshin.sff),
-// con tools/mugen_stage.py a escala 1.25, el fondo en espejo. Seccion 37 de docs/MODDING.md.
+// Planeta del Kaioshin: escenario de MUGEN (PlanetaKaioshin).
 stage {
     width = 960;
     layer ground {

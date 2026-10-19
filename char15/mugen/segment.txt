@@ -1,4 +1,4 @@
-# Lo escribe tools/mugen/mugen_char.py (seccion 48): el segmento MUGEN de char15.
+# Segmento MUGEN de char15: una directiva por linea.
 id broly
 def Broly-Mugen11.def
 scale 118

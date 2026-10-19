@@ -1,6 +1,4 @@
-// buu House: capas de buu House, con
-// tools/bg_capas.py a escala 0.9, pasadas por Real-ESRGAN, media y suelo a hd 2, estirado en alto x1.39.
-// Seccion 34g de docs/MODDING.md.
+// Casa de Buu.
 stage {
     width = 1856;
     layer far {
