@@ -578,4 +578,10 @@ sprites {
     sprite_576 { sheet = 48;  x =  98;  y = 471;  w =  43;  h =  39; }
     sprite_577 { sheet = 45;  x = 472;  y =   0;  w =  38;  h =  35; }
     sprite_578 { sheet = 42;  x =   0;  y = 313;  w = 256;  h = 192; }
+    sprite_579 { sheet = 52;  x =   0;  y =   0;  w =  73;  h = 144; }
+    sprite_580 { sheet = 52;  x =  76;  y =   0;  w =  78;  h = 145; }
+    sprite_581 { sheet = 52;  x = 155;  y =   0;  w =  86;  h = 147; }
+    sprite_582 { sheet = 52;  x = 248;  y =  18;  w = 100;  h = 127; }
+    sprite_583 { sheet = 52;  x = 357;  y =  26;  w =  96;  h = 118; }
+    sprite_584 { sheet = 52;  x =   3;  y = 150;  w =  95;  h = 116; }
 }
