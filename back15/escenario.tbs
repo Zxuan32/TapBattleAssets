@@ -1,104 +1,104 @@
 // namek1c: escenario de MUGEN convertido con mugen_stage.py y
 // hecho vuelta con stage_loop.py (cada capa, su tramo y su espejo).
 // Seccion 37 de docs/MODDING.md.
-escenario {
-    ancho = 1664;
-    en_orden;              // el piso tapa el pie de las salpicaduras
-    capa lejos {
-        pon "00.png" at 115, -330;
-        pon "00.png" at 531, -330 espejo;
-        pon "00.png" at 947, -330;
-        pon "00.png" at 1363, -330 espejo;
+stage {
+    width = 1664;
+    in_order;              // el piso tapa el pie de las salpicaduras
+    layer far {
+        place "00.png" at 115, -330;
+        place "00.png" at 531, -330 mirror;
+        place "00.png" at 947, -330;
+        place "00.png" at 1363, -330 mirror;
     }
-    capa media {
-        pon "01.png" at 289, 152;
-        pon "02.png" at 919, 152 espejo;
-        pon "03.png" at 294, 84;
-        pon "03.png" at 884, 84 espejo;
-        pon "04.png" at 275, 138 suma;
-        pon "04.png" at 906, 138 espejo suma;
-        pon "05.png" at -149, -62;
-        pon "05.png" at 1036, -62 espejo;
-        pon "06.png" at 51, -18 suma;
-        pon "06.png" at 1232, -18 espejo suma;
-        pon "07.png" at -59, 98;
-        pon "07.png" at 1282, 98 espejo;
-        pon "08.png" at -73, 84 suma;
-        pon "08.png" at 1268, 84 espejo suma;
-        pon "09.png" at 273, 86;
-        pon "10.png" at 1062, 86 espejo;
-        pon "11.png" at 259, 72 suma;
-        pon "11.png" at 1048, 72 espejo suma;
-        pon "12.png" at 146, 129;
-        pon "13.png" at 1102, 129 espejo;
-        pon "14.png" at 134, 115 suma;
-        pon "14.png" at 1089, 115 espejo suma;
+    layer mid {
+        place "01.png" at 289, 152;
+        place "02.png" at 919, 152 mirror;
+        place "03.png" at 294, 84;
+        place "03.png" at 884, 84 mirror;
+        place "04.png" at 275, 138 add;
+        place "04.png" at 906, 138 mirror add;
+        place "05.png" at -149, -62;
+        place "05.png" at 1036, -62 mirror;
+        place "06.png" at 51, -18 add;
+        place "06.png" at 1232, -18 mirror add;
+        place "07.png" at -59, 98;
+        place "07.png" at 1282, 98 mirror;
+        place "08.png" at -73, 84 add;
+        place "08.png" at 1268, 84 mirror add;
+        place "09.png" at 273, 86;
+        place "10.png" at 1062, 86 mirror;
+        place "11.png" at 259, 72 add;
+        place "11.png" at 1048, 72 mirror add;
+        place "12.png" at 146, 129;
+        place "13.png" at 1102, 129 mirror;
+        place "14.png" at 134, 115 add;
+        place "14.png" at 1089, 115 mirror add;
     }
-    capa suelo {
-        pon "15.png" at 110, 196;
-        pon "15.png" at 723, 196 espejo;
-        pon "16.png" at 102, 184 suma;
-        pon "16.png" at 716, 184 espejo suma;
-        pon "17.png" at -142, -5;
-        pon "17.png" at 680, -5 espejo;
-        pon "18.png" at -156, 158 suma;
-        pon "18.png" at 809, 158 espejo suma;
-        pon "19.png" at 261, 149 suma;
-        pon "19.png" at 1020, 149 espejo suma;
-        pon "20.png" at 249, 149 suma;
-        pon "20.png" at 1032, 149 espejo suma;
-        pon "21.png" at 243, 149 suma;
-        pon "22.png" at 286, 161 suma;
-        pon "22.png" at 995, 161 espejo suma;
-        pon "23.png" at 266, 84;
-        pon "23.png" at 661, 84 espejo;
-        pon "24.png" at 474, 174;
-        pon "24.png" at 662, 174 espejo;
-        pon "26.png" at 462, 161 suma;
-        pon "26.png" at 652, 161 espejo suma;
-        pon "27.png" at -74, 14;
-        pon "27.png" at 661, 14 espejo;
-        pon "28.png" at 184, 123 suma;
-        pon "28.png" at 1008, 123 espejo suma;
-        pon "29.png" at 222, 142 suma;
-        pon "29.png" at 970, 142 espejo suma;
-        pon "30.png" at -30, 196;
-        pon "30.png" at 1308, 196 espejo;
-        pon "32.png" at -42, 185 suma;
-        pon "32.png" at 1296, 185 espejo suma;
-        pon "33.png" at 36, 156;
-        pon "33.png" at 1175, 156 espejo;
-        pon "35.png" at 23, 142 suma;
-        pon "35.png" at 1160, 142 espejo suma;
-        pon "36.png" at 80, 155 suma;
-        pon "37.png" at 30, 155 suma;
-        pon "37.png" at 1251, 155 espejo suma;
-        pon "38.png" at 55, 136 suma;
-        pon "38.png" at 1226, 136 espejo suma;
-        pon "39.png" at 83, 116 suma;
-        pon "39.png" at 1018, 116 espejo suma;
-        pon "40.png" at 21, 104 suma;
-        pon "40.png" at 1080, 104 espejo suma;
-        pon "41.png" at 271, 104 suma;
-        pon "41.png" at 830, 104 espejo suma;
-        pon "42.png" at 333, 129 suma;
-        pon "42.png" at 768, 129 espejo suma;
-        pon "43.png" at 146, 135 suma;
-        pon "43.png" at 955, 135 espejo suma;
-        pon "44.png" at 396, 110 suma;
-        pon "44.png" at 705, 110 espejo suma;
-        pon "45.png" at 458, 104 suma;
-        pon "45.png" at 643, 104 espejo suma;
-        pon "46.png" at -104, 104 suma;
-        pon "46.png" at 1205, 104 espejo suma;
-        pon "47.png" at -10, 98 suma;
-        pon "47.png" at 1111, 98 espejo suma;
-        pon "48.png" at 302, 119 suma;
-        pon "48.png" at 799, 119 espejo suma;
-        pon "49.png" at -171, 147;
-        pon "49.png" at 661, 147;
+    layer ground {
+        place "15.png" at 110, 196;
+        place "15.png" at 723, 196 mirror;
+        place "16.png" at 102, 184 add;
+        place "16.png" at 716, 184 mirror add;
+        place "17.png" at -142, -5;
+        place "17.png" at 680, -5 mirror;
+        place "18.png" at -156, 158 add;
+        place "18.png" at 809, 158 mirror add;
+        place "19.png" at 261, 149 add;
+        place "19.png" at 1020, 149 mirror add;
+        place "20.png" at 249, 149 add;
+        place "20.png" at 1032, 149 mirror add;
+        place "21.png" at 243, 149 add;
+        place "22.png" at 286, 161 add;
+        place "22.png" at 995, 161 mirror add;
+        place "23.png" at 266, 84;
+        place "23.png" at 661, 84 mirror;
+        place "24.png" at 474, 174;
+        place "24.png" at 662, 174 mirror;
+        place "26.png" at 462, 161 add;
+        place "26.png" at 652, 161 mirror add;
+        place "27.png" at -74, 14;
+        place "27.png" at 661, 14 mirror;
+        place "28.png" at 184, 123 add;
+        place "28.png" at 1008, 123 mirror add;
+        place "29.png" at 222, 142 add;
+        place "29.png" at 970, 142 mirror add;
+        place "30.png" at -30, 196;
+        place "30.png" at 1308, 196 mirror;
+        place "32.png" at -42, 185 add;
+        place "32.png" at 1296, 185 mirror add;
+        place "33.png" at 36, 156;
+        place "33.png" at 1175, 156 mirror;
+        place "35.png" at 23, 142 add;
+        place "35.png" at 1160, 142 mirror add;
+        place "36.png" at 80, 155 add;
+        place "37.png" at 30, 155 add;
+        place "37.png" at 1251, 155 mirror add;
+        place "38.png" at 55, 136 add;
+        place "38.png" at 1226, 136 mirror add;
+        place "39.png" at 83, 116 add;
+        place "39.png" at 1018, 116 mirror add;
+        place "40.png" at 21, 104 add;
+        place "40.png" at 1080, 104 mirror add;
+        place "41.png" at 271, 104 add;
+        place "41.png" at 830, 104 mirror add;
+        place "42.png" at 333, 129 add;
+        place "42.png" at 768, 129 mirror add;
+        place "43.png" at 146, 135 add;
+        place "43.png" at 955, 135 mirror add;
+        place "44.png" at 396, 110 add;
+        place "44.png" at 705, 110 mirror add;
+        place "45.png" at 458, 104 add;
+        place "45.png" at 643, 104 mirror add;
+        place "46.png" at -104, 104 add;
+        place "46.png" at 1205, 104 mirror add;
+        place "47.png" at -10, 98 add;
+        place "47.png" at 1111, 98 mirror add;
+        place "48.png" at 302, 119 add;
+        place "48.png" at 799, 119 mirror add;
+        place "49.png" at -171, 147;
+        place "49.png" at 661, 147;
     }
-    persecucion {
-        fondo "50.png" at 0, -330 cielo 200;
+    chase {
+        background "50.png" at 0, -330 sky 200;
     }
 }

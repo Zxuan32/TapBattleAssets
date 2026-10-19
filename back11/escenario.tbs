@@ -1,15 +1,15 @@
 // Llanura cielo rojo: capas de Llanura cielo rojo, con
 // tools/bg_capas.py a escala 0.9, pasadas por Real-ESRGAN, media y suelo a hd 2.
 // Seccion 34g de docs/MODDING.md.
-escenario {
-    ancho = 1856;
-    capa lejos {
-        pon "00.png" at -164, -405 repite;
+stage {
+    width = 1856;
+    layer far {
+        place "00.png" at -164, -405 repeat;
     }
-    capa suelo {
-        pon "01.png" at -164, -245 repite hd 2;
+    layer ground {
+        place "01.png" at -164, -245 repeat hd 2;
     }
-    persecucion {
-        fondo "02.png" at 0, -405;
+    chase {
+        background "02.png" at 0, -405;
     }
 }

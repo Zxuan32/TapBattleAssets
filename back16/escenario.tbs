@@ -1,25 +1,25 @@
 // tdp5: escenario de MUGEN convertido con mugen_stage.py y
 // hecho vuelta con stage_loop.py (cada capa, su tramo y su espejo).
 // Seccion 37 de docs/MODDING.md.
-escenario {
-    ancho = 2560;
-    en_orden;              // el piso tapa el pie de las salpicaduras
-    capa lejos {
-        pon "00.png" at -174, -238;
-        pon "00.png" at 1106, -238 espejo;
+stage {
+    width = 2560;
+    in_order;              // el piso tapa el pie de las salpicaduras
+    layer far {
+        place "00.png" at -174, -238;
+        place "00.png" at 1106, -238 mirror;
     }
-    capa media {
-        pon "01.png" at -167, -51;
-        pon "01.png" at 1113, -51 espejo;
+    layer mid {
+        place "01.png" at -167, -51;
+        place "01.png" at 1113, -51 mirror;
     }
-    deriva media -8;
-    capa suelo {
-        pon "02.png" at -91, -39;
-        pon "02.png" at 549, -39;
-        pon "02.png" at 1189, -39;
-        pon "02.png" at 1829, -39;
+    drift mid -8;
+    layer ground {
+        place "02.png" at -91, -39;
+        place "02.png" at 549, -39;
+        place "02.png" at 1189, -39;
+        place "02.png" at 1829, -39;
     }
-    persecucion {
-        fondo "03.png" at 0, -203 cielo 200;
+    chase {
+        background "03.png" at 0, -203 sky 200;
     }
 }
