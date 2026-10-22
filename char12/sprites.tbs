@@ -584,4 +584,6 @@ sprites {
     sprite_582 { sheet = 52;  x = 248;  y =  18;  w = 100;  h = 127; }
     sprite_583 { sheet = 52;  x = 357;  y =  26;  w =  96;  h = 118; }
     sprite_584 { sheet = 52;  x =   3;  y = 150;  w =  95;  h = 116; }
+    sprite_585 { sheet = 52;  x = 109;  y = 151;  w = 106;  h = 155; }
+    sprite_586 { sheet = 52;  x = 218;  y = 152;  w = 120;  h = 153; }
 }

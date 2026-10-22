@@ -19,12 +19,12 @@ nospark 3004
 nospark 3050
 nospark 3055
 tbfx 3150 0 0 0 0 46 39 0 0
-tbfx 3130 198 63 0 0 0 0 0 1
+tbfx 3130 198 63 10 63 0 0 0 1
 tbfx 3130 153 33 0 0 0 0 1 2
 rivalhide 3105
 rivalhide 3106
 tbalpha 60
-tbbeam 3150 262 -52 28 -477 3105 31 10
+tbbeam 3150 262 11 5 -477 3105 31 10
 planet 379 3055 0
 anim 0 454 body 100
 anim 41 455 body 100

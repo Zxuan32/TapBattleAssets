@@ -2717,59 +2717,59 @@ animation {
     ano_118 {
         priority = 255;
         frame {
-            time = 5; sprite = sprite_257; origin = -58, -114;
+            time = 5; sprite = sprite_585; origin = -58, -144;
             hurtbox      at -32, -110  size   60, 118;
             cutscene     at   0,    0  size    9,   0;
             bubble 44    at   0,    0  size   16,  16;
             segment 3100;
         }
         frame {
-            time = 4; sprite = sprite_258; origin = -58, -114; keep_speed;
+            time = 4; sprite = sprite_586; origin = -58, -114; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
         frame {
-            time = 4; sprite = sprite_259; origin = -58, -114; keep_speed;
+            time = 4; sprite = sprite_586; origin = -58, -114; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
         frame {
-            time = 3; sprite = sprite_260; origin = -58, -114; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -114; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
         frame {
-            time = 3; sprite = sprite_261; origin = -58, -114; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -114; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
         frame {
-            time = 3; sprite = sprite_262; origin = -58, -114; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -114; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
         frame {
-            time = 38; sprite = sprite_263; origin = -58, -114; keep_speed;
+            time = 38; sprite = sprite_586; origin = -58, -114; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
         frame {
-            time = 3; sprite = sprite_264; origin = -58, -116; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -116; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
         frame {
-            time = 3; sprite = sprite_265; origin = -58, -114; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -114; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
         frame {
-            time = 15; sprite = sprite_266; origin = -58, -114; keep_speed;
+            time = 15; sprite = sprite_586; origin = -58, -114; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
         frame {
-            time = 5; sprite = sprite_267; origin = -56, -116; keep_speed;
+            time = 5; sprite = sprite_586; origin = -56, -116; keep_speed;
             hurtbox      at -32, -110  size   60, 118;
             segment 3100;
         }
@@ -11941,47 +11941,47 @@ animation {
 
     ano_470 {
         frame {
-            time = 5; sprite = sprite_257; origin = -58, -114;
+            time = 5; sprite = sprite_585; origin = -58, -144;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 4; sprite = sprite_258; origin = -58, -114; keep_speed;
+            time = 4; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 4; sprite = sprite_259; origin = -58, -114; keep_speed;
+            time = 4; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 3; sprite = sprite_260; origin = -58, -114; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 3; sprite = sprite_261; origin = -58, -114; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 3; sprite = sprite_262; origin = -58, -114; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 38; sprite = sprite_263; origin = -58, -114; keep_speed;
+            time = 38; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 3; sprite = sprite_264; origin = -58, -116; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 3; sprite = sprite_265; origin = -58, -114; keep_speed;
+            time = 3; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 15; sprite = sprite_266; origin = -58, -114; keep_speed;
+            time = 15; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
         frame {
-            time = 5; sprite = sprite_267; origin = -56, -116; keep_speed;
+            time = 5; sprite = sprite_586; origin = -58, -144; keep_speed;
             hurtbox at -32, -110  size 60, 118;
         }
     }
