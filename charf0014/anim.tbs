@@ -19,18 +19,13 @@ animation {
 
     ano_3 {
         priority = 128;
-        frame { time = 6; sprite = sprite_1; origin = -48, -48; }
+        frame { time = 6; sprite = sprite_1; origin = -48, -56; }
         frame { time = 6; sprite = -1; origin = -48, -48; }
     }
 
     ano_4 {
         priority = 128;
-        frame { time = 3; sprite = sprite_2; origin = -80, -64; }
-        frame { time = 3; sprite = sprite_2; origin = -72, -72; }
-        frame { time = 3; sprite = sprite_2; origin = -80, -64; }
-        frame { time = 3; sprite = sprite_2; origin = -72, -72; }
-        frame { time = 3; sprite = sprite_2; origin = -80, -64; }
-        frame { time = 3; sprite = sprite_2; origin = -72, -72; }
+        frame { time = 6; sprite = sprite_2; origin = -40, -56; }
         frame { time = 6; sprite = -1; origin = -80, -64; }
     }
 
@@ -95,7 +90,7 @@ animation {
 
     ano_13 {
         priority = 236;
-        frame { time = 6; sprite = sprite_1; origin = -15, -125; }
+        frame { time = 6; sprite = sprite_2; origin = -15, -125; }
         frame { time = 6; sprite = -1; origin = -31, -37; }
     }
 

@@ -58,10 +58,6 @@ animation {
     }
 
     ano_14 {
-        frame { sprite = sprite_14; origin = -25, -62; }
-    }
-
-    ano_15 {
         frame { sprite = sprite_15; origin = -25, -62; }
     }
 

@@ -44,7 +44,7 @@ sprites {
     sprite_42  { sheet =  8;  x =  92;  y = 155;  w =  62;  h =  14; }
     sprite_43  { sheet =  0;  x = 160;  y = 124;  w =  63;  h =  91; }
     sprite_44  { sheet = 17;  x =   0;  y =   0;  w =  64;  h =  80; }
-    sprite_45  { sheet = 16;  x =   0;  y =   0;  w = 220;  h = 217; }
+    sprite_45 { sheet = 16;  x =   0;  y =   0;  w = 250;  h = 217; }
     sprite_46  { sheet =  1;  x = 144;  y =  89;  w =  85;  h =  87; }
     sprite_47  { sheet =  4;  x =   0;  y = 152;  w =  67;  h =  74; }
     sprite_48  { sheet =  8;  x = 176;  y =  58;  w =  70;  h =  47; }
@@ -111,4 +111,6 @@ sprites {
     sprite_109 { sheet = 14;  x = 192;  y =   0;  w =  61;  h =  52; }
     sprite_110 { sheet = 15;  x = 172;  y =   0;  w =  68;  h =  31; }
     sprite_111 { sheet = 14;  x =   0;  y = 127;  w =  72;  h =  60; }
+    sprite_112 { sheet = 18;  x =   8;  y =   9;  w = 107;  h = 165; }
+    sprite_113 { sheet = 18;  x = 133;  y =   9;  w = 111;  h = 165; }
 }

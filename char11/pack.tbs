@@ -17,8 +17,10 @@ package "char11.pac" {
     image   "png15.png"   extra = 0xe214f700;
     image   "png16.png"   extra = 0x1a439800;
     image   "png17.png"   extra = 0xfdb58300;
+    image "png18.png";
     tables  "tables.tbs"  extra = 0x83e3af00;
     sprites "sprites.tbs" extra = 0x2dac7500;
+    mod       "mod.tbs";
     anim    "anim.tbs"    extra = 0x57951500;
     sound   "wav00.wav"   extra = 0x3b1d1000;
     sound   "wav01.wav"   extra = 0x5493f300;
