@@ -1,0 +1,19 @@
+sprites {
+    sprite_0   { sheet =  0;  x =    1;  y =    1;  w =  60;  h =  38; }
+    sprite_1   { sheet =  0;  x =    1;  y =   41;  w = 384;  h = 172; }
+    sprite_2   { sheet =  0;  x =   63;  y =    1;  w =  74;  h =  26; }
+    sprite_3   { sheet =  0;  x =  139;  y =    1;  w = 217;  h =  32; }
+    sprite_4   { sheet =  0;  x =    1;  y =  215;  w = 392;  h = 180; }
+    sprite_5   { sheet =  0;  x =  387;  y =   41;  w =  66;  h =  44; }
+    sprite_6   { sheet =  0;  x =  455;  y =   41;  w =  66;  h =  44; }
+    sprite_7   { sheet =  0;  x =  358;  y =    1;  w = 384;  h =  26; }
+    sprite_8   { sheet =  0;  x =  744;  y =    1;  w =  24;  h =  24; }
+    sprite_9   { sheet =  0;  x =  770;  y =    1;  w =  24;  h =  24; }
+    sprite_10  { sheet =  0;  x =  796;  y =    1;  w =  67;  h =  32; }
+    sprite_11  { sheet =  0;  x =  523;  y =   41;  w = 472;  h =  38; }
+    sprite_12  { sheet =  0;  x =  395;  y =  215;  w =  72;  h =  50; }
+    sprite_13  { sheet =  0;  x =  865;  y =    1;  w =  26;  h =  16; }
+    sprite_14  { sheet =  0;  x =  893;  y =    1;  w =  41;  h =  16; }
+    sprite_15  { sheet =  0;  x =  469;  y =  215;  w =  89;  h =  16; }
+    sprite_16  { sheet =  0;  x =  936;  y =    1;  w =  74;  h =  16; }
+}

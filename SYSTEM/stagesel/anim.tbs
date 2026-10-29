@@ -1,0 +1,72 @@
+animation {
+    anos  = 314;
+
+    ano_99 {
+        frame { sprite = sprite_0; origin = 0, 0; }
+    }
+
+    ano_199 {
+        frame { sprite = sprite_1; origin = 0, 0; }
+    }
+
+    ano_299 {
+        frame { sprite = sprite_2; origin = -74, 0; }
+    }
+
+    ano_300 {
+        frame { sprite = sprite_3; origin = -108, 0; }
+    }
+
+    ano_301 {
+        frame { sprite = sprite_4; origin = 0, 0; }
+    }
+
+    ano_302 {
+        frame { sprite = sprite_5; origin = 0, 0; }
+    }
+
+    ano_303 {
+        frame { sprite = sprite_6; origin = 0, 0; }
+    }
+
+    ano_304 {
+        frame { sprite = sprite_7; origin = 0, 0; }
+    }
+
+    ano_305 {
+        frame { sprite = sprite_8; origin = 0, 0; }
+    }
+
+    ano_306 {
+        frame { sprite = sprite_9; origin = 0, 0; }
+    }
+
+    ano_307 {
+        frame { sprite = sprite_10; origin = 0, 0; }
+    }
+
+    ano_308 {
+        frame { sprite = sprite_11; origin = 8, 8; }
+    }
+
+    ano_309 {
+        frame { sprite = sprite_12; origin = 0, 0; }
+    }
+
+    ano_310 {
+        frame { sprite = sprite_13; origin = -13, -16; }
+    }
+
+    ano_311 {
+        frame { sprite = sprite_14; origin = -20, -16; }
+    }
+
+    ano_312 {
+        frame { sprite = sprite_15; origin = -44, -16; }
+    }
+
+    ano_313 {
+        frame { sprite = sprite_16; origin = -37, -16; }
+    }
+
+}

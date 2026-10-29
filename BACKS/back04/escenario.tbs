@@ -1,0 +1,14 @@
+// Playa: el GIF del usuario y su espejo.
+stage {
+    width = 1280;
+
+    layer far {
+        place "spr00/png00.gif" at 0, -110 sky 300;
+        place "spr00/png00.gif" at 640, -110 mirror sky 300;
+    }
+
+    layer ground {
+        place "spr00/png01.png" at 0, 216;
+        place "spr00/png01.png" at 640, 216 mirror;
+    }
+}

@@ -1,0 +1,5 @@
+package "stagesel.pac" {
+    sprites "sprites.tbs";
+    anim    "anim.tbs";
+    image   "00.png";
+}

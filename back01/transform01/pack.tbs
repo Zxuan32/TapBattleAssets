@@ -1,9 +1,0 @@
-package "backt01.pac" {
-    dump   "dump.tbs"   type = "cnv" extra = 0xf909ce00;
-    anim   "anim.tbs"   extra = 0x6f86a400;
-    group "spr00" extra = 0x86170200 {
-        image "spr00/png00.png"     extra = 0x76d4e100;
-        data  "spr00/raw/bin00.bin" type = "bin" extra = 0xc9894c00;
-    }
-    tables "tables.tbs" extra = 0x6cb3d000;
-}

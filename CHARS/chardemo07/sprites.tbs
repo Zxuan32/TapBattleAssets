@@ -1,0 +1,11 @@
+sprites {
+    sprite_0 { sheet = 0;  x =   0;  y = 480;  w = 368;  h =  32; }
+    sprite_1 { sheet = 0;  x =   0;  y = 320;  w = 112;  h = 160; }
+    sprite_2 { sheet = 0;  x = 368;  y =   0;  w = 144;  h = 192; }
+    sprite_3 { sheet = 0;  x =   0;  y =   0;  w = 368;  h = 320; }
+    sprite_4 { sheet = 0;  x = 112;  y = 320;  w = 160;  h =  56; }
+    sprite_5 { sheet = 1;  x =   0;  y =   0;  w = 330;  h = 504; }
+    sprite_6 { sheet = 1;  x = 332;  y =   0;  w = 198;  h = 293; }
+    sprite_7 { sheet = 1;  x = 532;  y =   0;  w = 198;  h = 293; }
+    sprite_8 { sheet = 1;  x = 732;  y =   0;  w = 198;  h = 293; }
+}

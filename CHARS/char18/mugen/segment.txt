@@ -1,0 +1,16 @@
+# Segmento MUGEN de char18: una directiva por linea.
+id turles
+def Turles2.def
+scale 128
+own_sprites 153
+own_sheets 7
+anim 3004 357 body 100
+anim 4151 358 effect 100
+anim 7042 359 helper 100
+anim 7045 360 effect 100
+anim 7100 361 helper 100
+anim 7999 362 helper 100
+sound 3 10 16
+sound 3000 0 17
+sound 3999 2 18
+skip 94 45

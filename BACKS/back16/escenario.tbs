@@ -1,0 +1,23 @@
+// Torneo del Poder: escenario de MUGEN (tdp5).
+stage {
+    width = 2560;
+    in_order;              // el piso tapa el pie de las salpicaduras
+    layer far {
+        place "spr00/png00.png" at -174, -238;
+        place "spr00/png00.png" at 1106, -238 mirror;
+    }
+    layer mid {
+        place "spr00/png01.png" at -167, -51;
+        place "spr00/png01.png" at 1113, -51 mirror;
+    }
+    drift mid -8;
+    layer ground {
+        place "spr00/png02.png" at -91, -39;
+        place "spr00/png02.png" at 549, -39;
+        place "spr00/png02.png" at 1189, -39;
+        place "spr00/png02.png" at 1829, -39;
+    }
+    chase {
+        background "spr00/png03.png" at 0, -203 sky 200;
+    }
+}

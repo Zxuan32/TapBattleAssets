@@ -1,0 +1,16 @@
+// Planeta de Bills.
+stage {
+    width = 1280;
+    layer far {
+        place "spr00/png00.png" at -20, -254 repeat;
+    }
+    layer mid {
+        place "spr00/png01.png" at -20, -94 repeat hd 2;
+    }
+    layer ground {
+        place "spr00/png02.png" at -20, -94 repeat hd 2;
+    }
+    chase {
+        background "spr00/png03.png" at 0, -254;
+    }
+}

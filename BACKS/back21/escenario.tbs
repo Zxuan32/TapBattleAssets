@@ -1,0 +1,14 @@
+// Juego de Cell (de dia): «Cell's Arena (Day)» de MUGEN, de Tahattus con el retoque de Carmell.
+stage {
+    width = 2560;
+    in_order;
+    layer far {
+        place "spr00/png00.png" at -400, -326;
+    }
+    layer ground {
+        place "spr00/png01.png" at -400, -205;
+    }
+    chase {
+        background "spr00/png02.png" at 0, -290 sky 200;
+    }
+}

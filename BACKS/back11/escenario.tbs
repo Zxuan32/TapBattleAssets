@@ -1,0 +1,13 @@
+// Llanura de cielo rojo.
+stage {
+    width = 1856;
+    layer far {
+        place "spr00/png00.png" at -164, -405 repeat;
+    }
+    layer ground {
+        place "spr00/png01.png" at -164, -245 repeat hd 2;
+    }
+    chase {
+        background "spr00/png02.png" at 0, -405;
+    }
+}

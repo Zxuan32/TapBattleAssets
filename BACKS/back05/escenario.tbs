@@ -1,0 +1,18 @@
+// Torneo de Artes Marciales. Fondos de DSP27 (dsp27.deviantart.com).
+stage {
+    width = 1376;
+
+    layer far {
+        place "spr00/png00.png" at 0, -70 sky 300 below 200;
+        place "spr00/png02.png" at 688, -70 sky 300 below 200;
+    }
+
+    layer ground {
+        place "spr00/png01.png" at 0, 59 below 60;
+        place "spr00/png01.png" at 688, 59 mirror below 60;
+    }
+
+    chase {
+        background "spr00/png03.png" at 0, -70 sky 300 below 200;
+    }
+}

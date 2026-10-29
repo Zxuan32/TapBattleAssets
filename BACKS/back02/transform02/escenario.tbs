@@ -1,0 +1,102 @@
+// Namek destruido: escenario de MUGEN (namek1c).
+stage {
+    width = 1664;
+    in_order;              // el piso tapa el pie de las salpicaduras
+    layer far {
+        place "spr00/png00.png" at 115, -330;
+        place "spr00/png00.png" at 531, -330 mirror;
+        place "spr00/png00.png" at 947, -330;
+        place "spr00/png00.png" at 1363, -330 mirror;
+    }
+    layer mid {
+        place "spr00/png01.png" at 289, 152;
+        place "spr00/png02.png" at 919, 152 mirror;
+        place "spr00/png03.png" at 294, 84;
+        place "spr00/png03.png" at 884, 84 mirror;
+        place "spr00/png04.png" at 275, 138 add;
+        place "spr00/png04.png" at 906, 138 mirror add;
+        place "spr00/png05.png" at -149, -62;
+        place "spr00/png05.png" at 1036, -62 mirror;
+        place "spr00/png06.png" at 51, -18 add;
+        place "spr00/png06.png" at 1232, -18 mirror add;
+        place "spr00/png07.png" at -59, 98;
+        place "spr00/png07.png" at 1282, 98 mirror;
+        place "spr00/png08.png" at -73, 84 add;
+        place "spr00/png08.png" at 1268, 84 mirror add;
+        place "spr00/png09.png" at 273, 86;
+        place "spr00/png10.png" at 1062, 86 mirror;
+        place "spr00/png11.png" at 259, 72 add;
+        place "spr00/png11.png" at 1048, 72 mirror add;
+        place "spr00/png12.png" at 146, 129;
+        place "spr00/png13.png" at 1102, 129 mirror;
+        place "spr00/png14.png" at 134, 115 add;
+        place "spr00/png14.png" at 1089, 115 mirror add;
+    }
+    layer ground {
+        place "spr00/png15.png" at 110, 196;
+        place "spr00/png15.png" at 723, 196 mirror;
+        place "spr00/png16.png" at 102, 184 add;
+        place "spr00/png16.png" at 716, 184 mirror add;
+        place "spr00/png17.png" at -142, -5;
+        place "spr00/png17.png" at 680, -5 mirror;
+        place "spr00/png18.png" at -156, 158 add;
+        place "spr00/png18.png" at 809, 158 mirror add;
+        place "spr00/png19.png" at 261, 149 add;
+        place "spr00/png19.png" at 1020, 149 mirror add;
+        place "spr00/png20.png" at 249, 149 add;
+        place "spr00/png20.png" at 1032, 149 mirror add;
+        place "spr00/png21.png" at 243, 149 add;
+        place "spr00/png22.png" at 286, 161 add;
+        place "spr00/png22.png" at 995, 161 mirror add;
+        place "spr00/png23.png" at 266, 84;
+        place "spr00/png23.png" at 661, 84 mirror;
+        place "spr00/png24.png" at 474, 174;
+        place "spr00/png24.png" at 662, 174 mirror;
+        place "spr00/png26.png" at 462, 161 add;
+        place "spr00/png26.png" at 652, 161 mirror add;
+        place "spr00/png27.png" at -74, 14;
+        place "spr00/png27.png" at 661, 14 mirror;
+        place "spr00/png28.png" at 184, 123 add;
+        place "spr00/png28.png" at 1008, 123 mirror add;
+        place "spr00/png29.png" at 222, 142 add;
+        place "spr00/png29.png" at 970, 142 mirror add;
+        place "spr00/png30.png" at -30, 196;
+        place "spr00/png30.png" at 1308, 196 mirror;
+        place "spr00/png32.png" at -42, 185 add;
+        place "spr00/png32.png" at 1296, 185 mirror add;
+        place "spr00/png33.png" at 36, 156;
+        place "spr00/png33.png" at 1175, 156 mirror;
+        place "spr00/png35.png" at 23, 142 add;
+        place "spr00/png35.png" at 1160, 142 mirror add;
+        place "spr00/png36.png" at 80, 155 add;
+        place "spr00/png37.png" at 30, 155 add;
+        place "spr00/png37.png" at 1251, 155 mirror add;
+        place "spr00/png38.png" at 55, 136 add;
+        place "spr00/png38.png" at 1226, 136 mirror add;
+        place "spr00/png39.png" at 83, 116 add;
+        place "spr00/png39.png" at 1018, 116 mirror add;
+        place "spr00/png40.png" at 21, 104 add;
+        place "spr00/png40.png" at 1080, 104 mirror add;
+        place "spr00/png41.png" at 271, 104 add;
+        place "spr00/png41.png" at 830, 104 mirror add;
+        place "spr00/png42.png" at 333, 129 add;
+        place "spr00/png42.png" at 768, 129 mirror add;
+        place "spr00/png43.png" at 146, 135 add;
+        place "spr00/png43.png" at 955, 135 mirror add;
+        place "spr00/png44.png" at 396, 110 add;
+        place "spr00/png44.png" at 705, 110 mirror add;
+        place "spr00/png45.png" at 458, 104 add;
+        place "spr00/png45.png" at 643, 104 mirror add;
+        place "spr00/png46.png" at -104, 104 add;
+        place "spr00/png46.png" at 1205, 104 mirror add;
+        place "spr00/png47.png" at -10, 98 add;
+        place "spr00/png47.png" at 1111, 98 mirror add;
+        place "spr00/png48.png" at 302, 119 add;
+        place "spr00/png48.png" at 799, 119 mirror add;
+        place "spr00/png49.png" at -171, 147;
+        place "spr00/png49.png" at 661, 147;
+    }
+    chase {
+        background "spr00/png50.png" at 0, -330 sky 200;
+    }
+}

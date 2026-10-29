@@ -114,4 +114,10 @@ game {
     file "loose/save.bin" as "save.bin";
     file "loose/save1.bin" as "save1.bin";
     file "loose/bgm_variants.txt" as "bgm_variants.txt";
+    hide "char23.pac";
+    hide "chardemo23.pac";
+    hide "charf0023.pac";
+    hide "char22.pac";
+    hide "chardemo22.pac";
+    hide "charf0022.pac";
 }

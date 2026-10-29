@@ -1,0 +1,3 @@
+package "backt02.pac" {
+    stage "escenario.tbs";
+}

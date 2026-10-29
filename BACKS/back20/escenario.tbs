@@ -1,0 +1,12 @@
+// Torneo de los Dioses: escenario de MUGEN (gta1).
+stage {
+    width = 1472;
+    in_order;              // el piso tapa el pie de las salpicaduras
+    layer ground {
+        place "spr00/png00.png" at -158, -54;
+        place "spr00/png00.png" at 578, -54;
+    }
+    chase {
+        background "spr00/png01.png" at 0, -54 sky 200;
+    }
+}
