@@ -1,0 +1,3 @@
+// Lo escribe tools/scene_images.py: nombre, ano y tamano en la pantalla (480x320).
+images {
+}

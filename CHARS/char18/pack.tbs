@@ -8,6 +8,9 @@ package "char18.pac" {
     image   "png06.png";
     image   "png07.png";
     image   "png08.png";
+    image   "png09.png";
+    image   "png10.png";
+    image   "png11.png";
     tables  "tables.tbs";
     sprites "sprites.tbs";
     anim    "anim.tbs";
@@ -30,6 +33,10 @@ package "char18.pac" {
     sound   "wav16.wav";
     sound   "wav17.wav";
     sound   "wav18.wav";
+    sound   "wav19.wav";
+    sound   "wav20.wav";
+    sound   "wav21.wav";
+    sound   "wav22.wav";
     info    "info.tbs";
     mugen   "mugen";
 }

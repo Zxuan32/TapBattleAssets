@@ -1,5 +1,5 @@
 animation {
-    anos  = 365;
+    anos  = 380;
 
     ano_0 {
         link ano_356 { flag = 12; }
@@ -3136,68 +3136,24 @@ animation {
     }
 
     ano_95 {
-        link ano_195 { flag = 14; }
-        link ano_350 { flag = 0; offset = 0, -56; }
-        link ano_351 { flag = 8; offset = -8, 0; }
         frame {
-            time = 6; sprite = sprite_111; origin = -26, -146; sound = 80;
-            cutscene      at 0,   0  size  9,  0;
-            state 27      at 0,   0  size 16, 16;
-            spawn ano_201 at 1, -35;
+            time = 4; sprite = sprite_156; origin = -36, -99;
+            hurtbox      at -36, -95  size  109, 99;
+            cutscene     at   0,   0  size    9,  0;
+            state 27     at   0,   0  size   16, 16;
+            segment 3020;
         }
         frame {
-            time = 4; sprite = sprite_111; origin = -26, -146;
-            spawn ano_201 at 1, -35;
-        }
-        frame {
-            time = 6; sprite = sprite_111; origin = -26, -146;
-            spawn ano_201 at 1, -35;
-        }
-        frame {
-            time = 6; sprite = sprite_96; origin = -59, -86; sound = 6; speed_x = 1507328;
+            time = 12; sprite = sprite_157; origin = -38, -94; keep_speed;
             options { damage = 205; }
-            hurtbox       at -24, -112  size 64, 96;
-            state 27      at   0,    0;
-            state 37      at   0,    0;
-            hitbox        at  20,  -88  size 40, 48;
-            spawn ano_207 at  44,  -72;
-            spawn ano_232 at  32,    0;
+            hurtbox      at -36, -85  size   76, 89;
+            hitbox       at  16, -95  size   57, 89;
+            segment 3020;
         }
         frame {
-            time = 6; sprite = sprite_96; origin = -59, -86; keep_speed;
-            options { damage = 205; }
-            hurtbox       at -24, -112  size 64, 96;
-            state 27      at   0,    0;
-            state 37      at   0,    0;
-            hitbox        at  20,  -88  size 40, 48;
-            spawn ano_207 at  44,  -72;
-            spawn ano_232 at  32,    0;
-        }
-        frame {
-            time = 6; sprite = sprite_96; origin = -59, -86; keep_speed;
-            options { damage = 205; }
-            hurtbox       at -24, -112  size 64, 96;
-            state 27      at   0,    0;
-            state 37      at   0,    0;
-            hitbox        at  20,  -88  size 40, 48;
-            spawn ano_207 at  44,  -72;
-            spawn ano_232 at  32,    0;
-        }
-        frame {
-            time = 5; sprite = sprite_97; origin = -35, -98; keep_speed; accel_x = -98304;
-            hurtbox at -32, -112  size 64, 112;
-        }
-        frame {
-            time = 4; sprite = sprite_98; origin = -37, -182; keep_speed; accel_x = -98304;
-            hurtbox at -32, -112  size 64, 112;
-        }
-        frame {
-            time = 7; sprite = sprite_97; origin = -35, -98; keep_speed; accel_x = -65536;
-            hurtbox at -32, -112  size 64, 112;
-        }
-        frame {
-            time = 10; sprite = sprite_98; origin = -37, -182;
-            hurtbox at -32, -112  size 64, 112;
+            time = 8; sprite = sprite_158; origin = -32, -104; keep_speed;
+            hurtbox      at -29, -100  size   97, 103;
+            segment 3020;
         }
     }
 
@@ -8402,127 +8358,503 @@ animation {
 
     ano_358 {
         frame {
-            time = 2; sprite = sprite_156; origin = -121, -167; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+            time = 4; sprite = sprite_156; origin = -36, -99;
+            hurtbox at -36, -95  size 109, 99;
         }
         frame {
-            time = 2; sprite = sprite_157; origin = -121, -212; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+            time = 12; sprite = sprite_157; origin = -38, -94; keep_speed;
+            hurtbox at -36, -85  size 76, 89;
         }
         frame {
-            time = 2; sprite = sprite_158; origin = -123, -372; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_159; origin = -123, -364; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_160; origin = -125, -373; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_161; origin = -131, -373; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_162; origin = -125, -374; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_163; origin = -122, -373; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_164; origin = -125, -376; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_165; origin = -126, -376; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_166; origin = -125, -378; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_167; origin = -126, -376; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_168; origin = -127, -376; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_169; origin = -127, -370; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_170; origin = -127, -351; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
-        }
-        frame {
-            time = 2; sprite = sprite_171; origin = -127, -340; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+            time = 8; sprite = sprite_158; origin = -32, -104; keep_speed;
+            hurtbox at -29, -100  size 97, 103;
         }
     }
 
     ano_359 {
-        frame { time = 10; sprite = sprite_172; origin = -162, -162; actflag = 0x0200; }
+        frame {
+            time = 15; sprite = sprite_159; origin = -27, -120;
+            hurtbox at -24, -114  size 74, 118;
+        }
+        frame {
+            time = 10; sprite = sprite_160; origin = -29, -89; keep_speed;
+            hurtbox at -2, -84  size 63, 84;
+        }
+        frame {
+            time = 11; sprite = sprite_161; origin = -24, -86; keep_speed;
+            hurtbox at -6, -80  size 90, 84;
+        }
     }
 
     ano_360 {
         frame {
-            time = 2; sprite = sprite_173; origin = -94, -95; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+            time = 4; sprite = sprite_162; origin = -12, -128;
+            hurtbox at 1, -120  size 38, 124;
         }
         frame {
-            time = 2; sprite = sprite_174; origin = -95, -95; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+            time = 4; sprite = sprite_163; origin = 0, -127; keep_speed;
+            hurtbox at 1, -120  size 38, 124;
         }
         frame {
-            time = 2; sprite = sprite_175; origin = -100, -100; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+            time = 175; sprite = sprite_164; origin = -3, -126; keep_speed;
+            hurtbox at 14, -120  size 38, 124;
         }
         frame {
-            time = 2; sprite = sprite_176; origin = -103, -103; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+            time = 5; sprite = sprite_163; origin = 0, -127; keep_speed;
+            hurtbox at 14, -120  size 38, 124;
         }
         frame {
-            time = 2; sprite = sprite_177; origin = -104, -104; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
-        }
-        frame {
-            time = 2; sprite = sprite_178; origin = -103, -103; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
-        }
-        frame {
-            time = 2; sprite = sprite_179; origin = -102, -100; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
-        }
-        frame {
-            time = 2; sprite = sprite_180; origin = -90, -90; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
-        }
-        frame {
-            time = 2; sprite = sprite_181; origin = -75, -76; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
-        }
-        frame {
-            time = 2; sprite = sprite_182; origin = -58, -49; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
-        }
-        frame {
-            time = 2; sprite = sprite_183; origin = -57, -38; keep_speed; actflag = 0x0200;
-            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+            time = 6; sprite = sprite_162; origin = -12, -128; keep_speed;
+            hurtbox at 14, -120  size 38, 124;
         }
     }
 
     ano_361 {
-        frame { time = 1; sprite = -1; }
+        frame {
+            time = 2; sprite = sprite_165; origin = -109, -131; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_166; origin = -119, -141; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_167; origin = -120, -143; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_168; origin = -121, -145; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_169; origin = -123, -145; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_170; origin = -124, -146; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_171; origin = -126, -148; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_172; origin = -128, -149; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_173; origin = -128, -150; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_174; origin = -127, -150; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
     }
 
     ano_362 {
+        frame {
+            time = 2; sprite = sprite_175; origin = -121, -167; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_176; origin = -121, -212; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_177; origin = -123, -372; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_178; origin = -123, -364; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_179; origin = -125, -373; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_180; origin = -131, -373; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_181; origin = -125, -374; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_182; origin = -122, -373; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_183; origin = -125, -376; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_184; origin = -126, -376; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_185; origin = -125, -378; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_186; origin = -126, -376; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_187; origin = -127, -376; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_188; origin = -127, -370; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_189; origin = -127, -351; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+        frame {
+            time = 2; sprite = sprite_190; origin = -127, -340; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 400, 400; }
+        }
+    }
+
+    ano_363 {
+        frame { time = 2; sprite = sprite_191; origin = 0, -82; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_192; origin = 0, -82; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_193; origin = 0, -82; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_194; origin = 0, -82; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_195; origin = -2, -82; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_196; origin = -3, -82; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_197; origin = 1, -67; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_198; origin = 2, -61; keep_speed; actflag = 0x0200; }
+    }
+
+    ano_364 {
+        frame { time = 1; sprite = sprite_199; origin = -173, -95; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_200; origin = -107, -126; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_201; origin = -148, -94; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_202; origin = -164, -90; keep_speed; actflag = 0x0200; }
+    }
+
+    ano_365 {
+        frame { time = 10; sprite = sprite_203; origin = -162, -162; actflag = 0x0200; }
+    }
+
+    ano_366 {
+        frame {
+            time = 2; sprite = sprite_204; origin = -20, -21; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_205; origin = -22, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_206; origin = -19, -17; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_207; origin = -18, -23; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_208; origin = -20, -19; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_209; origin = -17, -17; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_210; origin = -20, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_211; origin = -21, -22; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_212; origin = -19, -17; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_213; origin = -22, -23; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_214; origin = -22, -24; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_215; origin = -22, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_216; origin = -23, -24; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_217; origin = -19, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_218; origin = -20, -18; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_219; origin = -24, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_220; origin = -19, -21; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_221; origin = -19, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_222; origin = -17, -21; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_223; origin = -17, -21; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_224; origin = -23, -18; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_225; origin = -24, -17; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_226; origin = -18, -19; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_227; origin = -19, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_228; origin = -22, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_229; origin = -19, -19; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_230; origin = -22, -22; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_231; origin = -17, -17; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_232; origin = -22, -22; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_233; origin = -17, -24; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_234; origin = -21, -18; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_235; origin = -25, -22; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_236; origin = -24, -24; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_237; origin = -20, -23; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_238; origin = -24, -19; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_239; origin = -22, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_240; origin = -21, -23; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_241; origin = -19, -21; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_242; origin = -21, -24; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_243; origin = -19, -20; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_244; origin = -19, -24; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_245; origin = -20, -24; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_246; origin = -25, -23; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_247; origin = -21, -18; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_248; origin = -20, -19; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_249; origin = -18, -23; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_250; origin = -22, -23; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+        frame {
+            time = 2; sprite = sprite_251; origin = -17, -18; keep_speed; actflag = 0x0200;
+            render { rotate = 0; alpha = 256; zoom = 200, 200; }
+        }
+    }
+
+    ano_367 {
+        frame { time = 1; sprite = -1; }
+    }
+
+    ano_368 {
+        frame { time = 2; sprite = -1; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+        frame { time = 2; sprite = -1; keep_speed; }
+    }
+
+    ano_369 {
         frame { time = 10; sprite = -1; }
+    }
+
+    ano_370 {
+        frame { time = 2; sprite = sprite_252; origin = -20, -16; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_253; origin = -27, -29; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_254; origin = -36, -41; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_255; origin = -47, -53; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_256; origin = -32, -57; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_257; origin = -36, -35; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_258; origin = -39, -26; keep_speed; actflag = 0x0200; }
+        frame { time = 2; sprite = sprite_259; origin = -40, -26; keep_speed; actflag = 0x0200; }
+    }
+
+    ano_371 {
+        frame { time = 1; sprite = sprite_260; origin = -10, -10; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_261; origin = -14, -14; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_262; origin = -19, -19; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_263; origin = -25, -25; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_264; origin = -31, -31; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_265; origin = -34, -34; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_266; origin = -36, -36; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_267; origin = -38, -38; keep_speed; actflag = 0x0200; }
+        frame {
+            time = 1; sprite = sprite_268; origin = -39, -39; keep_speed;
+            render { rotate = 0; alpha = 200; zoom = 100, 100; }
+        }
+        frame {
+            time = 1; sprite = sprite_269; origin = -39, -39; keep_speed;
+            render { rotate = 0; alpha = 100; zoom = 100, 100; }
+        }
+        frame {
+            time = 1; sprite = sprite_270; origin = -40, -40; keep_speed;
+            render { rotate = 0; alpha = 50; zoom = 100, 100; }
+        }
+    }
+
+    ano_372 {
+        frame { time = 3; sprite = sprite_271; origin = -3, -3; actflag = 0x0200; }
+        frame { time = 3; sprite = sprite_272; origin = -2, -2; keep_speed; actflag = 0x0200; }
+        frame { time = 3; sprite = sprite_273; origin = -2, -2; keep_speed; actflag = 0x0200; }
+        frame { time = 3; sprite = sprite_274; origin = -2, -1; keep_speed; actflag = 0x0200; }
+        frame { time = 3; sprite = sprite_275; origin = -1, -1; keep_speed; actflag = 0x0200; }
+    }
+
+    ano_373 {
+        frame { time = 1; sprite = -1; }
+        frame { time = 1; sprite = sprite_276; origin = -35, -37; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_277; origin = -40, -48; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_278; origin = -42, -57; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_279; origin = -45, -68; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_280; origin = -47, -73; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_281; origin = -51, -68; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_282; origin = -54, -76; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_283; origin = -58, -75; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_284; origin = -59, -76; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_285; origin = -63, -78; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_286; origin = -66, -80; keep_speed; actflag = 0x0200; }
+        frame { time = 1; sprite = sprite_287; origin = -68, -80; keep_speed; actflag = 0x0200; }
     }
 }

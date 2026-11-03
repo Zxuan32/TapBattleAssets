@@ -1,0 +1,70 @@
+// La seleccion de dos lados (docs/17-select-screen-scenes.md, seccion 10).
+// Sin este archivo el juego usa la pantalla de fabrica.
+scene "Dos lados" {
+    size = 480, 320;
+
+    anim background { anim = "chardemo99:234"; x = 240; layer = 0; }
+    anim title      { anim = "chardemo99:257"; x = 240; }
+
+    template side {
+        bind art        { what = art; fallback = "chardemo99:252"; x = 0; y = 28; anchor = left; layer = 10; }
+        bind burst      { what = burst; x = 0; y = 28; anchor = left; visible = "who.confirmed"; }
+        anim border     { anim = "chardemo99:{238 + who.index}"; x = 0; y = 28; anchor = left; }
+        anim shadow     { anim = "chardemo99:245"; x = 70; y = 292; zoom = 120; anchor = left; mirror = move; }
+        bind fighter    { what = fighter; x = 70; y = 292; anchor = left; }
+        anim unknown    { anim = "chardemo99:251"; x = 70; y = 292; anchor = left; mirror = move;
+                          visible = "not who.has_fighter"; layer = 14; }
+        group info {
+            x = "min(112 + min(edge, 12), 64 + edge)"; y = 228; anchor = left; mirror = move; w = 172;
+            anim plate   { anim = "chardemo99:{240 + who.index}"; layer = 16; }
+            bind name    { what = name_plate; x = 26; y = 5; zoom = 54; visible = "not who.empty"; layer = 18; }
+            bind symbol  { what = side_symbol; x = 10; y = 2; zoom = 55; visible = "not who.empty"; }
+            anim no_name { anim = "chardemo99:{who.random ? 253 : 255}"; x = 10; y = 10;
+                           visible = "who.empty and (who.random or who.waiting)"; layer = 18; }
+            group stats {
+                y = 22; visible = "who.choosing and not who.random";
+                anim box       { anim = "chardemo99:258"; layer = 18; }
+                number level   { value = "who.level"; font = "common:100"; digits = 2; pitch = 9; zoom = 65;
+                                 align = left; x = 15; y = 4; }
+                number exp     { value = "who.exp"; font = "common:100"; digits = 2; pitch = 9; zoom = 65;
+                                 x = 80; y = 4; layer = 19; }
+                anim slash     { anim = "common:141"; zoom = 65; x = 99; y = 4; layer = 19; }
+                number next    { value = "who.exp_next"; font = "common:100"; digits = 2; pitch = 9; zoom = 65;
+                                 align = left; x = 108; y = 4; layer = 19; }
+                anim atk       { anim = "common:3"; zoom = 35; x = 4; y = 23; layer = 19; }
+                number attack  { value = "who.attack"; font = "common:100"; digits = 7; pitch = 9; zoom = 65;
+                                 align = left; x = 22; y = 23; layer = 19; }
+                anim def       { anim = "common:4"; zoom = 35; x = 88; y = 23; layer = 19; }
+                number defense { value = "who.defense"; font = "common:100"; digits = 7; pitch = 9; zoom = 65;
+                                 align = left; x = 106; y = 23; layer = 19; }
+            }
+        }
+        anim tag        { anim = "chardemo99:{who.cpu ? 244 : 242 + who.index}"; x = 6; y = 42;
+                          anchor = left; mirror = move; w = 30; layer = 18; }
+    }
+    use side for p1;
+    use side for p2 { mirror; }
+
+    anim mode       { anim = "chardemo99:{246 + mode}"; x = 240; y = 196; layer = 20; }
+    anim page_left  { anim = "common:27"; x = 62; y = 104; visible = "pages > 1"; layer = 20;
+                      action = page_prev; hit = -23, -55, 46, 110; }
+    anim page_right { anim = "common:29"; x = 418; y = 104; visible = "pages > 1"; layer = 20;
+                      action = page_next; hit = -23, -55, 46, 110; }
+
+    template card {
+        bind portrait     { what = portrait; zoom = "cell.zoom", "cell.zoom_y"; layer = 70; }
+        anim random       { anim = "chardemo99:235"; zoom = "cell.zoom", "cell.zoom_y"; visible = "cell.random"; layer = 70; }
+        anim badge        { anim = "chardemo99:233"; zoom = "cell.zoom", "cell.zoom_y"; visible = "cell.transformable";
+                            x = "16 * cell.zoom / 100"; y = "12 * cell.zoom / 100 - cell.h"; layer = 71; }
+        anim picked       { anim = "chardemo99:98"; zoom = "cell.zoom", "cell.zoom_y"; visible = "cell.picked"; layer = 71; }
+        anim cursor_other { anim = "chardemo99:{237 - chooser}"; zoom = "cell.zoom", "cell.zoom_y"; visible = "cell.other"; }
+        anim cursor_own   { anim = "chardemo99:{236 + chooser}"; zoom = "cell.zoom", "cell.zoom_y"; visible = "cell.own"; }
+    }
+
+    grid roster {
+        pattern = rows; cols = 9; rows = 2;
+        pitch = 33, 46; row_shift = -6; arc = 23, "1.6";
+        zoom = 70; random_cell = 4; overflow = pages; card = card;
+        x = 240; y = 102;
+    }
+}

@@ -80,40 +80,30 @@ animation {
 
     ano_9 {
         link ano_8 { flag = 4; }
-        frame {
-            time = 31; sprite = sprite_3; origin = -129, -222;
-            render { rotate = 0; alpha = 0; zoom = 70, 70; }
-        }
+        frame { time = 31; sprite = sprite_3; origin = -176, -318; }
     }
 
     ano_10 {
-        frame {
-            sprite = sprite_3; origin = -129, -222;
-            render { rotate = 0; alpha = 0; zoom = 70, 70; }
-        }
+        frame { sprite = sprite_3; origin = -176, -318; }
     }
 
     ano_11 {
         frame {
-            time = 10; sprite = sprite_3; origin = -129, -222;
-            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+            time = 10; sprite = sprite_3; origin = -176, -318;
+            render { rotate = 0; alpha = 255; zoom = 100, 100; }
             options { tween; }
         }
-        frame {
-            time = 1; sprite = sprite_3; origin = -129, -222;
-            render { rotate = 0; alpha = 0; zoom = 70, 70; }
-        }
+        frame { time = 1; sprite = sprite_3; origin = -176, -318; }
     }
 
     ano_12 {
         frame {
-            time = 10; sprite = sprite_3; origin = -129, -222;
-            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+            time = 10; sprite = sprite_3; origin = -176, -318;
             options { tween; }
         }
         frame {
-            time = 1; sprite = sprite_3; origin = -129, -222;
-            render { rotate = 0; alpha = 0; zoom = 70, 70; }
+            time = 1; sprite = sprite_3; origin = -176, -318;
+            render { rotate = 0; alpha = 255; zoom = 100, 100; }
         }
     }
 
