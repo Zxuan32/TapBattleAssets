@@ -116,7 +116,4 @@ game {
     file "loose/bgm_variants.txt" as "bgm_variants.txt";
     file "selectscene/scene.tbs" as "select_scene.tbs";
     file "selectscene/images.tbs" as "select_scene_images.tbs";
-    hide "char23.pac";
-    hide "chardemo23.pac";
-    hide "charf0023.pac";
 }
