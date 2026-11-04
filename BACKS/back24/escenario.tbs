@@ -1,0 +1,26 @@
+// Nuevo Planeta Vegeta: «New Planet Vegeta» de MUGEN, de AVPboy6754 (editado por Manuz y Mr.Ansatsuken); sin el viento.
+stage {
+    width = 1920;
+    in_order;              // el piso tapa el pie de las salpicaduras
+    layer far {
+        place "spr00/png00.png" at 0, -885;
+        place "spr00/png00.png" at 480, -885;
+        place "spr00/png00.png" at 960, -885;
+        place "spr00/png00.png" at 1440, -885;
+    }
+    layer mid {
+        place "spr00/png01.png" at -238, -306;
+        place "spr00/png01.png" at 722, -306 mirror;
+        place "spr00/png02.png" at 367, 76;
+        place "spr00/png02.png" at 1041, 76 mirror;
+    }
+    layer ground {
+        place "spr00/png03.png" at 78, -9;
+        place "spr00/png03.png" at 558, -9 mirror;
+        place "spr00/png03.png" at 1038, -9;
+        place "spr00/png03.png" at 1518, -9 mirror;
+    }
+    chase {
+        background "spr00/png04.png" at 0, -885 sky 200;
+    }
+}

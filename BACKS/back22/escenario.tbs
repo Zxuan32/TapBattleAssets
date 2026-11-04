@@ -1,0 +1,19 @@
+// Planeta Vegeta: «Planet Vegeta In Space» de MUGEN, de Orochi_Shin y HIDDENSAGE121.
+stage {
+    width = 1504;
+    in_order;
+    layer far {
+        place "spr00/png00.png" at 0, -180;
+        place "spr00/png01.png" at 148, 57 add;
+        place "spr00/png02.png" at 161, 70;
+        place "spr00/png03.png" at 216, 109;
+        place "spr00/png04.png" at 210, 95 add 50;
+    }
+    layer ground {
+        place "spr00/png05.png" at -486, 95 add 80 repeat fade 70;
+        place "spr00/png06.png" at -358, 175 repeat;
+    }
+    chase {
+        background "spr00/png00.png" at 0, -180;
+    }
+}

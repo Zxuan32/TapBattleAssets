@@ -1,0 +1,24 @@
+// Árbol del Poder: «Tree Of Might» de MUGEN, de Crazy_Logic (escala 0,9, el árbol una vez por vuelta).
+stage {
+    width = 1920;
+    in_order;
+    drift far -1;
+    layer far {
+        place "spr00/png00.png" at 0, -215;
+        place "spr00/png00.png" at 480, -215;
+        place "spr00/png00.png" at 960, -215;
+        place "spr00/png00.png" at 1440, -215;
+    }
+    layer mid {
+        place "spr00/png01.png" at -718, -11;
+    }
+    layer ground {
+        place "spr00/png02.png" at 2, 101;
+        place "spr00/png02.png" at 482, 101;
+        place "spr00/png02.png" at 962, 101;
+        place "spr00/png02.png" at 1442, 101;
+    }
+    chase {
+        background "spr00/png03.png" at 0, -215 sky 200;
+    }
+}
