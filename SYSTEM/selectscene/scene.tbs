@@ -2,6 +2,7 @@
 // Sin este archivo el juego usa la pantalla de fabrica.
 scene "Dos lados" {
     size = 480, 320;
+    wide = fit;
 
     anim background { anim = "chardemo99:234"; x = 240; layer = 0; }
     anim title      { anim = "chardemo99:257"; x = 240; }
