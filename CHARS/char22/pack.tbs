@@ -20,6 +20,10 @@ package "char22.pac" {
     image   "png18.png"   extra = 0x637e3c00;
     image   "png19.png";
     image   "png20.png";
+    image   "png21.png";
+    image   "png22.png";
+    image   "png23.png";
+    image   "png24.png";
     tables  "tables.tbs"  extra = 0x42ec5d00;
     sprites "sprites.tbs" extra = 0x52ff6e00;
     anim    "anim.tbs"    extra = 0x87e19a00;
@@ -41,6 +45,10 @@ package "char22.pac" {
     sound   "wav15.wav"   extra = 0xbdb7ef00;
     sound   "wav16.wav"   extra = 0xc1df0700;
     sound   "wav17.wav"   extra = 0x8b929c00;
+    sound   "wav18.wav";
+    sound   "wav19.wav";
+    sound   "wav20.wav";
     info    "info.tbs";
     mod     "mod.tbs";
+    mugen   "mugen";
 }

@@ -1,0 +1,29 @@
+# Segmento MUGEN de char22: una directiva por linea.
+id zaiko
+def Turles2.def
+scale 128
+own_sprites 109
+own_sheets 21
+downhits 1
+cornerpush 1
+nospark 7503
+anim 3630 347 body 100
+anim 4150 348 effect 90
+anim 4151 349 effect 100
+anim 6000 350 helper 100
+anim 7022 353 helper 100
+anim 7042 354 helper 100
+anim 7060 355 effect 30
+anim 7100 356 helper 100
+anim 7503 357 helper 100
+sound 191 6 18
+sound 3500 0 19
+sound 3999 2 20
+pose 5100 23
+pose 5101 73
+pose 5080 24
+pose 5081 24
+pose 5110 24
+pose 5120 25
+pose -1 24 3630 ground
+damage 3630 40
