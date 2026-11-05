@@ -12837,9 +12837,5 @@ animation {
             hurtbox at -31, -111  size 64, 112;
             unfreeze;
         }
-        frame {
-            time = 6; sprite = sprite_591; origin = -76, -122;
-            hurtbox at -31, -111  size 64, 112;
-        }
     }
 }
