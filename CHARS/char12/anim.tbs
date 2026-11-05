@@ -11987,11 +11987,12 @@ animation {
     }
 
     ano_471 {
-        frame { time = 90; sprite = sprite_423; origin = -56, -116; }
-        frame { time = 40; sprite = sprite_424; origin = -56, -116; keep_speed; }
-        frame { time = 8; sprite = sprite_425; origin = -56, -116; keep_speed; }
-        frame { time = 8; sprite = sprite_426; origin = -56, -116; keep_speed; }
-        frame { time = 8; sprite = sprite_427; origin = -56, -116; keep_speed; }
+        frame { time = 90; sprite = sprite_587; origin = -42, -141; }
+        frame { time = 1; sprite = sprite_588; origin = -42, -141; keep_speed; }
+        frame { time = 8; sprite = sprite_589; origin = -42, -141; keep_speed; }
+        frame { time = 10; sprite = sprite_590; origin = -42, -141; keep_speed; }
+        frame { time = 8; sprite = sprite_589; origin = -42, -141; keep_speed; }
+        frame { time = 10; sprite = sprite_588; origin = -42, -141; keep_speed; }
     }
 
     ano_472 {

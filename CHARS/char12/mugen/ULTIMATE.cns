@@ -2325,18 +2325,18 @@ x = 0
 
 [State 0, PlaySnd]
 type = PlaySnd
-trigger1 = time = 90
+trigger1 = time = 91
 value = S5,61
 volume = 999
 [State 0, PlaySnd]
 type = PlaySnd
-trigger1 = time = 90
+trigger1 = time = 91
 value = S5,61
 volume = 999
 
 [State 0, EnvShake]
 type = EnvShake
-trigger1 = animelem = 3
+trigger1 = time = 130
 time = 8
 ampl = -2
 
