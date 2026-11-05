@@ -44,16 +44,11 @@ package "chardemo99.pac" {
     image   "../char15/png99.png";
     image   "../char16/png99.png";
     image   "../char17/png99.png";
-    image   "../char18/png99.png";
-    image   "../char19/png99.png";
-    image   "../char20/png99.png";
-    image   "../char21/png99.png";
-    image   "../char22/png99.png";
     image   "../char00/transform00/png99.png";
     image   "../char04/transform04/png99.png";
     image   "../char04/transform04_1/png99.png";
     image   "../char05/transform05/png99.png";
     image   "../char11/transform11/png99.png";
     image   "../char13/transform13/png99.png";
-    image   "../char22/transform22/png99.png";
+    image   "../char17/transform17/png99.png";
 }

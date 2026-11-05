@@ -422,51 +422,31 @@ animation {
         frame { sprite = sprite_82; origin = -25, -62; }
     }
 
-    ano_18 {
+    ano_300 {
         frame { sprite = sprite_83; origin = -25, -62; }
     }
 
-    ano_19 {
+    ano_340 {
         frame { sprite = sprite_84; origin = -25, -62; }
     }
 
-    ano_20 {
+    ano_341 {
         frame { sprite = sprite_85; origin = -25, -62; }
     }
 
-    ano_21 {
+    ano_350 {
         frame { sprite = sprite_86; origin = -25, -62; }
     }
 
-    ano_22 {
+    ano_410 {
         frame { sprite = sprite_87; origin = -25, -62; }
     }
 
-    ano_300 {
+    ano_430 {
         frame { sprite = sprite_88; origin = -25, -62; }
     }
 
-    ano_340 {
+    ano_470 {
         frame { sprite = sprite_89; origin = -25, -62; }
-    }
-
-    ano_341 {
-        frame { sprite = sprite_90; origin = -25, -62; }
-    }
-
-    ano_350 {
-        frame { sprite = sprite_91; origin = -25, -62; }
-    }
-
-    ano_410 {
-        frame { sprite = sprite_92; origin = -25, -62; }
-    }
-
-    ano_430 {
-        frame { sprite = sprite_93; origin = -25, -62; }
-    }
-
-    ano_520 {
-        frame { sprite = sprite_94; origin = -25, -62; }
     }
 }

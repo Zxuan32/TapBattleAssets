@@ -68,62 +68,63 @@ animation {
     ano_8 {
         priority = 255;
         frame {
-            time = 20; sprite = sprite_3; origin = -176, -318;
+            time = 20; sprite = sprite_3; origin = -184, -318;
             render { rotate = 0; alpha = 256; zoom = 100, 100; }
             options { tween; }
         }
         frame {
-            time = 1; sprite = sprite_3; origin = -264, -446;
+            time = 1; sprite = sprite_3; origin = -272, -447;
             render { rotate = 0; alpha = 511; zoom = 150, 150; }
         }
     }
 
     ano_9 {
         link ano_8 { flag = 4; }
-        frame { time = 31; sprite = sprite_3; origin = -176, -318; }
+        frame { time = 31; sprite = sprite_3; origin = -184, -318; }
     }
 
     ano_10 {
-        frame { sprite = sprite_3; origin = -176, -318; }
+        link ano_9 { flag = 4; }
+        frame { sprite = sprite_3; origin = -184, -318; }
     }
 
     ano_11 {
         frame {
-            time = 10; sprite = sprite_3; origin = -176, -318;
+            time = 10; sprite = sprite_3; origin = -184, -318;
             render { rotate = 0; alpha = 255; zoom = 100, 100; }
             options { tween; }
         }
-        frame { time = 1; sprite = sprite_3; origin = -176, -318; }
+        frame { time = 1; sprite = sprite_3; origin = -184, -318; }
     }
 
     ano_12 {
         frame {
-            time = 10; sprite = sprite_3; origin = -176, -318;
+            time = 10; sprite = sprite_3; origin = -184, -318;
             options { tween; }
         }
         frame {
-            time = 1; sprite = sprite_3; origin = -176, -318;
+            time = 1; sprite = sprite_3; origin = -184, -318;
             render { rotate = 0; alpha = 255; zoom = 100, 100; }
         }
     }
 
     ano_13 {
         priority = 255;
-        frame { time = 20; sprite = sprite_3; origin = -312, 2; speed_x = 1572864; }
+        frame { time = 20; sprite = sprite_3; origin = -304, 2; speed_x = 1572864; }
     }
 
     ano_14 {
         priority = 255;
-        frame { time = 20; sprite = sprite_3; origin = -312, 2; speed_x = 1572864; }
+        frame { time = 20; sprite = sprite_3; origin = -320, 2; speed_x = 1572864; }
     }
 
     ano_15 {
-        frame { sprite = sprite_3; origin = -184, -302; }
+        frame { sprite = sprite_3; origin = -184, -318; }
     }
 
     ano_16 {
         priority = 1;
-        frame { sprite = sprite_3; origin = -184, -302; }
+        frame { sprite = sprite_3; origin = -184, -318; }
     }
 
     ano_20 {
@@ -155,23 +156,23 @@ animation {
 
     ano_41 {
         frame {
-            time = 10; sprite = sprite_6; origin = -70, -180;
+            time = 1; sprite = sprite_6; origin = -47, -141;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
         frame {
-            time = 10; sprite = sprite_7; origin = -70, -180;
+            time = 8; sprite = sprite_7; origin = -47, -141;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
         frame {
-            time = 10; sprite = sprite_8; origin = -70, -180;
+            time = 10; sprite = sprite_8; origin = -47, -141;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
         frame {
-            time = 10; sprite = sprite_7; origin = -70, -180;
+            time = 8; sprite = sprite_7; origin = -47, -141;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
         frame {
-            time = 10; sprite = sprite_6; origin = -70, -180; loop;
+            time = 10; sprite = sprite_6; origin = -47, -141; loop;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
     }

@@ -89,9 +89,4 @@ sprites {
     sprite_87 { sheet = 47;  x =   0;  y =   0;  w =  50;  h =  62; }
     sprite_88 { sheet = 48;  x =   0;  y =   0;  w =  50;  h =  62; }
     sprite_89 { sheet = 49;  x =   0;  y =   0;  w =  50;  h =  62; }
-    sprite_90 { sheet = 50;  x =   0;  y =   0;  w =  50;  h =  62; }
-    sprite_91 { sheet = 51;  x =   0;  y =   0;  w =  50;  h =  62; }
-    sprite_92 { sheet = 52;  x =   0;  y =   0;  w =  50;  h =  62; }
-    sprite_93 { sheet = 53;  x =   0;  y =   0;  w =  50;  h =  62; }
-    sprite_94 { sheet = 54;  x =   0;  y =   0;  w =  50;  h =  62; }
 }
