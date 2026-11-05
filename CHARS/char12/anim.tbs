@@ -12819,7 +12819,7 @@ animation {
         }
         frame {
             time = 3; sprite = sprite_598; origin = -73, -135;
-            options { power = 1; damage = 66; }
+            options { power = 1; damage = 56; }
             state 27 at 0, 0;
             hurtbox at -31, -111  size 64, 112;
             hitbox  at -120, -150  size 100, 150;
@@ -12830,6 +12830,7 @@ animation {
             hurtbox at -31, -111  size 64, 112;
             state 27 at 0, 0;
             unfreeze;
+            turn;
         }
         frame {
             time = 14; sprite = sprite_598; origin = -73, -135;
