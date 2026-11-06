@@ -607,4 +607,7 @@ sprites {
     sprite_605 { sheet = 54;  x =  65;  y = 230;  w =  63;  h =  36; }
     sprite_606 { sheet = 54;  x =   0;  y = 230;  w =  63;  h =  78; }
     sprite_607 { sheet = 54;  x = 377;  y = 105;  w =  63;  h = 120; }
+    sprite_608 { sheet = 55;  x =   0;  y =   8;  w =  72;  h =  17; }
+    sprite_609 { sheet = 55;  x =  73;  y =   8;  w =  67;  h =  30; }
+    sprite_610 { sheet = 55;  x =   0;  y =   0;  w = 192;  h =   7; }
 }

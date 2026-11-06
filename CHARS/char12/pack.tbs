@@ -54,6 +54,7 @@ package "char12.pac" {
     image   "png52.png";
     image   "png53.png";
     image   "png54.png";
+    image   "png55.png";
     tables  "tables.tbs"  extra = 0xe3984100;
     sprites "sprites.tbs" extra = 0x521ba300;
     anim    "anim.tbs"    extra = 0xb8acf200;
