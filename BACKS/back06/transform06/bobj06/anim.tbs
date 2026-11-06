@@ -180,6 +180,22 @@ animation {
         frame { time = 6; sprite = -1; origin = -15, -97; }
     }
 
+    ano_15 {
+        frame {
+            time = 5; sprite = sprite_8; origin = -24, -97; flip_x;
+            render { rotate = 0; alpha = 0; zoom = 50, 50; }
+        }
+        frame {
+            time = 6; sprite = sprite_9; origin = -56, -109; flip_x;
+            render { rotate = 0; alpha = 0; zoom = 50, 50; }
+        }
+        frame {
+            time = 7; sprite = sprite_10; origin = -60, -115; flip_x;
+            render { rotate = 0; alpha = 0; zoom = 50, 50; }
+        }
+        frame { time = 1; sprite = -1; }
+    }
+
     ano_17 {
         frame { sprite = -1; }
     }

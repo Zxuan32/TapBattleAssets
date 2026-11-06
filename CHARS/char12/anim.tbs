@@ -707,37 +707,34 @@ animation {
     }
 
     ano_37 {
-        link ano_137 { flag = 14; }
         frame {
-            time = 6; sprite = sprite_2; origin = -56, -107;
-            hurtbox at -31, -111  size 64, 112;
+            time = 4; sprite = sprite_599; origin = -100, -100;
+            hurtbox at -31, -95  size 64, 96;
         }
         frame {
-            time = 2; sprite = sprite_14; origin = -59, -115; sound = 89; speed_x = 589824;
-            hurtbox at -31, -111  size 64, 112;
+            time = 4; sprite = sprite_600; origin = -161, -98;
+            hurtbox at -31, -95  size 64, 96;
         }
         frame {
-            time = 7; sprite = sprite_20; origin = -82, -116; speed_x = 524288; accel_x = -65535;
-            options { power = 7; damage = 56; }
-            hurtbox       at -15, -127  size 64, 112;
-            hitbox        at  14, -135  size 56,  96;
-            spawn ano_216 at  88,  -80;
+            time = 4; sprite = sprite_601; origin = -98, -94;
+            hurtbox at -31, -95  size 64, 96;
         }
         frame {
-            time = 5; sprite = sprite_20; origin = -82, -116;
-            hurtbox at -31, -111  size 64, 112;
+            time = 4; sprite = sprite_602; origin = -90, -115;
+            hurtbox at -31, -95  size 64, 96;
         }
         frame {
-            time = 5; sprite = sprite_20; origin = -82, -116;
-            hurtbox at -31, -111  size 64, 112;
+            time = 6; sprite = sprite_603; origin = -79, -103; sound = 87;
+            hurtbox        at -31, -95  size 64, 96;
+            cutscene       at -48,   0  size 24, 0;
+            cutscene       at -48,   0  size 28, 0;
+            shake 3        at   0,   0  size 16, 16;
+            shoot_at_rival ano_495 reach 260 impact ano_495;
         }
         frame {
-            time = 4; sprite = sprite_2; origin = -56, -107;
-            hurtbox at -31, -111  size 64, 112;
-        }
-        frame {
-            time = 4; sprite = sprite_2; origin = -56, -107;
-            hurtbox at -31, -111  size 64, 112;
+            time = 14; sprite = sprite_604; origin = -87, -97;
+            options { cancel; }
+            hurtbox at -31, -95  size 64, 96;
         }
     }
 
@@ -12838,5 +12835,26 @@ animation {
             hurtbox at -31, -111  size 64, 112;
             unfreeze;
         }
+    }
+
+    ano_495 {
+        frame {
+            time = 3; sprite = sprite_605; origin = -47, -36; sound = 7;
+            options { power = 3; damage = 55; }
+            hitbox   at -25, -36  size 50, 36;
+            cutscene at   0,   0  size 24, 0;
+            cutscene at   0,   0  size 27, 0;
+            pierce;
+        }
+        frame {
+            time = 3; sprite = sprite_606; origin = -47, -77;
+            options { power = 5; damage = 56; }
+            hitbox at -25, -78  size 50, 78;
+            pierce;
+        }
+        frame { time = 11; sprite = sprite_607; origin = -47, -119; }
+        frame { time = 3; sprite = sprite_606; origin = -47, -77; }
+        frame { time = 3; sprite = sprite_605; origin = -47, -36; }
+        frame { time = 6; sprite = -1; }
     }
 }

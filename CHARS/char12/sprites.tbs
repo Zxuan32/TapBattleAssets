@@ -598,4 +598,13 @@ sprites {
     sprite_596 { sheet = 53;  x =  87;  y =   0;  w = 102;  h = 138; }
     sprite_597 { sheet = 53;  x = 191;  y =   0;  w = 173;  h = 138; }
     sprite_598 { sheet = 53;  x = 366;  y =   0;  w = 115;  h = 138; }
+    sprite_599 { sheet = 54;  x = 198;  y =   0;  w = 134;  h = 103; }
+    sprite_600 { sheet = 54;  x =   0;  y =   0;  w = 196;  h = 102; }
+    sprite_601 { sheet = 54;  x = 334;  y =   0;  w = 136;  h =  97; }
+    sprite_602 { sheet = 54;  x =   0;  y = 105;  w = 128;  h = 119; }
+    sprite_603 { sheet = 54;  x = 130;  y = 105;  w = 118;  h = 123; }
+    sprite_604 { sheet = 54;  x = 250;  y = 105;  w = 125;  h = 118; }
+    sprite_605 { sheet = 54;  x =  65;  y = 230;  w =  63;  h =  36; }
+    sprite_606 { sheet = 54;  x =   0;  y = 230;  w =  63;  h =  78; }
+    sprite_607 { sheet = 54;  x = 377;  y = 105;  w =  63;  h = 120; }
 }
