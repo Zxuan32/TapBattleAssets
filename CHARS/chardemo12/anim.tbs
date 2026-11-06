@@ -156,23 +156,23 @@ animation {
 
     ano_41 {
         frame {
-            time = 1; sprite = sprite_6; origin = -48, -171;
+            time = 1; sprite = sprite_6; origin = -48, -169;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
         frame {
-            time = 8; sprite = sprite_7; origin = -48, -171;
+            time = 8; sprite = sprite_7; origin = -48, -169;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
         frame {
-            time = 10; sprite = sprite_8; origin = -48, -171;
+            time = 10; sprite = sprite_8; origin = -48, -169;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
         frame {
-            time = 8; sprite = sprite_7; origin = -48, -171;
+            time = 8; sprite = sprite_7; origin = -48, -169;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
         frame {
-            time = 10; sprite = sprite_6; origin = -48, -171; loop;
+            time = 10; sprite = sprite_6; origin = -48, -169; loop;
             render { rotate = 0; alpha = 0; zoom = 50, 50; }
         }
     }
