@@ -6142,11 +6142,13 @@ animation {
         frame {
             time = 1; sprite = sprite_96; origin = -58, -150;
             hurtbox at -31, -111  size 64, 112;
+            zoom    at -45,  -90  size 150,   9;
             turn;
         }
         frame {
             time = 1; sprite = sprite_96; origin = -58, -150; flip_x;
             hurtbox at -31, -111  size 64, 112;
+            zoom    at  45,  -90  size 150,   9;
             goto ano_346;
         }
     }
@@ -8086,27 +8088,32 @@ animation {
         frame {
             time = 4; sprite = sprite_96; origin = -58, -150; flip_x;
             hurtbox      at -31, -111  size    64, 112;
+            zoom at 45, -90  size 150, 9;
             segment 3630;
             cutscene at 0, 0  size 9, 0;
         }
         frame {
             time = 4; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox      at -31, -111  size    64, 112;
+            zoom at 45, -90  size 150, 9;
             segment 3630;
         }
         frame {
             time = 175; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox      at -31, -111  size    64, 112;
+            zoom at 45, -90  size 150, 9;
             segment 3630;
         }
         frame {
             time = 5; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox      at -31, -111  size    64, 112;
+            zoom at 45, -90  size 150, 9;
             segment 3630;
         }
         frame {
             time = 6; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox      at -31, -111  size    64, 112;
+            zoom at 45, -90  size 150, 9;
             segment 3630;
         }
     }
@@ -8115,23 +8122,28 @@ animation {
         frame {
             time = 4; sprite = sprite_96; origin = -58, -150; flip_x;
             hurtbox at -31, -111  size  64, 112;
+            zoom at 45, -90  size 150, 9;
             cutscene at 0, 0  size 9, 0;
         }
         frame {
             time = 4; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox at -31, -111  size  64, 112;
+            zoom at 45, -90  size 150, 9;
         }
         frame {
             time = 175; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox at -31, -111  size  64, 112;
+            zoom at 45, -90  size 150, 9;
         }
         frame {
             time = 5; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox at -31, -111  size  64, 112;
+            zoom at 45, -90  size 150, 9;
         }
         frame {
             time = 6; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox at -31, -111  size  64, 112;
+            zoom at 45, -90  size 150, 9;
         }
     }
 
