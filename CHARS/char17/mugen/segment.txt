@@ -2,6 +2,8 @@
 id zaiko
 def Turles2.def
 scale 128
+credit Turles | Code  Tapion, Intoxicados, Sawady
+credit Turles (edición) | joe flizz
 own_sprites 109
 own_sheets 21
 downhits 1

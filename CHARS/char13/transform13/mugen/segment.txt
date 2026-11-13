@@ -2,6 +2,7 @@
 id shallot_blue
 def SSJ_VegetaZ2.def
 scale 115
+credit SSJ Vegeta | Team Z2
 own_sprites 110
 own_sheets 20
 anim 48 380 body 100

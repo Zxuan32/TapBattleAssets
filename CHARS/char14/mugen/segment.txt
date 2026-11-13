@@ -2,6 +2,8 @@
 id broly
 def Broly-Mugen11.def
 scale 118
+credit Broly | Mr.Ansatsuken
+credit Broly (dibujos) | Orochi_Shin & G.knux19
 var 57 2
 camera mugen
 damage 4100 48

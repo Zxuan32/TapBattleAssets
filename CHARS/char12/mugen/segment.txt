@@ -2,6 +2,7 @@
 id a21
 def Android_21.def
 scale 200
+credit Android 21 | Knightmare
 own_sprites 257
 own_sheets 35
 camera mugen
