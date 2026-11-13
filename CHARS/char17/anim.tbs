@@ -973,7 +973,7 @@ animation {
     ano_45 {
         link ano_145 { flag = 14; }
         frame {
-            time = 6; sprite = sprite_5; origin = -32, -116; sound = 82;
+            time = 6; sprite = sprite_5; origin = -32, -116; sound = 97;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_201 at   8,    0;
         }
@@ -2188,7 +2188,7 @@ animation {
         link ano_162 { flag = 12; }
         link ano_250 { flag = 0; offset = 0, -192; }
         frame {
-            time = 6; sprite = sprite_22; origin = -47, -97; sound = 84;
+            time = 6; sprite = sprite_22; origin = -47, -97; sound = 83;
             cutscene at 0, 0  size 9, 0;
         }
         frame { time = 6; sprite = sprite_22; origin = -47, -97; }
@@ -3099,7 +3099,7 @@ animation {
             hurtbox at -31, -111  size 64, 112;
         }
         frame {
-            time = 2; sprite = sprite_5; origin = -30, -117; sound = 97;
+            time = 2; sprite = sprite_5; origin = -30, -117; sound = 100;
             hurtbox at -31, -95  size 64, 96;
         }
         frame {
@@ -6014,7 +6014,7 @@ animation {
             spawn ano_209 at 0, 0;
         }
         frame {
-            time = 6; sprite = sprite_9; origin = -50, -130; sound = 84;
+            time = 6; sprite = sprite_9; origin = -50, -130; sound = 83;
             hitbox    at -100,  97  size 2500, 60;
             knockdown 180;
             zoom      at    0, -80  size  150,  3;
@@ -6138,17 +6138,16 @@ animation {
             hurtbox at -31, -111  size  64, 112;
             zoom    at -45,  -90  size 150,   9;
         }
-        // el remate: el del Meteor Attack de Turles (estado 3630, tools/mugen/mapas/zaiko.tbs)
         frame {
             time = 1; sprite = sprite_96; origin = -58, -150;
-            hurtbox at -31, -111  size 64, 112;
+            hurtbox at -31, -111  size  64, 112;
             zoom    at -45,  -90  size 150,   9;
             turn;
         }
         frame {
             time = 1; sprite = sprite_96; origin = -58, -150; flip_x;
-            hurtbox at -31, -111  size 64, 112;
-            zoom    at  45,  -90  size 150,   9;
+            hurtbox      at -31, -111  size  64, 112;
+            zoom         at  45,  -90  size 150,   9;
             goto ano_346;
         }
     }
@@ -6274,48 +6273,48 @@ animation {
         frame {
             time = 3; sprite = sprite_28; origin = -30, -125; sound = 89;
             pierce;
-            hurtbox       at  -84, -160  size 168, 160;
-            spawn ano_233 at    0,  -64;
+            hurtbox       at -84, -160  size 168, 160;
+            spawn ano_233 at   0,  -64;
         }
         frame {
             time = 3; sprite = sprite_30; origin = -32, -146; sound = 15;
             options { effect = 5; power = 12; damage = 156; }
             pierce;
-            hurtbox       at  -84, -160  size 168, 160;
-            hitbox        at   16, -176  size 104, 200;
-            shake 5       at    0,    0  size  16,  16;
-            spawn ano_233 at    0,  -64;
-            bubble 42     at    0,    0  size  16,  16;
-            cutscene      at    0,    0  size  18,   0;
+            hurtbox       at -84, -160  size 168, 160;
+            hitbox        at  16, -176  size 104, 200;
+            shake 5       at   0,    0  size  16,  16;
+            spawn ano_233 at   0,  -64;
+            bubble 42     at   0,    0  size  16,  16;
+            cutscene      at   0,    0  size  18,   0;
         }
         frame {
             time = 9; sprite = sprite_30; origin = -32, -146;
             pierce;
-            hurtbox       at  -84, -160  size 168, 160;
-            spawn ano_233 at    0,  -64;
-            bubble 42     at    0,    0  size  16,  16;
-            cutscene      at    0,    0  size  18,   0;
+            hurtbox       at -84, -160  size 168, 160;
+            spawn ano_233 at   0,  -64;
+            bubble 42     at   0,    0  size  16,  16;
+            cutscene      at   0,    0  size  18,   0;
         }
         frame {
             time = 9; sprite = sprite_30; origin = -32, -146;
             pierce;
-            hurtbox       at  -84, -160  size 168, 160;
-            spawn ano_233 at    0,  -64;
-            bubble 42     at    0,    0  size  16,  16;
+            hurtbox       at -84, -160  size 168, 160;
+            spawn ano_233 at   0,  -64;
+            bubble 42     at   0,    0  size  16,  16;
         }
         frame {
             time = 9; sprite = sprite_30; origin = -32, -146;
             pierce;
-            hurtbox       at  -84, -160  size 168, 160;
-            spawn ano_233 at    0,  -64;
-            bubble 42     at    0,    0  size  16,  16;
+            hurtbox       at -84, -160  size 168, 160;
+            spawn ano_233 at   0,  -64;
+            bubble 42     at   0,    0  size  16,  16;
         }
         frame {
             time = 19; sprite = sprite_30; origin = -32, -146;
             pierce;
-            hurtbox       at  -84, -160  size 168, 160;
-            spawn ano_234 at    0,  -64;
-            bubble 42     at    0,    0  size  16,  16;
+            hurtbox       at -84, -160  size 168, 160;
+            spawn ano_234 at   0,  -64;
+            bubble 42     at   0,    0  size  16,  16;
         }
         frame {
             time = 5; sprite = sprite_28; origin = -30, -125;
@@ -8087,33 +8086,33 @@ animation {
     ano_346 {
         frame {
             time = 4; sprite = sprite_96; origin = -58, -150; flip_x;
-            hurtbox      at -31, -111  size    64, 112;
-            zoom at 45, -90  size 150, 9;
+            hurtbox      at -31, -111  size   64, 112;
+            zoom         at  45,  -90  size  150,   9;
             segment 3630;
-            cutscene at 0, 0  size 9, 0;
+            cutscene     at   0,    0  size    9,   0;
         }
         frame {
             time = 4; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
-            hurtbox      at -31, -111  size    64, 112;
-            zoom at 45, -90  size 150, 9;
+            hurtbox      at -31, -111  size   64, 112;
+            zoom         at  45,  -90  size  150,   9;
             segment 3630;
         }
         frame {
             time = 175; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
-            hurtbox      at -31, -111  size    64, 112;
-            zoom at 45, -90  size 150, 9;
+            hurtbox      at -31, -111  size   64, 112;
+            zoom         at  45,  -90  size  150,   9;
             segment 3630;
         }
         frame {
             time = 5; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
-            hurtbox      at -31, -111  size    64, 112;
-            zoom at 45, -90  size 150, 9;
+            hurtbox      at -31, -111  size   64, 112;
+            zoom         at  45,  -90  size  150,   9;
             segment 3630;
         }
         frame {
             time = 6; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
-            hurtbox      at -31, -111  size    64, 112;
-            zoom at 45, -90  size 150, 9;
+            hurtbox      at -31, -111  size   64, 112;
+            zoom         at  45,  -90  size  150,   9;
             segment 3630;
         }
     }
@@ -8121,29 +8120,29 @@ animation {
     ano_347 {
         frame {
             time = 4; sprite = sprite_96; origin = -58, -150; flip_x;
-            hurtbox at -31, -111  size  64, 112;
-            zoom at 45, -90  size 150, 9;
-            cutscene at 0, 0  size 9, 0;
+            hurtbox  at -31, -111  size  64, 112;
+            zoom     at  45,  -90  size 150,   9;
+            cutscene at   0,    0  size   9,   0;
         }
         frame {
             time = 4; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox at -31, -111  size  64, 112;
-            zoom at 45, -90  size 150, 9;
+            zoom    at  45,  -90  size 150,   9;
         }
         frame {
             time = 175; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox at -31, -111  size  64, 112;
-            zoom at 45, -90  size 150, 9;
+            zoom    at  45,  -90  size 150,   9;
         }
         frame {
             time = 5; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox at -31, -111  size  64, 112;
-            zoom at 45, -90  size 150, 9;
+            zoom    at  45,  -90  size 150,   9;
         }
         frame {
             time = 6; sprite = sprite_96; origin = -58, -150; flip_x; keep_speed;
             hurtbox at -31, -111  size  64, 112;
-            zoom at 45, -90  size 150, 9;
+            zoom    at  45,  -90  size 150,   9;
         }
     }
 

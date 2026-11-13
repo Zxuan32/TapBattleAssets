@@ -5,23 +5,23 @@ animation {
     ano_0 {
         frame {
             time = 20; sprite = sprite_85; origin = -72, -193;
-            hurtbox       at -31, -111  size 64, 112;
+            hurtbox at -31, -111  size 64, 112;
         }
         frame {
             time = 20; sprite = sprite_86; origin = -74, -193;
-            hurtbox       at -31, -111  size 64, 112;
+            hurtbox at -31, -111  size 64, 112;
         }
         frame {
             time = 20; sprite = sprite_87; origin = -97, -193;
-            hurtbox       at -31, -111  size 64, 112;
+            hurtbox at -31, -111  size 64, 112;
         }
         frame {
             time = 20; sprite = sprite_86; origin = -74, -193;
-            hurtbox       at -31, -111  size 64, 112;
+            hurtbox at -31, -111  size 64, 112;
         }
         frame {
             time = 20; sprite = sprite_85; origin = -72, -193; loop;
-            hurtbox       at -31, -111  size 64, 112;
+            hurtbox at -31, -111  size 64, 112;
         }
     }
 

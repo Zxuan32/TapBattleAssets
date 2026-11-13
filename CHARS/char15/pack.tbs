@@ -29,5 +29,10 @@ package "char15.pac" {
     sound   "wav12.wav";
     sound   "wav13.wav";
     sound   "wav14.wav";
+    sound   "wav15.wav";
+    sound   "wav16.wav";
+    sound   "wav17.wav";
+    sound   "wav18.wav";
+    sound   "wav19.wav";
     info    "info.tbs";
 }

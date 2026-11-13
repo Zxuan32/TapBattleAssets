@@ -18,9 +18,9 @@ anim 7042 354 helper 100
 anim 7060 355 effect 30
 anim 7100 356 helper 100
 anim 7503 357 helper 100
-sound 191 6 18
-sound 3500 0 19
-sound 3999 2 20
+sound 191 6 21
+sound 3500 0 22
+sound 3999 2 23
 pose 5100 23
 pose 5101 73
 pose 5080 24

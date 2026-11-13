@@ -13,22 +13,22 @@ anim 1230 384 body 100
 anim 1250 385 body 100
 anim 15999 386 body 100
 anim 17100 387 effect 100
-sound 0 24 15
-sound 1100 0 16
-sound 1100 2 17
-sound 1200 0 18
-sound 1200 1 19
-sound 1230 0 20
-sound 1400 12 21
-sound 15000 0 22
-sound 15000 1 23
-sound 2210 0 24
-sound 3100 1 25
-sound 40 0 26
-sound 40 1 27
-sound 5 5 28
-sound 5 8 29
-sound 6 1 30
+sound 0 24 21
+sound 1100 0 22
+sound 1100 2 23
+sound 1200 0 24
+sound 1200 1 25
+sound 1230 0 26
+sound 1400 12 2
+sound 15000 0 27
+sound 15000 1 28
+sound 2210 0 29
+sound 3100 1 30
+sound 40 0 31
+sound 40 1 32
+sound 5 5 33
+sound 5 8 34
+sound 6 1 35
 mute 5
 mute 6
 pose 1257 24
