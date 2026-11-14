@@ -1,5 +1,5 @@
 animation {
-    anos  = 341;
+    anos  = 348;
     padding = 3;
 
     ano_0 {
@@ -945,7 +945,7 @@ animation {
         }
     }
 
-    ano_44 {
+    ano_344 {
         link ano_144 { flag = 14; }
         frame {
             time = 1; sprite = sprite_22; origin = -32, -97; speed_x = -1048576;
@@ -1032,7 +1032,7 @@ animation {
         }
     }
 
-    ano_45 {
+    ano_46 {
         link ano_145 { flag = 14; }
         frame {
             time = 2; sprite = sprite_3; origin = 5, -88; speed_x = -1966080;
@@ -1129,7 +1129,7 @@ animation {
         }
     }
 
-    ano_46 {
+    ano_345 {
         link ano_146 { flag = 14; }
         frame {
             time = 2; sprite = sprite_3; origin = 5, -88; speed_x = -1966080;
@@ -1500,7 +1500,7 @@ animation {
         frame { time = 1; sprite = -1; origin = -175, -93; }
     }
 
-    ano_53 {
+    ano_346 {
         frame {
             time = 3; sprite = -1; origin = 158, -45;
             shake 5 at 0, 0  size 16, 16;
@@ -1571,7 +1571,7 @@ animation {
         }
     }
 
-    ano_55 {
+    ano_347 {
         link ano_155 { flag = 14; }
         frame {
             time = 6; sprite = sprite_5; origin = -18, -90; sound = 29;
@@ -2785,7 +2785,7 @@ animation {
         frame { time = 3; sprite = sprite_23; origin = -13, -96; loop; keep_speed; }
     }
 
-    ano_92 {
+    ano_45 {
         link ano_192 { flag = 14; }
         frame {
             time = 3; sprite = sprite_0; origin = -19, -93;
@@ -2832,7 +2832,7 @@ animation {
         }
     }
 
-    ano_93 {
+    ano_55 {
         link ano_192 { flag = 12; }
         frame {
             time = 3; sprite = sprite_0; origin = -19, -93;
@@ -3723,7 +3723,7 @@ animation {
         frame { time = 1; sprite = -1; }
     }
 
-    ano_188 {
+    ano_44 {
         priority = 1;
         link ano_149 { flag = 12; }
         frame {
@@ -6961,4 +6961,5 @@ animation {
         frame { time = 8; sprite = sprite_48; origin = -29, -69; }
         frame { time = 10; sprite = sprite_63; origin = -28, -46; loop; }
     }
+    ano_53 = ano_50;
 }

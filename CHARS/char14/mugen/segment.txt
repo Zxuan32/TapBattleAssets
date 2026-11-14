@@ -9,7 +9,7 @@ camera mugen
 damage 4100 48
 nohitadd 4124
 boost 4124 180
-planet 393 4124 4
+planet 64 4124 4
 anim 3 441 effect 100
 anim 11 442 body 100
 anim 20 443 helper 100
@@ -139,4 +139,4 @@ pose 1111192 24
 pose 5100 23
 vary 5 70 71
 vary 6 72 73
-skip 390 100
+skip 61 100

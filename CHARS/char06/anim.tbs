@@ -1,5 +1,5 @@
 animation {
-    anos  = 384;
+    anos  = 387;
     padding = 2;
 
     ano_0 {
@@ -1805,7 +1805,7 @@ animation {
         }
     }
 
-    ano_49 {
+    ano_63 {
         link ano_149 { flag = 14; }
         link ano_238 { flag = 4; }
         link ano_274 { flag = 4; }
@@ -2104,7 +2104,7 @@ animation {
         }
     }
 
-    ano_50 {
+    ano_61 {
         link ano_163 { flag = 14; }
         link ano_368 { flag = 12; offset = -80, -112; }
         frame {
@@ -2308,7 +2308,7 @@ animation {
         }
     }
 
-    ano_52 {
+    ano_384 {
         priority = 1;
         frame {
             time = 2; sprite = -1;
@@ -3035,7 +3035,7 @@ animation {
         }
     }
 
-    ano_61 {
+    ano_64 {
         link ano_161 { flag = 14; }
         link ano_374 { flag = 4; }
         link ano_375 { flag = 4; }
@@ -3081,7 +3081,7 @@ animation {
         }
     }
 
-    ano_62 {
+    ano_385 {
         link ano_162 { flag = 14; }
         frame {
             time = 1; sprite = -1; speed_x = -5242880;
@@ -3400,7 +3400,7 @@ animation {
         }
     }
 
-    ano_63 {
+    ano_49 {
         frame {
             time = 2; sprite = -1; origin = 0, 82;
             options { power = 5; damage = 116; }
@@ -3417,14 +3417,14 @@ animation {
         }
     }
 
-    ano_64 {
+    ano_50 {
         frame {
             time = 3; sprite = -1; origin = 158, -45;
             shake 5 at 0, 0  size 16, 16;
         }
     }
 
-    ano_65 {
+    ano_386 {
         frame {
             time = 6; sprite = -1;
             options { power = 12; damage = 197; }
@@ -4139,7 +4139,7 @@ animation {
         }
     }
 
-    ano_95 {
+    ano_52 {
         frame { time = 2; sprite = -1; origin = -29, -33; }
         frame {
             time = 2; sprite = -1; origin = -29, -33;
@@ -9261,4 +9261,6 @@ animation {
         frame { time = 1; sprite = sprite_53; origin = -43, -65; }
         frame { time = 1; sprite = sprite_54; origin = -42, -67; }
     }
+    ano_62 = ano_61;
+    ano_65 = ano_64;
 }

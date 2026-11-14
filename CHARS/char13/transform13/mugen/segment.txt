@@ -34,4 +34,4 @@ mute 6
 pose 1257 24
 pose 5110 24
 pose 5111 24
-follow 170 1100 1200
+follow 43 1100 1200

@@ -1,5 +1,5 @@
 animation {
-    anos  = 358;
+    anos  = 361;
 
     ano_0 {
         link ano_342 { flag = 12; }
@@ -918,7 +918,7 @@ animation {
         }
     }
 
-    ano_43 {
+    ano_358 {
         link ano_143 { flag = 12; }
         link ano_259 { flag = 4; offset = 0, -80; }
         frame {
@@ -1646,7 +1646,7 @@ animation {
         }
     }
 
-    ano_53 {
+    ano_359 {
         priority = 1;
         frame {
             time = 3; sprite = -1; origin = -93, -95;
@@ -2256,7 +2256,7 @@ animation {
         }
     }
 
-    ano_63 {
+    ano_360 {
         priority = 255;
         link ano_163 { flag = 14; }
         frame {
@@ -3626,7 +3626,7 @@ animation {
         frame { time = 1; sprite = sprite_50; origin = -21, -49; }
     }
 
-    ano_146 {
+    ano_53 {
         priority = 1;
         link ano_152 { flag = 12; }
         link ano_153 { flag = 12; }
@@ -5889,7 +5889,7 @@ animation {
         }
     }
 
-    ano_272 {
+    ano_63 {
         link ano_273 { flag = 14; }
         frame {
             time = 2; sprite = sprite_4; origin = -41, -112;
@@ -6256,7 +6256,7 @@ animation {
         }
     }
 
-    ano_275 {
+    ano_43 {
         link ano_194 { flag = 14; }
         frame {
             time = 6; sprite = sprite_28; origin = -30, -138;

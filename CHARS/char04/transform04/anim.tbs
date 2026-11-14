@@ -1,5 +1,5 @@
 animation {
-    anos  = 501;
+    anos  = 510;
 
     ano_0 {
         link ano_340 { flag = 12; }
@@ -885,7 +885,7 @@ animation {
         }
     }
 
-    ano_43 {
+    ano_501 {
         link ano_143 { flag = 14; }
         frame {
             time = 3; sprite = sprite_5; origin = -25, -84;
@@ -923,7 +923,7 @@ animation {
         }
     }
 
-    ano_44 {
+    ano_502 {
         link ano_144 { flag = 14; }
         frame {
             time = 6; sprite = sprite_22; origin = -15, -105;
@@ -1025,7 +1025,7 @@ animation {
         }
     }
 
-    ano_45 {
+    ano_503 {
         link ano_145 { flag = 14; }
         frame {
             time = 3; sprite = sprite_27; origin = -37, -99;
@@ -1132,7 +1132,7 @@ animation {
         }
     }
 
-    ano_46 {
+    ano_504 {
         link ano_148 { flag = 14; }
         frame {
             time = 2; sprite = sprite_4; origin = -33, -101; speed_x = 131072;
@@ -1491,7 +1491,7 @@ animation {
         }
     }
 
-    ano_52 {
+    ano_57 {
         priority = 255;
         link ano_152 { flag = 14; }
         link ano_250 { flag = 0; offset = -24, -64; }
@@ -1690,7 +1690,7 @@ animation {
         }
     }
 
-    ano_55 {
+    ano_505 {
         link ano_155 { flag = 14; }
         frame {
             time = 6; sprite = sprite_5; origin = -27, -93; sound = 29;
@@ -1756,7 +1756,7 @@ animation {
         }
     }
 
-    ano_57 {
+    ano_506 {
         priority = 255;
         link ano_157 { flag = 14; }
         link ano_250 { flag = 0; offset = -24, -64; }
@@ -2018,7 +2018,7 @@ animation {
         }
     }
 
-    ano_62 {
+    ano_507 {
         priority = 255;
         link ano_162 { flag = 14; }
         link ano_250 { flag = 4; offset = 8, -52; }
@@ -2314,7 +2314,7 @@ animation {
         }
     }
 
-    ano_64 {
+    ano_508 {
         priority = 255;
         link ano_164 { flag = 14; }
         frame {
@@ -2429,7 +2429,7 @@ animation {
         }
     }
 
-    ano_65 {
+    ano_509 {
         priority = 255;
         link ano_165 { flag = 14; }
         frame {
@@ -2964,7 +2964,7 @@ animation {
         }
     }
 
-    ano_93 {
+    ano_43 {
         link ano_193 { flag = 14; }
         frame {
             time = 3; sprite = sprite_5; origin = -25, -84;
@@ -3005,7 +3005,7 @@ animation {
         }
     }
 
-    ano_94 {
+    ano_44 {
         link ano_194 { flag = 14; }
         frame {
             time = 1; sprite = sprite_7; origin = -35, -97;
@@ -7694,7 +7694,7 @@ animation {
         }
     }
 
-    ano_345 {
+    ano_52 {
         frame { time = 2; sprite = -1; }
         frame {
             time = 1; sprite = -1; sound = 8;
@@ -7851,7 +7851,7 @@ animation {
         frame { time = 1; sprite = sprite_99; origin = -48, -57; }
     }
 
-    ano_420 {
+    ano_64 {
         link ano_421 { flag = 14; }
         frame {
             time = 30; sprite = sprite_95; origin = -41, -130;
@@ -8070,7 +8070,7 @@ animation {
         frame { time = 1; sprite = sprite_43; origin = -36, -41; }
     }
 
-    ano_341 {
+    ano_45 {
         link ano_342 { flag = 14; }
         frame {
             time = 6; sprite = sprite_114; origin = -30, -102; sound = 97;
@@ -8217,7 +8217,7 @@ animation {
         }
     }
 
-    ano_346 {
+    ano_46 {
         link ano_347 { flag = 14; }
         frame {
             time = 1; sprite = sprite_124; origin = -19, -119; speed_x = -2097152;
@@ -8373,7 +8373,7 @@ animation {
         frame { time = 3; sprite = sprite_117; origin = -25, -58; }
     }
 
-    ano_348 {
+    ano_55 {
         priority = 255;
         link ano_349 { flag = 4; offset = 0, 64; }
         link ano_350 { flag = 12; }
@@ -8659,4 +8659,6 @@ animation {
         frame { time = 5; sprite = sprite_9; origin = -26, -126; sound = 92; }
         frame { time = 150; sprite = sprite_9; origin = -26, -126; }
     }
+    ano_62 = ano_61;
+    ano_65 = ano_64;
 }

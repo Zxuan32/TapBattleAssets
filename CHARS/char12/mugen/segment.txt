@@ -26,7 +26,7 @@ rivalhide 3105
 rivalhide 3106
 tbalpha 60
 tbbeam 3150 262 11 5 -477 3105 31 10
-planet 379 3055 0
+planet 65 3055 0
 anim 0 454 body 100
 anim 41 455 body 100
 anim 42 456 body 100
@@ -115,5 +115,5 @@ pose 5110 24
 pose 3007 24
 pose 5120 25
 pose -1 24 3004
-skip 118 100
-skip 452 100
+skip 61 100
+skip 62 100
