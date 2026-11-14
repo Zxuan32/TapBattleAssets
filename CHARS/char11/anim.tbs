@@ -8551,7 +8551,7 @@ animation {
         frame { time = 1; sprite = sprite_56; origin = -39, -58; }
     }
 
-    ano_356 {
+    ano_96 {
         link ano_357 { flag = 14; }
         frame {
             time = 15; sprite = sprite_5; origin = -31, -107; flip_x;

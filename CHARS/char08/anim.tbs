@@ -1,5 +1,5 @@
 animation {
-    anos  = 411;
+    anos  = 413;
 
     ano_0 {
         link ano_402 { flag = 0; }
@@ -1968,7 +1968,7 @@ animation {
         }
     }
 
-    ano_58 {
+    ano_411 {
         link ano_158 { flag = 12; }
         frame {
             time = 1; sprite = -1;
@@ -2005,7 +2005,7 @@ animation {
         }
     }
 
-    ano_59 {
+    ano_412 {
         link ano_159 { flag = 14; }
         frame {
             time = 60; sprite = sprite_33; origin = -78, -113; sound = 7;
@@ -2165,7 +2165,7 @@ animation {
         }
     }
 
-    ano_63 {
+    ano_58 {
         link ano_395 { flag = 4; }
         link ano_163 { flag = 14; }
         frame {
@@ -2686,7 +2686,7 @@ animation {
         frame { time = 3; sprite = sprite_17; origin = -27, -110; loop; keep_speed; }
     }
 
-    ano_92 {
+    ano_59 {
         link ano_192 { flag = 14; }
         link ano_350 { flag = 12; }
         link ano_352 { flag = 4; }

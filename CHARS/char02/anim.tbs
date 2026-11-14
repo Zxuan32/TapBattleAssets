@@ -1,5 +1,5 @@
 animation {
-    anos  = 348;
+    anos  = 349;
     padding = 3;
 
     ano_0 {
@@ -1755,7 +1755,7 @@ animation {
         }
     }
 
-    ano_58 {
+    ano_348 {
         link ano_158 { flag = 12; }
         frame {
             time = 6; sprite = -1; sound = 7;
@@ -2882,7 +2882,7 @@ animation {
         }
     }
 
-    ano_94 {
+    ano_58 {
         priority = 1;
         link ano_149 { flag = 14; }
         frame {

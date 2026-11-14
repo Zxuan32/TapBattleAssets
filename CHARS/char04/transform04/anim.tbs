@@ -1,5 +1,5 @@
 animation {
-    anos  = 510;
+    anos  = 511;
 
     ano_0 {
         link ano_340 { flag = 12; }
@@ -1879,7 +1879,7 @@ animation {
         frame { time = 3; sprite = -1; }
     }
 
-    ano_59 {
+    ano_510 {
         priority = 253;
         frame {
             time = 2; sprite = -1; origin = -24, -62;
@@ -8518,7 +8518,7 @@ animation {
         frame { time = 1; sprite = -1; }
     }
 
-    ano_353 {
+    ano_59 {
         priority = 255;
         link ano_354 { flag = 4; offset = 0, 48; }
         link ano_355 { flag = 12; }
