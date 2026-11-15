@@ -1,5 +1,5 @@
 animation {
-    anos  = 514;
+    anos  = 515;
 
     ano_0 {
         frame {
@@ -992,7 +992,7 @@ animation {
         }
     }
 
-    ano_500 {
+    ano_514 {
         link ano_145 { flag = 14; }
         frame {
             time = 3; sprite = sprite_0; origin = -49, -114; sound = 100;
