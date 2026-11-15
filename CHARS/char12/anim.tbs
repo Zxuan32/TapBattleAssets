@@ -1,5 +1,5 @@
 animation {
-    anos  = 513;
+    anos  = 514;
 
     ano_0 {
         frame {
@@ -2519,7 +2519,7 @@ animation {
         }
     }
 
-    ano_95 {
+    ano_513 {
         link ano_195 { flag = 14; }
         frame {
             time = 30; sprite = sprite_6; origin = -56, -133;
@@ -7874,7 +7874,7 @@ animation {
         }
     }
 
-    ano_368 {
+    ano_95 {
         link ano_373 { flag = 14; }
         frame {
             time = 4; sprite = sprite_205; origin = -27, -83; sound = 16;

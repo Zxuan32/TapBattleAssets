@@ -1,5 +1,5 @@
 animation {
-    anos  = 388;
+    anos  = 389;
     padding = 2;
 
     ano_0 {
@@ -3880,7 +3880,7 @@ animation {
         frame { time = 3; sprite = sprite_25; origin = -27, -148; loop; keep_speed; }
     }
 
-    ano_92 {
+    ano_388 {
         link ano_192 { flag = 14; }
         frame {
             time = 6; sprite = sprite_5; origin = -30, -124;
@@ -5330,7 +5330,7 @@ animation {
         }
     }
 
-    ano_196 {
+    ano_92 {
         priority = 1;
         frame {
             time = 3; sprite = sprite_38; origin = -68, -33;

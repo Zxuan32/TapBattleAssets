@@ -1,5 +1,5 @@
 animation {
-    anos  = 364;
+    anos  = 365;
     padding = 1;
 
     ano_0 {
@@ -1396,7 +1396,7 @@ animation {
         }
     }
 
-    ano_354 {
+    ano_56 {
         priority = 255;
         link ano_156 { flag = 12; }
         link ano_349 { flag = 12; }
@@ -1720,7 +1720,7 @@ animation {
         frame { time = 3; sprite = -1; origin = -93, -95; }
     }
 
-    ano_54 {
+    ano_364 {
         link ano_154 { flag = 12; }
         frame {
             time = 6; sprite = sprite_31; origin = -44, -109;
@@ -1774,21 +1774,25 @@ animation {
             time = 6; sprite = sprite_126; origin = -71, -191;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
+            kinext ano_54;
         }
         frame {
             time = 9; sprite = sprite_126; origin = -71, -191;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
+            kinext ano_54;
         }
         frame {
             time = 15; sprite = sprite_126; origin = -71, -191;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
+            kinext ano_54;
         }
         frame {
             time = 6; sprite = sprite_126; origin = -71, -191;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
+            kinext ano_54;
         }
         frame {
             time = 3; sprite = sprite_127; origin = -68, -188; sound = 87;
@@ -1800,6 +1804,7 @@ animation {
             spawn ano_213 at -88, -112;
             bubble 42     at  48,  -48  size 16, 16;
             cutscene      at   0,    0  size 18,  0;
+            kinext ano_54;
         }
         frame {
             time = 27; sprite = sprite_127; origin = -68, -188;
@@ -1810,6 +1815,7 @@ animation {
             state 27      at   0,    0  size 16, 16;
             spawn ano_213 at -88, -112;
             bubble 42     at  48,  -48  size 16, 16;
+            kinext ano_54;
         }
         frame {
             time = 18; sprite = sprite_127; origin = -68, -188;
@@ -1819,34 +1825,39 @@ animation {
             state 27      at   0,    0  size 16, 16;
             spawn ano_213 at -88, -112;
             bubble 42     at  48,  -48  size 16, 16;
+            kinext ano_54;
         }
         frame {
             time = 6; sprite = sprite_127; origin = -68, -188;
             hurtbox       at -31,  -95  size 64, 96;
             state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -112;
+            kinext ano_54;
         }
         frame {
             time = 6; sprite = sprite_127; origin = -68, -188;
             hurtbox       at -31,  -95  size 64, 96;
             state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -112;
+            kinext ano_54;
         }
         frame {
             time = 4; sprite = sprite_127; origin = -68, -188; accel_y = 65536;
             hurtbox       at -31,  -95  size 64, 96;
             state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -104;
+            kinext ano_54;
         }
         frame {
             time = 46; sprite = sprite_115; origin = -61, -194; keep_speed; accel_y = 65536;
             hurtbox       at -31, -95  size 64, 96;
             state 37      at  -2,   6  size 16, 16;
             spawn ano_216 at -40, -80;
+            kinext ano_54;
         }
     }
 
-    ano_56 {
+    ano_54 {
         link ano_192 { flag = 4; offset = -64, -40; }
         frame {
             time = 1; sprite = -1; origin = -125, -261; speed_x = 7864320;
@@ -2156,7 +2167,7 @@ animation {
         frame { time = 1; sprite = -1; }
     }
 
-    ano_90 {
+    ano_60 {
         priority = 1;
         link ano_257 { flag = 12; }
         frame {
@@ -2294,21 +2305,25 @@ animation {
             time = 6; sprite = sprite_126; origin = -71, -191; sound = 28;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
+            kinext ano_95;
         }
         frame {
             time = 9; sprite = sprite_126; origin = -71, -191; sound = 28;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
+            kinext ano_95;
         }
         frame {
             time = 15; sprite = sprite_126; origin = -71, -191; sound = 28;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
+            kinext ano_95;
         }
         frame {
             time = 6; sprite = sprite_126; origin = -71, -191; sound = 28;
             hurtbox       at -31, -111  size 64, 112;
             spawn ano_217 at -80,  -64;
+            kinext ano_95;
         }
         frame {
             time = 3; sprite = sprite_127; origin = -68, -188;
@@ -2320,6 +2335,7 @@ animation {
             spawn ano_213 at -88, -112;
             bubble 42     at  48,  -48  size 16, 16;
             cutscene      at   0,    0  size 18,  0;
+            kinext ano_95;
         }
         frame {
             time = 27; sprite = sprite_127; origin = -68, -188;
@@ -2330,6 +2346,7 @@ animation {
             state 27      at   0,    0  size 16, 16;
             spawn ano_213 at -88, -112;
             bubble 42     at  48,  -48  size 16, 16;
+            kinext ano_95;
         }
         frame {
             time = 18; sprite = sprite_127; origin = -68, -188;
@@ -2339,28 +2356,32 @@ animation {
             state 27      at   0,    0  size 16, 16;
             spawn ano_213 at -88, -112;
             bubble 42     at  48,  -48  size 16, 16;
+            kinext ano_95;
         }
         frame {
             time = 6; sprite = sprite_127; origin = -68, -188;
             hurtbox       at -31,  -95  size 64, 96;
             state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -112;
+            kinext ano_95;
         }
         frame {
             time = 6; sprite = sprite_127; origin = -68, -188;
             hurtbox       at -31,  -95  size 64, 96;
             state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -112;
+            kinext ano_95;
         }
         frame {
             time = 8; sprite = sprite_115; origin = -61, -194;
             hurtbox       at -31,  -95  size 64, 96;
             state 37      at  -2,    6  size 16, 16;
             spawn ano_213 at -72, -104;
+            kinext ano_95;
         }
     }
 
-    ano_60 {
+    ano_95 {
         link ano_192 { flag = 4; offset = -64, -40; }
         frame {
             time = 1; sprite = -1; origin = -125, -261; speed_x = 7864320;

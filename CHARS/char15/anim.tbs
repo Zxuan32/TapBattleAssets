@@ -501,7 +501,7 @@ animation {
         frame { time = 6; sprite = sprite_1; origin = -27, -117; }
     }
 
-    ano_18 {
+    ano_52 {
         priority = 253;
         frame {
             time = 2; sprite = -1; origin = -24, -62;
@@ -1907,7 +1907,7 @@ animation {
         }
     }
 
-    ano_52 {
+    ano_380 {
         priority = 1;
         link ano_224 { flag = 4; }
         frame {
