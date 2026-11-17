@@ -2964,7 +2964,7 @@ animation {
         }
     }
 
-    ano_363 {
+    ano_90 {
         link ano_190 { flag = 8; }
         link ano_337 { flag = 0; }
         frame { time = 3; sprite = sprite_112; origin = -79, -174; speed_x = 13106; }

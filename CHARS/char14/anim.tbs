@@ -3542,7 +3542,7 @@ animation {
         frame { time = 3; sprite = sprite_96; origin = -52, -155; loop; keep_speed; }
     }
 
-    ano_530 {
+    ano_91 {
         link ano_191 { flag = 14; }
         frame { time = 3; sprite = sprite_89; origin = -55, -169; speed_x = -13105; }
         frame { time = 3; sprite = sprite_89; origin = -55, -169; keep_speed; }
@@ -3801,7 +3801,7 @@ animation {
         frame { time = 1; sprite = -1; origin = -29, -33; }
     }
 
-    ano_91 {
+    ano_277 {
         priority = 1;
         frame {
             time = 3; sprite = sprite_40; origin = -68, -33;

@@ -1096,7 +1096,7 @@ animation {
         frame { time = 2; sprite = -1; origin = -109, -253; }
     }
 
-    ano_90 {
+    ano_276 {
         priority = 1;
         frame {
             time = 3; sprite = sprite_27; origin = -68, -33; speed_x = 1048576;
@@ -2366,7 +2366,7 @@ animation {
         }
     }
 
-    ano_511 {
+    ano_90 {
         link ano_190 { flag = 8; }
         link ano_337 { flag = 0; }
         frame { time = 3; sprite = sprite_14; origin = -59, -115; speed_x = 13106; }
