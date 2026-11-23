@@ -11,6 +11,7 @@ helpersize 1
 camerazoom 3000 75
 releasedown 5120
 damagesound 3100 5 61 500
+kosound 3100 5 62
 silent 3150
 silent 3155
 nospark 3000
