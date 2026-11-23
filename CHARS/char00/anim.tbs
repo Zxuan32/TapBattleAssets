@@ -1,5 +1,5 @@
 animation {
-    anos  = 343;
+    anos  = 346;
 
     ano_0 {
         link ano_342 { flag = 12; }
@@ -926,7 +926,7 @@ animation {
         }
     }
 
-    ano_43 {
+    ano_344 {
         link ano_143 { flag = 12; }
         link ano_259 { flag = 4; offset = 0, -80; }
         frame {
@@ -1449,7 +1449,7 @@ animation {
         }
     }
 
-    ano_53 {
+    ano_345 {
         priority = 1;
         frame {
             time = 3; sprite = -1; origin = -93, -95;
@@ -2855,7 +2855,7 @@ animation {
         frame { time = 1; sprite = -1; }
     }
 
-    ano_94 {
+    ano_43 {
         link ano_194 { flag = 14; }
         link ano_258 { flag = 4; offset = 0, -80; }
         frame {
@@ -3400,7 +3400,7 @@ animation {
         frame { time = 1; sprite = sprite_50; origin = -21, -49; }
     }
 
-    ano_146 {
+    ano_53 {
         priority = 1;
         link ano_152 { flag = 12; }
         link ano_153 { flag = 12; }

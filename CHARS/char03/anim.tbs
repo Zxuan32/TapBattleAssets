@@ -1,5 +1,5 @@
 animation {
-    anos  = 349;
+    anos  = 351;
     padding = 2;
 
     ano_0 {
@@ -1471,7 +1471,7 @@ animation {
         }
     }
 
-    ano_53 {
+    ano_63 {
         link ano_153 { flag = 14; }
         link ano_92 { flag = 4; offset = 96, -96; }
         link ano_93 { flag = 4; offset = 96, -96; }
@@ -2139,7 +2139,7 @@ animation {
         }
     }
 
-    ano_61 {
+    ano_347 {
         link ano_161 { flag = 14; }
         link ano_92 { flag = 4; offset = 96, -96; }
         link ano_93 { flag = 4; offset = 96, -88; }
@@ -2312,7 +2312,7 @@ animation {
         }
     }
 
-    ano_62 {
+    ano_348 {
         link ano_162 { flag = 14; }
         link ano_92 { flag = 4; offset = 96, -88; }
         link ano_93 { flag = 4; offset = 96, -88; }
@@ -2481,7 +2481,7 @@ animation {
         }
     }
 
-    ano_63 {
+    ano_349 {
         link ano_163 { flag = 14; }
         frame {
             time = 3; sprite = sprite_26; origin = -47, -130; keep_speed; accel_x = -65536; accel_y = 26214;
@@ -2531,11 +2531,11 @@ animation {
         }
     }
 
-    ano_64 {
+    ano_350 {
         frame { sprite = -1; }
     }
 
-    ano_65 {
+    ano_61 {
         link ano_165 { flag = 14; }
         frame {
             time = 6; sprite = sprite_5; origin = -37, -90; sound = 82;
@@ -2568,7 +2568,7 @@ animation {
         }
     }
 
-    ano_66 {
+    ano_62 {
         link ano_166 { flag = 14; }
         frame {
             time = 6; sprite = sprite_5; origin = -37, -90; sound = 82;
@@ -3017,7 +3017,7 @@ animation {
         }
     }
 
-    ano_96 {
+    ano_64 {
         link ano_196 { flag = 14; }
         frame {
             time = 30; sprite = sprite_32; origin = -36, -108;
@@ -4396,7 +4396,7 @@ animation {
         }
     }
 
-    ano_221 {
+    ano_53 {
         frame {
             time = 4; sprite = -1; origin = -48, -48;
             options { power = 4; damage = 102; }
@@ -7528,4 +7528,5 @@ animation {
         frame { time = 8; sprite = sprite_47; origin = -46, -69; }
         frame { time = 10; sprite = sprite_43; origin = -46, -73; loop; }
     }
+    ano_65 = ano_64;
 }

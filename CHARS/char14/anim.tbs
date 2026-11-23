@@ -1,5 +1,5 @@
 animation {
-    anos  = 518;
+    anos  = 534;
     padding = 2;
 
     ano_0 {
@@ -977,7 +977,7 @@ animation {
         }
     }
 
-    ano_43 {
+    ano_58 {
         frame {
             time = 1; sprite = sprite_112; origin = -50, -183;
             hurtbox at -43, -170  size 82, 170;
@@ -1100,7 +1100,7 @@ animation {
         }
     }
 
-    ano_45 {
+    ano_518 {
         frame {
             time = 3; sprite = sprite_56; origin = -57, -124;
             hurtbox at -37, -109  size 85, 108;
@@ -1405,7 +1405,7 @@ animation {
         }
     }
 
-    ano_48 {
+    ano_519 {
         frame {
             time = 3; sprite = -1; origin = -120, -256; sound = 6;
             cutscene at 0, 0  size  9,  0;
@@ -1636,7 +1636,7 @@ animation {
         }
     }
 
-    ano_49 {
+    ano_520 {
         link ano_238 { flag = 4; }
         link ano_274 { flag = 4; }
         link ano_275 { flag = 4; }
@@ -1906,7 +1906,7 @@ animation {
         }
     }
 
-    ano_50 {
+    ano_521 {
         frame {
             time = 5; sprite = sprite_112; origin = -50, -183;
             cutscene at 0, 0  size 9, 0;
@@ -1992,7 +1992,7 @@ animation {
         }
     }
 
-    ano_51 {
+    ano_532 {
         link ano_250 { flag = 0; offset = -24, -64; }
         link ano_150 { flag = 0; offset = -8, -56; }
         frame {
@@ -2112,7 +2112,7 @@ animation {
         }
     }
 
-    ano_52 {
+    ano_522 {
         priority = 1;
         frame {
             time = 2; sprite = -1;
@@ -2213,7 +2213,7 @@ animation {
         }
     }
 
-    ano_53 {
+    ano_523 {
         priority = 1;
         frame {
             time = 1; sprite = -1; speed_x = -5242880;
@@ -2464,7 +2464,7 @@ animation {
         }
     }
 
-    ano_57 {
+    ano_524 {
         priority = 255;
         link ano_250 { flag = 0; offset = -24, -64; }
         link ano_150 { flag = 0; offset = -8, -56; }
@@ -2589,7 +2589,7 @@ animation {
         }
     }
 
-    ano_58 {
+    ano_529 {
         frame {
             time = 3; sprite = -1; sound = 7;
             options { effect = 4; power = 3; damage = 51; }
@@ -2796,7 +2796,7 @@ animation {
         }
     }
 
-    ano_61 {
+    ano_525 {
         link ano_374 { flag = 4; }
         link ano_375 { flag = 4; }
         link ano_376 { flag = 4; }
@@ -2835,7 +2835,7 @@ animation {
         }
     }
 
-    ano_62 {
+    ano_526 {
         link ano_162 { flag = 14; }
         frame {
             time = 1; sprite = -1; speed_x = -5242880;
@@ -3142,14 +3142,14 @@ animation {
         }
     }
 
-    ano_64 {
+    ano_527 {
         frame {
             time = 3; sprite = -1; origin = 158, -45;
             shake 5 at 0, 0  size 16, 16;
         }
     }
 
-    ano_65 {
+    ano_528 {
         frame {
             time = 6; sprite = -1;
             options { power = 12; damage = 197; }
@@ -3558,7 +3558,7 @@ animation {
         frame { time = 3; sprite = sprite_97; origin = -48, -155; loop; keep_speed; }
     }
 
-    ano_92 {
+    ano_533 {
         frame {
             time = 6; sprite = sprite_86; origin = -66, -185;
             hurtbox  at -36, -168  size 121, 169;
@@ -3674,7 +3674,7 @@ animation {
         }
     }
 
-    ano_94 {
+    ano_531 {
         frame {
             time = 5; sprite = sprite_115; origin = -80, -138;
             hurtbox  at -68, -119  size 125, 120;
@@ -3801,7 +3801,7 @@ animation {
         frame { time = 1; sprite = -1; origin = -29, -33; }
     }
 
-    ano_96 {
+    ano_277 {
         priority = 1;
         frame {
             time = 3; sprite = sprite_40; origin = -68, -33;
@@ -4966,7 +4966,7 @@ animation {
         }
     }
 
-    ano_196 {
+    ano_92 {
         priority = 1;
         frame {
             time = 3; sprite = sprite_44; origin = -68, -33;
@@ -8821,7 +8821,7 @@ animation {
         frame { time = 1; sprite = -1; origin = -42, -67; }
     }
 
-    ano_384 {
+    ano_51 {
         link ano_395 { flag = 4; offset = 70, -85; }
         link ano_396 { flag = 0; offset = 70, -85; }
         frame {
@@ -8873,7 +8873,7 @@ animation {
         }
     }
 
-    ano_385 {
+    ano_49 {
         priority = 1;
         link ano_399 { flag = 4; offset = -24, 0; }
         frame {
@@ -8944,7 +8944,7 @@ animation {
         }
     }
 
-    ano_386 {
+    ano_50 {
         frame {
             time = 2; sprite = -1; origin = 0, 82;
             options { effect = 14; power = 5; damage = 134; }
@@ -9016,7 +9016,7 @@ animation {
         }
     }
 
-    ano_388 {
+    ano_57 {
         link ano_395 { flag = 4; offset = 70, -85; }
         link ano_396 { flag = 0; offset = 70, -85; }
         frame {
@@ -9090,7 +9090,7 @@ animation {
         }
     }
 
-    ano_390 {
+    ano_61 {
         frame {
             time = 4; sprite = sprite_162; origin = -50, -183; sound = 82;
             hurtbox      at -42, -154  size   84, 158;
@@ -9114,7 +9114,7 @@ animation {
         }
     }
 
-    ano_391 {
+    ano_52 {
         frame { time = 2; sprite = -1; }
         frame {
             time = 1; sprite = -1; sound = 8;
@@ -9161,7 +9161,7 @@ animation {
         }
     }
 
-    ano_393 {
+    ano_64 {
         frame {
             time = 30; sprite = sprite_52; origin = -51, -192;
             hurtbox  at -43, -170  size 82, 170;
@@ -9623,7 +9623,7 @@ animation {
         }
     }
 
-    ano_408 {
+    ano_45 {
         frame {
             time = 6; sprite = sprite_56; origin = -57, -124;
             hurtbox at -36, -115  size 96, 116;
@@ -9697,7 +9697,7 @@ animation {
         frame { time = 1; sprite = -1; origin = -46, -73; }
     }
 
-    ano_410 {
+    ano_43 {
         link ano_414 { flag = 14; }
         frame {
             time = 6; sprite = sprite_60; origin = -54, -209;
@@ -9896,7 +9896,7 @@ animation {
         }
     }
 
-    ano_413 {
+    ano_48 {
         frame {
             time = 15; sprite = sprite_62; origin = -60, -180;
             options { effect = 1; }
@@ -10078,7 +10078,7 @@ animation {
         frame { time = 1; sprite = -1; origin = -53, -54; }
     }
 
-    ano_421 {
+    ano_62 {
         priority = 255;
         link ano_403 { flag = 0; offset = 0, -70; }
         link ano_428 { flag = 0; offset = 0, -192; }
@@ -10151,7 +10151,7 @@ animation {
         }
     }
 
-    ano_422 {
+    ano_94 {
         priority = 1;
         link ano_429 { flag = 4; }
         frame {
@@ -10222,7 +10222,7 @@ animation {
         }
     }
 
-    ano_423 {
+    ano_53 {
         priority = 1;
         link ano_430 { flag = 0; offset = 0, 48; }
         frame {
@@ -10282,7 +10282,7 @@ animation {
         frame { time = 3; sprite = -1; origin = -93, -95; }
     }
 
-    ano_425 {
+    ano_65 {
         frame {
             time = 30; sprite = sprite_135; origin = -64, -182; sound = 7;
             hurtbox  at -24, -111  size 64, 112;
