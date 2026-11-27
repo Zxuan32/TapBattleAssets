@@ -3,7 +3,7 @@ tables {
         columns = 1;
         rows    = 2;
         real    = 70;
-        text_0 = "#c4Cegador#c0";
+        text_0 = "#c4Taiyoken#c0";
         text_1 = "Tipo: bueno _Rango +#a1 _Costo #a2 _Atq #a3 / Def #a4";
     }
 }

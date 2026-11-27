@@ -89,15 +89,15 @@ tables {
         text_27  = "¿Los Juegos de Cell?_Si puedo, prefiero no participar...";
         text_28  = "¡Aquí voy, Trunks!";
         text_29  = "Oigan, es una broma, ¿verdad?_¡¿Yo contra Majin Boo?!";
-        text_30  = "¿...Goku?_¡Tienes cara de villano!";
-        text_31  = "¿Gotenks?_¡Qué poder tan tremendo!";
-        text_32  = "Goku, ¿qué haces aquí?_...Espera, ¿me equivoqué de persona?";
-        text_33  = "¿Goku y Vegeta fusionados?_Ya todo es posible...";
-        text_34  = "Goku... ¿qué te pasó?_No siento nada de tu ki...";
-        text_35  = "Ay, ay, ay..._Está en otro nivel...";
-        text_36  = "";
-        text_37  = "";
-        text_38  = "";
+        text_30  = "¿Gotenks?_¡Qué poder tan tremendo!";
+        text_31  = "Goku, ¿qué haces aquí?_...Espera, ¿me equivoqué de persona?";
+        text_32  = "¿Goku y Vegeta fusionados?_Ya todo es posible...";
+        text_33  = "¿Una androide? Ojalá sea_tan amable como Número 18...";
+        text_34  = "¿Otro Saiyajin? Ya ni me sorprendo..._¡Pero no me voy a rendir!";
+        text_35  = "¡Ese ki es una locura!_¡¿Por qué siempre me tocan estos?!";
+        text_36  = "¡¿Q-qué es esa cosa?!_¡Goku, ayúdame!";
+        text_37  = "Otro de la familia de Freezer..._¡Esta vez no me la van a hacer!";
+        text_38  = "¿Goku? ¿Te pintaste el cabello?_...No, tú no eres Goku";
         text_39  = "";
         text_40  = "";
         text_41  = "";
@@ -170,14 +170,14 @@ tables {
         text_108 = "Uf, logré ganar..._Se nota que eres hijo de Vegeta...";
         text_109 = "Eso fue todo, ¿verdad?_Ya no te levantes, por favor...";
         text_110 = "¿Hasta dónde pueden llegar los Saiyajin...?";
-        text_111 = "¿Hasta dónde pueden llegar los Saiyajin...?";
-        text_112 = "Si Goku no se hubiera golpeado la cabeza,_tal vez sería así";
-        text_113 = "Gané, pero..._¡fusionar Saiyajin es trampa!";
-        text_114 = "¿Súper Saiyajin Dios?_Ja, ja... ya solo me queda reír...";
-        text_115 = "¿Le gané a un Dios de la Destrucción?_¡Esto es un sueño! ¡Tiene que serlo!";
-        text_116 = "";
-        text_117 = "";
-        text_118 = "";
+        text_111 = "Si Goku no se hubiera golpeado la cabeza,_tal vez sería así";
+        text_112 = "Gané, pero..._¡fusionar Saiyajin es trampa!";
+        text_113 = "¡Gané! Y lo mejor de todo:_no me convertiste en dulce";
+        text_114 = "¡Ja! Un terrícola también_puede ganarle a un Saiyajin";
+        text_115 = "¡¿De verdad gané?!_Que alguien me pellizque...";
+        text_116 = "Uf... prefiero mil veces_el Torneo de las Artes Marciales";
+        text_117 = "¡Tómala! ¡Ese Kienzan fue_por lo que me hizo tu hermano!";
+        text_118 = "Te pareces a Goku, pero_no tienes su corazón";
     }
 
     table_3 {
