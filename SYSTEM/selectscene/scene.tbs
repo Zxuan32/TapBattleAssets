@@ -46,10 +46,12 @@ scene "Dos lados" {
     use side for p1;
     use side for p2 { mirror; }
 
-    anim mode       { anim = "chardemo99:{246 + mode}"; x = 240; y = 196; layer = 20; }
-    anim page_left  { anim = "common:27"; x = 62; y = 104; visible = "pages > 1"; layer = 20;
+    // la flecha de volver de la escena (sin ella la pone el juego en 0, 0): mas pegada a la esquina
+    anim back       { anim = "common:10"; x = "0 - edge"; y = -6; layer = 20;
+                      action = back; hit = -10, 0, 110, 48; }
+    anim page_left  { anim = "common:27"; x = 34; y = 150; visible = "pages > 1"; layer = 20;
                       action = page_prev; hit = -23, -55, 46, 110; }
-    anim page_right { anim = "common:29"; x = 418; y = 104; visible = "pages > 1"; layer = 20;
+    anim page_right { anim = "common:29"; x = 446; y = 150; visible = "pages > 1"; layer = 20;
                       action = page_next; hit = -23, -55, 46, 110; }
 
     template card {
@@ -64,8 +66,8 @@ scene "Dos lados" {
 
     grid roster {
         pattern = rows; cols = 9; rows = 2;
-        pitch = 33, 46; row_shift = -6; arc = 23, "1.6";
-        zoom = 70; random_cell = 4; overflow = pages; card = card;
-        x = 240; y = 102;
+        pitch = 38, 53; row_shift = -6; arc = 26, "1.6";
+        zoom = 81; random_cell = 4; overflow = pages; card = card;
+        x = 243; y = 148;
     }
 }
