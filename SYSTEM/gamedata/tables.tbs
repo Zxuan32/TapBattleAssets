@@ -321,7 +321,7 @@ tables {
         text_86  = "Ataque ";
         text_87  = "Quieto ";
         text_88  = "Vuelo";
-        text_89  = "ｼﾞｬﾝﾌﾟ";
+        text_89  = "Salto";
         text_90  = "Volver a la pantalla anterior";
         text_91  = "Cómo jugar";
         text_92  = "Volver al título";
@@ -1693,7 +1693,7 @@ tables {
         row_59 = 109,   1,   0,   0,   0,   4,   5,   0,   0,   0,   0,   0,   0,   0, 100;
         row_60 = 110,   1,   0,   0,   0,   2,   3,   0,   0,   0,   0,   0,   0,   0, 100;
         row_61 = 111,   1,   0,   0,   0,   6,  11,   0,   0,   0,   0,   0,   0,   0, 100;
-        row_62 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 100;
+        row_62 =   112,   1,   0,   0,   0,  46,  47,   0,   0,   0,   0,   0,   0,   0, 100;
         row_63 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 100;
         row_64 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 100;
         row_65 =   0,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 100;
@@ -1721,8 +1721,8 @@ tables {
     table_51 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 39;
+        row_1  = 20;
         row_2  = 0;
         row_3  = 4;
         row_4  = 0;
@@ -1748,8 +1748,8 @@ tables {
     table_52 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 40;
+        row_1  = 30;
         row_2  = 0;
         row_3  = 4;
         row_4  = 0;
@@ -1775,8 +1775,8 @@ tables {
     table_53 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 41;
+        row_1  = 8;
         row_2  = 0;
         row_3  = 0;
         row_4  = 0;
@@ -1802,8 +1802,8 @@ tables {
     table_54 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 39;
+        row_1  = 14;
         row_2  = 0;
         row_3  = 2;
         row_4  = 0;
@@ -1829,8 +1829,8 @@ tables {
     table_55 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 40;
+        row_1  = 20;
         row_2  = 0;
         row_3  = 2;
         row_4  = 0;
@@ -1856,8 +1856,8 @@ tables {
     table_56 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 41;
+        row_1  = 5;
         row_2  = 0;
         row_3  = 2;
         row_4  = 0;
@@ -1883,8 +1883,8 @@ tables {
     table_57 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 42;
+        row_1  = 20;
         row_2  = 0;
         row_3  = 3;
         row_4  = 0;
@@ -1910,8 +1910,8 @@ tables {
     table_58 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 16;
+        row_1  = 50;
         row_2  = 0;
         row_3  = 2;
         row_4  = 0;
@@ -1937,8 +1937,8 @@ tables {
     table_59 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 10;
+        row_1  = 3;
         row_2  = 0;
         row_3  = 2;
         row_4  = 0;
@@ -1964,8 +1964,8 @@ tables {
     table_60 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 39;
+        row_1  = 8;
         row_2  = 0;
         row_3  = 1;
         row_4  = 0;
@@ -1991,8 +1991,8 @@ tables {
     table_61 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 40;
+        row_1  = 12;
         row_2  = 0;
         row_3  = 1;
         row_4  = 0;
@@ -2018,8 +2018,8 @@ tables {
     table_62 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 41;
+        row_1  = 3;
         row_2  = 0;
         row_3  = 0;
         row_4  = 0;
@@ -2045,8 +2045,8 @@ tables {
     table_63 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  28;
+        row_1  =  100;
         row_2  =  0;
         row_3  =  7;
         row_4  =  0;
@@ -2072,8 +2072,8 @@ tables {
     table_64 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 26;
+        row_1  = 2;
         row_2  = 0;
         row_3  = 7;
         row_4  = 0;
@@ -2099,8 +2099,8 @@ tables {
     table_65 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  29;
+        row_1  =  25;
         row_2  =  0;
         row_3  =  6;
         row_4  =  0;
@@ -2126,8 +2126,8 @@ tables {
     table_66 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 22;
+        row_1  = 150;
         row_2  = 0;
         row_3  = 5;
         row_4  = 0;
@@ -2153,8 +2153,8 @@ tables {
     table_67 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 30;
+        row_1  = 20;
         row_2  = 0;
         row_3  = 5;
         row_4  = 0;
@@ -2180,8 +2180,8 @@ tables {
     table_68 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  5;
+        row_1  =  30;
         row_2  =  0;
         row_3  =  7;
         row_4  =  0;
@@ -2207,8 +2207,8 @@ tables {
     table_69 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  14;
+        row_1  =  50;
         row_2  =  0;
         row_3  =  2;
         row_4  =  0;
@@ -2234,8 +2234,8 @@ tables {
     table_70 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  31;
+        row_1  =  25;
         row_2  =  0;
         row_3  =  4;
         row_4  =  0;
@@ -2261,8 +2261,8 @@ tables {
     table_71 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  12;
+        row_1  =  6;
         row_2  =  0;
         row_3  =  5;
         row_4  =  0;
@@ -2288,8 +2288,8 @@ tables {
     table_72 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 19;
+        row_1  = 30;
         row_2  = 0;
         row_3  = 4;
         row_4  = 0;
@@ -2315,8 +2315,8 @@ tables {
     table_73 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 29;
+        row_1  = 15;
         row_2  = 0;
         row_3  = 3;
         row_4  = 0;
@@ -2342,8 +2342,8 @@ tables {
     table_74 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  3;
+        row_1  =  1;
         row_2  =  0;
         row_3  =  0;
         row_4  =  0;
@@ -2369,8 +2369,8 @@ tables {
     table_75 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  20;
+        row_1  =  100;
         row_2  =  0;
         row_3  =  6;
         row_4  =  0;
@@ -2396,8 +2396,8 @@ tables {
     table_76 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  18;
+        row_1  =  25;
         row_2  =  0;
         row_3  =  7;
         row_4  =  0;
@@ -2423,8 +2423,8 @@ tables {
     table_77 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  32;
+        row_1  =  30;
         row_2  =  0;
         row_3  =  5;
         row_4  =  0;
@@ -2450,8 +2450,8 @@ tables {
     table_78 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  1;
+        row_1  =  5;
         row_2  =  0;
         row_3  =  3;
         row_4  =  0;
@@ -2477,8 +2477,8 @@ tables {
     table_79 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  4;
+        row_1  =  30;
         row_2  =  0;
         row_3  =  4;
         row_4  =  0;
@@ -2504,8 +2504,8 @@ tables {
     table_80 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  33;
+        row_1  =  25;
         row_2  =  0;
         row_3  =  4;
         row_4  =  0;
@@ -2531,8 +2531,8 @@ tables {
     table_81 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 25;
+        row_1  = 20;
         row_2  = 0;
         row_3  = 4;
         row_4  = 0;
@@ -2558,8 +2558,8 @@ tables {
     table_82 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  9;
+        row_1  =  40;
         row_2  =  0;
         row_3  =  2;
         row_4  =  0;
@@ -2585,8 +2585,8 @@ tables {
     table_83 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  15;
+        row_1  =  40;
         row_2  =  0;
         row_3  =  3;
         row_4  =  0;
@@ -2612,8 +2612,8 @@ tables {
     table_84 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 7;
+        row_1  = 60;
         row_2  = 0;
         row_3  = 3;
         row_4  = 0;
@@ -2639,8 +2639,8 @@ tables {
     table_85 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  17;
+        row_1  =  20;
         row_2  =  0;
         row_3  =  6;
         row_4  =  0;
@@ -2666,8 +2666,8 @@ tables {
     table_86 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  33;
+        row_1  =  15;
         row_2  =  0;
         row_3  =  5;
         row_4  =  0;
@@ -2693,8 +2693,8 @@ tables {
     table_87 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 24;
+        row_1  = 25;
         row_2  = 0;
         row_3  = 5;
         row_4  = 0;
@@ -2720,8 +2720,8 @@ tables {
     table_88 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  23;
+        row_1  =  10;
         row_2  =  0;
         row_3  =  2;
         row_4  =  0;
@@ -2747,8 +2747,8 @@ tables {
     table_89 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  2;
+        row_1  =  30;
         row_2  =  0;
         row_3  =  3;
         row_4  =  0;
@@ -2774,8 +2774,8 @@ tables {
     table_90 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  6;
+        row_1  =  30;
         row_2  =  0;
         row_3  =  2;
         row_4  =  0;
@@ -2801,8 +2801,8 @@ tables {
     table_91 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  11;
+        row_1  =  10;
         row_2  =  0;
         row_3  =  3;
         row_4  =  0;
@@ -2828,8 +2828,8 @@ tables {
     table_92 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  28;
+        row_1  =  50;
         row_2  =  0;
         row_3  =  4;
         row_4  =  0;
@@ -2855,8 +2855,8 @@ tables {
     table_93 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  21;
+        row_1  =  100;
         row_2  =  0;
         row_3  =  2;
         row_4  =  0;
@@ -2882,8 +2882,8 @@ tables {
     table_94 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 32;
+        row_1  = 20;
         row_2  = 0;
         row_3  = 2;
         row_4  = 0;
@@ -2909,8 +2909,8 @@ tables {
     table_95 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  13;
+        row_1  =  25;
         row_2  =  0;
         row_3  =  5;
         row_4  =  0;
@@ -2936,8 +2936,8 @@ tables {
     table_96 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 8;
+        row_1  = 6;
         row_2  = 0;
         row_3  = 1;
         row_4  = 0;
@@ -2963,8 +2963,8 @@ tables {
     table_97 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 34;
+        row_1  = 25;
         row_2  = 0;
         row_3  = 2;
         row_4  = 0;
@@ -2990,8 +2990,8 @@ tables {
     table_98 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  6;
+        row_1  =  25;
         row_2  =  0;
         row_3  =  4;
         row_4  =  0;
@@ -3017,8 +3017,8 @@ tables {
     table_99 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 35;
+        row_1  = 10;
         row_2  = 0;
         row_3  = 1;
         row_4  = 0;
@@ -3044,8 +3044,8 @@ tables {
     table_100 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  10;
+        row_1  =  3;
         row_2  =  0;
         row_3  =  2;
         row_4  =  0;
@@ -3071,8 +3071,8 @@ tables {
     table_101 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  27;
+        row_1  =  50;
         row_2  =  0;
         row_3  =  2;
         row_4  =  0;
@@ -3098,8 +3098,8 @@ tables {
     table_102 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 15;
+        row_1  = 30;
         row_2  = 0;
         row_3  = 2;
         row_4  = 0;
@@ -3125,8 +3125,8 @@ tables {
     table_103 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  5;
+        row_1  =  25;
         row_2  =  0;
         row_3  =  3;
         row_4  =  0;
@@ -3152,8 +3152,8 @@ tables {
     table_104 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  36;
+        row_1  =  1;
         row_2  =  0;
         row_3  =  0;
         row_4  =  0;
@@ -3179,8 +3179,8 @@ tables {
     table_105 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  22;
+        row_1  =  100;
         row_2  =  0;
         row_3  =  0;
         row_4  =  0;
@@ -3206,8 +3206,8 @@ tables {
     table_106 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  37;
+        row_1  =  3;
         row_2  =  0;
         row_3  =  3;
         row_4  =  0;
@@ -3233,8 +3233,8 @@ tables {
     table_107 {
         columns = 1;
         rows    = 22;
-        row_0  =  0;
-        row_1  =  0;
+        row_0  =  4;
+        row_1  =  20;
         row_2  =  0;
         row_3  =  0;
         row_4  =  0;
@@ -3260,8 +3260,8 @@ tables {
     table_108 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 17;
+        row_1  = 15;
         row_2  = 0;
         row_3  = 2;
         row_4  = 0;
@@ -3287,8 +3287,8 @@ tables {
     table_109 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 27;
+        row_1  = 30;
         row_2  = 0;
         row_3  = 0;
         row_4  = 0;
@@ -3314,8 +3314,8 @@ tables {
     table_110 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 9;
+        row_1  = 25;
         row_2  = 0;
         row_3  = 1;
         row_4  = 0;
@@ -3341,8 +3341,8 @@ tables {
     table_111 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 16;
+        row_1  = 75;
         row_2  = 0;
         row_3  = 0;
         row_4  = 0;
@@ -3368,14 +3368,14 @@ tables {
     table_112 {
         columns = 1;
         rows    = 22;
-        row_0  = 0;
-        row_1  = 0;
+        row_0  = 38;
+        row_1  = 40;
         row_2  = 0;
-        row_3  = 0;
+        row_3  = 5;
         row_4  = 0;
         row_5  = 0;
-        row_6  = 0;
-        row_7  = 0;
+        row_6  = 3;
+        row_7  = 20;
         row_8  = 0;
         row_9  = 0;
         row_10 = 0;
@@ -4105,7 +4105,7 @@ tables {
 
     table_137 {
         columns = 1;
-        rows    = 62;
+        rows    = 63;
         real    = 1050;
         text_0  = "Vacío";
         text_1  = "Alma justa (máx.)";
@@ -4129,7 +4129,7 @@ tables {
         text_19 = "Habitación del Tiempo";
         text_20 = "Invasores temibles";
         text_21 = "Androides crueles";
-        text_22 = "Frenar a Buu";
+        text_22 = "Frenar a Boo";
         text_23 = "Guardianes de la Tierra";
         text_24 = "Alguien especial";
         text_25 = "Fuerzas Ginyu";
@@ -4169,74 +4169,76 @@ tables {
         text_59 = "Maestro y alumno";
         text_60 = "Buenos amigos";
         text_61 = "Defensa de hierro";
+        text_62 = "La batalla de los dioses";
     }
 
     table_138 {
         columns = 1;
-        rows    = 62;
+        rows    = 63;
         real    = 4579;
         text_0  = "Vacío";
-        text_1  = "Requiere: 8 cartas de tipo bueno._Efectos: ninguno.__";
-        text_2  = "Requiere: 8 cartas de tipo malo._Efectos: ninguno.__";
-        text_3  = "Requiere: 8 cartas neutrales._Efectos: ninguno.__";
-        text_4  = "Requiere: 6 o 7 cartas de habilidad de tipo bueno._Efectos: ninguno.__";
-        text_5  = "Requiere: 6 o 7 cartas de habilidad de tipo malo._Efectos: ninguno.__";
-        text_6  = "Requiere: 6 o 7 cartas de habilidad neutrales._Efectos: ninguno.__";
-        text_7  = "Requiere: 4 cartas buenas y 4 malas._Efectos: ninguno.__";
-        text_8  = "Requiere: 4 cartas buenas y 4 neutrales._Efectos: ninguno.__";
-        text_9  = "Requiere: 4 cartas malas y 4 neutrales._Efectos: ninguno.__";
-        text_10 = "Requiere: 4 o 5 cartas de habilidad de tipo bueno._Efectos: ninguno.__";
-        text_11 = "Requiere: 4 o 5 cartas de habilidad de tipo malo._Efectos: ninguno.__";
-        text_12 = "Requiere: 4 o 5 cartas de habilidad neutrales._Efectos: ninguno.__";
-        text_13 = "Requiere: entrenar en el Templo de Kamisama._Efectos: +100 de ki al empezar._                 +1 barra de ki al máximo._";
-        text_14 = "Requiere: pelear por las Esferas del Dragón._Efectos: +0,3 s de ira.__";
-        text_15 = "Requiere: alcanzar la paz interior._Efectos: +100 de ki al empezar.__";
-        text_16 = "Requiere: que los Guerreros Z se unan._Efectos: +0,3 s de ira.__";
-        text_17 = "Requiere: entrenar a 10 veces la gravedad terrestre._Efectos: +0,3 s de ira.__";
-        text_18 = "Requiere: el poder de un Saiyajin de sangre pura._Efectos: +200 de ki al empezar._                 +1 barra de ki al máximo._                 +0,3 s de ira.";
-        text_19 = "Requiere: entrenar en la Habitación del Tiempo._Efectos: +100 de ki al empezar._                 +1 barra de ki al máximo._";
-        text_20 = "Requiere: la amenaza de los invasores._Efectos: +100 de ki al empezar.__";
-        text_21 = "Requiere: la fuerza descomunal de los androides._Efectos: +200 de ki al empezar.__";
-        text_22 = "Requiere: pelear para acabar con Majin Buu._Efectos: +1 barra de ki al máximo.__";
-        text_23 = "Requiere: el temple de quienes protegen la Tierra._Efectos: +50 de ki al empezar.__";
-        text_24 = "Requiere: el cariño de Krilin._Efectos: +150 de ki al empezar.__";
-        text_25 = "Requiere: un equipo de 5 buenos amigos._Efectos: +200 de ki al empezar.__";
-        text_26 = "Requiere: una de las técnicas marca Gotenks._Efectos: +200 de ki al empezar.__";
-        text_27 = "Requiere: el carisma de Freezer._Efectos: +100 de ki al empezar.__";
-        text_28 = "Requiere: el orgullo de un namekiano._Efectos: +100 de ki al empezar.__";
-        text_29 = "Requiere: el poder místico de la Torre Karin._Efectos: +300 de ki al empezar.__";
-        text_30 = "Requiere: la fusión con los Pothala._Efectos: +100 de ki al empezar.__";
-        text_31 = "Requiere: el rencor de los enemigos de la Tierra._Efectos: +50 de ki al empezar.__";
-        text_32 = "Requiere: entrenar con el maestro Roshi._Efectos: +100 de ki al empezar.__";
-        text_33 = "Requiere: la sangre Saiyajin de Bardock._Efectos: +100 de ki al empezar.__";
-        text_34 = "Requiere: la brutalidad Saiyajin._Efectos: +10 de ki al empezar.__";
-        text_35 = "Requiere: un poder de magnitud «súper»._Efectos: +200 de ki al empezar.__";
-        text_36 = "Requiere: pelear por el planeta entero._Efectos: +100 de ki al empezar.__";
-        text_37 = "Requiere: alcanzar el Súper Saiyajin 3._Efectos: +20 de ki al empezar.__";
-        text_38 = "Requiere: practicar la fusión._Efectos: +100 de ki al empezar.__";
-        text_39 = "Requiere: la forma perfecta llevada más lejos._Efectos: +100 de ki al empezar.__";
-        text_40 = "Requiere: el poder de Gohan._Efectos: +100 de ki al empezar.__";
-        text_41 = "Requiere: la promesa de la «esperanza»._Efectos: +200 de ki al empezar.__";
-        text_42 = "Requiere: la fusión de demonio y deidad._Efectos: +100 de ki al empezar.__";
-        text_43 = "Requiere: el don de ver el futuro._Efectos: +200 de ki al empezar.__";
-        text_44 = "Requiere: lealtad a Freezer._Efectos: ninguno.__";
-        text_45 = "Requiere: la magia de un brujo._Efectos: +200 de ki al empezar.__";
-        text_46 = "Requiere: los cálculos exactos de un androide._Efectos: ninguno.__";
-        text_47 = "Requiere: las bromas de un dúo insólito._Efectos: +1 barra de ki al máximo.__";
-        text_48 = "Requiere: liberar el poder dormido._Efectos: +100 de ki al empezar.__";
-        text_49 = "Requiere: usar una técnica namekiana especial._Efectos: ninguno.__";
-        text_50 = "Requiere: perseguir a un gato muy veloz._Efectos: +100 de ki al empezar.__";
-        text_51 = "Requiere: las preocupaciones del oficio de enseñar._Efectos: +100 de ki al empezar.__";
-        text_52 = "Requiere: la leyenda del Súper Saiyajin._Efectos: ninguno.__";
-        text_53 = "Requiere: plantarle cara a Freezer._Efectos: +100 de ki al empezar.__";
-        text_54 = "Requiere: el espíritu de un campeón mundial._Efectos: +150 de ki al empezar.__";
-        text_55 = "Requiere: reencontrarse con un padre lejano._Efectos: +100 de ki al empezar.__";
-        text_56 = "Requiere: el fruto de entrenar en el otro mundo._Efectos: +100 de ki al empezar.__";
-        text_57 = "Requiere: que Yajirobe entre en la pelea._Efectos: +100 de ki al empezar.__";
-        text_58 = "Requiere: el lazo familiar de Goku y Gohan._Efectos: ninguno.__";
-        text_59 = "Requiere: la confianza mutua de Piccolo y Gohan._Efectos: ninguno.__";
-        text_60 = "Requiere: la vieja amistad de Goku y Krilin._Efectos: ninguno.__";
-        text_61 = "Requiere: preparar un ataque por sorpresa._Efectos: ninguno.__";
+        text_1  = "Pasiva: Espíritu de lucha._Con menos vida que el rival_haces +20 % de daño._";
+        text_2  = "Pasiva: Terror._El rival carga un 30 % menos de furia.__";
+        text_3  = "Pasiva: Equilibrio._+8 % de daño y recibes un 8 % menos.__";
+        text_4  = "Pasiva: Espíritu de lucha._Con menos vida que el rival_haces +14 % de daño._";
+        text_5  = "Pasiva: Terror._El rival carga un 20 % menos de furia.__";
+        text_6  = "Pasiva: Equilibrio._+5 % de daño y recibes un 5 % menos.__";
+        text_7  = "Pasiva: Rivalidad._+20 % de daño contra los del otro bando_(buenos contra malos)._";
+        text_8  = "Pasiva: Barrera de ki._Al cubrirte pierdes un 50 % menos de vida.__";
+        text_9  = "Pasiva: Instinto de pelea._Cada golpe que entra te da 3 de ki.__";
+        text_10 = "Pasiva: Espíritu de lucha._Con menos vida que el rival_haces +8 % de daño._";
+        text_11 = "Pasiva: Terror._El rival carga un 12 % menos de furia.__";
+        text_12 = "Pasiva: Equilibrio._+3 % de daño y recibes un 3 % menos.__";
+        text_13 = "Pasiva: Entrenamiento divino._Empiezas cada round con 100 de ki._Además: +100 de ki al empezar, +1 barra de ki._";
+        text_14 = "Pasiva: Caza de esferas._+2 puntos por cada combate._Además: +0,3 s de furia._";
+        text_15 = "Pasiva: Concentración._Todo el ki que cargas sube un 25 %._Además: +100 de ki al empezar._";
+        text_16 = "Pasiva: Lazos de los Guerreros Z._Si pierdes un round, empiezas el siguiente_con 150 de ki más._Además: +0,3 s de furia.";
+        text_17 = "Pasiva: Kaio-ken._+20 % de daño, pero recibes un 10 % más._Además: +0,3 s de furia._";
+        text_18 = "Pasiva: Zenkai._Con menos del 25 % de vida, +30 % de ataque._Además: +200 de ki al empezar, +1 barra de ki,_+0,3 s de furia.";
+        text_19 = "Pasiva: Súper Saiyajin dominado._La furia dura un 50 % más._Además: +100 de ki al empezar, +1 barra de ki._";
+        text_20 = "Pasiva: Sin piedad._+25 % de daño contra un rival_con menos de la mitad de vida._Además: +100 de ki al empezar.";
+        text_21 = "Pasiva: Robo de energía._Cada golpe que entra le quita 6 de ki_al rival._Además: +200 de ki al empezar.";
+        text_22 = "Pasiva: Despertar Saiyajin._Te transformas con un 30 % menos de ki_y al hacerlo recuperas la vida gris._Además: +1 barra de ki.";
+        text_23 = "Pasiva: Concentración._Todo el ki que cargas sube un 15 %._Además: +50 de ki al empezar._";
+        text_24 = "Pasiva: Deseo de Shenlong._Una vez por combate, el combo que te_derrotaría te deja con 1 de vida._Además: +150 de ki al empezar.";
+        text_25 = "Pasiva: Poses Ginyu._Ganar el Rush Fight te da 100 de ki._Además: +200 de ki al empezar._";
+        text_26 = "Pasiva: Ráfaga de ki._Las balas de ki hacen +25 % de daño._Además: +200 de ki al empezar._";
+        text_27 = "Pasiva: Guardaespaldas._Cada vez que te cubres, el rival_pierde 30 de ki._Además: +100 de ki al empezar.";
+        text_28 = "Pasiva: Regeneración namekiana._La vida gris vuelve sola, 5 por segundo._Además: +100 de ki al empezar._";
+        text_29 = "Pasiva: Semilla del ermitaño._Una vez por combate, al bajar del 15 %_de vida recuperas el 30 %._Además: +300 de ki al empezar.";
+        text_30 = "Pasiva: Poder de la fusión._Durante la furia haces +25 % de daño._Además: +100 de ki al empezar._";
+        text_31 = "Pasiva: Enemigo de la Tierra._+20 % de ataque contra personajes buenos._Además: +50 de ki al empezar._";
+        text_32 = "Pasiva: Escuela de la Tortuga._En los combos largos el daño baja_un 40 % menos._Además: +100 de ki al empezar.";
+        text_33 = "Pasiva: Orgullo Saiyajin._La furia sube un 40 % más rápido._Además: +100 de ki al empezar._";
+        text_34 = "Pasiva: Ataque sorpresa._El primer golpe de cada round hace +60 %._Además: +10 de ki al empezar._";
+        text_35 = "Pasiva: A toda potencia._Las ultimates hacen +20 % de daño._Además: +200 de ki al empezar._";
+        text_36 = "Pasiva: Poder de la fusión._Durante la furia haces +15 % de daño._Además: +100 de ki al empezar._";
+        text_37 = "Pasiva: Súper Saiyajin 3._+25 % de ataque, pero el ki baja_6 por segundo._Además: +20 de ki al empezar.";
+        text_38 = "Pasiva: Aprender del rival._+10 % de ataque por cada round perdido_en el combate._Además: +100 de ki al empezar.";
+        text_39 = "Pasiva: Absorción de Cell._El 30 % del daño que haces cura tu vida gris._Además: +100 de ki al empezar._";
+        text_40 = "Pasiva: Furia de Gohan._Con menos del 30 % de vida se llena la_barra de furia (una vez por round)._Además: +100 de ki al empezar.";
+        text_41 = "Pasiva: Energía infinita._El ki se carga solo, 10 por segundo._Además: +200 de ki al empezar._";
+        text_42 = "Pasiva: Entrenamiento divino._Empiezas cada round con 50 de ki._Además: +100 de ki al empezar._";
+        text_43 = "Pasiva: Adivinación de Baba._Ganar la batalla de cartas te da 100 de ki._Además: +200 de ki al empezar._";
+        text_44 = "Pasiva: Guardaespaldas._Cada vez que te cubres, el rival_pierde 20 de ki._";
+        text_45 = "Pasiva: Magia de Babidi._El rival carga un 25 % menos de ki._Además: +200 de ki al empezar._";
+        text_46 = "Pasiva: Cálculo del Dr. Gero._Cada 6 golpes de un combo, uno hace el doble.__";
+        text_47 = "Pasiva: Cuerpo de goma._Con más de la mitad de vida_recibes un 25 % menos de daño._Además: +1 barra de ki.";
+        text_48 = "Pasiva: Furia de Gohan._Con menos del 25 % de vida se llena la_barra de furia (una vez por round)._Además: +100 de ki al empezar.";
+        text_49 = "Pasiva: Fusión namekiana._Recibes un 10 % menos de daño.__";
+        text_50 = "Pasiva: Instinto de pelea._Cada golpe que entra te da 3 de ki._Además: +100 de ki al empezar._";
+        text_51 = "Pasiva: Entrenamiento del maestro._+50 % de experiencia por combate._Además: +100 de ki al empezar._";
+        text_52 = "Pasiva: Orgullo Saiyajin._La furia sube un 30 % más rápido.__";
+        text_53 = "Pasiva: Zenkai._Con menos del 25 % de vida, +25 % de ataque._Además: +100 de ki al empezar._";
+        text_54 = "Pasiva: Trampa de Mr. Satán._Hasta el primer golpe del rival en_cada round, nada te quita vida._Además: +150 de ki al empezar.";
+        text_55 = "Pasiva: Lazos de los Guerreros Z._Si pierdes un round, empiezas el siguiente_con 100 de ki más._Además: +100 de ki al empezar.";
+        text_56 = "Pasiva: Aguante del otro mundo._Cada golpe que recibes te da 3 de ki._Además: +100 de ki al empezar._";
+        text_57 = "Pasiva: Semilla del ermitaño._Una vez por combate, al bajar del 15 %_de vida recuperas el 20 %._Además: +100 de ki al empezar.";
+        text_58 = "Pasiva: A toda potencia._Las ultimates hacen +15 % de daño.__";
+        text_59 = "Pasiva: Entrenamiento del maestro._+30 % de experiencia por combate.__";
+        text_60 = "Pasiva: Escuela de la Tortuga._En los combos largos el daño baja_un 25 % menos._";
+        text_61 = "Pasiva: Barrera de ki._Al cubrirte pierdes un 75 % menos de vida.__";
+        text_62 = "Pasiva: Hakai._Cuando el rival se cubre, tus golpes_le quitan un 40 % más._Además: +200 de ki al empezar.";
     }
 
     table_139 {

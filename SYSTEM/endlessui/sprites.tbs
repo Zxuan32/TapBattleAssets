@@ -1,0 +1,35 @@
+sprites {
+    sprite_0   { sheet =  0;  x =    1;  y =    1;  w = 720;  h = 320; }
+    sprite_1   { sheet =  0;  x =    1;  y =  323;  w = 884;  h =  60; }
+    sprite_2   { sheet =  0;  x =  723;  y =    1;  w = 208;  h =  56; }
+    sprite_3   { sheet =  0;  x =    1;  y =  385;  w = 300;  h = 484; }
+    sprite_4   { sheet =  0;  x =    1;  y =  871;  w = 944;  h = 140; }
+    sprite_5   { sheet =  0;  x =  303;  y =  385;  w = 176;  h =  32; }
+    sprite_6   { sheet =  0;  x =  481;  y =  385;  w = 192;  h = 268; }
+    sprite_7   { sheet =  0;  x =  675;  y =  385;  w = 192;  h = 268; }
+    sprite_8   { sheet =  0;  x =  933;  y =    1;  w =  76;  h = 114; }
+    sprite_9   { sheet =  0;  x =  869;  y =  385;  w =  90;  h = 134; }
+    sprite_10  { sheet =  1;  x =    1;  y =    1;  w = 256;  h = 256; }
+    sprite_11  { sheet =  1;  x =  259;  y =    1;  w = 164;  h =  32; }
+    sprite_12  { sheet =  0;  x =  887;  y =  323;  w =  96;  h =  34; }
+    sprite_13  { sheet =  1;  x =  425;  y =    1;  w = 125;  h =  18; }
+    sprite_14  { sheet =  1;  x =  552;  y =    1;  w = 125;  h =  18; }
+    sprite_15  { sheet =  1;  x =  679;  y =    1;  w =  81;  h =  18; }
+    sprite_16  { sheet =  1;  x =  762;  y =    1;  w =  81;  h =  18; }
+    sprite_17  { sheet =  0;  x =  961;  y =  385;  w =  60;  h =  18; }
+    sprite_18  { sheet =  0;  x =  947;  y =  871;  w =  60;  h =  18; }
+    sprite_19  { sheet =  1;  x =  845;  y =    1;  w =  46;  h =  18; }
+    sprite_20  { sheet =  1;  x =  893;  y =    1;  w =  46;  h =  18; }
+    sprite_21  { sheet =  0;  x =  985;  y =  323;  w =  38;  h =  18; }
+    sprite_22  { sheet =  1;  x =  941;  y =    1;  w =  38;  h =  18; }
+    sprite_23  { sheet =  1;  x =  981;  y =    1;  w =  31;  h =  18; }
+    sprite_24  { sheet =  1;  x =    1;  y =  259;  w =  31;  h =  18; }
+    sprite_25  { sheet =  1;  x =   34;  y =  259;  w =  27;  h =  18; }
+    sprite_26  { sheet =  1;  x =   63;  y =  259;  w =  27;  h =  18; }
+    sprite_27  { sheet =  1;  x =    1;  y =  279;  w = 146;  h =  34; }
+    sprite_28  { sheet =  1;  x =  149;  y =  279;  w = 118;  h =  32; }
+    sprite_29  { sheet =  1;  x =    1;  y =  315;  w = 390;  h =  46; }
+    sprite_30  { sheet =  1;  x =  393;  y =  315;  w = 270;  h =  46; }
+    sprite_31  { sheet =  1;  x =  269;  y =  279;  w =  94;  h =  32; }
+    sprite_32  { sheet =  1;  x =  365;  y =  279;  w = 194;  h =  32; }
+}
